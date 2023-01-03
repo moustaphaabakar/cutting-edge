@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css introduction <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Introduction</h4>
+        <p class="intro">CSS is the language we use to style a Web page.</p>
+        <hr>
+        <h4 style="color: blue;">What is CSS?</h4>
+        <ul>
+          <li>CSS stands for Cascading Style Sheets</li>
+          <li>CSS describes how HTML elements are to be displayed on screen,  
+          paper, or in other media</li>
+          <li>CSS saves a lot of work. It can control the layout of 
+          multiple web pages all at once</li>
+          <li>External stylesheets are stored in CSS files</li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">CSS Demo - One HTML Page - Multiple Styles!</h4>
+        <p>Here we will show one HTML page displayed with four different stylesheets. 
+        Click on the &quot;Stylesheet 1&quot;, &quot;Stylesheet 2&quot;, &quot;Stylesheet 3&quot;, &quot;Stylesheet 4&quot; 
+        links below to see the different styles:</p>
+        <hr>
+<h4 style="color: blue;">Why Use CSS?</h4>
+<p>CSS is used to define styles for your web pages, including the design, layout 
+and variations in display for different devices and screen sizes.</p>
+<h4 style="color: blue;">CSS Example</h4>
+<div class="affichage">
+body
+{<br>&nbsp;&nbsp;background-color: lightblue;<br>}<br>
+<br>h1
+{<br>
+&nbsp;&nbsp;color: white;<br>
+&nbsp;&nbsp;text-align: center;<br>
+}<br><br>
+p
+{<br>
+  &nbsp;
+font-family: verdana;<br>
+&nbsp;&nbsp;font-size: 20px;<br>
+</div>
+<hr>
+<h4 style="color: blue;">CSS Solved a Big Problem</h4>
+<p>HTML was NEVER intended to contain tags for formatting a web page!</p>
+<p>HTML was 
+created to describe the content of a web page, like:</p>
+<p>&lt;h1&gt;This is a heading&lt;/h1&gt;</p>
+<p>&lt;p&gt;This is a paragraph.&lt;/p&gt;</p>
+<p>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 
+specification, it started a nightmare for web developers. Development of large 
+websites, where fonts and color information were added to every single  
+page, became a long and expensive process.</p>
+<p>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+<p>CSS removed the style formatting from the HTML page!</p>
+<hr>
+<h4 style="color: blue;">CSS Saves a Lot of Work!</h4>
+<p>The style definitions are normally saved in external .css files.</p>
+<p>With an external stylesheet file, you can change the look of an entire website by changing just one file!</p>
+      </div>
+    
+</body>
+</html>

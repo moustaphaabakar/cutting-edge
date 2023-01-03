@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS  classes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Classes</h4>
+        <hr>
+<p>ECMAScript 2015, also known as ES6, introduced JavaScript Classes.</p>
+<p>JavaScript Classes are templates for JavaScript Objects.</p>
+<h4 style="color: blue;">JavaScript Class Syntax</h4>
+<p>Use the keyword <code>class</code> to create a class.</p>
+<p>Always add a method named <code>constructor()</code>:</p>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+class ClassName {<br>
+&nbsp;  constructor() { ... }<br>
+}
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+class Car {<br>
+&nbsp;  constructor(name, year) {<br>
+&nbsp;&nbsp;&nbsp; this.name = name;<br>
+&nbsp;&nbsp;&nbsp; this.year = year;<br>
+&nbsp; }<br>
+}
+</div>
+<p>The example above creates a class named &quot;Car&quot;.</p>
+<p>The class has two initial properties: "name" and "year".</p>
+<p>A JavaScript class is <b>not</b> an object.</p>
+<p>It is a <b>template</b> for JavaScript objects.</p>
+<hr>
+<h4 style="color: blue;">Using a Class</h4>
+<p>When you have a class, you can use the class to create objects:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let myCar1 = new Car(&quot;Ford&quot;, 2014);<br>
+let myCar2 = new Car(&quot;Audi&quot;, 2019);
+</div>
+<p>The example above uses the <b>Car class</b> to create two <b>Car objects</b>.</p>
+<p>The constructor method is called automatically when a new object is created.</p>
+<hr>
+<h4 style="color: blue;">The Constructor Method</h4>
+<p>The constructor method is a special method:</p>
+<ul>
+<li>It has to have the exact name &quot;constructor&quot;</li>
+<li>It is executed automatically when a new object is created</li>
+<li>It is used to initialize object properties</li>
+</ul>
+<p>If you do not define a constructor method, JavaScript 
+will add an empty constructor method.
+</p>
+<hr>
+<h4 style="color: blue;">Class Methods</h4>
+<p>Class methods are created with the same syntax as object methods.</p>
+<p>Use the keyword <code>class</code> to create a class.</p>
+<p>Always add a <code>constructor()</code> method.</p>
+<p>Then add any number of methods.</p>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+class ClassName {<br>
+&nbsp;  constructor() { ... }<br>
+&nbsp;&nbsp;method_1() { ... }<br>
+&nbsp;&nbsp;method_2() { ... }<br>
+&nbsp;&nbsp;method_3() { ... }<br>
+}
+</div>
+<p>Create a Class method named "age", that returns the Car age:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+class Car {<br>
+&nbsp;  constructor(name, year) {<br>
+&nbsp;&nbsp;&nbsp; this.name = name;<br>
+&nbsp;&nbsp;&nbsp; this.year = year;<br>
+&nbsp;  }<br>&nbsp; age() {<br>
+&nbsp;&nbsp;&nbsp; let date = new Date();<br>
+&nbsp;&nbsp;&nbsp; return date.getFullYear() - this.year;<br>
+&nbsp;  }<br>}<br><br>
+let myCar = new Car(&quot;Ford&quot;, 2014);<br>
+document.getElementById(&quot;demo&quot;).innerHTML =<br>
+"My car is " + myCar.age() + " years old.";
+</div>
+<p>You can send parameters to Class methods:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+class Car {<br>&nbsp; constructor(name, year) {<br>&nbsp;&nbsp;&nbsp; 
+  this.name = name;<br>&nbsp;&nbsp;&nbsp; this.year = year;<br>&nbsp; }<br>&nbsp; 
+  age(x) {<br>&nbsp;&nbsp;&nbsp; return x - this.year;<br>&nbsp; }<br>}<br><br>
+  let date = new Date();<br>
+  let year = date.getFullYear();<br><br>let myCar = new 
+  Car(&quot;Ford&quot;, 2014);<br>document.getElementById(&quot;demo&quot;).innerHTML=<br>&quot;My car is 
+  &quot; + myCar.age(year) + &quot; years old.&quot;; </div>
+  <hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>The following table defines the first browser version with full support for 
+Classes in JavaScript: </p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 49</td>
+    <td>Edge 12</td>    
+    <td>Firefox 45</td>
+    <td>Safari 9</td>
+    <td>Opera 36</td>
+  </tr>
+  <tr>
+    <td>Mar, 2016</td>
+    <td>Jul, 2015</td>    
+    <td>Mar, 2016</td>
+    <td>Oct, 2015</td>
+    <td>Mar, 2016</td>
+  </tr></tbody>
+</table>
+<p>You will learn a lot more about JavaScript Classes later in this tutorial.</p>
+ </div>
+ 
+</body>
+</html>

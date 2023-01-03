@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS typeof</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript typeof</h4>
+        <hr>
+        <p>In JavaScript there are 5 different data types that can contain values:</p>
+        <ul>
+          <li><code>string</code></li>
+          <li><code>number</code></li>
+          <li><code>boolean</code></li>
+          <li><code>object</code></li>
+          <li><code>function</code></li>
+        </ul>
+        <p>There are 6 types of objects:</p>
+        <ul>
+          <li><code>Object</code></li>
+          <li><code>Date</code></li>
+          <li><code>Array</code></li>
+          <li><code>String</code></li>
+          <li><code>Number</code></li>
+          <li><code>Boolean</code></li>
+        </ul>
+        <p>And 2 data types that cannot contain values:</p>
+        <ul>
+          <li><code>null</code></li>
+          <li><code>undefined</code></li>
+        </ul>
+        <hr>
+<h4 style="color: blue;">The typeof Operator</h4>
+<p>You can use the <code >typeof</code> operator to find the data type of a 
+JavaScript variable.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;string&quot; <br>
+typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;number&quot;<br>
+typeof NaN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;number&quot;<br>
+typeof false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Returns &quot;boolean&quot;<br>
+typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+ &quot;object&quot;<br>
+typeof {name:'John', age:34}&nbsp;
+// Returns &quot;object&quot;<br>typeof new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;object&quot;<br>typeof function () {} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Returns 
+ &quot;function&quot;<br>
+typeof myCar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;undefined&quot; *<br>
+typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns &quot;object&quot;
+</div>
+<p>Please observe:</p>
+<ul>
+  <li>The data type of NaN is number</li>
+  <li>The data type of an array is object</li>
+  <li>The data type of a date is object</li>
+  <li>The data type of null is object</li>
+  <li>The data type of an undefined variable is <strong>undefined</strong> 
+    *</li>
+    <li>The data type of a variable that has not been assigned a value is 
+    also <strong>undefined</strong> *</li>
+</ul>
+<p>You cannot use <code>typeof</code> to determine if a JavaScript object is an array (or a date).</p>
+<hr>
+<h4 style="color: blue;">Primitive Data</h4>
+<p>A primitive data value is a single simple data value with no additional 
+properties and methods.</p>
+<p>The <code>typeof</code> operator can return one of these primitive types:</p>
+<ul>
+  <li><code>string</code></li>
+  <li><code>number</code></li>
+  <li><code>boolean</code></li>
+  <li><code>undefined</code></li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+typeof &quot;John&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+ &quot;string&quot; <br>
+typeof 3.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+ &quot;number&quot;<br>
+typeof true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+ &quot;boolean&quot;<br>typeof false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+ &quot;boolean&quot;<br>typeof x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  // Returns &quot;undefined&quot; (if x has no value)</div>
+<hr>
+<h4 style="color: blue;">Complex Data</h4>
+<p>The <code >typeof</code> operator can return one of two complex types:</p>
+<ul>
+  <li><code>function</code></li>
+  <li><code>object</code></li>
+</ul>
+
+<p>The <code>typeof</code> operator returns &quot;object&quot; for objects, arrays, and null.</p>
+<p>The <code>typeof</code> operator does not return &quot;object&quot; for functions.</p>
+<h4 style="color:blue">Example</h4>
+<div class="affichage">
+typeof {name:'John', age:34}&nbsp;// Returns &quot;object&quot;<br>
+typeof [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Returns &quot;object&quot; (not &quot;array&quot;, see note below)<br>
+typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Returns 
+  &quot;object&quot;<br>typeof function myFunc(){}&nbsp;&nbsp; // Returns &quot;function&quot;<br>
+</div>
+<p>The <code>typeof</code> operator returns &quot;<code>object</code>&quot; for arrays because in JavaScript arrays are objects.</p>
+<hr>
+<h4 style="color: blue;">The Data Type of typeof</h4>
+<p>The <code>typeof</code>operator is not a variable. It is an operator. Operators ( + - * / 
+) do not have any data type. </p>
+<p>But, the <code>typeof</code> operator always <strong>returns a string</strong> (containing 
+the type of the operand).</p>
+<hr>
+<h4 style="color: blue;">The constructor Property</h4>
+<p>The <code>constructor</code> property returns the constructor 
+function for all JavaScript variables.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&quot;John&quot;.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns function String()&nbsp; {[native code]}<br>
+(3.14).constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// Returns function Number()&nbsp; {[native code]}<br>
+false.constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+  function Boolean() {[native code]}<br>
+[1,2,3,4].constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Returns function Array()&nbsp;&nbsp; {[native code]}<br>
+{name:'John',age:34}.constructor&nbsp;
+// Returns function Object()&nbsp; {[native code]}<br>
+ new Date().constructor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// Returns function Date()&nbsp; &nbsp; {[native code]}<br>
+function () {}.constructor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Returns 
+  function Function(){[native code]}
+</div>
+<p>
+You can check the constructor property to find out if an object is an <code>Array</code> 
+(contains the word &quot;Array&quot;):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="table table-striped">
+function isArray(myArray) {<br>
+  &nbsp; return myArray.constructor.toString().indexOf(&quot;Array&quot;) &gt; -1;<br>
+}
+</div>
+<p>Or even simpler, you can check if the object is an <strong>Array function</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function isArray(myArray) {<br>
+  &nbsp; return myArray.constructor 
+  === Array;<br>
+}
+</div>
+<p>
+You can check the constructor property to find out if an object is a 
+<code>Date</code> (contains the word &quot;Date&quot;):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function isDate(myDate) {<br>
+  &nbsp; return myDate.constructor.toString().indexOf(&quot;Date&quot;) &gt; -1;<br>
+}
+</div>
+<p>Or even simpler, you can check if the object is a <strong>Date function</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function isDate(myDate) {<br>
+  &nbsp; return myDate.constructor === Date;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Undefined</h4>
+<p>In JavaScript, a variable without a value, has the value <code>undefined</code>. 
+The type is also <code>undefined</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let car;&nbsp;&nbsp;&nbsp; // Value is undefined, 
+    type is undefined</div>
+<p>Any variable can be emptied, by setting the value to <code>undefined</code>. 
+The type will also be <code>undefined</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+    car = undefined;&nbsp;&nbsp;&nbsp; // Value is undefined, 
+    type is undefined</div>
+    <hr>
+<h4 style="color: blue;">Empty Values </h4>
+<p>An empty value has nothing to do with <code>undefined</code>.</p>
+<p>An empty string has both a legal value and a type.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let car = &quot;&quot;;&nbsp;&nbsp;&nbsp; // 
+    The value is 
+    &quot;&quot;, the typeof is &quot;string&quot;</div>
+<hr>
+<h4 style="color: blue;">Null</h4>
+<p>In JavaScript <code>null</code> is &quot;nothing&quot;. It is supposed to be something that doesn't exist.</p>
+<p>Unfortunately, in JavaScript, the data type of <code>null</code> is an object.</p>
+<p>You can consider it a bug in JavaScript that <code>typeof null</code> is an object. It should be <code class="w3-codespan">null</code>.</p>
+<p>You can empty an object by setting it to <code>null</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = null;&nbsp;&nbsp;&nbsp; // 
+  Now value is null, 
+    but type is still an object<br>
+</div>
+<p>You can also empty an object by setting it to <code>undefined</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};<br>person = undefined;&nbsp;&nbsp; // 
+  Now both value and type is undefined<br>
+</div>
+<hr>
+<h4 style="color: blue;">Difference Between Undefined and Null</h4>
+<p><code class="w3-codespan">undefined</code> and <code>null</code> are equal in value but different in type:</p>
+<div class="affichage">
+ typeof undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    // undefined<br>typeof null&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    // object<br><br>null === undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    // false<br>null == undefined&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    // true</div>
+    <hr>
+    <h4 style="color: blue;">The instanceof Operator</h4>
+    <p>The <code >instanceof</code> operator returns <code>true</code> if an object is an instance of the specified object:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
+    (cars instanceof Array);<br>
+    (cars instanceof Object);<br>
+    (cars instanceof String);<br>
+    (cars instanceof Number);<br>
+    </div>
+    <hr>
+    <h4 style="color: blue;">The void Operator</h4>
+    <p>The <strong>void</strong> operator evaluates an expression and returns 
+    <strong>undefined</strong>. This operator is often used to obtain the undefined 
+    primitive value, using &quot;void(0)&quot; (useful when evaluating an expression without 
+    using the return value).</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+     &lt;a href=&quot;javascript:void(0);&quot;&gt;<br>&nbsp; Useless link<br>&lt;/a&gt;<br>
+     <br>&lt;a href=&quot;javascript:void(document.body.style.backgroundColor='red');&quot;&gt;<br>&nbsp; Click me to change the background color of body to red<br>&lt;/a&gt;<br>
+    </div>
+</div>
+
+</body>
+</html>

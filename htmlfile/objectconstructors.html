@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object constructors</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Object Constructors</h4>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        function Person(first, last, age, eye) {<br>
+        &nbsp;&nbsp;this.firstName = first;<br>
+        &nbsp;&nbsp;this.lastName = last;<br>
+        &nbsp;&nbsp;this.age = age;<br>
+        &nbsp;&nbsp;this.eyeColor = eye;<br>
+        }
+        </div>
+        <h4 style="color: blue;">Notes</h4>
+        <p>It is considered good practice to name constructor functions with an upper-case first letter.</p>
+        <h4 style="color: blue;">About this</h4>
+        <p>In a constructor function <code>this</code> does not have a value.
+        It is a substitute for the new object. The value of <code>this</code> will become the new object when 
+        a new object is created.</p>    
+        <hr>
+        <h4 style="color: blue;">Object Types (Blueprints) (Classes)</h4>
+        <p>The examples from the previous chapters are limited. They only create single objects.</p>
+        <p>Sometimes we need a &quot;<strong>blueprint</strong>&quot; for creating many objects of the same "type".</p>
+        <p>The way to create an &quot;object type&quot;, is to use an <strong>object constructor function</strong>.</p>
+        <p>In the example above, <code>function Person()</code> is an object constructor function.</p>
+        <p>Objects of the same type are created by calling the constructor function with the <code>new</code> keyword:</p>>
+        <div class="affichage">
+        const myFather = new Person(&quot;John&quot;, &quot;Doe&quot;, 50, &quot;blue&quot;);<br>
+        const myMother = new Person(&quot;Sally&quot;, &quot;Rally&quot;, 48, &quot;green&quot;);
+        </div>
+        <hr>
+        <h4 style="color: blue;">What is <b>this</b>?</h4>
+<p>In JavaScript, the <code>this</code> keyword refers to an <b>object</b>.</p>
+<p><b>Which</b> object depends on how <code>this</code> is being invoked (used or called).</p>
+<p>The <code >this</code> keyword refers to different objects depending on how it is used:</p>
+<table class="table table-striped">
+<tr><td>In an object method, <code>this</code> refers to the <b>object</b>.</td></tr>
+<tr><td>Alone, <code>this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, <code>this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</td></tr>
+<tr><td>In an event, <code>this</code> refers to the <b>element</b> that received the event.</td></tr>
+<tr><td>Methods like <code>call()</code>, <code">apply()</code>,
+and <code>bind()</code> can refer <code>this</code> to <b>any object</b>.</td></tr>
+</table>
+<h4 style="color: blue;">Note</h4>
+<code>this</code> is not a variable. It is a keyword. You cannot change the value of <code>this</code>.
+<hr>
+<h4 style="color: blue;">Adding a Property to an Object</h4>
+<p>Adding a new property to an existing object is easy: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+myFather.nationality = &quot;English&quot;;
+</div>
+<p>The property will be added to myFather. Not to myMother. (Not to any other person objects).</p>
+<hr>
+<h4 style="color: blue;">Adding a Method to an Object</h4>
+<p>Adding a new method to an existing object is easy: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+myFather.name = function () {<br>&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>};
+</div>
+<p>The method will be added to myFather. Not to myMother. (Not to any other person objects).</p>
+<hr>
+<h4 style="color: blue;">Adding a Property to a Constructor</h4>
+<p>You cannot add a new property to an object constructor the same way you 
+add a new property to an existing object:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ Person.nationality = &quot;English&quot;;
+</div>
+<p>To add a new property to a constructor, you must add it to the 
+    constructor function:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    function Person(first, last, age, eyecolor) {<br>
+      &nbsp;
+    this.firstName = first;<br>
+      &nbsp;
+    this.lastName = last;<br>
+      &nbsp;
+    this.age = age;<br>
+    &nbsp;&nbsp;this.eyeColor = eyecolor;<br>&nbsp;&nbsp;this.nationality = &quot;English&quot;;<br>
+    }
+    </div>
+    <p>This way object properties can have default values.</p>
+    <hr>
+    <h4 style="color: blue;">Adding a Method to a Constructor</h4>
+    <p>Your constructor function can also define methods:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    function Person(first, last, age, eyecolor) {<br>
+      &nbsp;
+    this.firstName = first;<br>
+      &nbsp;
+    this.lastName = last;<br>
+      &nbsp;
+    this.age = age;<br>
+      &nbsp;
+    this.eyeColor = eyecolor;<br>&nbsp;&nbsp;this.name = function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>
+    &nbsp;&nbsp;};<br>
+    }
+    </div>
+    <p>You cannot add a new method to an object constructor the same way you add a 
+        new method to an existing object.</p>
+        <p>Adding methods to an object constructor must be done inside the 
+        constructor function:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        function Person(firstName, lastName, age, eyeColor) {<br>
+        &nbsp;&nbsp;this.firstName = firstName;&nbsp; <br>
+          &nbsp;
+        this.lastName = lastName;<br>
+          &nbsp;
+        this.age = age;<br>
+        &nbsp;&nbsp;this.eyeColor = eyeColor;<br>
+        &nbsp;&nbsp;this.changeName = function (name) {<br>
+          &nbsp;&nbsp;&nbsp;
+        this.lastName = name;<br>
+        &nbsp;&nbsp;};<br>
+        }</div>
+        <p>The changeName() function assigns the value of name to the person's 
+        lastName property.</p>
+        <div class="affichage">
+        myMother.changeName(&quot;Doe&quot;);</div>>
+        <p>JavaScript knows which person you are 
+        talking about by &quot;substituting&quot; <b>this</b> with <b>myMother</b>.</p>        
+        <hr>
+        <h4 style="color: blue;">Built-in JavaScript Constructors</h4>
+        <p>JavaScript has built-in constructors for native objects:</p>
+        <div class="affichage">
+        new String()&nbsp;&nbsp;&nbsp; // A new String object<br>
+        new Number()&nbsp;&nbsp;&nbsp; // A new Number object<br>
+        new Boolean()&nbsp;&nbsp; // A new Boolean object<br>
+        new Object()&nbsp;&nbsp;&nbsp; // A new Object object<br>
+        new Array()&nbsp;&nbsp;&nbsp;&nbsp; // A new Array object<br>
+        new RegExp()&nbsp;&nbsp;&nbsp; // A new RegExp object<br>
+        new Function()&nbsp; // A new Function object<br>
+        new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // A new Date object
+        </div>
+            <p>The <code>Math()</code> object is not in the list. <code>Math</code> is a global object. The <code class="w3-codespan">new</code> keyword cannot be used on 
+            <code>Math</code>.</p>
+            <hr>
+            <h4 style="color:blue">Did You Know?</h4>
+            <p>As you can see above, JavaScript has object versions of the primitive 
+            data types <code>String</code>, <code>Number</code>, and <code>Boolean</code>. But there is no reason to create complex objects. Primitive values 
+            are much faster:</p>
+            <p>Use string literals <code>&quot;&quot;</code> instead of <code>new String()</code>.</p>
+            <p>Use number literals <code>50</code> instead of <code>new Number()</code>.</p>
+            <p>Use boolean literals <code>true / false</code> instead of <code>new Boolean()</code>.</p>
+            <p>Use object literals <code>{}</code> instead of <code>new Object()</code>.</p>
+            <p>Use array literals <code>[]</code> instead of <code>new Array()</code>.</p>
+            <p>Use pattern literals <code>/()/</code> instead of <code>new RegExp()</code>.</p>
+            <p>Use function expressions <code>() {}</code> instead of <code>new Function()</code>.</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            let x1 = &quot;&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new primitive string<br>
+            let x2 = 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new primitive number<br>
+            let x3 = false;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new primitive boolean<br>
+            <br>
+            const x4 = {};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new Object object<br>
+            const x5 = [];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new Array object<br>
+            const x6 = /()/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // new RegExp object<br>
+            </div>
+            <hr>
+            <h4 style="color: blue;">String Objects</h4>
+<p>Normally, strings are created as primitives: <code>firstName = &quot;John&quot;</code></p>
+<p>But strings can also be created as objects using the <code>new</code> keyword:<br>
+<code>firstName = new String(&quot;John&quot;)</code></p>
+<p>Learn why strings should not be created as object in the chapter JS Strings </p>
+<hr>
+<h4 style="color: blue;">Number Objects</h4>
+<p>Normally, numbers are created as primitives: <code>x = 30</code></p>
+<p>But numbers can also be created as objects using the <code>new</code> keyword:<br>
+<code>x = new 
+Number(30)</code></p>
+<p>Learn why numbers should not be created as object in the chapter JS Numbers </p>
+<hr>
+<h4 style="color: blue;">Boolean Objects</h4>
+<p>Normally, booleans are created as primitives: <code>x = 
+false</code></p>
+<p>But booleans can also be created as objects using the <code>new</code> keyword:<br>
+<code>x = new Boolean(false)</code></p>
+<p>Learn why booleans should not be created as object in the chapter JS Booleans </p>
+ </div>
+ 
+</body>
+</html>

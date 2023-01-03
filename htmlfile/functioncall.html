@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> function call</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Function call()</h4>
+<hr>
+<h4 style="color: blue;">Method Reuse</h4>
+<p>With the <code>call()</code> method, you can write a method that can be used on different 
+objects. </p>
+<hr>
+<h4 style="color: blue;">All Functions are Methods</h4>
+<p>In JavaScript all functions are object methods.</p>
+<p>If a function is not a method of a JavaScript object, it is a function of the 
+global object (see previous chapter). </p>
+<p>The example below creates an object with 3 
+properties, firstName, lastName, fullName.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>
+  &nbsp; fullName: function () {<br>
+&nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName;<br>
+  &nbsp;&nbsp;}<br>
+}<br>
+<br>
+// This will return &quot;John Doe&quot;:<br>
+person.fullName();&nbsp;&nbsp;
+</div>
+<p>In the example above, <code>this</code> refers to the <strong>person object</strong>.</p>
+<p><strong>this.firstName</strong> means the <strong>firstName</strong> property of <strong>this</strong>.</p>  
+<p>Same as:</p>
+<p><strong>this.firstName</strong> means the <strong>firstName</strong> property of <strong>person</strong>.</p>  
+
+<hr>
+<h4 style="color: blue;">What is <b>this</b>?</h4>
+<p>In JavaScript, the <code>this</code> keyword refers to an <b>object</b>.</p>
+<p><b>Which</b> object depends on how <code >this</code> is being invoked (used or called).</p>
+<p>The <code>this</code> keyword refers to different objects depending on how it is used:</p>
+<table class="table table-striped">
+<tr><td>In an object method, <code>this</code> refers to the <b>object</b>.</td></tr>
+<tr><td>Alone, <code>this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, <code>this</code> refers to the <b>global object</b>.</td></tr>
+<tr><td>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</td></tr>
+<tr><td>In an event, <code >this</code> refers to the <b>element</b> that received the event.</td></tr>
+<tr><td>Methods like <code>call()</code>, <code>apply()</code>,
+and <code>bind()</code> can refer <code>this</code> to <b>any object</b>.</td></tr>
+</table>
+<h4 style="color: blue;">Note</h4>
+<code>this</code> is not a variable. It is a keyword. You cannot change the value of <cod>this</code>.
+    <hr>
+<h4 style="color: blue;">The JavaScript call() Method</h4>
+<p>The <code>call()</code> method is a predefined 
+JavaScript method.</p>
+<p>It can be used to invoke (call) a method 
+with an owner object as an argument (parameter).</p>
+<p>With <code>call()</code>, an object can use a method belonging to another object.</p>
+<p>This example calls the <strong>fullName</strong> method of person, using it on 
+<strong>person1</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+  &nbsp;&nbsp;<strong>fullName</strong>: function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>
+  &nbsp;&nbsp;}<br>}<br>
+const person1 = {<br>
+&nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>
+  }<br>
+const person2 = {<br>
+&nbsp; firstName:&quot;Mary&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>}<br>
+<br>
+// This will return &quot;John Doe&quot;:<br>  
+  person.fullName.call(<strong>person1</strong>);
+</div>
+<p>This example calls the <strong>fullName</strong> method of person, using it on
+<strong>person2</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+  &nbsp; <strong>fullName</strong>: function() {<br>
+  &nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName;<br>
+  &nbsp;&nbsp;}<br>}<br>
+const person1 = {<br>
+&nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>
+  }<br>
+const person2 = {<br>
+  &nbsp; firstName:&quot;Mary&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>}<br>
+<br>
+// This will return &quot;Mary Doe&quot;<br>
+  person.fullName.call(<strong>person2</strong>);
+</div>
+<h4 style="color: blue;">The call() Method with Arguments</h4>
+<p>The <code>call()</code> method can accept arguments:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+  &nbsp; fullName: function(city, country) {<br>
+&nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName 
+  + "," + city + "," + country;<br>
+  &nbsp; }<br>}<br>
+<br>
+const person1 = {<br>
+&nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;<br>
+}<br>
+<br>
+person.fullName.call(person1, "Oslo", "Norway");
+</div>
+ </div>
+</body>
+</html>

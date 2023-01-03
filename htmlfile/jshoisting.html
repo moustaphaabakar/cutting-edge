@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS  hoisting</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Hoisting</h4>
+        <hr>
+        <p>Hoisting is JavaScript's default behavior of moving declarations to the 
+        top.</p>
+        <h4 style="color: blue;">JavaScript Declarations are Hoisted</h4>
+        <p>In JavaScript, a variable can be declared after it has been used.</p>
+        <p>In other words; a variable can be used before it has been declared.</p>
+        <p><strong>Example 1</strong> gives the same result as <strong>Example 2</strong>:</p>
+        <h4 style="color: blue;">Example 1</h4>
+        <div class="affichage">
+        x = 5; // Assign 5 to x<br>
+        <br>
+        elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
+        elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        // Display x in the element<br><br>var x; // Declare x
+        </div>
+        <h4 style="color: blue;">Example 2</h4>
+        <div class="affichage">
+        var x; // Declare x<br>
+        x = 5; // Assign 5 to x<br><br>
+        elem = document.getElementById(&quot;demo&quot;); // Find an element <br>elem.innerHTML = x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        // Display x in the element<br>
+        </div>
+        <p>To understand this, you have to understand the term &quot;hoisting&quot;.</p>
+<p>Hoisting is JavaScript's default behavior of moving all declarations to the 
+top of the current scope (to the top of the current script or the current function).</p>
+<hr>
+<h4 style="color: blue;">The let and const Keywords</h4>
+<p>Variables defined with <code>let</code> and <code>const</code> are hoisted to the top 
+of the block, but not <em>initialized</em>.<p>Meaning: The block of code is aware of the 
+variable, but it cannot be used until it has been declared.
+<p>Using a <code>let</code> variable before it is declared will result in a
+<code>ReferenceError</code>.</p> 
+<p>The variable is in a &quot;temporal dead zone&quot; from the start 
+of the block until it is declared:</p>
+<h4 style="color: blue;">Example</h4>
+This will result in a <code>ReferenceError</code>:
+<div class="affichage">
+carName = &quot;Volvo&quot;;<br>
+let carName;
+</div>
+<p>Using a <code>const</code> variable before it is declared, is a syntax errror,
+so the code will simply not run.</p> 
+<h4 style="color: blue;">Example</h4>
+<p>This code will not run.</p>
+<div class="affichage">
+carName = &quot;Volvo&quot;;<br>
+const carName;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Initializations are Not Hoisted</h4>
+<p>JavaScript only hoists declarations, not initializations.</p>
+<p><strong>Example 1</strong> does <strong>not</strong> give the same result as
+<strong>Example 2</strong>:</p>
+<h4 style="color: blue;">Example 1</h4>
+<div class="affichage">
+var x = 5; // Initialize x<br>var y = 7; // Initialize y<br><br>elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
+elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y
+</div>
+<h4 style="color: blue;">Example 2</h4>
+<div class="affichage">
+var x = 5; // Initialize x<br>
+<br>
+elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
+elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y<br>
+<br>
+var y = 7; // Initialize y
+</div>
+<p>Does it make sense that y is undefined in the last example?</p>
+<p>This is because only the declaration (var y), not the initialization (=7) is hoisted to the top.</p>
+<p>Because of hoisting, y has been declared before it is used, but because 
+initializations are not hoisted, the value of y is undefined.</p>
+<p>Example 2 is the same as writing:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+var x = 5; // Initialize x<br>
+var y;&nbsp;&nbsp;&nbsp;&nbsp; // Declare y<br>
+<br>
+elem = document.getElementById(&quot;demo&quot;); // Find an element <br>
+elem.innerHTML = x + &quot; &quot; + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Display x and y<br>
+<br>
+y = 7;&nbsp;&nbsp;&nbsp; // Assign 7 to y 
+</div>
+<hr>
+<h4 style="color: blue;">Declare Your Variables At the Top !</h4>
+<p>Hoisting is (to many developers) an unknown or overlooked behavior of  
+JavaScript.</p><p>
+If a developer doesn't understand hoisting, programs may contain bugs (errors).<p>
+To avoid bugs, always declare all variables at the beginning of 
+every scope.<p>
+Since this is how JavaScript interprets the 
+code, it is always a good rule.
+</p>
+<p>JavaScript in strict mode does not allow variables to be used if they are 
+not declared.<br>Study <strong>&quot;use strict&quot;</strong> in the next chapter.</p>
+</div>
+<hr>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html responsive <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+<h4 style="color: blue;">HTML <span>Style Guide</span></h4>
+<p>A consistent, clean, and tidy HTML code makes it easier for others to read and understand your code. </p>
+<p>Here are some guidelines and tips for creating good HTML code.</p>
+<hr>
+<h2>Always Declare Document Type</h2>
+<p>Always declare the document type as the first line in your document.</p>
+<p>The correct document type for HTML is:</p>
+<div class="affichage">
+ &lt;!DOCTYPE html&gt;</div>
+<hr>
+<h4 style="margin: 10px;">Use Lowercase Element Names</h4>
+<p style="margin: 10px;"> HTML allows mixing uppercase and lowercase letters in element names.</p>
+<p style="margin: 10px;">However, we recommend using lowercase element names, because:</p>
+<ul style="margin: 10px;">
+ <li>Mixing uppercase and lowercase names looks bad</li>
+ <li>Developers normally use lowercase names</li>
+ <li>Lowercase looks cleaner</li>
+ <li>Lowercase is easier to write</li>
+</ul>
+<h4 style="color: blue; margin: 10px ;">Good:</h4>
+<div class="affichage">
+&lt;body&gt;<br>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+&lt;/body&gt;</div>
+<h4 style="color: blue;">Bad:</h4>
+<div class="affichage">
+&lt;BODY&gt;<br>
+&lt;P&gt;This is a paragraph.&lt;/P&gt;<br>
+&lt;/BODY&gt;</div>
+<hr>
+<h4 style="color: blue; margin:10px ;">Close All HTML Elements</h4>
+<p style="margin: 10px;">In HTML, you do not have to close all elements (for example the <code>&lt;p&gt;</code> element). </p>
+<p style="margin: 10px;">However, we strongly recommend closing all HTML elements, like this:</p>
+<h4 style="color: blue;margin: 10px;">Good:</h4>
+<div class="affichage">
+ &lt;section&gt;<br>&nbsp; &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>&nbsp; &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+ &lt;/section&gt;</div>
+<h4 style="color: blue; margin: 10px;">Bad:</h4>
+<div class="affichage">
+ &lt;section&gt;<br>&nbsp; &lt;p&gt;This is a paragraph.<br>&nbsp; &lt;p&gt;This is a paragraph.<br>
+    &lt;/section&gt;</div>
+<hr>
+<h4 style="color: blue; margin: 10px;">Use Lowercase Attribute Names</h4>
+<p style="margin: 10px;">HTML allows mixing uppercase and lowercase letters in attribute names.</p>
+<p style="margin: 10px;">However, we recommend using lowercase attribute names, because:</p>
+<ul style="margin: 10px;">
+ <li>Mixing uppercase and lowercase names looks bad</li>
+ <li>Developers normally use lowercase names</li>
+ <li>Lowercase looks cleaner</li>
+ <li>Lowercase is easier to write</li>
+</ul>
+<h4 style="color: blue;margin: 10px;">Good:</h4>
+<div class="affichage">
+  &lt;a href=&quot;https://www.Google.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<h4 style="color: blue;"></h4>Bad:</h4>
+<div class="affichage">
+  &lt;a HREF=&quot;https://www.Google.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<hr>
+<h4 style="margin: 10px;">Always Quote Attribute Values</h4>
+<p style="margin: 10px;">HTML allows attribute values without quotes.</p>
+<p>However, we recommend quoting attribute values, because:</p>
+<ul style="margin: 10px;">
+  <li>Developers normally quote attribute values</li>
+  <li>Quoted values are easier to read</li>
+  <li>You MUST use quotes if the value contains spaces</li>
+</ul>
+<h4 style="color: blue;margin:10px">Good:</h4>
+<div class="affichage">
+ &lt;table 
+    class=&quot;striped&quot;&gt;</div>
+<h4 style="color:blue ;">Bad:</h4>
+<div class="affichage">
+ &lt;table class=striped&gt;</div>
+<h4 style="color:blue ;">Very bad:</h4>
+  <p>This will not work, because the value contains spaces:</p>
+<div class="affichage">
+ &lt;table class=table striped&gt;</div>
+<hr>
+<h4 style="color: blue;margin: 10px;">Always Specify alt, width, and height for Images</h4>
+<p style="margin: 10px;"> Always specify the <code>alt</code> attribute for images. This attribute is important if the image 
+for some reason cannot be displayed.</p>
+<p style="margin: 10px;">Also, always define the <code>width</code> and <code>
+height</code> of images. This reduces flickering, because the browser can reserve space for 
+the image before loading.</p>
+<h4 style="color: blue;margin: 10px;">Good:</h4>
+<div class="affichage">
+ &lt;img  style="margin: 10px;"
+    src=&quot;html5.gif&quot; alt=&quot;HTML5&quot; style=&quot;width:128px;height:128px&quot;&gt;</div>
+<h4 style="color: blue;">Bad:</h4>
+<div class="affichage">
+ &lt;img 
+    src=&quot;html5.gif&quot;&gt;</div>
+<hr>
+<h4 style="color: blue;margin: 10px;">Spaces and Equal Signs</h4>
+<p style="margin: 10px;">HTML allows spaces around equal signs. But space-less is easier to read and 
+groups entities better together.</p>
+<h4 style="color: blue; margin: 10px;">Good:</h4>
+<div class="affichage">
+ &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</div>
+<h4 style="color: blue;">Bad:</h4>
+<div class="affichage">
+ &lt;link 
+    rel = &quot;stylesheet&quot; href = &quot;styles.css&quot;&gt;</div>
+<hr>
+<h4 style="color: blue;margin: 10px;">Avoid Long Code Lines</h4>
+<p style="margin: 10px;">When using an HTML editor, it is NOT convenient to scroll right and left to read the HTML code.</p>
+<p style="margin: 10px;">Try to avoid too long code lines.</p>
+<h4 style="color: blue;margin: 10px;">Blank Lines and Indentation</h4>
+<p style="margin: 10px;">Do not add blank lines, spaces, or indentations without a reason.</p>
+<p style="margin: 10px;">For readability, add blank lines to separate large or logical code blocks.</p>
+<p style="margin: 10px;">For readability, add two spaces of indentation. Do not use the tab key.</p>
+<h4 style="color: blue;margin: 10px;">Good:</h4>
+<div class="affichage">
+ &lt;body&gt;<br><br>&lt;h1&gt;Famous Cities&lt;/h1&gt;<br><br>&lt;h2&gt;Tokyo&lt;/h2&gt;<br>
+    &lt;p&gt;Tokyo is the capital of Japan, the 
+    center of the Greater Tokyo Area, and the most 
+    populous metropolitan area in the world.&lt;/p&gt;<br><br>&lt;h2&gt;London&lt;/h2&gt;<br>
+    &lt;p&gt;London is the capital city of England. It is the most populous city 
+  in the United Kingdom.&lt;/p&gt;<br><br>&lt;h2&gt;Paris&lt;/h2&gt;<br>
+    &lt;p&gt;Paris is the capital of France. The Paris area is one of the 
+  largest population centers in Europe.&lt;/p&gt;<br><br>&lt;/body&gt;</div>
+<h4 style="color: blue;margin: 10px;">Bad:</h4>
+<div class="affichage">
+ &lt;body&gt;<br>&lt;h1&gt;Famous Cities&lt;/h1&gt;<br>&lt;h2&gt;Tokyo&lt;/h2&gt;&lt;p&gt;Tokyo is the capital of Japan, the 
+    center of the Greater Tokyo Area, and the most 
+    populous metropolitan area in the world.&lt;/p&gt;<br>&lt;h2&gt;London&lt;/h2&gt;&lt;p&gt;London 
+  is the capital city of England. It is the most populous city in the United 
+  Kingdom.&lt;/p&gt;<br>&lt;h2&gt;Paris&lt;/h2&gt;&lt;p&gt;Paris is the capital 
+  of France. The Paris area is one of the largest population centers in Europe.&lt;/p&gt;<br>&lt;/body&gt;</div>
+  <h4 style="color: blue;margin: 10px;">Good Table Example:</h4>
+<div class="affichage">
+ &lt;table&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;th&gt;Name&lt;/th&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;th&gt;Description&lt;/th&gt;<br>
+    &nbsp;
+    &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;A&lt;/td&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;td&gt;Description of A&lt;/td&gt;<br>
+    &nbsp;
+    &lt;/tr&gt;<br>&nbsp; &lt;tr&gt;<br>&nbsp;&nbsp;&nbsp; &lt;td&gt;B&lt;/td&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;td&gt;Description of B&lt;/td&gt;<br>&nbsp; &lt;/tr&gt;<br>&lt;/table&gt;</div>
+<h4 style="color: blue;margin: 10px;">Good List Example:</h4>
+<div class="affichage">
+ &lt;ul&gt;<br>&nbsp; &lt;li&gt;London&lt;/li&gt;<br>&nbsp; &lt;li&gt;Paris&lt;/li&gt;<br>
+    &nbsp; 
+    &lt;li&gt;Tokyo&lt;/li&gt;<br>&lt;/ul&gt;</div>
+<hr>
+<h4 style="color: blue;">Never Skip the &lt;title&gt; Element</h4>
+<p>The <code>&lt;title&gt;</code> element is required in HTML.</p>
+<p>The contents of a page title is very important for search engine optimization 
+(SEO)! The page title is used by search engine algorithms to decide the order 
+when listing pages in search results.</p>
+<p>The <code>&lt;title&gt;</code> element:</p>
+<ul>
+  <li>defines a title in the browser toolbar</li>
+  <li>provides a title for the page when it is added to favorites</li>
+  <li>displays a title for the page in search-engine results</li>
+</ul>
+<p >So, try to make the title as accurate and meaningful as possible:&nbsp;</p>
+<div class="affichage">
+ &lt;title&gt;HTML 
+    Style Guide and Coding Conventions&lt;/title&gt;</div>
+<hr>
+<h4 style="color: blue;">Omitting &lt;html&gt; and &lt;body&gt;?</h4>
+<p>An HTML page will validate without the <code>&lt;html&gt;</code> and 
+<code>&lt;body&gt;</code> tags:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+    &lt;!DOCTYPE html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Page Title&lt;/title&gt;<br>
+    &lt;/head&gt;<br>
+    <br>
+    &lt;h1&gt;This is a heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+    <p>However, we strongly recommend to always add the <code>&lt;html&gt;</code> and 
+        <code>&lt;body&gt;</code> tags!</p>
+        <p>Omitting <code>&lt;body&gt;</code> can produce errors in older browsers.</p>
+        <p>Omitting <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> 
+        can also crash DOM and XML software.</p>
+        <hr>
+        <h4 style="color: blue;">Omitting &lt;head&gt;?</h4>
+        <p>The HTML &lt;head&gt; tag can also 
+        be omitted.</p>
+        <p>Browsers will add all elements before <code >&lt;body&gt;</code>, to a default <code>&lt;head&gt;</code> 
+        element.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+            &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;title&gt;Page Title&lt;/title&gt;<br>
+            &lt;body&gt;<br><br>&lt;h1&gt;This is a heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+            <br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+            <p>However, we recommend using the <code>&lt;head&gt;</code> tag.</p>
+            <hr>
+            <h4 style="color: blue;">Close Empty HTML Elements?</h4>
+            <p>In HTML, it is optional to close empty elements.</p>
+            <h4 style="color: blue;">Allowed:</h4>
+            <div class="affichage">
+             &lt;meta 
+                charset=&quot;utf-8&quot;&gt;</div>
+            <h4 style="color: blue;">Also Allowed:</h4>
+            <div class="affichage">
+             &lt;meta charset=&quot;utf-8&quot; /&gt;</div>
+            <p>If you expect XML/XHTML software to access your page, keep the 
+            closing slash (/), because it is required in XML and XHTML.</p>
+            <hr>       
+            <h4 style="color: blue;">Add the lang Attribute</h4>
+            <p>You should always include the <code>lang</code> attribute 
+            inside the <code>&lt;html&gt;</code> tag, to declare the 
+            language of the Web page. This is meant to assist search engines and browsers.</p>
+              <h4 style="color: blue">Example</h4>
+            <div class="affichage">
+                &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en-us&quot;&gt;<br>&lt;head&gt;<br>&nbsp; &lt;title&gt;Page Title&lt;/title&gt;<br>
+                &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;This is a 
+                heading&lt;/h1&gt;<br>&lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+                <h4 style="color: blue;">Meta Data</h4>
+                <p>To ensure proper interpretation and correct search engine indexing, both the language and 
+                the character encoding <code>&lt;meta charset=&quot;<em>charset</em>&quot;&gt;</code> should be defined as early as possible in an HTML document:</p>
+                <div class="affichage">
+                 &lt;!DOCTYPE html&gt;<br>&lt;html 
+                    lang=&quot;en-us&quot;&gt;<br>&lt;head&gt;<br>&nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;<br>
+                  &nbsp;
+                 &lt;title&gt;Page Title&lt;/title&gt;<br>&lt;/head&gt;</div>
+                <hr>
+                <h4 style="color: blue">Setting The Viewport</h4>
+<p >The viewport is the user's visible area of a web page. It varies with the device 
+- it will be smaller on a mobile phone than on a computer screen.</p>
+<p>You should include the following <code>&lt;meta&gt;</code> element in all your web pages:</p>
+<div class="affichage">
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+</div>
+<p>This gives the browser instructions on how 
+to control the page's dimensions and scaling.</p>
+<p>The <code>width=device-width</code> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).</p>
+<p>The <code>initial-scale=1.0</code> part sets the initial zoom level when the page is first loaded by the browser.</p>
+<p>Here is an example of a web page <em>without</em> the viewport meta tag, and the same web page <em>with</em> the viewport meta tag:</p>
+<p><strong>Tip:</strong> If you are browsing this page with a phone or a tablet, you can click on the two links below to see the difference.</p>
+
+<h4 style="color: blue">HTML Comments</h4>
+<p>Short comments should be written on one line, like this:</p>
+<div class="affichage">
+&lt;!-- This is a comment --&gt;
+</div>
+<p>Comments that spans more than one line, should be written like this:</p>
+ <div class="affichage">
+&lt;!-- <br>&nbsp; This is a long comment example. This is 
+  a long comment example.<br>&nbsp; This is a 
+  long comment example. This is a long comment example.<br>--&gt;
+</div>
+<p>Long comments are easier to observe if they are indented with two spaces.</p>
+<hr>
+<h4 style="color: blue;">Using Style Sheets</h4>
+<p>Use simple syntax for linking to style sheets (the <code>
+type</code> attribute is not necessary):</p>
+<div class="affichage">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+</div>
+<p>Short CSS rules can be written compressed, like this:</p>
+<div class="affichage">
+p.intro {font-family:Verdana;font-size:16em;}</div>
+<p>Long CSS rules should be written over multiple lines:</p>
+<div class="affichage">
+body {<br>&nbsp; background-color: lightgrey;<br>&nbsp; font-family: &quot;Arial 
+Black&quot;, Helvetica, sans-serif;<br>&nbsp; font-size: 16em;<br>&nbsp; color: 
+black;<br>}</div>
+<ul>
+    <li>Place the opening bracket on the same line as the selector</li>
+    <li>Use one space before the opening bracket</li>
+    <li>Use two spaces of indentation</li>
+    <li>Use semicolon after each property-value pair, including the last</li>
+    <li>Only use quotes around values if the value contains spaces</li>
+    <li>Place the closing bracket on a new line, without leading spaces</li>
+   </ul>
+   <hr>
+   <h4 style="margin: 10px;color:blue">Loading JavaScript in HTML</h4>
+   <p>Use simple syntax for loading external scripts (the <code>
+   type</code> attribute is not necessary):</p>
+   <div class="affichage">
+   &lt;script src=&quot;myscript.js&quot;&gt;
+   </div>
+   <hr>
+   <h4 style="color: blue;">Accessing HTML Elements with JavaScript</h4>
+   <p style="margin: 10px;">Using &quot;untidy&quot; HTML code can result in JavaScript errors.</p>
+   <p style="margin: 10px;">These two JavaScript statements will produce different results:</p>
+   <h4 style="color: bllue;">Example</h4>
+   <div class="affichage">
+     getElementById(&quot;Demo&quot;).innerHTML = &quot;Hello&quot;;<br><br>getElementById(&quot;demo&quot;).innerHTML 
+     = &quot;Hello&quot;;
+   </div>
+   <h4 style="color:blue ;">Use Lower Case File Names</h4>
+   <p>Some web servers (Apache, Unix) are case sensitive about file names: &quot;london.jpg&quot; cannot be accessed as 
+   &quot;London.jpg&quot;. </p>
+   <p>Other web servers (Microsoft, IIS) are not case sensitive: &quot;london.jpg&quot; can be accessed as 
+   &quot;London.jpg&quot;.</p>
+   <p>If you use a mix of uppercase and lowercase, you have to be aware of this.</p>
+   <p>If you move from a case-insensitive to a case-sensitive server, even small 
+   errors will break your web!</p>
+   <p>To avoid these problems, always use lowercase file names!</p>
+   <hr>
+   <h4 style="color: blue;">File Extensions</h4>
+   <p>HTML files should have a <strong>.html</strong> extension (<strong>.htm</strong> is allowed).</p>
+   <p>CSS files should have a <strong>.css</strong> extension.</p>
+   <p>JavaScript files should have a <strong>.js</strong> extension.</p>
+   <hr>
+   <h4 style="color: blue;">Differences Between .htm and .html?</h4>
+   <p>There is no difference between the .htm and .html file extensions!</p>
+   <p >Both will be 
+   treated as HTML by any web browser and web server.</p>
+   <hr>
+   <h4 style="color: blue;">Default Filenames</h4>
+   <p>When a URL does not specify a filename at the end (like &quot;https://www.Google.com/&quot;), 
+   the server just adds a default filename, such as &quot;index.html&quot;, 
+   &quot;index.htm&quot;, &quot;default.html&quot;, or &quot;default.htm&quot;.</p>
+   <p>If your server is configured only with &quot;index.html&quot; as the default filename, your 
+   file must be named &quot;index.html&quot;, and not &quot;default.html&quot;.</p>
+   <p>However, servers can be configured with more than one default filename; 
+   usually you can set up as many default filenames as you want.</p>
+</div>
+</body>
+</html>

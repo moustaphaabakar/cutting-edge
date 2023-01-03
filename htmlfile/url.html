@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html url encode <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+       <h4 style="color: blue;">Html url encode</h4>
+       <p>A URL is another word for a web address.</p>
+       <p>A URL can be composed of words (e.g. w3schools.com), or an Internet Protocol (IP) address (e.g. 192.68.20.50).</p>
+       <p>Most people enter the name when surfing, because names are easier to remember than numbers.</p>
+       <hr>
+       <h4 style="color: blue;">URL - Uniform Resource Locator</h4>
+       <p>Web browsers request pages from web servers by using a URL.</p>
+       <p>A Uniform Resource Locator (URL) is used to address a document (or other data) on the web.</p>
+       <div class="affichage">
+       scheme://prefix.domain:port/path/filename
+       </div>
+       <p>Explanation:</p>
+       <ul>
+         <li><b>scheme</b> - defines the <b>type</b> of Internet service (most common is <b>http or https</b>)</li>
+         <li><strong>prefix</strong> - defines a domain <b>prefix</b> (default for http is <b>www</b>)</li>
+         <li><b>domain</b> - defines the Internet <b>domain name </b>(like w3schools.com)</li>
+         <li><b>port</b> - defines the <b>port number </b>at the host (default for http is <b>80</b>)</li>
+         <li><b>path</b> - defines a <b>path</b> at the server (If omitted: the root directory of the site)</li>
+         <li><b>filename</b> - defines the name of a document or resource</li>
+       </ul>
+       <hr>
+       <h4 style="color: blue;">Common URL Schemes</h4>
+       <p>The table below lists some common schemes:</p>
+       <table class="table table-striped">
+       <tr>
+       <th style="width:10%">Scheme</th>
+       <th style="width:35%">Short for</th>
+       <th>Used for</th>
+       </tr>
+       <tr>
+       <td>http</td>
+       <td>HyperText Transfer Protocol</td>
+       <td>Common web pages. Not encrypted</td>
+       </tr>
+       <tr>
+       <td>https</td>
+       <td>Secure HyperText Transfer Protocol</td>
+       <td>Secure web pages. Encrypted</td>
+       </tr>
+       <tr>
+       <td>ftp</td>
+       <td>File Transfer Protocol</td>
+       <td>Downloading or uploading files</td>
+       </tr>
+       <tr>
+       <td>file</td>
+       <td>&nbsp;</td>
+       <td>A file on your computer</td>
+       </tr>
+       </table>
+       <hr>
+       <h4 style="color: blue;">URL Encoding</h4>
+<p>URLs can only be sent over the Internet using the
+<p>URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.</p>
+<p>URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.</p>
+<p>URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.</p>
+<hr>
+<p>If you click "Submit", the browser will URL encode the input before it is sent to the server.</p>
+<p>A page at the server will display the received input.</p>
+<p>Try some other input and click Submit again.</p>
+<hr>
+<h2>ASCII Encoding Examples</h2>
+<p>Your browser will encode input, according to the character-set used in your page.</p>
+<p>The default character-set in HTML5 is UTF-8.</p>
+<table class="table table-striped">
+    <tr>
+      <th style="width:20%">Character</th>
+      <th style="width:40%">From Windows-1252</th>
+      <th style="width:40%">From UTF-8</th>
+      </tr>
+    <tr>
+      <td>€</td>
+      <td>%80</td>
+      <td>%E2%82%AC</td>
+    </tr>
+    <tr>
+      <td>£</td>
+      <td>%A3</td>
+      <td>%C2%A3</td>
+    </tr>
+    <tr>
+      <td>©</td>
+      <td>%A9</td>
+      <td>%C2%A9</td>
+    </tr>
+    <tr>
+      <td>®</td>
+      <td>%AE</td>
+      <td>%C2%AE</td>
+    </tr>
+    <tr>
+      <td>À</td>
+      <td>%C0</td>
+      <td>%C3%80</td>
+    </tr>
+    <tr>
+      <td>Á</td>
+      <td>%C1</td>
+      <td>%C3%81</td>
+    </tr>
+    <tr>
+      <td>Â</td>
+      <td>%C2</td>
+      <td>%C3%82</td>
+    </tr>
+    <tr>
+      <td>Ã</td>
+      <td>%C3</td>
+      <td>%C3%83</td>
+    </tr>
+    <tr>
+      <td>Ä</td>
+      <td>%C4</td>
+      <td>%C3%84</td>
+    </tr>
+    <tr>
+      <td>Å</td>
+      <td>%C5</td>
+      <td>%C3%85</td>
+    </tr>
+    </table>
+      </div>
+</body>
+</html>

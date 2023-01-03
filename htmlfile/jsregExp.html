@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS regular expression</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px;" class="mediaquery">
+    <h4 style="color: blue;">JavaScript Regular Expressions</h4>
+    <hr>
+    <p>A regular expression is a sequence of characters that forms a 
+    search pattern.</p>
+    <p>The search pattern can be used for text search and text replace 
+    operations. </p>
+    <hr>
+    <h4 style="color: blue;">What Is a Regular Expression?</h4>
+    <p>A regular expression is a sequence of characters that forms a <strong>search 
+    pattern</strong>.</p>
+    <p>When you search for data in a text, you can use this search pattern to describe what you are searching for.</p>
+    <p>A regular expression can be a single character, or a more complicated pattern.</p>
+    <p>Regular expressions can be used to perform all types of <strong>text search</strong> 
+    and <strong>text replace</strong> operations.</p>
+    <h4 style="color: blue;">Syntax</h4>
+     /<em>pattern</em>/<em>modifiers</em>;
+    <h4 style="color: blue;">Example</h4>
+    <p>/w3schools/i;</p>
+
+    <p>Example explained:</p>
+    <p><strong>/w3schools/i</strong>&nbsp; is a regular expression.</p>
+    <p><strong>w3schools</strong>&nbsp; is a pattern (to be used in a search).</p>
+    <p><strong>i</strong>&nbsp; is a modifier (modifies the search to be case-insensitive).</p>
+    <hr>    
+    <h4 style="color: blue;">Using String Methods</h4>
+    <p>In JavaScript, regular expressions are often used with the two <strong>string 
+    methods</strong>: <code >search()</code> and <code>replace()</code>.</p>
+    <p>The <code>search()</code> method uses an expression to search for a 
+    match, and returns the position of the match.</p>
+    <p>The <code>replace()</code> method returns a modified string where the 
+    pattern is replaced.</p>
+    <hr>
+    <h4 style="color: blue;">Using String search() With a String</h4>
+    <p>The <code>search()</code> method searches a string for a specified value and returns the position of the match:</p>
+    <h4 style="color: blue;">Example</h4>
+    <p>Use a string to do a search for &quot;W3schools&quot; in a string:</p>
+    <div class="affichage">
+    let text = &quot;Visit digibit!&quot;;<br>
+    let n = text.search(&quot;digibit&quot;);
+    </div>
+    <p>
+    <hr>
+    <h4 style="color: blue;">Using String search() With a Regular Expression</h4>
+<h4 style="color: blue;">Example</h4>
+<p>Use a regular expression to do a case-insensitive search for &quot;w3schools&quot; in a string:</p>
+<div class="affichage">
+let text = &quot;Visit digibit&quot;;<br>
+let n = text.search(/w3schools/i);
+</div>
+<hr>
+<h4 style="color: blue;">Using String replace() With a String</h4>
+<p>The <code>replace()</code> method replaces a specified value with another value in a string:</p>
+<div class="affichage">
+let text = &quot;Visit Microsoft!&quot;;<br>
+let result = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">Use String replace() With a Regular Expression</h4>
+<h4 style="color:blue">Example</h4>
+<p>Use a case insensitive regular expression to replace Microsoft with W3Schools 
+in a string:</p>
+<div class="affichage">
+let text = &quot;Visit Microsoft!&quot;;<br>
+let result = text.replace(/microsoft/i, &quot;digibit&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">Did You Notice?</h4>
+<p>Regular expression arguments (instead of string arguments) can be used in the methods above.<br>
+Regular expressions can make your search much more powerful (case insensitive for example).</p>
+<hr>
+<h4 style="color: blue;">Regular Expression Modifiers</h4>
+<p><strong>Modifiers</strong> can be used to perform case-insensitive more global searches:</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:22%">Modifier</th>
+    <th>Description</th>
+    <th>Try it</th>                
+  </tr>
+  <tr>
+    <td>i</td>
+    <td>Perform case-insensitive matching</td>
+  </tr>
+  <tr>
+    <td>g</td>
+    <td>Perform a global match (find all matches rather than stopping after the first match)</td>
+  </tr>
+  <tr>
+    <td>m</td>
+    <td>Perform multiline matching</td>
+  </tr>
+</table>
+<h4 style="color: blue;">Regular Expression Patterns</h4>
+<p><strong>Brackets</strong> are used to find a range of characters:</p>
+<table class="table">
+  <tr>
+    <th style="width:22%">Expression</th>
+    <th>Description</th>
+    <th style="width:5%">Try it</th>                
+  </tr>
+  <tr>
+    <td>[abc]</td>
+    <td>Find any of the characters between the brackets</td>
+  <tr>
+    <td>[0-9]</td>
+    <td>Find any of the digits between the brackets</td>
+    <tr>
+    <td>(x|y)</td>
+    <td>Find any of the alternatives separated with |</td>
+  </tr>
+</table>
+
+<p><strong>Metacharacters</strong> are characters with a special meaning:</p>
+<table class="affichage">
+<tr>
+    <th style="width:22%">Metacharacter</th>
+    <th>Description</th>
+    <th>Try it</th>                
+</tr>
+<tr>
+    <td>\d</td>
+    <td>Find a digit</td>
+</tr>
+<tr>
+    <td>\s</td>
+    <td>Find a whitespace character</td>
+</tr>
+<tr>
+    <td>\b</td>
+    <td>Find a match at the beginning of a word like this: \bWORD, or at the end of a word 
+    like this: WORD\b</td>
+</tr>
+<tr>
+    <td>\uxxxx</td>
+    <td>Find the Unicode character specified by the hexadecimal number xxxx</td>
+</tr>
+</table>
+<p><strong>Quantifiers</strong> define quantities:</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:22%">Quantifier</th>
+    <th>Description</th>
+    <th style="width:5%">Try it</th>                
+  </tr>
+  <tr>
+    <td>n+</td>
+    <td>Matches any string that contains at least one <em>n</em></td>
+  </tr>
+  <tr>
+    <td>n*</td>
+    <td>Matches any string that contains zero or more occurrences of <em>n</em></td>
+  </tr>
+  <tr>
+    <td>n?</td>
+    <td>Matches any string that contains zero or one occurrences of <em>n</em></td>
+</table>
+<h4 style="color: blue;">Using the RegExp Object</h4>
+<p>In JavaScript, the RegExp object is a regular expression object with 
+predefined properties and methods.</p>
+<hr>
+<h4 style="color: blue;">Using test()</h4>
+<p>The <code>test()</code> method is a RegExp expression method.</p>
+<p>It searches a string for a pattern, and returns true 
+or false, depending on the result.</p>
+<p>The following example searches a string for the character &quot;e&quot;:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const pattern = /e/;<br>
+pattern.test(&quot;The best things in life are free!&quot;);
+</div>
+<p>Since there is an &quot;e&quot; in the string, the output of the code above will be:</p>
+<div class="affichage">
+<code>true</code>
+</div>
+<p>You don't have to put the regular expression in a variable first. The two 
+lines above can be shortened to one:</p>
+<div class="affichage">
+/e/.test(&quot;The best things in life are free!&quot;);</div>
+<hr>
+<h4 style="color: blue;">Using exec()</h4>
+<p>The <code>exec()</code> method is a RegExp expression method.</p>
+<p>It searches a string for a specified pattern, and returns the found text as 
+an object. </p>
+<p>If no match is found, it returns an empty <i>(null)</i> object.</p>
+<p>The following example searches a string for the character &quot;e&quot;:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ /e/.exec(&quot;The best things in life are free!&quot;);
+</div>
+<p>The reference contains descriptions and examples of all RegExp 
+properties and methods.</p>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS date get methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Get Date Methods</h4>
+        <hr>
+        <h4 style="color: blue;">The new Date() Constructor</h4>
+        <p>In JavaScript, date objects are created with <code>new Date()</code>.</p>
+        <p><code>new Date()</code> returns a date object with the current date and time.</p>
+        <h4 style="color: blue;">Get the Current Time</h4>        
+        <hr>
+        <h4 style="color: blue;">Date Get Methods</h4>
+        <table class="table table-striped">
+        <tr>
+        <th>Method</th>
+        <th>Description</th>
+        </tr>
+        <tr>
+        <td>getFullYear()</td>
+        <td>Get <strong>year</strong> as a four digit number (yyyy)</td>
+        </tr>
+        <tr>
+        <td>getMonth()</td>
+        <td>Get <strong>month</strong> as a number (0-11)</td>
+        </tr>
+        <tr>
+        <td>getDate()</td>
+        <td>Get <strong>day</strong> as a number (1-31)</td>
+        </tr>
+        <tr>
+        <td>getDay()</td>
+        <td>Get <b>weekday</b> as a number (0-6)</td>
+        </tr>
+        <tr>
+        <td>getHours()</td>
+        <td>Get <strong>hour</strong> (0-23)</td>
+        </tr>
+        <tr>
+        <td>getMinutes()</td>
+        <td>Get <strong>minute</strong> (0-59)</td>
+        </tr>
+        <tr>
+        <td>getSeconds()</td>
+        <td>Get <strong>second</strong> (0-59)</td>
+        </tr>
+        <tr>
+        <td>getMilliseconds()</td>
+        <td>Get <strong>millisecond</strong> (0-999)</td>
+        </tr>
+        <tr>
+        <td>getTime()</td>
+        <td>Get <b>time</b> (milliseconds since January 1, 1970)</td>
+        </tr>
+    </table>
+        <h4 style="color: blue;">Note 1</h4>
+        <p>The the get methods above return <b>Local time</b>.</p>
+        <p><b>Universal time</b> (UTC) is documented at the bottom of this page.</p>
+        <h4 style="color:blue ;">Note 2</h4>
+        <p>The get methods return information from existing date objects.</p>
+        <p>In a date object, the time is static. The "clock" is not "running".</p>
+        <p>The time in a date object is NOT the same as current time.</p>
+        <hr>
+        <h4 style="color: blue;">The getFullYear() Method</h4>
+        <p>The <code>getFullYear()</code> method returns the year of a date as a four digit number:</p>
+        <h4 style="color: blue;">Examples</h4>
+        <div class="affichage">
+        const d = new Date("2021-03-25");<br>
+        d.getFullYear();
+        </div>
+        <div class="affichage">
+        const d = new Date();<br>
+        d.getFullYear();
+        </div>
+        <hr>
+        <h4 style="color: blue;">The getMonth() Method</h4>
+        <p>The <code>getMonth()</code> method returns the month of a date as a number (0-11).</p>
+        <h4 style="color: blue;">Note</h4>
+        <p>In JavaScript, January is month number 0, February is number 1, ...</p>
+        <p>Finally, December is month number 11.</p>
+        <h4 style="color: blue;">Examples</h4>
+        <div class="affichage">
+        const d = new Date("2021-03-25");<br>
+        d.getMonth();
+        </div>
+        <div class="affichage">
+        const d = new Date();<br>
+        d.getMonth();
+        </div>
+        <h4 style="color: blue;">Note</h4>
+        <p>You can use an array of names to return the month as a name:</p>
+        <h4 style="color: blue;">Examples</h4>
+        <div class="affichage">
+        const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;,
+        &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;,
+        &quot;November&quot;, &quot;December&quot;];<br>
+        <br>
+        const d = new Date("2021-03-25");<br>
+        let month = months[d.getMonth()];
+        </div>
+        <div class="affichage">
+        const months = [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;,
+        &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;,
+        &quot;November&quot;, &quot;December&quot;];<br>
+        <br>
+        const d = new Date();<br>
+        let month = months[d.getMonth()];
+        </div>
+        <hr>
+        <h4 style="color: blue;">The getDate() Method</h4>
+        <p>The <code>getDate()</code> method returns the day of a date as a number (1-31):</p>
+        <h4 style="color: blue;">Examples</h4>
+        <div class="affichage">
+        const d = new Date("2021-03-25");<br>
+        d.getDate();
+        </div>
+        <div class="affichage">
+        const d = new Date();<br>
+        d.getDate();
+        </div>
+        <hr>
+        <h4 style="color: blue;">The getHours() Method</h4>
+        <p>The <code>getHours()</code> method returns the hours of a date as a number (0-23):</p>
+        <h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+const d = new Date("2021-03-25");<br>
+d.getHours();
+</div>
+<div class="affichage">
+const d = new Date();<br>
+d.getHours();
+</div>
+<hr>
+<h4 style="color: blue;">The getMinutes() Method</h4>
+<p>The <code>getMinutes()</code> method returns the minutes of a date as a number (0-59):</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+const d = new Date("2021-03-25");<br>
+d.getMinutes();
+</div>
+<div class="affichage">
+const d = new Date();<br>
+d.getMinutes();
+</div>
+<hr>
+<h4 style="color: blue;">The getSeconds() Method</h4>
+<p>The <code >getSeconds()</code> method returns the seconds of a date as a number (0-59):</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+const d = new Date("2021-03-25");<br>
+d.getSeconds();
+</div>
+<div class="affichage">
+const d = new Date();<br>
+d.getSeconds();
+</div>
+<hr>
+<h4 style="color: blue;">The getMilliseconds() Method</h4>
+<p>The <code>getMilliseconds()</code> method returns the milliseconds of a date as a number (0-999):</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+const d = new Date("2021-03-25");<br>
+d.getMilliseconds();
+</div>
+<div class="affichage">
+const d = new Date();<br>
+d.getMilliseconds();
+</div>
+<hr>
+<h4 style="color: blue;">The getDay() Method</h4>
+<p>The <code>getDay()</code> method returns the weekday of a date as a number (0-6).</p>
+<h4 style="color: blue;">Note</h4>
+<p>In JavaScript, the first day of the week (day 0) is Sunday.</p>
+<p>Some countries in the world consider the first day of the week to be Monday.</p>
+    <h4 style="color: blue;">Examples</h4>
+    <div class="affichage">
+    const d = new Date("2021-03-25");<br>
+    d.getDay();
+    </div>
+    <div class="affichage">
+    const d = new Date();<br>
+    d.getDay();
+    </div>
+    <h4 style="color: blue;">Note</h4>
+    <p>You can use an array of names, and <code>getDay()</code> to return weekday as a name:</p>
+    <h4 style="color: blue;">Examples</h4>
+    <div class="affichage">
+    const days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;,
+    &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];<br>
+    <br>
+    const d = new Date("2021-03-25");<br>
+    let day = days[d.getDay()];
+    </div>
+    <div class="affichage">
+    const days = [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;,
+    &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;];<br>
+    <br>
+    const d = new Date();<br>
+    let day = days[d.getDay()];
+    </div>
+    <hr>
+    <h4 style="color: blue;">The getTime() Method</h4>
+    <p>The <code>getTime()</code> method returns the number of milliseconds since January 1, 1970:</p>
+    <h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+const d = new Date("1970-01-01");<br>
+d.getTime();
+</div>
+<div class="affichage">
+const d = new Date("2021-03-25");<br>
+d.getTime();
+</div>
+<div class="affichage">
+const d = new Date();<br>
+d.getTime();
+</div>
+<hr>
+<h4 style="color: blue;">The Date.now() Method</h4>
+<p><code>Date.now()</code> returns the number of milliseconds since January 1, 1970.</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+let ms = Date.now();
+</div>
+<p>Calculate the number of years since 1970/01/01:</p>
+<div class="affichage">
+const minute = 1000 * 60;<br>
+const hour = minute * 60;<br>
+const day = hour * 24;<br>
+const year = day * 365;<br>
+<br>
+let years = Math.round(Date.now() / year);</div>
+<p><code>Date.now()<code> is a static method of the Date object.</p>
+<p>You cannot use it on a date object like <code>myDate.now()</code>.</p>
+<p>The syntax is always <code>Date.now()</code>.</p>
+<hr>
+<h4 style="color: blue;">UTC Date Get Methods</h4>
+<table class="table table-striped">
+    <tr>
+    <th>Method</th>
+    <th>Same As</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>getUTCDate()</td>
+    <td>getDate()</td><td>Returns the UTC date</td>
+    </tr>
+    <tr>
+    <td>getUTCFullYear()</td>
+    <td>getFullYear()</td><td>Returns the UTC year</td>
+    </tr>
+    <tr>
+    <td>getUTCMonth()</td>
+    <td>getMonth()</td><td>Returns the UTC month</td>
+    </tr>
+    <tr>
+    <td>getUTCDay()</td>
+    <td>getDay()</td><td>Returns the UTC day</td>
+    </tr>
+    <tr>
+    <td>getUTCHours()</td>
+    <td>getHours()</td><td>Returns the UTC hour</td>
+    </tr>
+    <tr>
+    <td>getUTCMinutes()</td>
+    <td>getMinutes()</td><td>Returns the UTC minutes</td>
+    </tr>
+    <tr>
+    <td>getUTCSeconds()</td>
+    <td>getSeconds()</td><td>Returns the UTC seconds</td>
+    </tr>
+    <tr>
+    <td>getUTCMilliseconds()</td>
+    <td>getMilliseconds()</td><td>Returns the UTC milliseconds</td>
+    </tr>
+    </table>
+    <p>UTC methods use UTC time (Coordinated Universal Time).</p>
+    <p>UTC time is the same as GMT (Greenwich Mean Time).</p>
+    <p>The difference between Local time and UTC time can be up to 24 hours.</p>
+    <canvas id="canvas" width="200" height="200" style="background-color:#333"></canvas><br><br>
+    <button class="w3-btn" style="width:200px" onclick="timeShow(0)">Local Time?</button><br><br>
+    <button class="w3-btn" style="width:200px" onclick="timeShow(1)">UTC Time?</button>
+    </div>
+</body>
+</html>

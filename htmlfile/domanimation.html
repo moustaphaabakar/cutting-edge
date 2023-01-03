@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM animation</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript HTML DOM Animation</h4>
+        <hr>
+        <p>Learn to create HTML animations using JavaScript.</p>
+        <hr>
+        <h4 style="color: blue;">A Basic Web Page</h4>
+        <p>To demonstrate how to create HTML animations with JavaScript, we will use a simple 
+        web page:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My First 
+         JavaScript Animation&lt;/h1&gt;<br><br>
+        &lt;div id=&quot;animation&quot;&gt;My animation will go here&lt;/div&gt;<br><br>
+        &lt;/body&gt;<br>&lt;/html&gt;<br></div>
+        <hr>
+        <h4 style="color: blue;">Create an Animation Container</h4>
+        <p>All animations should be relative to a container element.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        &lt;div id =&quot;container&quot;&gt;<br>&nbsp;&nbsp;&lt;div id =&quot;animate&quot;&gt;My 
+         animation will go here&lt;/div&gt;<br>&lt;/div&gt;</div>
+        <hr>
+        <h4 style="color: blue;">Style the Elements</h4>
+        <p>The container element should be created with style = &quot;<code >position: relative</code>&quot;.</p>
+        <p>The animation element should be created with style = &quot;<code>position: absolute</code>&quot;.</p>
+         <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+         #container {<br>&nbsp;&nbsp;width: 400px;<br>&nbsp;&nbsp;height: 
+         400px;<br>&nbsp; position: relative;<br>&nbsp; 
+         background: yellow;<br>
+         }<br>#animate {<br>&nbsp; width: 50px;<br>&nbsp; height: 
+         50px;<br>&nbsp; position: absolute;<br>&nbsp; 
+         background: red;<br>}
+        </div>
+        <hr>
+<h4 style="color:blue ;">Animation Code</h4>
+<p>JavaScript animations are done by programming gradual changes in an element's 
+style.</p>
+<p>The changes are called by a timer. When the timer interval is small, the 
+animation looks continuous.</p>
+<p>The basic code is:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+id = setInterval(frame, 5);<br><br>function frame() {<br>&nbsp; if (/* 
+ test for finished */) {<br>&nbsp;&nbsp;&nbsp;&nbsp;clearInterval(id);<br>&nbsp;&nbsp;} else {<br>
+  &nbsp;&nbsp;&nbsp; 
+ /* code to change the element style */&nbsp; <br>&nbsp;&nbsp;}<br>}
+</div>
+<hr>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function myMove() {<br>
+&nbsp; let id = null;<br>
+&nbsp; const elem = document.getElementById(&quot;animate&quot;);<br>
+&nbsp; let pos = 0;<br>&nbsp; 
+  clearInterval(id);<br>&nbsp; id = setInterval(frame, 5);<br>&nbsp; 
+ function frame() {<br>&nbsp;&nbsp;&nbsp; if (pos == 
+ 350) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ clearInterval(id);<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ pos++; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem.style.top = pos + 'px'; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elem.style.left = pos + 'px'; <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>}</div>
+</div>
+</body>
+</html>

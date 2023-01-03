@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css borders<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">borders</h4>
+        <p>The CSS border properties allow you to specify the style,width, and color of an element's border.</p>       
+     <div style="border: solid 5px black;margin: 10px;;">
+        <p>I have borders on all sides.</p>
+        </div>
+        <br>
+        <div  style="border-bottom:solid red 5px ;margin: 10px;">
+        <p>I have a red bottom border.</p>
+        </div>
+        <br>
+        <div style="border:solid black 1px;border-radius:  50px ;margin: 10px;">
+        <p>I have rounded borders.</p>
+        </div>
+        <br>
+        <div style="border: solid black 5px;border-left: solid yellow 5px ;margin: 10px;">
+        <p>I have a blue left border.</p>
+        </div>
+        <hr>
+
+        <h4 style="color: blue;">CSS Border Style</h4>
+        <p>The <code>border-style</code> property specifies what kind of border to display.</p>
+        <p>The following values are allowed:</p>
+        <ul>
+        <li><code >dotted</code> - Defines a dotted border</li>
+        <li><code >dashed</code> - Defines a dashed border</li>
+        <li><code>solid</code> - Defines a solid border</li>
+        <li><code >double</code> - Defines a double border</li>
+        <li><code>groove</code> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+        <li><code >ridge</code> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+        <li><code>inset</code> - Defines a 3D inset border. The effect depends on the border-color value</li>
+        <li><code >outset</code> - Defines a 3D outset border. The effect depends on the border-color value</li>
+        <li><code >none</code> - Defines no border</li>
+        <li><code>hidden</code> - Defines a hidden border</li>
+        </ul>
+        <p>The <code>border-style</code> property can have from one to four values (for the top border, right border, bottom border, and the left border).</p>
+
+        <h4 style="color: blue;">Example</h4>
+  <p>Demonstration of the different border styles:</p>
+<div class="w3-code notranslate cssHigh">
+p.dotted {border-style: dotted;}<br>p.dashed 
+{border-style: dashed;}<br>p.solid {border-style: solid;}<br>p.double 
+{border-style: double;}<br>p.groove {border-style: groove;}<br>p.ridge 
+{border-style: ridge;}<br>p.inset {border-style: inset;}<br>p.outset 
+{border-style: outset;}<br>p.none {border-style: none;}<br>p.hidden {border-style: hidden;}<br>
+p.mix {border-style: dotted dashed solid double;}</div>
+<p>Result:</p>
+<div class="w3-white w3-padding notranslate">
+<p style="border-style: dotted;padding:2px 4px;">A dotted border.</p>
+<p style="border-style: dashed;padding:2px 4px;">A dashed border.</p>
+<p style="border-style: solid;padding:2px 4px;">A solid border.</p>
+<p style="border-style: double;padding:2px 4px;">A double border.</p>
+<p style="border-style: groove;padding:2px 4px;">A groove border. The effect depends on the border-color value.</p>
+<p style="border-style: ridge;padding:2px 4px;">A ridge border. The effect depends on the border-color value.</p>
+<p style="border-style: inset;padding:2px 4px;">An inset border. The effect depends on the border-color value.</p>
+<p style="border-style: outset;padding:2px 4px;">An outset border. The effect depends on the border-color value.</p>
+<p style="border-style: none;padding:2px 4px;">No border.</p>
+<p style="border-style: hidden;padding:2px 4px;">A hidden border.</p>
+<p style="border-style: dotted dashed solid double;padding:2px 4px;">A mixed border.</p>
+</div>
+      </div>
+</body>
+</html>

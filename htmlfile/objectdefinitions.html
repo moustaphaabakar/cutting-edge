@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object definitions</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Objects</h4>
+<hr>
+<p>In JavaScript, objects are king. If you understand objects, you understand JavaScript.</p>
+<hr>
+<p>In JavaScript, almost &quot;everything&quot; is an object.</p>
+<ul>
+  <li>Booleans can be objects (if defined with the <code>new</code> keyword)</li>
+  <li>Numbers can be objects (if defined with the <code>new</code> keyword)</li>
+  <li>Strings can be objects (if defined with the <code>new</code> keyword)</li>
+  <li>Dates are always objects</li>
+  <li>Maths are always objects</li>
+    <li>Regular expressions are always objects</li>
+  <li>Arrays are always objects</li>
+  <li>Functions are always objects</li>
+    <li>Objects are always objects</li>
+</ul>
+<p>All JavaScript values, except primitives, are objects.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Primitives</h4>
+<p>A <b>primitive value</b> is a value that has no properties or methods.</p>
+<p><b>3.14</b> is a primitive value</p>
+<p>A <b>primitive data type</b> is data that has a primitive value.</p>
+<p>JavaScript defines 7 types of primitive data types:</p>
+<h4 style="color: blue;">Examples</h4>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>boolean</code></li>
+<li><code>null</code></li>
+<li><code>undefined</code></li>
+<li><code>symbol</code></li>
+<li><code>bigint</code></li>
+</ul>
+<h4 style="color: blue;">Immutable</h4>
+<p>Primitive values are immutable (they are hardcoded and cannot be changed).</p>
+<p>if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.</p>
+<table class="table table-striped">
+<tr><th>Value</th><th>Type</th><th>Comment</th></tr>
+<tr><td>"Hello&quot;</td><td>string</td><td>&quot;Hello&quot; is always &quot;Hello&quot;</td></tr>
+<tr><td>3.14</td><td>number</td><td>3.14 is always 3.14</td></tr>
+<tr><td>true</td><td>boolean</td><td>true is always true</td></tr>
+<tr><td>false</td><td>boolean</td><td>false is always false</td></tr>
+<tr><td>null</td><td>null (object)</td><td>null is always null</td></tr>
+<tr><td>undefined</td><td>undefined</td><td>undefined is always undefined</td></tr>
+</table>
+<h4 style="color: blue;">Objects are Variables</h4>
+<p>JavaScript variables can contain single values:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="asp?filename">
+let person = &quot;John Doe&quot;;
+</div>
+<p>JavaScript variables can also contain many values.</p>
+<p>Objects are variables too. But objects can contain many 
+values. </p>
+<p>Object values are written as <b>name : value</b> pairs (name and value separated by a 
+colon).</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};
+</div>
+<p>A JavaScript object is a collection of <strong>named values</strong></p>
+<p>It is a common practice to declare objects with the <code>const</code> keyword.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};
+</div>
+<hr>
+<h4 style="color: blue;">Object Properties</h4>
+<p>The named values, in JavaScript objects, are called <strong>properties</strong>.</p>
+<table class="table table-striped">
+ <tr>
+  <th style="width:20%">Property</th>
+  <th>Value</th>
+ </tr>
+ <tr>
+  <td>firstName</td>
+  <td>John</td>
+ </tr>
+ <tr>
+  <td>lastName</td>
+  <td>Doe</td>
+ </tr>
+ <tr>
+  <td>age</td>
+  <td>50</td>
+ </tr>
+ <tr>
+  <td>eyeColor</td>
+  <td>blue</td>
+ </tr>
+</table>
+<p>Objects written as name value pairs are similar to:</p>
+<ul>
+ <li>Associative arrays in PHP</li>
+ <li>Dictionaries in Python</li>
+ <li>Hash tables in C</li>
+ <li>Hash maps in Java</li>
+ <li>Hashes in Ruby and Perl</li>
+</ul>
+<hr>
+<h4 style="color: blue;">Object Methods</h4>
+<p>Methods are <strong>actions</strong> that can be performed on objects.</p>
+<p>Object properties can be both primitive values, other objects, and functions.</p>
+<p>An <strong>object method</strong> is an object property containing a <strong>function 
+definition</strong>.</p>
+<table class="table table-striped">
+ <tr>
+  <th style="width:20%">Property</th>
+  <th>Value</th>
+ </tr>
+ <tr>
+  <td>firstName</td>
+  <td>John</td>
+ </tr>
+ <tr>
+  <td>lastName</td>
+  <td>Doe</td>
+ </tr>
+ <tr>
+  <td>age</td>
+  <td>50</td>
+ </tr>
+ <tr>
+  <td>eyeColor</td>
+  <td>blue</td>
+ </tr>
+ <tr>
+  <td>fullName</td>
+  <td>function() {return this.firstName + &quot; &quot; + this.lastName;}</td>
+ </tr>
+</table>
+<p>JavaScript objects are containers for named values, called properties and methods.</p>
+<p>You will learn more about methods in the next chapters.</p>
+<hr>
+<h4 style="color: blue;">Creating a JavaScript Object</h4>
+<p>With JavaScript, you can define and create your own objects.</p>
+<p>There are different ways to create new objects:</p>
+<ul>
+  <li>Create a single object, using an object literal.</li>
+  <li>Create a single object, with the keyword <code>new</code>.</li>
+  <li>Define an object constructor, and then create objects of the constructed type.</li>
+  <li>Create an object using <code>Object.create()</code>.</li>
+</ul>
+<hr>
+<h4 style="color: blue;">Using an Object Literal</h4>
+<p>This is the easiest way to create a JavaScript Object.</p>
+<p>Using an object literal, you both define and create an object in one 
+statement.</p>
+<p>An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</p>
+<p>The following example creates a new JavaScript object with four properties:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};
+</div>
+<p>Spaces and line breaks are not important. An object definition can span multiple lines:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>&nbsp;&nbsp;firstName: &quot;John&quot;,<br>&nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>&nbsp;&nbsp;age: 50,<br>&nbsp;&nbsp;eyeColor: &quot;blue&quot;<br>};
+</div>
+<p>This example creates an empty JavaScript object, 
+and then adds 4 properties:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {};<br>
+person.firstName = &quot;John&quot;;<br>
+person.lastName = &quot;Doe&quot;;<br>
+person.age = 50;<br>
+person.eyeColor = &quot;blue&quot;;
+</div>
+<hr>
+<h4 style="color: blue;">Using the JavaScript Keyword new</h4>
+<p>The following example create a new JavaScript object
+using <code>new Object()</code>, 
+and then adds 4 properties:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = new Object();<br>
+person.firstName = &quot;John&quot;;<br>
+person.lastName = &quot;Doe&quot;;<br>
+person.age = 50;<br>
+person.eyeColor = &quot;blue&quot;;
+</div>
+<p>The examples above do exactly the same.</p>
+<p>But there is no need to use <code >new Object()</code>.</p>
+<p>For readability, simplicity and execution speed, use the object literal method.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Objects are Mutable</h4>
+<p>Objects are mutable: They are addressed by reference, not by value.</p>
+<p>If person is an object, the following statement will not create a copy of person:</p>
+<div class="affichage">
+const x = person;&nbsp; // Will not create a copy of person.
+</div>
+<p>The object x is <strong>not a copy</strong> of person. It <strong>is</strong> 
+person. 
+Both x and person are the same object.</p>
+<p>Any changes to x will also change person, because x and person are the same object. </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; firstName:&quot;John&quot;,<br>
+&nbsp; lastName:&quot;Doe&quot;,<br>
+&nbsp; age:50, eyeColor:&quot;blue&quot;<br>
+}<br>
+ <br>const x = person;<br>
+x.age = 10;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Will change both x.age and person.age
+</div>
+</div>
+</body>
+</html>

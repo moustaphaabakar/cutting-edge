@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html block and inline</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;" >
+        <h4 style="color: blue;">block and inline</h4>
+        <p>Every HTML element has a default display value, depending on what type  of element it is.</p>
+        <p class="intro">There are two display values: block and inline.</p>
+        <hr>
+        <h4 style="color: blue;">Block-level Elements</h4>
+<p>A block-level element always starts on a new line, and the browsers 
+automatically add some space (a margin) before and after the element.</p>
+<p>A block-level element always takes up the full width available 
+(stretches out to the left and right as far as it can).</p>
+<p>Two commonly used block elements are: <code>&lt;p&gt;</code> and <code>&lt;div&gt;</code>.</p>
+<p>The <code>&lt;p&gt;</code> element defines a paragraph in an HTML document.</p>
+<p>The <code>&lt;div&gt;</code> element defines a division  or a section in an HTML document.</p>
+<p>The &lt;p&gt; element is a block-level element.</p>
+<p>Here are the block-level elements in HTML:</p>
+<div class="affichage">
+  <p>&lt;address&gt;</p>
+  <p>&lt;article&gt;</p>
+  <p>&lt;aside&gt;</p>
+  <p>&lt;blockquote&gt;</p>
+  <p>&lt;canvas&gt;</p>
+  <p>&lt;dd&gt;</p>
+  <p>&lt;div&gt;</p>
+  <p>&lt;dl&gt;</p>
+  <p>&lt;dt&gt;</p>
+  <p>&lt;fieldset&gt;</p>
+  <p>&lt;figcaption&gt;</p>
+  <p>&lt;figure&gt;</p>
+  <p>&lt;footer&gt;</p>
+  <p>&lt;form&gt;</p>
+  <p>&lt;h1&gt;-&lt;h6&gt;</p>
+  <p>&lt;header&gt;</p>
+  <p>&lt;hr&gt;</p>
+  <p>&lt;li&gt;</p>
+  <p>&lt;main&gt;</p>
+  <p>&lt;nav&gt;</p>
+  <p>&lt;noscript&gt;</p>
+  <p>&lt;ol&gt;</p>
+  <p>&lt;p&gt;</p>
+  <p>&lt;pre&gt;</p>
+  <p>&lt;section&gt;</p>
+  <p>&lt;table&gt;</p>
+  <p>&lt;tfoot&gt;</p>
+  <p>&lt;ul&gt;</p>
+  <p>&lt;video&gt;</p>
+</div>
+<hr>   
+<h4 style="color: blue;">Inline Elements</h4>
+<p>An inline element does not start on a new line.</p>
+<p>An inline element only takes up as much width as necessary.</p>
+<p>This is a &lt;span&gt; element inside a paragraph.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;span&gt;Hello World&lt;/span&gt;
+</div>
+<p>Here are the inline elements in HTML:</p>
+<div class="affichage">
+  <p>&lt;a&gt;</p>
+  <p>&lt;abbr&gt;</p>
+  <p>&lt;acronym&gt;</p>
+  <p>&lt;b&gt;</p>
+  <p>&lt;bdo&gt;</p>
+  <p>&lt;big&gt;</p>
+  <p>&lt;br&gt;</p>
+  <p>&lt;button&gt;</p>
+  <p>&lt;cite&gt;</p>
+  <p>&lt;code&gt;</p>
+  <p>&lt;dfn&gt;</p>
+  <p>&lt;em&gt;</p>
+  <p>&lt;i&gt;</p>
+  <p>&lt;img&gt;</p>
+  <p>&lt;input&gt;</p>
+  <p>&lt;kbd&gt;</p>
+  <p>&lt;label&gt;</p>
+  <p>&lt;map&gt;</p>
+  <p>&lt;object&gt;</p>
+  <p>&lt;output&gt;</p>  
+  <p>&lt;q&gt;</p>
+  <p>&lt;samp&gt;</p>
+  <p>&lt;script&gt;</p>
+  <p>&lt;select&gt;</p>
+  <p>&lt;small&gt;</p>
+  <p>&lt;span&gt;</p>
+  <p>&lt;strong&gt;</p>
+  <p>&lt;sub&gt;</p>
+  <p>&lt;sup&gt;</p>
+  <p>&lt;textarea&gt;</p>
+  <p>&lt;time&gt;</p>
+  <p>&lt;tt&gt;</p>
+  <p>&lt;var&gt;</p>
+  </div>
+<p><strong>Note:</strong> An inline element cannot contain a block-level  element!</p>
+<h4 style="color: blue;">The &lt;div&gt; Element</h4>
+<p>The <code>&lt;div&gt;</code> element is often used as a container for other HTML elements.</p>
+<p>The <code>&lt;div&gt;</code> element has no required attributes, but <code>style</code>, <code>class</code> and <code>id</code> are common.</p>
+<p>When used together with CSS, the <code>&lt;div&gt;</code> element can be used to style blocks of content:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;div style=&quot;background-color:black;color:white;padding:20px;&quot;&gt;<br>
+ &nbsp; &lt;h2&gt;London&lt;/h2&gt;<br>&nbsp; &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;<br>
+ &lt;/div&gt;
+</div>
+<hr>
+<h4 style="color: blue;">The &lt;span&gt; Element</h4>
+<p>The <code>&lt;span&gt;</code> element is  an inline container used to mark up a part of a text, or a part of a document.</p>
+<p>The <code>&lt;span&gt;</code> element has no required attributes, but <code>style</code>, <code>class</code> and <code>id</code> are common.</p>
+<p>When used together with CSS, the <code>&lt;span&gt;</code> element can be used to style parts of the text:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;p&gt;My mother has &lt;span style=&quot;color:blue;font-weight:bold;&quot;&gt;blue&lt;/span&gt; eyes 
+  and my father has &lt;span style=&quot;color:darkolivegreen;font-weight:bold;&quot;&gt;dark 
+  green&lt;/span&gt; eyes.&lt;/p&gt;<br>
+</div>
+<h4 style="color: blue;">Chapter Summary</h4>
+<ul>
+<li>There are two display values: block and inline</li>
+  <li>A block-level element always starts on a new line and takes up the full 
+  width available</li>
+  <li>An inline element does not start on a new line and it only takes up as 
+  much width as necessary</li>
+  <li>The <code>&lt;div&gt;</code> element is a block-level 
+  and is often used as a container for other HTML elements</li>
+  <li>The <code>&lt;span&gt;</code> element is an inline 
+  container used to mark up a part of a text, or a part of a document</li>
+</ul>
+</div>
+</body>
+</html>

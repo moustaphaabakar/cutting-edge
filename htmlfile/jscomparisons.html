@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS comparisons</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Comparison and Logical Operators</h4>
+        <hr>
+        <p>Comparison and Logical operators are used to test for <code class="w3-codespan">true</code> or 
+        <code>false</code>.</p>
+        <hr>
+        <h4 style="color: blue;">Comparison Operators</h4>
+        <p>Comparison operators are used in logical statements to determine equality or difference between variables or values. </p>
+        <p>Given that <code>x = 5</code>, the table below explains the comparison operators:</p>
+        <table class="table table-striped">
+        <tr>
+        <th style="width:12%">Operator</th>
+        <th>Description</th>
+        <th>Comparing</th>
+        <th>Returns</th>
+        </tr>
+        <tr class="spes_table_row1">
+        <td rowspan="3">==</td>
+        <td rowspan="3">equal to</td>
+        <td>x == 8</td>
+        <td>false</td>
+        </tr>
+        <tr class="spes_table_row1">
+        <td>x == 5</td>
+        <td>true</td>
+        </tr>
+        <tr class="spes_table_row1">
+        <td>x == "5"</td>
+        <td>true</td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td rowspan="2">===</td>
+        <td rowspan="2">equal value and equal type</td>
+        <td>x === 5</td>
+        <td>true</td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td>x === "5"</td>
+        <td>false</td>
+        </tr>
+        <tr class="spes_table_row1">
+        <td>!=</td>
+        <td>not equal</td>
+        <td>x != 8</td>
+        <td>true</td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td rowspan="3">!==</td>
+        <td rowspan="3">not equal value or not equal type</td>
+        <td>x !== 5</td>
+        <td>false</td>
+        <td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td>x !== &quot;5&quot;</td>
+        <td>true</td>
+        <td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td>x !== 8</td>
+        <td>true</td>
+        <td>
+        </tr>
+        <tr class="spes_table_row1">
+        <td>&gt;</td>
+        <td>greater than</td>
+        <td>x &gt; 8</td>
+        <td>false</td>
+        <tr class="spes_table_row2">
+        <td>&lt;</td>
+        <td>less than</td>
+        <td>x &lt; 8</td>
+        <td>true</td>
+        </tr>
+        <tr class="spes_table_row1">
+        <td>&gt;=</td>
+        <td>greater than or equal to</td>
+        <td>x &gt;= 8</td>
+        <td>false</td>
+        </tr>
+        <tr class="spes_table_row2">
+        <td>&lt;=</td>
+        <td>less than or equal to</td>
+        <td>x &lt;= 8</td>
+        <td>true</td>
+        </tr>
+        </table>
+        <h4 style="color: blue;">How Can it be Used</h4>
+        <p>Comparison operators can be used in conditional statements to compare values 
+        and take action depending on the result:</p>
+        <div class="affichage">
+        if (age &lt; 18) text = &quot;Too young to buy alcohol&quot;;
+        </div>
+        <p>You will learn more about the use of conditional statements in the next chapter of this tutorial.</p>
+        <hr>
+        <h4 style="color: blue;">Logical Operators</h4>
+        <p>Logical operators are used to determine the logic between variables or values.</p>
+        <p>Given that <code>x = 6</code> and <code>y = 3</code>, the table below explains the logical operators: </p>
+        <table class="table table-striped">
+        <tr>
+        <th style="width:12%">Operator</th>
+        <th>Description</th>
+        <th>Example</th>
+        <th style="width:10%">Try it</th>
+        </tr>
+        <tr>
+        <td>&amp;&amp;</td>
+        <td>and</td>
+        <td> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+        </tr>
+        <tr>
+        <td>||</td>
+        <td>or</td>
+        <td>(x == 5 || y == 5) is false</td>
+        </tr>
+        <tr>
+        <td>!</td>
+        <td>not</td>
+        <td> !(x == y) is true</td>
+        </tr>
+        </table>
+        <h4 style="color: blue;">Conditional (Ternary) Operator</h4>
+        <p>JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.</p>
+        <h4 style="color: blue;">Syntax</h4>
+        <p> <em>variablename </em>= (<em>condition</em>) ?<em> value1</em>:<em>value2</em>&nbsp;</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let voteable = (age &lt; 18) ? "Too young":"Old enough";</div>
+        <p>If the variable age is a value below 18, the value of the variable voteable 
+        will be &quot;Too young&quot;, otherwise the value of voteable will be &quot;Old enough&quot;.</p>
+        <hr>
+        <h4 style="color: blue;">Comparing Different Types</h4>
+        <p>Comparing data of different types may give unexpected results.</p>
+        <p>When comparing a string with a number, JavaScript will convert the string to 
+        a number when doing the comparison. An empty string converts to 0. A non-numeric 
+        string converts to <code>NaN</code> which is always <code>false</code>.</p>
+        <table class="table table-striped">
+            <tr>
+             <th>Case</th>
+             <th>Value</th>
+             <th style="width:10%">Try</th>
+            </tr>
+            <tr>
+             <td>2 &lt; 12</td>
+             <td>true</td>
+            </tr>
+            <tr>
+             <td>2 &lt; &quot;12&quot;</td>
+             <td>true</td>
+            </tr>
+            <tr>
+             <td>2 &lt; &quot;John&quot;</td>
+             <td>false</td>
+            </tr>
+            <tr>
+             <td>2 &gt; &quot;John&quot;</td>
+             <td>false</td>
+            </tr>
+            <tr>
+             <td>2 == &quot;John&quot;</td>
+             <td>false</td>
+            </tr>
+            <tr>
+             <td>&quot;2&quot; &lt; &quot;12&quot;</td>
+             <td>false</td>
+            </tr>
+            <tr>
+             <td>&quot;2&quot; &gt; &quot;12&quot;</td>
+             <td>true</td>
+            </tr>
+            <tr>
+             <td>&quot;2&quot; == &quot;12&quot;</td>
+             <td>false</td>
+            </tr>
+           </table>
+           
+           
+           <p>When comparing two strings, &quot;2&quot; will be greater than &quot;12&quot;, because 
+            (alphabetically) 1 is less than 2.</p>
+            <p>To secure a proper result, variables should be converted to the proper type 
+            before comparison:</p>
+            <div class="affichage">
+            age = Number(age);<br>
+            if (isNaN(age)) {<br>
+            &nbsp;&nbsp;voteable = &quot;Input is not a number&quot;;<br>
+            } else {<br>
+              &nbsp; voteable = (age &lt; 18) ? &quot;Too young&quot; : &quot;Old enough&quot;;<br>
+            }
+            </div> 
+            <hr>
+            <h4 style="color: blue;">The Nullish Coalescing Operator (??)</h4>
+            <p>The <code>??</code> operator returns the first argument if it is <code>null</code>
+            or <code>undefined</code>. Otherwise it returns the second.</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            let name = null;<br>
+            let text = "missing";<br>
+            let result = name ?? text;
+            </div>
+            <p>The nullish operator is supported in all browsers since March 2020:</p>
+            <table class="affichage">
+              <tbody><tr style="height:50px">
+                <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+                <th style="width:20%;" class="bsEdge" title="Edge"></th>
+                <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+                <th style="width:20%;" class="bsSafari" title="Safari"></th>
+                <th style="width:19%;" class="bsOpera" title="Opera"></th>                
+              </tr>
+              <tr>
+                <td>Chrome 80</td>    
+                <td>Edge 80</td>
+                <td>Firefox 72</td>
+                <td>Safari 13.1</td>
+                <td>Opera 67</td>
+              </tr>
+              <tr>
+                <td>Feb 2020</td>
+                <td>Feb 2020</td>    
+                <td>Jan 2020</td>
+                <td>Mar 2020</td>
+                <td>Mar 2020</td>
+              </tr>
+            </tbody></table>
+            <h4 style="color: blue;">The Optional Chaining Operator (?.)</h4>
+<p>The <code>?.</code> operator returns <code>undefined</code> if an object is
+<code >undefined</code> or <code>null</code> (instead of throwing an error).</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create an object:<br>
+const car = {type:"Fiat", model:"500", color:"white"};<br>
+// Ask for car name:<br>
+document.getElementById("demo").innerHTML = car?.name;
+</div>
+<p>The optional chaining operator is supported in all browsers since March 2020:</p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:19%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 80</td>    
+    <td>Edge 80</td>
+    <td>Firefox 72</td>
+    <td>Safari 13.1</td>
+    <td>Opera 67</td>
+  </tr>
+  <tr>
+    <td>Feb 2020</td>
+    <td>Feb 2020</td>    
+    <td>Jan 2020</td>
+    <td>Mar 2020</td>
+    <td>Mar 2020</td>
+  </tr>
+</tbody></table>
+<p>Choose the correct <strong>comparison operator</strong> to alert <code>true</code>, when <code>x</code> is greater than <code>y</code>.</p>
+ </div>
+ 
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html symbols <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">Html symbols</h4>     
+        <p>Symbols that are not present on your keyboard can also be added  by using entities.</p>
+        <h4 style="color: blue;">HTML Symbol Entities</h4>
+<p>HTML entities were described in the previous chapter.</p>
+<p>Many mathematical, technical, and currency symbols, are not present on a normal keyboard.</p>
+<p>To add such symbols to an HTML page, you can use the entity name or the entity number 
+(a decimal or a hexadecimal reference) for the symbol.</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Display the euro sign, &#8364;, with an entity name, a decimal, and a hexadecimal 
+  value:</p>
+<div class="affichage">
+&lt;p&gt;I will display &amp;euro;&lt;/p&gt;<br>
+&lt;p&gt;I will display &amp;#8364;&lt;/p&gt;<br>
+&lt;p&gt;I will display &amp;#x20AC;&lt;/p&gt;
+</div>
+<h4 style="color: blue;">Will display as:</h4>
+<div class="affichage">
+I will display &euro;<br>
+I will display &#8364;<br>
+I will display &#x20AC;
+</div>
+<hr>
+
+
+<h4 style="color: blue;">Some Mathematical Symbols Supported by HTML</h4>
+<table class="table table-striped">
+<tr>
+<th style="width:10%">Char</th>
+<th style="width:10%">Number</th>
+<th style="width:15%">Entity</th>
+<th>Description</th>
+<th style="width:10%">Try it</th>      
+</tr>
+<tr>
+<td>&#8704;</td>
+<td>&amp;#8704;</td>
+<td>&amp;forall;</td>
+<td>FOR ALL</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8706;</td>
+<td>&amp;#8706;</td>
+<td>&amp;part;</td>
+<td>PARTIAL DIFFERENTIAL</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8707;</td>
+<td>&amp;#8707;</td>
+<td>&amp;exist;</td>
+<td>THERE EXISTS</td>
+<td>&raquo;</a></td>
+</tr>
+<tr>
+<td>&#8709;</td>
+<td>&amp;#8709;</td>
+<td>&amp;empty;</td>
+<td>EMPTY SETS</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8711;</td>
+<td>&amp;#8711;</td>
+<td>&amp;nabla;</td>
+<td>NABLA</td>
+<td>&raquo;</a></td>
+</tr>
+<tr>
+<td>&#8712;</td>
+<td>&amp;#8712;</td>
+<td>&amp;isin;</td>
+<td>ELEMENT OF</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8713;</td>
+<td>&amp;#8713;</td>
+<td>&amp;notin;</td>
+<td>NOT AN ELEMENT OF</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8715;</td>
+<td>&amp;#8715;</td>
+<td>&amp;ni;</td>
+<td>CONTAINS AS MEMBER</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8719;</td>
+<td>&amp;#8719;</td>
+<td>&amp;prod;</td>
+<td>N-ARY PRODUCT</td>
+<td> &raquo;</a></td>
+</tr>
+<tr>
+<td>&#8721;</td>
+<td>&amp;#8721;</td>
+<td>&amp;sum;</td>
+<td>N-ARY SUMMATION</td>
+<td> &raquo;</a></td>
+</tr>
+</table>
+
+<hr>
+<h4 style="color: blue;">Some Greek Letters Supported by HTML</h4>
+<table class="table table-striped">
+<tr>
+<th style="width:10%">Char</th>
+<th style="width:10%">Number</th>
+<th style="width:15%">Entity</th>
+<th>Description</th>
+<th style="width:10%">Try it</th>      
+</tr>
+<tr>
+<td>&#913;</td>
+<td>&amp;#913;</td>
+<td>&amp;Alpha;</td>
+<td>GREEK CAPITAL LETTER ALPHA</td>
+<tr>
+<td>&#914;</td>
+<td>&amp;#914;</td>
+<td>&amp;Beta;</td>
+<td>GREEK CAPITAL LETTER BETA</td>
+</tr>
+<tr>
+<td>&#915;</td>
+<td>&amp;#915;</td>
+<td>&amp;Gamma;</td>
+<td>GREEK CAPITAL LETTER GAMMA</td>
+</tr>
+<tr>
+<td>&#916;</td>
+<td>&amp;#916;</td>
+<td>&amp;Delta;</td>
+<td>GREEK CAPITAL LETTER DELTA</td>
+</tr>
+<tr>
+<td>&#917;</td>
+<td>&amp;#917;</td>
+<td>&amp;Epsilon;</td>
+<td>GREEK CAPITAL LETTER EPSILON</td>
+</tr>
+<tr>
+<td>&#918;</td>
+<td>&amp;#918;</td>
+<td>&amp;Zeta;</td>
+<td>GREEK CAPITAL LETTER ZETA</td>
+</tr>
+</table>
+<hr>
+<h4 style="color: blue;">Some Other Entities Supported by HTML</h4>
+<table class="table table-striped">
+<tr>
+<th style="width:10%">Char</th>
+<th style="width:10%">Number</th>
+<th style="width:15%">Entity</th>
+<th>Description</th>
+<th style="width:10%">Try it</th>      
+</tr>
+<tr>
+<td>&#169;</td>
+<td>&amp;#169;</td>
+<td>&amp;copy;</td>
+<td>COPYRIGHT SIGN</td>
+</tr>
+<tr>
+<td>&#174;</td>
+<td>&amp;#174;</td>
+<td>&amp;reg;</td>
+<td>REGISTERED SIGN</td>
+</tr>
+<tr>
+<td>&#8364;</td>
+<td>&amp;#8364;</td>
+<td>&amp;euro;</td>
+<td>EURO SIGN</td>
+</tr>
+<tr>
+<td>&#8482;</td>
+<td>&amp;#8482;</td>
+<td>&amp;trade;</td>
+<td>TRADEMARK</td>
+</tr>
+<tr>
+<td>&#8592;</td>
+<td>&amp;#8592;</td>
+<td>&amp;larr;</td>
+<td>LEFTWARDS ARROW</td>
+</tr>
+<tr>
+<td>&#8593;</td>
+<td>&amp;#8593;</td>
+<td>&amp;uarr;</td>
+<td>UPWARDS ARROW</td>
+</tr>
+<tr>
+<td>&#8594;</td>
+<td>&amp;#8594;</td>
+<td>&amp;rarr;</td>
+<td>RIGHTWARDS ARROW</td>
+</tr>
+<tr>
+<td>&#8595;</td>
+<td>&amp;#8595;</td>
+<td>&amp;darr;</td>
+<td>DOWNWARDS ARROW</td>
+</tr>
+<tr>
+<td>&#9824;</td>
+<td>&amp;#9824;</td>
+<td>&amp;spades;</td>
+<td>BLACK SPADE SUIT</td>
+</tr>
+<tr>
+<td>&#9827;</td>
+<td>&amp;#9827;</td>
+<td>&amp;clubs;</td>
+<td>BLACK CLUB SUIT</td>
+</tr>
+<tr>
+<td>&#9829;</td>
+<td>&amp;#9829;</td>
+<td>&amp;hearts;</td>
+<td>BLACK HEART SUIT</td>
+</tr>
+<tr>
+<td>&#9830;</td>
+<td>&amp;#9830;</td>
+<td>&amp;diams;</td>
+<td>BLACK DIAMOND SUIT</td>
+</tr>     
+</table>
+ </div>
+</body>
+</html>

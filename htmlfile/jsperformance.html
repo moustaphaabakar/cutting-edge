@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Js performance</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript performance</h4>
+<hr>
+<p>How to speed up your JavaScript code.</p>
+<hr>
+<h4 style="color: blue;">Reduce Activity in Loops</h4>
+<p>Loops are often used in programming.</p>
+<p>Each statement in a loop, including the for statement, is executed for each iteration of the 
+loop.</p>
+<p>Statements or assignments that can be placed outside the loop will make the 
+loop run faster. </p>
+<h4 style="color: blue;">Bad:</h4>
+<div class="affichage">
+for (let i = 0; i &lt; arr.length; i++) {<br>
+</div>
+<h4 style="color: blue;">Better Code:</h4>
+<div class="affichage">
+let l = arr.length;<br>
+for (let i = 0; i &lt; l; i++) {</div>
+<p>The bad code accesses the length property of an array each time the loop is 
+iterated.</p>
+<p>The better code accesses the length property outside the loop and makes the 
+loop run faster.</p>
+<hr>
+<h4 style="color: blue;">Reduce DOM Access</h4>
+<p>Accessing the HTML DOM is very slow, compared to other JavaScript statements.</p>
+<p>If you expect to access a DOM element several times, access it once, and use 
+it as a local variable:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const obj = document.getElementById(&quot;demo&quot;);<br>obj.innerHTML = &quot;Hello&quot;;
+</div>
+<hr>
+<h4 style="color: blue;">Reduce DOM Size</h4>
+<p>Keep the number of elements in the HTML DOM small.</p>
+<p>This will always 
+improve page loading, and speed up rendering (page display), especially on smaller devices.</p>
+<p>Every attempt to search the DOM (like getElementsByTagName) will benefit 
+from a smaller DOM.</p>
+<hr>
+<h4 style="color: blue;">Avoid Unnecessary Variables</h4>
+<p>Don't create new variables if you don't plan to save values.</p>
+<p>Often you can replace code like this:</p>
+<div class="affichage">
+let fullName = firstName + &quot; &quot; + lastName;<br>
+document.getElementById(&quot;demo&quot;).innerHTML = fullName;
+</div>
+<p>With this:</p>
+<div class="affichage">
+document.getElementById(&quot;demo&quot;).innerHTML = firstName + &quot; &quot; + lastName;
+</div>
+<hr>
+<h4 style="color: blue;">Delay JavaScript Loading</h4>
+<p>Putting your scripts at the bottom of the page body lets the browser load the 
+page first.</p>
+<p>While a script is downloading, the browser will not start any other 
+downloads. In addition all parsing and rendering activity might be blocked.</p>
+<p>The HTTP specification defines that browsers should not download more than 
+two components in parallel.</p>
+<p>An alternative is to use <code>defer=&quot;true&quot;</code> in the script tag. The 
+    defer attribute specifies that the script should be executed after the page has 
+    finished parsing, but it only works for external scripts.</p>
+    <p>If possible, you can add your script to the page by code, after the page has loaded:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    &lt;script&gt;<br>window.onload = function() {<br>&nbsp; 
+    const element = document.createElement(&quot;script&quot;);<br>&nbsp; 
+    element.src = &quot;myScript.js&quot;;<br>&nbsp; 
+    document.body.appendChild(element);<br>};<br>&lt;/script&gt;</div>
+    <hr>
+    <h4 style="color: blue;">Avoid Using with</h4>
+    <p>Avoid using the <code>with</code> keyword. It has a negative effect on 
+    speed. It also clutters up JavaScript scopes.</p>
+    <p>The <code>with</code> keyword is <strong>not allowed</strong> in strict mode.</p>
+</div>
+
+</body>
+</html>

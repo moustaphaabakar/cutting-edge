@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html attributes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="attributeshtml mediaquery" style="margin: 10px;" >
+       <h4 style="color:blue">Html attributes</h4>
+       <p class="intro">HTML attributes provide additional information about HTML elements.</p>
+        <hr>
+       <h4 style="color: blue;">Html Attributes</h4>
+       <ul>
+         <li>All Html elements can have <b>attributes</b></li>
+         <li>Attributes provide <b>additional information</b> about elements</li>
+         <li>Attributes are always specified in <b>the start tag</b></li>
+         <li>Attributes usually come in name/value pairs like: <b>name=&quot;value&quot;</b></li>
+       </ul>
+       <hr>
+       <h4 style="color: blue;">The href Attribute</h4>
+       <p>The <code>&lt;a&gt;</code> tag defines a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to:</p>
+       <h4 style="color: blue; ">Example</h4>
+       <div class="affichage">&lt;a href=&quot;https://www.google.com&quot;&gt;Visit google&lt;/a&gt;</div>
+       <p>You will learn more about links in our Html Links chapter.</p>
+        <hr>
+        <h4 style="color: blue;">The src Attribute</h4>
+        <p>The <code>&lt;img&gt;</code> tag is used to embed an  image in an HTML page. The <code>src</code> attribute specifies the path to the image to be displayed:</p>
+        <p>There are two ways to specify the URL in the <code>src</code> attribute:</p>
+    
+        <p><strong style="color:blue ;">1. Absolute URL</strong> - Links to an external image that is hosted  on another website. Example: <span style="word-wrap: break-word;">src=&quot;https://www.google.com/images/img_girl.jpg&quot;</span>.</p><p><strong>Notes:</strong> External images might be under copyright. If you do  not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or  changed.</p>
+        
+        <p><strong style="color:blue">2. Relative URL</strong> - Links to an image that is hosted within  the website. Here, the URL does not include the domain name. If the URL begins  without a slash, it will be relative to the current page. Example: src=&quot;img_girl.jpg&quot;. If the URL begins with a slash, it will be relative to the domain. Example: src=&quot;/images/img_girl.jpg&quot;.</p>
+            <p><strong>Tip:</strong> It is almost always best to use relative URLs. They will not break if you change domain.</p>
+            <hr>
+         
+            <h4 style="color: blue;">The width and height Attributes</h4>
+            <p>The <code>&lt;img&gt;</code> tag should also contain the<code>width</code> and <code>  height</code> attributes, which specify the width and height of the image (in pixels):</p>
+            <div>
+            <h4 style="color:blue ;">Example</h4>
+            <div>
+            &lt;img src=&quot;img_girl.jpg&quot; width=&quot;500&quot; height=&quot;600&quot;&gt;
+            </div>
+   
+            <h4 style="color:blue ;">The alt Attribute</h4>
+            <p>The required <code>alt</code> attribute for the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <code>src</code> attribute, or if the user uses a screen reader.</p>
+          
+            <h4 style="color: blue;">Example</h4>
+            <div>&lt;img src=&quot;img_girl.jpg&quot; alt=&quot;Girl with a jacket&quot;&gt;
+            </div>
+            <h4 style="color:blue ;">Example</h4>
+            <p>See what happens if we try to display an image that does not exist:</p>
+            <div>&lt;img src=&quot;img_typo.jpg&quot; alt=&quot;Girl with a jacket&quot;&gt;
+             <hr>
+            <h4 style="color:blue ;">The style Attribute</h4>
+            <p>The <code>style</code> attribute is used to add styles to an element, such as color, font, size, and more.</p><div>
+            <h4 style="color: blue;">Example</h4>
+            <div> &lt;p style=&quot;color:red;&quot;&gt;This is a red paragraph.&lt;/p&gt;</div>
+             <hr>
+            <h4 style="color:blue ;">The lang Attribute</h4>
+            <p>You should always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+            <p>The following example specifies English as the language:</p>
+            <div class="affichage">
+            <div>
+             &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;body&gt;<br>...<br>&lt;/body&gt;<br>&lt;/html&gt;
+            </div>
+            </div>
+            <p>Country codes can also be added to the language code in the <code>lang</code> attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country.</p>
+              <p>The following example specifies English as the language and United States as the country:</p>
+              <div class="affichage">
+              &lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en-US&quot;&gt;<br>&lt;body&gt;<br>...<br>&lt;/body&gt;<br>&lt;/html&gt;
+              </div>
+              <hr>
+              <h4 style="color:blue ;">The title Attribute</h2>
+              <p>The <code>title</code> attribute defines some extra information about an element.</p>
+              <p>The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+              <div>
+              <h4 style="color:blue ;">Example</h4>
+              <div class="w3-code notranslate htmlHigh">
+               &lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;
+              </div>
+              <hr>
+              <h4 style="color:blue ;">We Suggest: Always Use Lowercase Attributes</h2>
+              <p>The HTML standard does not require lowercase attribute names.</p>
+              <p>The title attribute (and all other attributes) can be written with uppercase or lowercase like <strong>title</strong> or <strong>TITLE</strong>.</p>
+              <p>However, Digibit <strong>recommends</strong> lowercase attributes in HTML, and <strong>demands</strong> lowercase attributes for stricter document types like XHTML.</p>
+              <div>
+              <p>At Digibit we always use lowercase attribute names.</p>
+              </div>
+              <hr> 
+              <h4 style="color:blue ;">We Suggest: Always Quote Attribute Values</h4>
+              <p>The HTML standard does not require quotes around attribute values.</p>
+              <p>However, Digibit <b>recommends</b> quotes in HTML, and <strong>demands</strong> quotes for stricter document types like XHTML.</p>
+              <hr>       
+              <h4 style="color:blue ;">Good:</h4>
+              <div>
+              &lt;a href=&quot;https://www.google.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div></div>
+              <div>
+              <h4 style="color:blue;">Bad:</h4>
+              <div>
+              &lt;a href=https://www.google.com/html/&gt;Visit our HTML tutorial&lt;/a&gt;</div></div>
+              <p>Sometimes you have to use quotes. This example will not display the title attribute correctly, because it contains a space:</p>
+              </div>
+               <hr>
+
+               <h4 style="color:blue ;">Single or Double Quotes?</h4>
+               <p>Double quotes around attribute values are the most common in HTML, but single quotes can also be used.</p>
+               <p>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:</p>
+               <div>
+                &lt;p title='John &quot;ShotGun&quot; Nelson'&gt;
+                </div>
+                 <hr>
+                <h4 style="color:blue ;">Chapter Summary</h4>
+<ul>
+  <li>All HTML elements can have <strong>attributes</strong></li>
+  <li>The <code>href</code> attribute of <code>
+  &lt;a&gt;</code> specifies the URL of the page the link goes to</li>
+  <li>The <code>src</code> attribute of <code>
+  &lt;img&gt;</code> specifies the path to the image to be displayed</li>
+  <li>The <code>width</code> and <code>height</code> attributes 
+  of <code>&lt;img&gt;</code> provide size information for images</li>
+  <li>The <code>alt</code> attribute of <code>
+  &lt;img&gt;</code> provides an alternate text for an image</li>
+  <li>The <code>style</code> attribute is used to add styles 
+  to an element, such as color, font, size, and more</li>
+  <li>The <code>lang</code> attribute 
+  of the <code>&lt;html&gt;</code> tag declares the 
+  language of the Web page</li>
+  <li>The <code>title</code> attribute defines some extra 
+  information about an element</li>
+</ul>
+ </div>
+</body>
+</html>

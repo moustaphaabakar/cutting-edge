@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css attributes selectors<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Attribute Selectors</h4>
+        <hr>
+        <h4 style="color: blue;">Style HTML Elements With Specific Attributes</h4>
+        <p>It is possible to style HTML elements that have specific attributes or attribute values.</p>
+        <hr>
+        <h4 style="color: blue;">CSS [attribute] Selector</h4>
+<p>The <code>[attribute]</code> selector is used to select elements with a specified attribute.</p>
+<p>The following example selects all &lt;a&gt; elements with a target attribute:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+a[target] {<br>&nbsp; background-color: yellow;<br>} </div>
+<hr>
+<h4 style="color: blue;">CSS [attribute=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute=&quot;value&quot;]</code> selector is used to select elements with a specified 
+attribute and value.</p>
+<p>The following example selects all &lt;a&gt; elements with a target=&quot;_blank&quot; attribute:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+a[target=&quot;_blank&quot;] { <br>&nbsp; background-color: yellow;<br>}
+</div>
+<h4 style="color: blue;">CSS [attribute~=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute~=&quot;value&quot;]</code> selector is used to select elements with an attribute 
+value containing a specified word.</p>
+<p>The following example selects all elements with a title attribute that 
+contains a space-separated list of words, one of which is &quot;flower&quot;:</p>
+<h4 style="color:blue ;">Example</h4>
+<div class="affichage">
+[title~=&quot;flower&quot;] {<br>&nbsp; border: 5px solid yellow;<br>}</div>
+<p>The example above will match elements with title="flower", title="summer flower", and title="flower new", but not title="my-flower" or title="flowers".</p>
+<hr>
+<h4 style="color: blue;">CSS [attribute|=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute|=&quot;value&quot;]</code> selector 
+is used to select elements with the specified attribute, whose value can be 
+exactly the specified value, or the specified value followed by a hyphen (-).</p>
+<p><strong>Note:</strong> The value has to be a whole word, either alone, like 
+class=&quot;top&quot;, or followed by a hyphen( - ), like class=&quot;top-text&quot;.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+[class|=&quot;top&quot;] {<br>&nbsp; background: yellow;<br>}
+</div>
+
+<h4 style="color: blue;">CSS [attribute^=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute^=&quot;value&quot;]</code> selector 
+is used to select elements with the specified attribute, whose value starts with 
+the specified value.</p>
+<p>The following example selects all elements with a class attribute value that 
+starts with &quot;top&quot;:</p>
+<p><strong>Note:</strong> The value does not have to be a whole word!</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+[class^=&quot;top&quot;] {<br>&nbsp;&nbsp;background: yellow;<br>}
+</div>
+<hr>
+<h4 style="color:blue ;">CSS [attribute$=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute$=&quot;value&quot;]</code> selector is used to select elements whose attribute 
+value ends with a specified value.</p>
+<p>The following example selects all elements with a class attribute value that 
+ends with &quot;test&quot;:</p>
+<p><strong>Note:</strong> The value does not have to be a whole word!&nbsp;&nbsp;</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+[class$=&quot;test&quot;] {<br>&nbsp;&nbsp;background: yellow;<br>}</div>
+<hr>
+<h4 style="color: blue;">CSS [attribute*=&quot;value&quot;] Selector</h4>
+<p>The <code>[attribute*=&quot;value&quot;]</code> selector is used to select elements whose attribute 
+value contains a specified value.</p>
+<p>The following example selects all elements with a class attribute value that 
+contains &quot;te&quot;:</p>
+<p><strong>Note:</strong> The value does not have to be a whole word!&nbsp;&nbsp;</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+[class*=&quot;te&quot;] {<br>&nbsp; background: yellow;<br>}</div>
+<hr>
+<h4 style="color: blue;">Styling Forms</h4>
+<p>The attribute selectors can be useful for styling forms without class or ID:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+input[type=&quot;text&quot;]
+{<br>
+&nbsp;&nbsp;width: 150px;<br>
+  &nbsp;
+display: block;<br>
+  &nbsp;
+margin-bottom: 10px;<br>
+  &nbsp;
+background-color: yellow;<br>
+}<br><br>
+input[type=&quot;button&quot;]
+{<br>
+&nbsp;&nbsp;width: 120px;<br>
+&nbsp;&nbsp;margin-left: 35px;<br>
+&nbsp;&nbsp;display: block;<br>
+}</div>
+</div>
+</body>
+</html>

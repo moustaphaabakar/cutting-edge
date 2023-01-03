@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM event</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+    <h4 style="color: blue;">JavaScript HTML DOM Events</h4>
+    <hr>
+    <p>HTML DOM allows JavaScript to react to HTML events:</p>
+<hr>
+<h4 style="color: blue;">Reacting to Events</h4>
+<p>A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.</p>
+<p>To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:</p>
+<div class="affichage">
+onclick=<i>JavaScript</i>
+</div>
+<p>Examples of HTML events:</p>
+<ul>
+  <li>When a user clicks the mouse</li>
+  <li>When a web page has loaded</li>
+  <li>When an image has been loaded</li>
+  <li>When the mouse moves over an element</li>
+  <li>When an input field is changed</li>
+  <li>When an HTML form is submitted</li>
+  <li>When a user strokes a key </li>
+</ul>
+<p>In this example, the content of the <code>&lt;h1&gt;</code> element is changed when a user clicks on it:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>
+&lt;body&gt;<br><br>
+&lt;h1 onclick=&quot;this.innerHTML = 'Ooops!'&quot;&gt;Click on this text!&lt;/h1&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<p>In this example, a function is called from the event handler:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>
+&lt;h1 onclick=&quot;changeText(this)&quot;&gt;Click on this text!&lt;/h1&gt;<br>
+ <br>&lt;script&gt;<br>
+function changeText(id) {
+<br>
+&nbsp;&nbsp;id.innerHTML = &quot;Ooops!&quot;;<br>
+}<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<hr>
+<h4 style="color: blue;">HTML Event Attributes</h4>
+<p>To assign events to HTML elements you can use event attributes.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Assign an onclick event to a button element:</p>
+<div class="affichage">
+&lt;button onclick=&quot;displayDate()&quot;&gt;Try it&lt;/button&gt;
+</div>
+<p>In the example above, a function named <code>displayDate</code> will be executed 
+when the button is clicked.</p>
+<hr>
+<h4 style="color: blue;">Assign Events Using the HTML DOM</h4>
+<p>The HTML DOM allows you to assign events to HTML elements using JavaScript: </p>
+<h4 style="color: blue;">Example</h4>
+<p>Assign an onclick event to a button element:</p>
+<div class="affichage">
+&lt;script&gt;<br>
+document.getElementById(&quot;myBtn&quot;).onclick = displayDate;<br>
+&lt;/script&gt;
+</div>
+<p>In the example above, a function named <code>displayDate</code> is assigned to 
+an HTML element with the <code>id=&quot;myBtn&quot;</code>.</p>
+<p>The function will be executed 
+when the button is clicked.</p>
+<hr>
+<h4 style="color: blue;">The onload and onunload Events</h4>
+<p>The <code>onload</code> and <code>onunload</code> events are triggered when the user enters or leaves the page.</p>
+<p>The <code>onload</code> event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.</p>
+<p>The <code>onload</code> and <code>onunload</code> events can be used to deal with cookies.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;body onload=&quot;checkCookies()&quot;&gt;
+</div>
+<h4 style="color: blue;">The onchange Event</h4>
+<p>The <code>onchange</code> event is often used in combination with validation of input fields.</p>
+<p>Below is an example of how to use the onchange. The <code>upperCase()</code> 
+function will be called when a user changes the content of an input field.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;input type=&quot;text&quot; id=&quot;fname&quot;
+onchange=&quot;upperCase()&quot;&gt;</div>
+<hr>
+<h4 style="color: blue;">The onmouseover and onmouseout Events</h4>
+<p>The <code>onmouseover</code> and <code >onmouseout</code> events can be used to trigger a function when the user mouses 
+over, or out of, an HTML element:</p>
+<hr>
+<h4 style="color: blue;">The onmousedown, onmouseup and onclick Events</h4>
+<p>The <code>onmousedown</code>, <code>onmouseup</code>, and <code>onclick</code> events are all parts of a 
+mouse-click. First when a mouse-button is clicked, the onmousedown event is 
+triggered, then, when the mouse-button 
+is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered.</p>
+</div>
+</body>
+</html>

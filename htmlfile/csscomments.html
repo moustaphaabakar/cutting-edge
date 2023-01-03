@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css syntax <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+  <h4 style="color: blue;">comments</h4>   
+<p>CSS comments are not displayed in the browser, but they can    help document your source code.</p>
+<hr>
+<h4 style="color: blue;">CSS Comments</h4>
+<p>Comments are used to explain the code, and may help when you edit the source code at a later date.</p>
+<p>Comments are ignored by browsers.</p>
+<p>A CSS comment is placed inside the <code>&lt;style&gt;</code> element, and starts with <code>/*</code> and ends with <code>*/</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  /* This is a single-line comment */<br>p
+{<br>
+  &nbsp;
+color: red;<br>
+}</div>
+<p>You can add comments wherever you want in the code:</p>
+<h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+    p
+{<br>
+  &nbsp;
+color: red;&nbsp;
+  /* Set text color to red */<br>
+}</div>
+<hr>
+<p>Comments can also span multiple lines:&nbsp;</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+      /* This is<br>a multi-line<br>comment */
+    <br><br>p
+    {<br>
+      &nbsp;
+    color: red;<br>
+    }<br>
+    </div>
+    <hr>
+    <h4 style="color: blue;">HTML and CSS Comments</h4>
+    <p>From the HTML tutorial, you learned that you can add comments to your HTML source by using the 
+    <code>&lt;!--...--&gt;</code> syntax.</p>
+    <p>In the following example, we use a combination of HTML and CSS comments:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+      &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>p {<br>&nbsp; color: red; /* Set 
+      text color to red */<br>} <br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h2&gt;My 
+      Heading&lt;/h2&gt;<br><br>&lt;!-- These paragraphs will be red --&gt;<br>&lt;p&gt;Hello 
+      World!&lt;/p&gt;<br>&lt;p&gt;This paragraph is styled with CSS.&lt;/p&gt;<br>&lt;p&gt;CSS comments are 
+      not shown in the output.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br>
+    </div>
+      </div>
+</body>
+</html>

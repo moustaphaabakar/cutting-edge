@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css math functions<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Math Functions</h4>
+        <p>The CSS math functions allow mathematical expressions to be 
+        used as property values. Here, we will explain the <code>calc()</code>, <code>
+        max()</code> and <code>min()</code> functions.</p>
+        <hr>
+        <h4 style="color:blue">The calc() Function</h4>
+<p>The <code class="w3-codespan">calc()</code> function performs a calculation to be used as the property value.</p>
+<h4 style="color: blue;">CSS Syntax</h4>
+<div class="affichae">
+ calc(<em>expression</em>)</div>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%">Value</th>
+    <th>Description</th>
+  </tr>  
+  <tr>
+    <td><i>expression</i></td>
+    <td>Required. A mathematical expression. The result will be used as the value.<br>The following operators can be used: + - * /</td>
+  </tr>
+</table>
+<p style="margin: 10px;">Let us look at an example:</p>
+<h4 style="color: blue;">Example</h4>
+<p>Use calc() to calculate the width of a &lt;div&gt; element:</p>
+<div class="affichage">
+ #div1 {<br>&nbsp; position: absolute;<br>&nbsp; left: 50px;<br>&nbsp; width: calc(100% - 100px);<br>
+  &nbsp; border: 1px solid black;<br>&nbsp; background-color: yellow;<br>&nbsp; padding: 5px;<br>}   
+</div>
+<hr>
+<h4 style="color: blue;">The max() Function</h4>
+<p style="margin: 10px;">The <code >max()</code> function uses the largest value, 
+from a comma-separated list of values, as the property value.</p>
+<h4 style="color: blue;">CSS Syntax</h4>
+<p>
+  max(<em>value1</em>, <em>value2</em>, ...)
+</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%">Value</th>
+    <th>Description</th>
+  </tr>  
+  <tr>
+    <td><em>value1</em>, <em>value2</em>, ...</td>
+    <td>Required. A list of comma-separated values - where the largest value is 
+    chosen</td>
+  </tr>
+</table>
+<p>Let us look at an example:</p>
+<h4 style="color: blue">Example</h4>
+<p>Use max() to set the width of #div1 to whichever value is largest, 50% or 
+300px:</p>
+<div class="affichage">
+ #div1 {<br>&nbsp; background-color: yellow;<br>&nbsp; height: 100px;<br>&nbsp; 
+  width: max(50%, 300px);<br>}   
+</div>
+<hr>
+<h4 style="color: blue;">The min() Function</h4>
+<p>The <code>min()</code> function uses the smallest value, 
+from a comma-separated list of values, as the property value.</p>
+<h4 style="color: blue; margin:10px ;">CSS Syntax</h4>
+<p>
+  min(<em>value1</em>, <em>value2</em>, ...)
+</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%">Value</th>
+    <th>Description</th>
+  </tr>  
+  <tr>
+    <td><em>value1</em>, <em>value2</em>, ...</td>
+    <td>Required. A list of comma-separated values - where the smallest value is 
+    chosen</td>
+  </tr>
+</table>
+<p>Let us look at an example:</p>
+        <h4 style="color: blue;">Example</h4>
+        <p>Use min() to set the width of #div1 to whichever value is smallest, 50% or 
+        300px:</p>
+        <div class="affichage">
+         #div1 {<br>&nbsp; background-color: yellow;<br>&nbsp; height: 100px;<br>&nbsp; 
+          width: min(50%, 300px);<br>}   
+        </div>
+        <hr>
+        <h4 style="color: blue;">All CSS Math Functions</h4>
+        <table class="table table-striped">
+          <tr>
+            <th style="width:30%">Function</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Allows you to perform calculations to determine CSS property values</td>
+          </tr>  
+          <tr>
+            <td>Uses the largest value, from a comma-separated list of values, as the 
+            property value</td>
+          </tr>
+          <tr>
+            <td>Uses the smallest value, from a comma-separated list of values, as the 
+            property value</td>
+          </tr>
+          </table>
+</div>
+</body>
+</html>

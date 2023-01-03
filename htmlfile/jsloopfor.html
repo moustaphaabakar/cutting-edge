@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS loop for</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript For Loop</h4>
+        <hr>
+        <p>Loops can execute a block of code a number of times.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Loops</h4>
+        <p>Loops are handy, if you want to run the same code over and over again, each 
+        time with a different value.</p>
+        <p>Often this is the case when working with arrays:</p>
+        <h4 style="color: blue;">Instead of writing:</h4>
+        <div class="affichage">
+          text += cars[0] + &quot;&lt;br&gt;&quot;; <br>text += cars[1] + &quot;&lt;br&gt;&quot;; <br>
+         text += cars[2] + &quot;&lt;br&gt;&quot;; <br>text += cars[3] + &quot;&lt;br&gt;&quot;; <br>
+         text += cars[4] + &quot;&lt;br&gt;&quot;; <br>text += cars[5] + &quot;&lt;br&gt;&quot;;
+        </div>
+        <h4 style="color: blue;">You can write:</h4>
+        <div class="affichage">
+        for (let i = 0; i &lt; cars.length; i++) { <br>&nbsp;&nbsp;text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
+        </div>  
+        <hr>
+<h4 style="color: blue;">Different Kinds of Loops</h4>
+<p>JavaScript supports different kinds of loops:</p>
+<ul>
+  <li><code>for</code> - loops through a block of code a number of times</li>
+  <li><code>for/in</code> - loops through the properties of an object</li>
+  <li><code>for/of</code> - loops through the values of an 
+  iterable object </li>
+  <li><code>while</code> - loops through a block of code while a specified condition is true</li>
+  <li><code >do/while</code> - also loops through a block of code while a specified condition is true</li>
+</ul>
+<hr>
+<h4 style="color: blue;">The For Loop</h4>
+<p>The <code>for</code> statement creates a loop with 3 optional expressions:</p>
+<div class="affichage">
+for (<i>expression 1</i>;<i> expression 2</i>;<i> expression 3</i>) {<br>
+    &nbsp; // <i>code block to be executed</i><br>
+ }<br>
+</div>
+<p><strong>Expression 1</strong> is executed (one time) before the execution of the code block.</p>
+<p><strong>Expression 2</strong> defines the condition for executing the code block.</p>
+<p><strong>Expression 3</strong> is executed (every time) after the code block has been executed.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+for (let i = 0; i &lt; 5; i++) {<br>
+ &nbsp; text += &quot;The number is &quot; + i + &quot;&lt;br&gt;&quot;;<br>
+}<br>
+ </div>
+ <p>From the example above, you can read:</p>
+<p>Expression 1 sets a variable before the loop starts (let i = 0).</p>
+<p>Expression 2 defines the condition for the loop to run (i must be less than 
+5).</p>
+<p>Expression 3 increases a value (i++) each time the code block in the loop has 
+been executed.</p>
+<hr>
+<h4 style="color: blue;">Expression 1</h4>
+<p>Normally you will use expression 1 to initialize the variable used in the loop (let i = 0).</p>
+<p>This is not always the case. JavaScript doesn't care. Expression 1 is 
+optional.</p>
+<p>You can initiate many values in expression 1 (separated by comma):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+for (let i = 0, len = cars.length, text = &quot;&quot;; i &lt; len; i++) { <br>&nbsp; text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
+ }</div>
+<p>And you can omit expression 1 (like when your values are set 
+before the loop starts):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let i = 2;<br>
+let len = cars.length;<br>
+let text = &quot;&quot;;<br>for (; i &lt; len; i++) { <br>
+  &nbsp; text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
+ }</div>
+<h4 style="color: blue;">Expression 2</h4>
+<p>Often expression 2 is used to evaluate the condition of the initial variable.</p>
+<p>This is not always the case. JavaScript doesn't care. Expression 2 is 
+also optional.</p>
+<p>If expression 2 returns true, the loop will start over again. If it returns false, the 
+loop will end.</p>
+<p>If you omit expression 2, you must provide a <strong>break</strong> inside the 
+loop. Otherwise the loop will never end. This will crash your browser.
+Read about breaks in a later chapter of this tutorial.</p>
+<hr>
+<h4 style="color: blue;">Expression 3</h4>
+<p>Often expression 3 increments the value of the initial variable.</p>
+<p>This is not always the case. JavaScript doesn't care. Expression 3 is 
+optional.</p>
+<p>Expression 3 can do anything like negative increment (i--), positive 
+increment (i = i + 15), or anything else.</p>
+<p>Expression 3 can also be omitted (like when you increment your values inside the loop): </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let i = 0;<br>
+let len = cars.length;<br>
+let text = &quot;&quot;;<br>
+for (; i &lt; len; ) { <br>&nbsp; text += cars[i] + &quot;&lt;br&gt;&quot;;<br>
+  &nbsp;
+ i++;<br>}</div>
+<hr>
+<h4 style="color: blue;">Loop Scope</h4>
+<p>Using <code >var</code> in a loop:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+var i = 5;<br>
+<br>
+for (var i = 0; i &lt; 10; i++) {<br>
+&nbsp;&nbsp;// some code<br>}<br>
+<br>
+// Here i is 10
+</div>
+<p>Using <code>let</code> in a loop:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let i = 5;<br>
+<br>
+for (let i = 0; i &lt; 10; i++) {<br>
+  &nbsp; // some code<br>}<br>
+<br>
+// Here i is 5
+</div>
+<p>In the first example, using <code>var</code>, the variable declared in 
+the loop redeclares the variable outside the loop. </p>
+<p>In the second example, using <code>let</code>, the variable declared in 
+the loop does not redeclare the variable outside the loop. </p>
+<p>When <code>let</code> is used to declare the i variable in a loop, the i 
+variable will only be visible within the loop. </p>
+<hr>
+<h4 style="color: blue;">For/Of and For/In Loops</h4>
+<p>The <code>for/in</code> loop and the <code>for/of</code> loop are explained in the next chapter.</p>
+<hr>
+<h4 style="color: blue;">While Loops</h4>
+<p>The <code>while</code> loop and the <code>do/while</code> are explained in the next chapters.</p>
+</div>
+</body>
+</html>

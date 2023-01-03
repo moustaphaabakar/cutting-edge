@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css forms<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h1>CSS Forms</h1>
+        <hr>
+        <p>The look of an HTML form can be greatly improved with CSS:</p>
+        <div style="border-radius:5px;background-color:#f2f2f2;padding:40px;">
+            <form action="/action_page.php" class="test">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="usa">Australia</option>
+                <option value="usa">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+            </form>
+            </div>
+            <hr>
+        <h4 style="color: blue;">Styling Input Fields</h4>
+        <p>Use the <code >width</code> property to determine the width of the input field:</p>
+          <label for="fname2">First Name</label>
+          <input type="text" id="fname2" name="firstname" style="width:100%;">
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        input
+        {<br>
+        &nbsp;&nbsp;width: 100%;<br>
+        }</div>
+        <p>The example above applies to all &lt;input&gt; elements. If you only want to 
+            style a specific input type, you can use attribute selectors:</p>
+            <ul>
+            <li><code class="w3-codespan">input[type=text]</code> - will only select text fields</li>
+            <li><code class="w3-codespan">input[type=password]</code> - will only select password fields</li>
+            <li><code class="w3-codespan">input[type=number]</code> - will only select number fields</li>
+            <li>etc..</li>
+            </ul>
+            <hr>
+            <h4 style="color: blue;">Padded Inputs</h4>
+            <p>Use the <code>padding</code> property to add space inside the text field.</p>
+            <p><strong>Tip:</strong> When you have many inputs after each other, you might 
+            also want to add some <code>margin</code>, to add more space 
+            outside of them:</p>
+            <label for="fname3">First Name</label>
+            <input type="text" id="fname3" name="firstname" class="input1">
+            <label for="lname3">Last Name</label>
+            <input type="text" id="lname3" name="lastname" class="input1">
+            <h4 style="color: blue;">Example</h4>
+            <div class="w3-code notranslate cssHigh">
+            input[type=text]
+            {<br>
+              &nbsp; width: 100%;<br>&nbsp; padding: 12px 20px;<br>&nbsp; margin: 8px 0;<br>&nbsp; 
+            box-sizing: border-box;<br>
+            }</div>
+            <hr>
+            <h4 style="border: blue;">Bordered Inputs</h4>
+            <p>Use the <code>border</code> property to change the border size and color, and 
+            use the <code>border-radius</code> property to add rounded corners:</p>
+            <label for="fname4">First Name</label>
+            <input type="text" id="fname4" name="firstname" class="inputborder">
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            input[type=text]
+            {<br>&nbsp;&nbsp;border: 2px solid red;<br>&nbsp; 
+            border-radius: 4px;<br>
+            }</div>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            input[type=text]
+            {<br>&nbsp;&nbsp;border: 2px solid red;<br>&nbsp; 
+            border-radius: 4px;<br>
+            }</div>
+            <p>If you only want a bottom border, use the <code>border-bottom</code> property:</p>
+            <label for="fname7">First Name</label>
+            <input type="text" id="fname7" name="firstname" class="inputborder2">
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text]
+           {<br>&nbsp;&nbsp;border: none;<br>&nbsp; 
+           border-bottom: 2px solid red;<br>
+           }</div>
+           <h4 style="color: blue;">Colored Inputs</h4>
+           <p>Use the <code>background-color</code> property to add a background color to the input, and 
+           the <code>color</code> property to change the text color:</p>
+           <input type="text" value="John" name="firstname" class="inputcolor" style="background-color: green;">
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text]
+           {<br>&nbsp;&nbsp;background-color: #3CBC8D;<br>&nbsp; color: green;<br>
+           }</div>
+
+           <h2>Focused Inputs</h2>
+           <p>By default, some browsers will add a blue outline around the input when it gets 
+           focus (clicked on). You can remove this behavior by adding <code>outline: none;</code> to the input.</p>
+           <p>Use the <code>:focus</code> selector to do something with the input field when it gets focus:</p>
+           <input class="focus1" type="text" name="firstname">
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text]:focus
+           {<br>
+           &nbsp;&nbsp;background-color: lightblue;<br>
+           }</div>
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text]:focus
+           {<br>
+           &nbsp;&nbsp;border: 3px solid #555;<br>
+           }</div>
+           <hr>
+           <h4 style="color: blue;">Input with icon/image</h4>
+           <p>If you want an icon inside the input, use the <code>background-image</code> property and 
+           position it with the <code>background-position</code> property. Also notice that we 
+           add a 
+           large left padding to reserve the space of the icon:</p>
+           <input type="text" name="search" placeholder="Search.." class="icon">
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text]
+           {<br>&nbsp; background-color: white;<br>&nbsp; background-image: url('searchicon.png');<br>&nbsp; 
+           background-position: 10px 10px; <br>&nbsp; background-repeat: 
+           no-repeat;<br>&nbsp; 
+           padding-left: 40px;<br>
+           }</div>
+
+           <h4 style="color: blue;">Animated Search Input</h4>
+           <p>In this example we use the CSS <code>transition</code> property to animate 
+           the width of the search input when it gets focus. You will learn more about the <code ><
+           transition</code>.</p>
+           <input id="myInp" type="text" name="search" placeholder="Search..">
+           <h4 style="color: blue;">Example</h4>
+           <div class="affichage">
+           input[type=text] {<br>&nbsp; transition: width 0.4s ease-in-out;<br>}<br><br>input[type=text]:focus {<br>
+             &nbsp; 
+           width: 100%;<br>}</div>
+           <hr>
+<h4 style="color: blue;">Styling Textareas</h4>
+<p><strong>Tip:</strong> Use the <code>resize</code> property to prevent textareas from being resized (disable the "grabber" in the bottom right corner):</p>
+<textarea name="firstname" style="background-color:#f8f8f8;width:100%;padding: 12px 20px;resize:none;height:150px;box-sizing: border-box;border:2px solid #ccc;border-radius:4px;">
+Some text...
+</textarea>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+textarea
+{<br>&nbsp; width: 100%;<br>&nbsp; height: 150px;<br>&nbsp; padding: 12px 20px;<br>&nbsp; 
+box-sizing: border-box;<br>&nbsp; border: 2px solid #ccc;<br>&nbsp; 
+border-radius: 4px;<br>&nbsp; background-color: #f8f8f8;<br>&nbsp; resize: none;<br></div>
+<hr>
+<h4 style="color: blue;">Styling Select Menus</h4>
+<form class="test">
+  <select id="country" name="country" style="background-color:#f1f1f1;border:none;">
+    <option value="usa">Australia</option>
+    <option value="usa">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+</form>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+select
+{<br>&nbsp; width: 100%;<br>&nbsp; padding: 16px 20px;<br>&nbsp; 
+border: none;<br>&nbsp; border-radius: 4px;<br>&nbsp;&nbsp;background-color: #f1f1f1;<br>
+}</div>
+<hr>
+<h4 style="color: blue;">Styling Input Buttons</h4>
+<input type="button" value="Button" class="button" style="cursor: pointer;">
+<input type="button" value="Button" class="button" style="width:100%;cursor: pointer;">
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+input[type=button], input[type=submit], input[type=reset]
+{<br>&nbsp; background-color: #04AA6D;<br>&nbsp; border: 
+none;<br>&nbsp; color: white;<br>&nbsp; padding: 
+16px 32px;<br>&nbsp; text-decoration: none;<br>&nbsp; 
+margin: 4px 2px;<br>&nbsp; cursor: pointer;<br>
+}<br><br>/* Tip: use <strong>width: 100%</strong> for full-width buttons */</div>
+<h4 style="color: blue;">Responsive Form</h4>
+<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css syntax <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Selectors</h4>
+        <p>A CSS selector selects the HTML element(s) you want to style.</p>
+        <h4 style="color: blue;">CSS Selectors</h4>
+        <p>CSS selectors are used to &quot;find&quot; (or select) the HTML elements you 
+        want to style.</p>
+        <p>We can divide CSS selectors into five categories:</p>
+        <ul>
+          <li>Simple selectors (select elements based on name, id, class)</li>
+          <li>Combinator selectors (select  elements based on a specific relationship between them)</li>
+          <li>Pseudo-class selectors (select elements based on a certain state)</li>
+          <li>Pseudo-elements selectors (select  and style a part of an element)</li>
+          <li>Attribute selectors (select elements based on 
+          an attribute or attribute value)</li>
+        </ul>
+        <p>This page will explain the most basic CSS selectors.</p>
+        <hr>
+        <h4 style="color: blue;">The CSS element Selector</h4>
+<p>The element selector selects HTML elements based on the element name.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Here, all &lt;p&gt; elements on the page will be 
+center-aligned, with a red text color:&nbsp;</p>
+<div class="affichage">
+p
+{<br>
+&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;color: red;<br>
+}
+</div>
+<h4 style="color: blue;">The CSS id Selector</h4>
+<p>The id selector uses the id attribute of an HTML element to select a specific element.</p>
+<p>The id of an element is unique within a page, so the id selector is 
+used to 
+select one unique element!</p>
+<p>To select an element with a specific id, write a hash (#) character, followed by 
+the id of the element.</p>
+<h4 style="color: blue;">Example</h4>
+<p>The CSS rule below will be applied to the HTML element with id=&quot;para1&quot;:&nbsp;</p>
+<div class="affichage">
+#para1
+{<br>
+&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;color: red;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">The CSS class Selector</h4>
+<p>The class selector selects HTML elements with a specific class attribute.</p>
+<p>To select elements with a specific class, write a period (.) character, followed by the 
+class name.</p>
+<h4 style="color: blue;">Example</h4>
+<p>In this example all HTML elements with class=&quot;center&quot; will be red and center-aligned:&nbsp;</p>
+<div class="affichage">
+.center {<br>&nbsp; text-align: center;<br>&nbsp;&nbsp;color: red;<br>}
+</div>
+<p>You can also specify that only specific HTML elements should be affected by a class.</p>
+<h4 style="color: blue;">Example</h4>
+<p>In this example only &lt;p&gt; elements with class=&quot;center&quot; will be 
+red and center-aligned:&nbsp;</p>
+<div class="affichage">
+p.center {<br>&nbsp; text-align: center;<br>&nbsp;&nbsp;color: red;<br>}
+</div>
+<p>HTML elements can also refer to more than one class.</p>
+    <h4 style="color: blue;">Example</h4>
+    <p>In this example the &lt;p&gt; element will be styled according to class=&quot;center&quot; 
+    and to class=&quot;large&quot;:&nbsp;</p>
+    <div class="affichage">
+    &lt;p class=&quot;center large&quot;&gt;This paragraph refers to two classes.&lt;/p&gt;</div>
+    <p><strong>Note:</strong> A class name cannot start with a number!</p>
+    <hr>
+
+<h4 style="color: blue;">The CSS Universal Selector</h4>
+<p>The universal selector (*) selects all HTML 
+elements on the page.</p>
+<h4 style="color: blue;">Example</h4>
+<p>The CSS rule below will affect every HTML element on the page:&nbsp;</p>
+<div class="affichage">
+  *
+{<br>
+&nbsp;&nbsp;text-align: center;<br>
+&nbsp;&nbsp;color: blue;<br>
+}
+</div>
+
+
+<hr>
+
+<h4 style="color: blue;">The CSS Grouping Selector</h4>
+<p>The grouping selector selects all the HTML elements with the same style 
+definitions.</p>
+<p>Look at the following CSS code (the h1, h2, and p elements have the same 
+style definitions):</p>
+<div class="affichage">
+h1
+{<br>
+&nbsp;&nbsp;text-align: center;<br>&nbsp;&nbsp;color: red;<br>
+}<br>
+<br>h2
+{<br>
+  &nbsp;
+text-align: center;<br>&nbsp; color: red;<br>}<br>
+<br>p
+{<br>
+&nbsp;&nbsp;text-align: center;<br>&nbsp;&nbsp;color: red;<br>
+}</div>
+<p>It will be better to group the selectors, to minimize the code.</p>
+<p>To group selectors, separate each selector with a comma.</p>
+<h4 style="color: blue;">Example</h4>
+<p>In this example we have grouped the selectors from the code above:&nbsp;</p>
+<div class="affichage">
+h1, h2, p
+{<br>
+  &nbsp;
+text-align: center;<br>&nbsp;&nbsp;color: red;<br>}
+<hr>
+</div>
+</body>
+</html>

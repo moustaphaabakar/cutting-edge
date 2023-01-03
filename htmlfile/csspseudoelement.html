@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css pseudo-element<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+      
+        <h4 style="color: blue;">CSS Pseudo-elements</h4>
+<hr>
+<h4 style="color: blue;">What are Pseudo-Elements?</h4>
+<p>A CSS pseudo-element is used to style specified parts of an element.</p>
+<p>For example, it can be used to:</p>
+<ul>
+<li>Style the first letter, or line, of an element</li>
+<li>Insert content before, or after, the content of an element </li>
+</ul>
+<hr>
+<h4 style="color: blue;">Syntax</h4>
+<p>The syntax of pseudo-elements:</p>
+<div class="affichage">
+selector::pseudo-element {<br>&nbsp;&nbsp;property: value;<br>}</div>
+<h4 style="color: blue;">The ::first-line Pseudo-element</h4>
+<p>The <code >::first-line</code> pseudo-element is used to add a special style 
+to the first line of a text.</p>
+<p>The following example formats the first line of the text in all &lt;p&gt; 
+elements:</p>
+<h4 style="color: blue;">Example&nbsp;</h4>
+<div class="affichage">
+p::first-line 
+{<br>
+  &nbsp;
+color: #ff0000;<br>
+  &nbsp;
+font-variant: small-caps;<br>
+}
+</div>
+<p><strong>Note:</strong> The <code>::first-line</code> pseudo-element can only be applied to block-level 
+    elements.</p>
+    <p>The following properties apply to the <code>::first-line</code> 
+    pseudo-element:</p>
+    <ul>
+      <li>font properties</li>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>text-decoration</li>
+      <li>vertical-align</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>clear</li>
+    </ul>
+        <p><strong>Notice the double colon notation - </strong> <code>::first-line</code> versus
+        <code>:first-line</code><br><br>The double colon replaced the single-colon 
+        notation for pseudo-elements in CSS3. This was an attempt from W3C to 
+        distinguish between <strong>pseudo-classes</strong> 
+        and <strong>pseudo-elements</strong>.<br><br>The single-colon syntax was used 
+        for both pseudo-classes and pseudo-elements in CSS2 and CSS1.<br><br>For 
+        backward compatibility, the single-colon syntax is acceptable for CSS2 and CSS1 
+        pseudo-elements.</p>
+        <hr>
+        <h4 style="color: blue;">The ::first-letter Pseudo-element</h4>
+        <p>The <code>::first-letter</code> pseudo-element is used to add a special style to the first 
+        letter of a text.</p>
+        <p>The following example formats the first letter of the text in all &lt;p&gt; 
+        elements:&nbsp;</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        p::first-letter 
+        {<br>
+          &nbsp;
+        color: #ff0000;<br>
+          &nbsp;
+        font-size: xx-large;<br>
+        }
+    </div>
+    <p><strong>Note:</strong> The <code>::first-letter</code> pseudo-element can only be applied to block-level 
+        elements.</p>
+        <p>The following properties apply to the ::first-letter pseudo- element:&nbsp;</p>
+        <ul>
+          <li> font properties</li>
+          <li> color properties&nbsp;</li>
+          <li> background properties</li>
+          <li>margin properties</li>
+          <li>padding properties</li>
+          <li>border properties</li>
+          <li>text-decoration</li>
+          <li>vertical-align (only if &quot;float&quot; is &quot;none&quot;)</li>
+          <li>text-transform</li>
+          <li>line-height</li>
+          <li>float</li>
+          <li>clear</li>
+        </ul>
+        <hr>
+        <h2>Pseudo-elements and HTML Classes</h2>
+<p>Pseudo-elements can be combined with HTML classes:&nbsp;</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+p.intro::first-letter {<br>&nbsp;&nbsp;color: #ff0000;<br>&nbsp; 
+font-size: 200%;<br>} </div>
+<p>The example above will display the first letter of paragraphs with class=&quot;intro&quot;, in 
+    red and in a larger size.</p>
+    <hr>
+    <h4 style="color: blue;">Multiple Pseudo-elements</h4>
+    <p>Several pseudo-elements can also be combined.</p>
+    <p>In the following example, the first letter of a paragraph will be red, in 
+    an xx-large font size. The rest of the first line will be blue, and in 
+    small-caps. The rest of the paragraph will be the default font size and color:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    p::first-letter
+    {<br>
+    &nbsp;&nbsp;color: #ff0000;<br>
+    &nbsp;&nbsp;font-size: xx-large;<br>
+    }<br><br>
+    p::first-line 
+    {<br>
+      &nbsp;
+    color: #0000ff;<br>
+      &nbsp;
+    font-variant: small-caps;<br>
+    }
+</div>
+<h4 style="color: blue;">CSS - The ::before Pseudo-element</h4>
+<p>The <code>::before</code> pseudo-element can be used to insert some content before the content of an element.</p>
+<p>The following example inserts an image before the content of each &lt;h1&gt; element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+h1::before 
+{<br>
+&nbsp;&nbsp;content: url(smiley.gif);<br>
+}</div>
+<h4 style="color: blue;">CSS - The ::after Pseudo-element</h4>
+<p>The <code>::after</code> pseudo-element can be used to insert some content after the content of an element.</p>
+<p>The following example inserts an image after the content of each &lt;h1&gt; element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+h1::after
+{<br>
+&nbsp;&nbsp;content: url(smiley.gif);<br>
+}</div>
+<hr>
+<h4 style="color: blue;">CSS - The ::marker Pseudo-element</h4>
+<p>The <code>::marker</code> pseudo-element selects the 
+markers of list items.</p>
+<p>The following example styles the markers of list items:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+::marker { <br>
+&nbsp;&nbsp;color: red;<br>&nbsp; font-size: 23px;<br>
+}
+</div>
+<h4 style="color: blue;">CSS - The ::selection Pseudo-element</h4>
+<p>The <code>::selection</code> pseudo-element matches the portion of an element that is 
+selected by a user.</p>
+<p>The following CSS properties can be applied to <code>::selection</code>: 
+<code>color</code>, 
+<code>background</code>, <code>cursor</code>, and <code>outline</code>.</p>
+<p>The following example makes the selected text red on a yellow background:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+::selection {<br>&nbsp;&nbsp;color: red; <br>&nbsp; 
+background: yellow;<br>}</div>
+</div>
+</div>
+</body>
+</html>

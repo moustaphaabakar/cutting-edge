@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS type conversion</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Type Conversion</span></h4>
+        <ul>
+        <li>Converting Strings to Numbers</li>
+        <li>Converting Numbers to Strings</li>
+        <li>Converting Dates to Numbers</li>
+        <li>Converting Numbers to Dates</li>
+        <li>Converting Booleans to Numbers</li>
+        <li>Converting Numbers to Booleans</li>
+        </ul>
+        <h4 style="color: blue;">JavaScript Type Conversion</h4>
+        <p>JavaScript variables can be converted to a new variable and another data type:</p>
+        <ul>
+          <li>By the use of a JavaScript function</li>
+          <li><strong>Automatically</strong> by JavaScript itself</li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">Converting Strings to Numbers</h4>
+        <p>The global method <code >Number()</code> converts a variable (or a value) into a number.</p>
+        <p>A numeric string (like &quot;3.14&quot;) converts to a number (like 3.14).</p>
+        <p>An empty string (like "") converts to 0.</p>
+        <p>A non numeric string (like "John") converts to <code>NaN</code> (Not a Number).</p>
+        <h4 style="color: blue;">Examples</h4>
+<p>These will convert:</p>
+<div class="affichage">
+Number(&quot;3.14&quot;)<br>
+Number(Math.PI)<br>
+Number(&quot; &quot;)<br>
+Number(&quot;&quot;)<br>
+</div>
+<p>These will not convert:</p>
+<div class="affichage">
+Number(&quot;99 88&quot;)<br>
+Number("John")
+</div>
+<hr>
+<h4 style="color: blue;">Number Methods</h4>
+<p>In the chapter Number Methods, you 
+will find more methods that can be used to convert strings to 
+numbers:</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:25%">Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Number()</td>
+    <td>Returns a number, converted from its argument</td>
+    </tr>
+  <tr>
+  <tr>
+    <td>parseFloat()</td>
+    <td>Parses a string and returns a floating point number</td>
+    </tr>
+  <tr>
+    <td>parseInt()</td>
+    <td>Parses a string and returns an integer</td>
+    </tr>
+</table>
+<h4 style="color: blue;">The Unary + Operator</h4>
+<p>The <strong>unary + operator</strong> can be used to 
+convert a variable to a number:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let y = &quot;5&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+// y is a string<br>
+let x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+// x is a number
+</div>
+<p>
+If the 
+variable cannot be converted, it will still become a number, but with the value <code>NaN</code> 
+(Not a Number):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let y = &quot;John&quot;;&nbsp;&nbsp;
+// y is a string<br>
+let x = + y;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x is a number (NaN)</div>
+<hr>
+<h4 style="color: blue;">Converting Numbers to Strings</h4>
+<p>The global method <code>String()</code> can convert numbers to strings.</p>
+<p>It can be used on any type of numbers, literals, variables, or expressions:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ String(x)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns a string from a number variable x<br>
+ String(123)&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // returns a string from a number literal 123<br>
+ String(100 + 23)&nbsp; // returns a string from a number from an expression</div>
+<p>The Number method <code>toString()</code> does the same.</p>
+<h4 style="color: blue;">Example</h4>
+ <div class="affichage">
+x.toString()<br>(123).toString()<br>(100 + 23).toString()</div>
+<hr>
+<h4 style="color: blue;">More Methods</h4>
+<p>In the chapter Number Methods, you 
+will find more methods that can be used to convert numbers to 
+strings:</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:25%">Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>toExponential()</td>
+    <td>Returns a string, with a number rounded and written using exponential notation.</td>
+  </tr>
+  <tr>
+    <td>toFixed()</td>
+    <td>Returns a string, with a number rounded and written with a specified number of decimals.</td>
+  </tr>
+  <tr>
+    <td>toPrecision()</td>
+    <td>Returns a string, with a number written with a specified length</td>
+  </tr>
+</table>
+<h4 style="color: blue;">Converting Dates to Numbers</h4>
+<p>The global method <code>Number()</code> can be used to convert dates to 
+numbers.</p>
+<div class="affichage">
+d = new Date();<br>Number(d)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // returns 1404568027739
+</div>
+<p>The date method <code>getTime()</code>  does the same.</p>
+<div class="affichage">
+d = new Date();<br>d.getTime()&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; // returns 1404568027739
+</div>
+<hr>
+<h4 style="color: blue;">Converting Dates to Strings</h4>
+<p>The global method <code>String()</code> can convert dates to 
+strings.</p>
+<div class="affichage">
+  String(Date())&nbsp; // returns &quot;Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)&quot;</div>
+<p>The Date method <code>toString()</code> does the same.</p>
+<h4 style="color: blue;">Example</h4>
+ <div class="affichage">
+  Date().toString()&nbsp; // returns &quot;Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)&quot;</div>
+<p>In the chapter Date Methods, you 
+will find more methods that can be used to convert dates to 
+strings:</p>
+<table class="table table-striped">
+    <tr>
+    <th>Method</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>getDate()</td>
+    <td>Get the day as a number (1-31)</td>
+    </tr>
+    <tr>
+    <td>getDay()</td>
+    <td>Get the weekday a number (0-6)</td>
+    </tr>
+    <tr>
+    <td>getFullYear()</td>
+    <td>Get the four digit year (yyyy)</td>
+    </tr>
+    <tr>
+    <td>getHours()</td>
+    <td>Get the hour (0-23)</td>
+    </tr>
+    <tr>
+    <td>getMilliseconds()</td>
+    <td>Get the milliseconds (0-999)</td>
+    </tr>
+    <tr>
+    <td>getMinutes()</td>
+    <td>Get the minutes (0-59)</td>
+    </tr>
+    <tr>
+    <td>getMonth()</td>
+    <td>Get the month (0-11)</td>
+    </tr>
+    <tr>
+    <td>getSeconds()</td>
+    <td>Get the seconds (0-59)</td>
+    </tr>
+    <tr>
+    <td>getTime()</td>
+    <td>Get the time (milliseconds since January 1, 1970)</td>
+    </tr>
+    </table>
+    <h4 style="color: blue;">Converting Booleans to Numbers</h4>
+<p>The global method <code>Number()</code> can also convert booleans to numbers.</p>
+<div class="affichage">
+Number(false)&nbsp;&nbsp;&nbsp;&nbsp; // returns 0<br>
+Number(true)&nbsp; &nbsp;&nbsp;&nbsp; // returns 1
+</div>
+<hr>
+<h4 style="color: blue;">Converting Booleans to Strings</h4>
+<p>The global method <code>String()</code> can convert booleans to 
+strings.</p>
+<div class="affichage">
+String(false)&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;// returns &quot;false&quot;<br>
+String(true)&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; // returns &quot;true&quot;
+</div>
+<p>The Boolean method <code>toString()</code> does the same.</p>
+<div class="affichage">
+false.toString()&nbsp;&nbsp;&nbsp;// returns &quot;false&quot;<br>
+  true.toString()&nbsp; &nbsp; // returns &quot;true&quot;
+</div>
+<hr>
+<h4 style="color: blue;">Automatic Type Conversion</h4>
+<p>When JavaScript tries to operate on a &quot;wrong&quot; data type, it will try to 
+convert the value to a &quot;right&quot; type.</p>
+<p>The result is not always what you expect:</p>
+<div class="affichage">
+    5 + null&nbsp;&nbsp;&nbsp; // returns 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because null is converted to 0<br>&quot;5&quot; + null&nbsp; // returns &quot;5null&quot;&nbsp;&nbsp; because null is converted to &quot;null&quot;<br>&quot;5&quot; + 2&nbsp;&nbsp;&nbsp;&nbsp; // returns 
+       &quot;52&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because 2 is converted to &quot;2&quot;<br>
+    &quot;5&quot; - 2&nbsp;&nbsp;&nbsp;&nbsp; // returns 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because &quot;5&quot; is converted to 5<br>&quot;5&quot; * &quot;2&quot;&nbsp;&nbsp; // returns 
+       10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; because &quot;5&quot; and &quot;2&quot; are 
+       converted to 5 and 2</div>
+   <hr>
+   <h4 style="color: blue;">Automatic String Conversion</h4>
+   <p>JavaScript automatically calls the variable's <code >toString()</code> function when you try 
+   to &quot;output&quot; an object or a variable:</p>
+   <div class="affichage">
+   document.getElementById(&quot;demo&quot;).innerHTML = myVar;<br><br>
+   // if myVar = {name:&quot;Fjohn&quot;}&nbsp; // toString converts to &quot;[object Object]&quot;<br>
+   // if myVar = [1,2,3,4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString converts to &quot;1,2,3,4&quot;<br>
+   // if myVar = new Date()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString converts to &quot;Fri Jul 18 2014 09:08:55 GMT+0200&quot;<br>
+   </div>
+   <p>Numbers and booleans are also converted, but this is not very visible:</p>
+   <div class="affichage">
+   // if myVar = 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString converts to &quot;123&quot;<br>
+   // if myVar = true &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString converts to &quot;true&quot;<br>
+   // if myVar = false&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // toString converts to &quot;false&quot;
+   </div>
+   <h4 style="color: blue;">JavaScript Type Conversion Table</h4>
+<p>This table shows the result of converting different JavaScript values to Number, String, and Boolean:</p>
+<table class="table table-striped">
+ <tr>
+  <th>Original<br>Value</th>
+  <th>Converted<br>to Number</th>
+  <th>Converted<br>to String</th>
+  <th>Converted<br>to Boolean</th>
+  <th style="width:10%">Try it</th>
+ </tr>
+ <tr>
+  <td>false</td>
+  <td>0</td>
+  <td>&quot;false&quot;</td>
+  <td>false</td>
+ </tr>
+ <tr>
+  <td>true</td>
+  <td>1</td>
+  <td>&quot;true&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>0</td>
+  <td>0</td>
+  <td>&quot;0&quot;</td>
+  <td>false</td>
+ </tr>
+ <tr>
+  <td>1</td>
+  <td>1</td>
+  <td>&quot;1&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>&quot;0&quot;</td>
+  <td>0</td>
+  <td>&quot;0&quot;</td>
+  <td class="important">true</td>
+ </tr>
+ <tr>
+  <td>&quot;000&quot;</td>
+  <td>0</td>
+  <td>&quot;000&quot;</td>
+  <td class="important">true</td>
+ </tr>
+ <tr>
+  <td>&quot;1&quot;</td>
+  <td>1</td>
+  <td>&quot;1&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>NaN</td>
+  <td>NaN</td>
+  <td>&quot;NaN&quot;</td>
+  <td>false</td>
+ </tr>
+ <tr>
+  <td>Infinity</td>
+  <td>Infinity</td>
+  <td>&quot;Infinity&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>-Infinity</td>
+  <td>-Infinity</td>
+  <td>&quot;-Infinity&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>&quot;&quot;</td>
+  <td class="important">0</td>
+  <td>&quot;&quot;</td>
+  <td class="important">false</td>
+ </tr>
+ <tr>
+  <td>&quot;20&quot;</td>
+  <td>20</td>
+  <td>&quot;20&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>&quot;twenty&quot;</td>
+  <td>NaN</td>
+  <td>&quot;twenty&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>[ ]</td>
+  <td class="important">0</td>
+  <td>&quot;&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>[20]</td>
+  <td class="important">20</td>
+  <td>&quot;20&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>[10,20]</td>
+  <td>NaN</td>
+  <td>&quot;10,20&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>[&quot;twenty&quot;]</td>
+  <td>NaN</td>
+  <td>&quot;twenty&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>[&quot;ten&quot;,&quot;twenty&quot;]</td>
+  <td>NaN</td>
+  <td>&quot;ten,twenty&quot;</td>
+  <td>true</td>
+ <tr>
+  <td>function(){}</td>
+  <td>NaN</td>
+  <td>&quot;function(){}&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>{ }</td>
+  <td>NaN</td>
+  <td>&quot;[object Object]&quot;</td>
+  <td>true</td>
+ </tr>
+ <tr>
+  <td>null</td>
+  <td class="important">0</td>
+  <td>&quot;null&quot;</td>
+  <td>false</td>
+ </tr>
+ <tr>
+  <td>undefined</td>
+  <td>NaN</td>
+  <td>&quot;undefined&quot;</td>
+  <td>false</td>
+ </tr>
+</table>
+<p>Values in quotes indicate string values.</p>
+<p>Red values indicate values (some) programmers might not expect.</p>
+</div>
+</body>
+</html>

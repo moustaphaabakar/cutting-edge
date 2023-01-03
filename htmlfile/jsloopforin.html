@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS loop for in</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript For In</h4>
+        <hr>
+        <h4 style="color: blue;">The For In Loop</h4>
+        <p>The JavaScript <code >for in</code> statement loops through the properties of an Object:</p>
+        <h4 style="color: blue;">Syntax</h4>
+        <div class="affichage">
+        for (key in object) {<br>
+        &nbsp; // <i>code block to be executed</i><br>
+        
+        }
+        </div>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const person = {fname:&quot;John&quot;, lname:&quot;Doe&quot;, age:25};<br><br>
+        let text = &quot;&quot;;<br>for (let x in person) {<br>
+        &nbsp; text += person[x];<br>
+        }</div>
+        <h4 style="color: blue;">Example Explained</h4>
+        <ul>
+        <li>The <b>for in</b> loop iterates over a <b>person</b> object</li>
+        <li>Each iteration returns a <b>key</b> (x)</li>
+        <li>The key is used to access the <b>value</b> of the key</li>
+        <li>The value of the key is <b>person[x]</b></li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">For In Over Arrays</h4>
+        <p>The JavaScript <code>for in</code> statement can also loop over the properties of an Array:</p>
+        <h4 style="color: blue;">Syntax</h4>
+        <div class="affichage">
+        for (variable in array) {<br>
+        &nbsp;&nbsp;code<br>
+        }
+        </div>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const numbers = [45, 4, 9, 16, 25];<br><br>
+        let txt = "";<br>
+        for (let x in numbers) {<br>
+        &nbsp; txt += numbers[x];<br> 
+        }<br>
+        </div>
+        <p>Do not use <b>for in</b> over an Array if the index <b>order</b> is important.</p>
+        <p>The index order is implementation-dependent, and array values may not be accessed in the order you expect.</p>
+        <p>It is better to use a <b>for</b> loop, a <b>for of</b> loop, or <b>Array.forEach()</b> when the order is important.</p>
+        <hr>
+<h4 style="color: blue;">Array.forEach()</h4>
+<p>The <code>forEach()</code> method calls a function (a callback function) once for each array element.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [45, 4, 9, 16, 25];<br><br>
+let txt = &quot;&quot;;<br>
+numbers.forEach(myFunction);<br><br>
+function myFunction(value, index, array) {<br>
+  &nbsp;
+txt += value;<br>
+}
+</div>
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+<li>The item value</li>
+<li>The item index </li>
+<li>The array itself</li>
+</ul>
+<p>The example above uses only the value parameter. It can be rewritten to:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [45, 4, 9, 16, 25];<br><br>
+let txt = &quot;&quot;;<br>
+numbers.forEach(myFunction);<br><br>
+function myFunction(value) {<br>
+  &nbsp;
+txt += value; <br>
+}
+</div>
+ </div>
+</body>
+</html>

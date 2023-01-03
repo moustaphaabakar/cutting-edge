@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">json objects</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JSON Object Literals</h4>
+        <hr>
+        <p>This is a JSON string:</p>
+        <div class="affichag">
+        '{&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;car&quot;:null}'
+        </div>
+        <p>Inside the JSON string there is a JSON object literal:</p>
+        <div class="affichag">
+        {&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;car&quot;:null}
+        </div>
+        <p>JSON object literals are surrounded by curly braces {}.</p>
+        <p>JSON object literals contains key/value pairs.</p>
+        <p>Keys and values are separated by a colon.</p>
+        <p>Keys must be strings, 
+        and values must be a valid JSON data type:
+        <ul>
+        <li>string</li>
+        <li>number</li>
+        <li>object</li>
+        <li>array</li>
+        <li>boolean</li>
+        <li>null</li>
+        </ul>
+        </p>
+        <p>Each key/value pair is separated by a comma.</p>
+        <p>It is a common mistake to call a JSON object literal "a JSON object".</p>
+        <p>JSON cannot be an object. JSON is a string format.</p>
+        <p>The data is only JSON when it is in a string format. 
+        When it is converted to a JavaScript variable, it becomes a JavaScript object.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Objects</h4>
+        <p>You can create a JavaScript object from a JSON object literal:
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        myObj = {&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;car&quot;:null};
+        </div>
+        <p>Normally, you create a JavaScript object by parsing a JSON string:
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        myJSON = '{"name":"John", "age":30, "car":null}';<br>
+        myObj = JSON.parse(myJSON);
+        </div>
+        <hr>
+        <h4 style="color: blue;">Accessing Object Values</h4>
+        <p>You can access object values by using dot (.) notation:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        const myJSON = '{"name":"John", "age":30, "car":null}';<br>
+        const myObj = JSON.parse(myJSON);<br>
+          x = myObj.name;<br>
+        </div>
+        <p>You can also access object values by using bracket ([]) notation:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        const myJSON = '{"name":"John", "age":30, "car":null}';<br>
+        const myObj = JSON.parse(myJSON);<br>
+          x = myObj[&quot;name&quot;];<br></div>
+        <hr>
+        <h4 style="color: blue;">Looping an Object</h4>
+        <p>You can loop through object properties with a for-in loop:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        const myJSON = '{"name":"John", "age":30, "car":null}';<br>
+        const myObj = JSON.parse(myJSON);<br>
+        <br>
+        let text = "";<br>
+        for (const x in myObj) {<br>
+        &nbsp;&nbsp;text += x + ", ";<br>
+        }
+        </div>
+        <p>In a for-in loop, use the bracket notation to access the property <em>values</em>:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichag">
+        const myJSON = '{"name":"John", "age":30, "car":null}';<br>
+        const myObj = JSON.parse(myJSON);<br>
+        <br>
+        let text = "";<br>
+        for (const x in myObj) {<br>
+        &nbsp;&nbsp;text += myObj[x] + ", ";<br>
+        }
+        </div>
+    </div>
+  
+</body>
+</html>

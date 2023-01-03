@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object reference</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript ES5 Object Methods</h4>
+        <p>ECMAScript 5 (2009) added a lot of new Object Methods to JavaScript.</p>
+        <h4 style="color: blue;">Managing Objects</h4>
+        <div class="affichage">
+        // Create object with an existing object as prototype<br>
+        Object.create()<br><br>
+        // Adding or changing an object property<br>
+        Object.defineProperty(object, property, descriptor)<br><br>
+        // Adding or changing object properties<br>
+        Object.defineProperties(object, descriptors)<br><br>
+        // Accessing Properties<br>
+        Object.getOwnPropertyDescriptor(object, property)<br><br>
+        // Returns all properties as an array<br>
+        Object.getOwnPropertyNames(object)<br><br>
+        // Accessing the prototype<br>
+        Object.getPrototypeOf(object)<br><br>
+        // Returns enumerable properties as an array<br>
+        Object.keys(object)<br><br>
+        </div>
+        <h4 style="color: blue;">Protecting Objects</h4>
+        <div class="affichage">
+        // Prevents adding properties to an object<br>
+        Object.preventExtensions(object)<br><br>
+        // Returns true if properties can be added to an object<br>
+        Object.isExtensible(object)<br><br>
+        // Prevents changes of object properties (not values)<br>
+        Object.seal(object)<br><br>
+        // Returns true if object is sealed<br>
+        Object.isSealed(object)<br><br>
+        // Prevents any changes to an object<br>
+        Object.freeze(object)<br><br>
+        // Returns true if object is frozen<br>
+        Object.isFrozen(object)
+        </div>    
+        <hr>
+        <h4 style="color: blue;">Changing a Property Value</h4>
+        <h4 style="color: blue;">Syntax</h4>
+        <div class="affichage">
+        Object.defineProperty(object, property, {value : <em>value</em>})</div>
+        <p>This example changes a property value:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const person = {<br>&nbsp;&nbsp;firstName: &quot;John&quot;,<br>&nbsp; 
+          lastName : &quot;Doe&quot;,<br>&nbsp; language : &quot;EN&quot; <br>};<br><br>// Change a property<br>Object.defineProperty(person, &quot;language&quot;, 
+          {value : &quot;NO&quot;});</div>
+          <hr>
+<h4 style="color: blue;">Changing Meta Data</h4>
+<p>ES5 allows the following property meta data to be changed:</p>
+<div class="affichage">
+writable : true&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;// Property value can be changed<br>
+enumerable : true&nbsp; &nbsp; // Property can be enumerated<br>
+configurable : true&nbsp; // Property can be reconfigured </div>
+<div class="affichage">
+writable : false&nbsp;&nbsp;&nbsp;&nbsp; // Property value can not be changed<br>
+enumerable : false&nbsp;&nbsp; // Property can be not enumerated<br>
+configurable : false // Property can be not reconfigured
+</div>
+<p>ES5 allows getters and setters to be changed:</p>
+<div class="affichage">
+// Defining a getter<br>
+get: function() { return language }<br>
+// Defining a setter<br>
+set: function(value) { language = value }
+</div>
+<p>This example makes language read-only:</p>
+<div class="affichage">
+Object.defineProperty(person, "language", {writable:false});
+</div>
+<p>This example makes language not enumerable:</p>
+<div class="affichage">
+Object.defineProperty(person, "language", {enumerable:false});
+</div>
+<hr>
+<h4 style="color: blue;">Listing All Properties</h4>
+<p>This example list all properties of an object:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>&nbsp; firstName: &quot;John&quot;,<br>&nbsp; 
+  lastName : &quot;Doe&quot;,<br>&nbsp; language : &quot;EN&quot; <br>};<br><br>
+  Object.defineProperty(person, &quot;language&quot;, {enumerable:false});<br>Object.getOwnPropertyNames(person);&nbsp; // Returns an array of 
+  properties</div>
+<hr>
+<h4 style="color: blue;">Listing Enumerable Properties</h4>
+<p>This example list only the enumerable properties of an object:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>&nbsp;&nbsp;firstName: &quot;John&quot;,<br>&nbsp; 
+  lastName : &quot;Doe&quot;,<br>&nbsp;&nbsp;language : &quot;EN&quot; <br>};<br><br>
+  Object.defineProperty(person, &quot;language&quot;, {enumerable:false});<br>Object.keys(person);&nbsp; // Returns an array 
+  of enumerable  
+  properties</div>
+<hr>
+<h4 style="color: blue;">Adding a Property</h4>
+<p>This example adds a new property to an object:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  // Create an object:<br>const person = {<br>&nbsp;&nbsp;firstName: &quot;John&quot;,<br>&nbsp;&nbsp;lastName : 
+  &quot;Doe&quot;,<br>&nbsp; language : &quot;EN&quot;<br>};<br><br>// Add a property<br>Object.defineProperty(person, &quot;year&quot;, 
+  {value:&quot;2008&quot;});</div>
+<hr>
+<h4 style="color: blue;">Adding Getters and Setters</h4>
+<p>The <code>Object.defineProperty()</code> method can also be used to add Getters and 
+Setters:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+//Create an object<br>const person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;};<br><br>
+// Define a getter<br>Object.defineProperty(person, &quot;fullName&quot;, {<br>&nbsp;&nbsp;get: 
+function () {return this.firstName + &quot; &quot; + this.lastName;}<br>});</div>
+<hr>
+<h4 style="color: blue;">A Counter Example</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Define object<br>
+const obj = {counter:0};<br><br>
+// Define setters<br>
+Object.defineProperty(obj, &quot;reset&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter = 0;}<br>});<br>
+Object.defineProperty(obj, &quot;increment&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter++;}<br>});<br>
+Object.defineProperty(obj, &quot;decrement&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter--;}<br>});<br>
+Object.defineProperty(obj, &quot;add&quot;, {<br>
+&nbsp;&nbsp;set : function (value) {this.counter += value;}<br>});<br>
+Object.defineProperty(obj, &quot;subtract&quot;, {<br>
+&nbsp;&nbsp;set : function (i) {this.counter -= i;}<br>});<br><br>
+// Play with the counter:<br>
+obj.reset;<br>
+obj.add = 5;<br>
+obj.subtract = 1;<br>
+obj.increment;<br>
+obj.decrement;<br>
+</div>
+</div>
+
+</body>
+</html>

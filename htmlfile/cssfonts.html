@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css fonts<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">fonts</h4>
+        <p class="intro">Choosing the right font for your website is important!</p>
+        <h4 style="color: blue;">Font Selection is Important</h4>
+        <p>Choosing the right font has a huge impact on how the readers experience a 
+        website.</p>
+        <p>The right font can create a strong identity for your brand.</p>
+        <p>Using a font that is easy to read is important. The font adds 
+        value to your text. It is also important to choose the correct color and text size 
+        for the font.</p>
+        <hr>
+        <h4 style="color: blue;">Generic Font Families</h4>
+        <p>In CSS there are five generic font families:</p>
+        <ol>
+          <li><strong>Serif</strong> fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</li>
+          <li><strong>Sans-serif</strong> fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</li>
+          <li><strong>Monospace</strong> fonts - here all the letters have the same fixed width. They create a mechanical look.&nbsp;</li>
+          <li><strong>Cursive</strong> fonts imitate human handwriting.</li>
+          <li><strong>Fantasy</strong> fonts are decorative/playful fonts.</li>
+        </ol>
+        <p>All the different font names belong to one of the generic font families.&nbsp;</p>
+        <hr>
+        <h2>Difference Between Serif and Sans-serif Fonts</h2>
+        <img alt="Serif vs. Sans-serif" src="../serif.gif" width="398" height="142" style="max-width:100%;height:auto">
+        <div class="w3-panel w3-note">
+         <p><strong>Note:</strong> On computer screens, sans-serif fonts are considered easier to read than serif fonts.</p>
+        </div>
+        <hr>
+        <h4 style="color: blue;">Some Font Examples</h4>
+<table class="table table-striped">
+<tr>
+<th style="width:20%">Generic Font Family</th>
+<th style="width:30%">Examples of Font Names</th>
+</tr>
+<tr>
+<td>Serif</td>
+<td><span style="font-size:150%;font-family:'Times New Roman',serif">Times New Roman</span><br>
+<span style="font-size:150%;font-family:Georgia,serif">Georgia</span><br>
+<span style="font-size:150%;font-family:Garamond,serif">Garamond</span><br>
+</td>
+</tr>
+<tr>
+<td>Sans-serif</td>
+<td><span style="font-size:150%;font-family:Arial,sans-serif">Arial</span><br>
+<span style="font-size:150%;font-family:Verdana,sans-serif">Verdana</span><br>
+<span style="font-size:150%;font-family:Helvetica,sans-serif">Helvetica</span><br>
+</td>
+</tr>
+<tr>
+<td>Monospace</td>
+<td><span style="font-size:150%;font-family:'Courier New',monospace">Courier New</span><br>
+<span style="font-size:150%;font-family:'Lucida Console',monospace">Lucida Console</span><br>
+<span style="font-size:150%;font-family:Monaco,monospace">Monaco</span>
+</td>
+</tr>
+<tr>
+<td>Cursive</td>
+<td><span style="font-size:150%;font-family:'Brush Script MT',cursive">Brush Script MT</span><br>
+<span style="font-size:150%;font-family:'Lucida Handwriting',cursive">Lucida Handwriting</span><br>
+</td>
+</tr>
+<tr>
+<td>Fantasy</td>
+<td><span style="font-size:150%;font-family:Copperplate,fantasy">Copperplate</span><br>
+<span style="font-size:150%;font-family:Papyrus,fantasy">Papyrus</span>
+</td>
+</tr>
+</table>
+<h4 style="color: blue;">The CSS font-family Property</h4>
+<p>In CSS, we use the <code >font-family</code> property to specify the font of a text.</p>
+<p><b>Note</b>: If the font name is more than one word, it must be in quotation marks, like: &quot;Times New Roman&quot;.</p>
+<p><strong>Tip:</strong> The <code>font-family</code> property should hold several font names as a &quot;fallback&quot; system, 
+to ensure maximum compatibility between browsers/operating systems. Start with the font you want, and end with a generic family 
+(to let the 
+browser pick a similar font in the generic family, if no other fonts are 
+available). The font names should be separated with comma.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Specify some different fonts for three paragraphs:</p>
+<div class="affichage">
+  .p1 {<br>&nbsp; font-family: &quot;Times New Roman&quot;, Times, serif;<br>}<br><br>
+  .p2 {<br>&nbsp; font-family: Arial, Helvetica, sans-serif;<br>}<br><br>
+  .p3 {<br>&nbsp; font-family: &quot;Lucida Console&quot;, &quot;Courier New&quot;, monospace;<br>}</div>
+</div>
+</body>
+</html>

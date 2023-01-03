@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css borders<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">margin</h4>
+        <p>Margins are used to create space around elements, outside of any defined borders.</p>
+        <hr>
+        <h4 style="color: blue;">CSS Margins</h4>
+        <p>The CSS <code>margin</code> properties are used to create space around elements, 
+        outside of any defined borders.</p>
+        <p>With CSS, you have full control over the margins. There are properties 
+        for setting the margin for each side of an element (top, right, bottom, and left).</p>
+        <hr>
+        <h2>Margin - Individual Sides</h2>
+<p>CSS has properties for specifying the margin for each 
+side of an element:</p>
+<ul>
+<li><code >margin-top</code></li>
+<li><code class="w3-codespan">margin-right</code></li>
+<li><code class="w3-codespan">margin-bottom</code></li>
+<li><code class="w3-codespan">margin-left</code></li>
+</ul>
+<p>All the margin properties can have the following values:</p>
+<ul>
+<li>auto - the browser calculates the margin</li>
+<li><em>length</em> - specifies a margin in px, pt, cm, etc.</li>
+<li><em>%</em> - specifies a margin in % of the width of the containing element</li>
+<li>inherit - specifies that the margin should be inherited from the parent element</li>
+</ul>
+<p><b>Tip:</b> Negative values are allowed.</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Set different margins for all four sides of a &lt;p&gt; element:</p>
+<div class="affichage">
+p {<br>&nbsp;&nbsp;margin-top: 100px;<br>
+&nbsp;&nbsp;margin-bottom: 100px;<br>
+&nbsp;&nbsp;margin-right: 150px;<br>
+&nbsp;&nbsp;margin-left: 80px;<br>}
+</div>
+
+<hr>
+
+<h4 style="color: blue;">Margin - Shorthand Property</h4>
+<p>To shorten the code, it is possible to specify all the margin properties in 
+one property.</p>
+<p>The <code>margin</code> property is a shorthand property for the following individual margin properties:</p>
+<ul>
+<li><code >margin-top</code></li>
+<li><code>margin-right</code></li>
+<li><code >margin-bottom</code></li>
+<li><code>margin-left</code></li>
+</ul>
+<p>So, here is how it works:</p>
+<p>If the <code >margin</code> property has four values:</p>
+<ul>
+<li><b>margin: 25px 50px 75px 100px; </b>
+<ul><li>top margin is 25px</li>
+<li>right margin is 50px</li>
+<li>bottom margin is 75px</li>
+<li>left margin is 100px</li></ul>
+</li>
+</ul>
+
+<h4 style="color: blue;">Example</h4>
+  <p>Use the margin shorthand property with four values:</p>
+<div class="affichage">
+p {<br>&nbsp;&nbsp;margin: 25px 50px 75px 100px;<br>}</div>
+
+<p>If the <code>margin</code> property has three values:</p>
+<ul>
+<li><b>margin: 25px 50px 75px;</b><ul>
+<li>top margin is 25px</li>
+<li>right and left margins are 50px</li>
+<li>bottom margin is 75px</li></ul>
+</li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+  <p>Use the margin shorthand property with three values:&nbsp;</p>
+<div class="affichage">
+p {<br>&nbsp;
+margin: 25px 50px 75px;<br>}</div>
+
+<p>If the <code>margin</code> property has two values:</p>
+<ul>
+<li><b>margin: 25px 50px;</b><ul><li>top and bottom margins are 25px</li>
+<li>right and left margins are 50px</li></ul>
+</li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+  <p>Use the margin shorthand property with two values:&nbsp;</p>
+<div class="affichage">
+p {<br>&nbsp;
+margin: 25px 50px;<br>}</div>
+
+<p>If the <code>margin</code> property has one value:</p>
+<ul>
+<li><b>margin: 25px;</b><ul><li>all four margins are 25px</li></ul>
+</li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+  <p>Use the margin shorthand property with one value:&nbsp;</p>
+<div class="affichage">
+p {<br>&nbsp;&nbsp;margin: 25px;<br>}</div>
+
+<hr>
+<h4 style="color: blue;">The auto Value</h4>
+<p>You can set the margin property to <code >auto</code> to horizontally center the element within its container.</p>
+<p>The element will then take up the specified width, and the remaining space 
+will be split equally between the left and right margins.</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Use margin: auto:</p>
+<div class="affichage">
+div {<br>&nbsp; width: 300px;<br>&nbsp; margin: 
+auto;<br>&nbsp;&nbsp;border: 1px solid red;<br>}</div>
+<h2>The inherit Value</h2>
+<p>This example lets the left margin of the &lt;p class=&quot;ex1&quot;&gt; element be inherited from the parent element 
+(&lt;div&gt;):</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Use of the inherit value:</p>
+<div class="affichage">
+div {<br>&nbsp;&nbsp;border: 1px solid red;<br>&nbsp;&nbsp;margin-left: 100px;<br>}<br><br>p.ex1 {<br>
+  &nbsp; margin-left: 
+inherit;<br>}</div>
+
+<hr>
+
+<h4 style="color: blue;">All CSS Margin Properties</h4>
+<table class="table table-striped" style="margin: 10px;">
+  <tr>
+    <th style="width:20%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>margin</td>
+    <td>A shorthand property for setting all the margin properties in one declaration</td>
+  </tr>
+  <tr>
+    <td>margin-bottom</td>
+    <td>Sets the bottom margin of an element</td>
+  </tr>
+  <tr>
+    <td>margin-left></td>
+    <td>Sets the left margin of an element</td>
+  </tr>
+  <tr>
+    <td>margin-right</td>
+    <td>Sets the right margin of an element</td>
+  </tr>
+  <tr>
+    <td>margin-top</td>
+    <td>Sets the top margin of an element</td>
+  </tr>
+</table>
+
+      </div>
+      
+</body>
+</html>

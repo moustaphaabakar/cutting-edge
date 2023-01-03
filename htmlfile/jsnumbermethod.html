@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS numbers methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Number Methods</h4>
+        <p class="intro">Number methods help you work with numbers.</p>
+        <hr>
+        <h4 style="color: blue;">Number Methods and Properties</h4>
+        <p>Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects). </p>
+        <p>But with JavaScript, methods and properties are also available to primitive 
+        values, because JavaScript treats primitive values as objects when executing 
+        methods and properties.</p>
+        <hr>
+        <h4 style="color: blue;">The toString() Method</h4>
+        <p>The <code>toString()</code> method returns a number as a string.</p>
+        <p>All number methods can be used on any type of numbers (literals, variables, or expressions):</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 123;<br>
+        x.toString();<br>
+        (123).toString();<br>
+        (100 + 23).toString();
+        </div>
+        <hr>
+        <h4 style="color: blue;">The toExponential() Method</h4>
+        <p><code>toExponential()</code> returns a string, with a number rounded and written using exponential notation.</p>
+        <p>A parameter defines the number of characters behind the decimal point:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 9.656;<br>
+        x.toExponential(2);<br>
+        x.toExponential(4);<br>
+        x.toExponential(6);
+        </div>
+        <p>The parameter is optional. If you don't specify it, JavaScript will not round the number.</p>
+        <hr>
+        <h4 style="color: blue;">The toFixed() Method</h4>
+        <p><code class="affichage">toFixed()</code> returns a string, with the number 
+        written with a specified number of 
+        decimals:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 9.656;<br>
+        x.toFixed(0);<br>
+        x.toFixed(2);<br>
+        x.toFixed(4);<br>
+        x.toFixed(6);
+        </div>
+        <p><code>toFixed(2)</code> is perfect for working with money.</p>
+        <hr>
+        <h4 style="color: blue;">The toPrecision() Method</h4>
+        <p><code>toPrecision()</code> returns a string, with a number written with a 
+        specified length:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 9.656;<br>
+        x.toPrecision();<br>
+        x.toPrecision(2);<br>
+        x.toPrecision(4);<br>
+        x.toPrecision(6);
+        </div>    
+        <hr>
+        <h4 style="color: blue;">The valueOf() Method</h4>
+        <p><code class="w3-codespan">valueOf()</code> returns a number as a number.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 123;<br>
+        x.valueOf();<br>
+        (123).valueOf();<br>
+        (100 + 23).valueOf();
+        </div>
+        <p>In JavaScript, a number can be a primitive value (typeof = number) or an 
+            object (typeof = object).</p>
+            <p>The <code>valueOf()</code> method is used internally in JavaScript to convert Number 
+            objects to primitive values.</p>
+            <p>There is no reason to use it in your code.</p>
+            <p>All JavaScript data types have a <code>valueOf()</code> and a <code>toString()</code> method.</p>
+            <hr>
+            <h4 style="color: blue;">Converting Variables to Numbers</h4>
+            <p>There are 3 JavaScript methods that can be used 
+            to convert variables to numbers:</p>
+            <ul>
+              <li>The <code>Number()</code> method</li>
+              <li>The <code>parseInt()</code> method</li>
+              <li>The <code>parseFloat()</code> method</li>
+            </ul>
+            <p>These methods are not <strong>number</strong> methods, but <strong>global</strong> 
+            JavaScript methods.</p>
+            <hr>
+            <h4 style="color: blue;">Global JavaScript Methods</h4>
+            <p>JavaScript global methods can be used on all JavaScript data types.</p>
+            <p>These are the most relevant methods, when working with numbers:</p>
+            <table class="table table-striped">
+                <tr>
+                  <th style="width:25%">Method</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>Number()</td>
+                  <td>Returns a number, converted from its argument.</td>
+                </tr>
+                <tr>
+                  <td>parseFloat()</td>
+                  <td>Parses its argument and returns a floating point number</td>
+                  </tr>
+                <tr>
+                  <td>parseInt()</td>
+                  <td>Parses its argument and returns an integer</td>
+                  </tr>
+                </table>
+              <h4 style="color: blue;">The Number() Method</h4>
+              <p><code>Number()</code> can be used to convert JavaScript variables to numbers:</p>
+              <h4 style="color: blue;">Example</h4>
+              <div class="affichage">
+              Number(true);<br>
+              Number(false);<br>
+              Number(&quot;10&quot;);<br>
+              Number(&quot;&nbsp; 10&quot;);<br>
+              Number(&quot;10&nbsp; &quot;);<br>
+              Number(&quot; 10&nbsp; &quot;);<br>
+              Number(&quot;10.33&quot;);<br>
+              Number(&quot;10,33&quot;);<br>
+              Number(&quot;10 33&quot;);<br>
+              Number(&quot;John&quot;);
+              </div>
+                <p>If the number cannot be converted, <code>NaN</code> (Not a Number) is returned.</p>
+                <hr>
+                <h4 style="color: blue;">The Number() Method Used on Dates</h2>
+                <p><code>Number()</code> can also convert a date to a number.</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                Number(new Date(&quot;1970-01-01&quot;))
+                </div>
+                <p>The <code>Number()</code> method returns the number of milliseconds since 1.1.1970.
+                <p>The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000:</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                Number(new Date(&quot;1970-01-02&quot;))
+                </div>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    Number(new Date(&quot;2017-09-30&quot;))
+                    </div>
+                    <hr>
+                    <h4 style="color: blue;">The parseInt() Method</h4>
+                    <p><code>parseInt()</code> parses a string and returns a whole number. Spaces are 
+                    allowed. Only the first number is returned:</p>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    parseInt(&quot;-10&quot;);<br>
+                    parseInt(&quot;-10.33&quot;);<br>
+                    parseInt(&quot;10&quot;);<br>
+                    parseInt(&quot;10.33&quot;);<br>
+                    parseInt(&quot;10 20 30&quot;);<br>
+                    parseInt(&quot;10 years&quot;);<br>
+                    parseInt(&quot;years 10&quot;);
+                    </div>
+                    <p>If the number cannot be converted, <code>NaN</code> (Not a Number) is returned.</p>
+                    <hr>
+                    <h4 style="color: blue;">The parseFloat() Method</h4>
+                    <p><code>parseFloat()</code> parses a string and returns a number. Spaces are 
+                    allowed. Only the first number is returned:</p>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    parseFloat(&quot;10&quot;);<br>
+                    parseFloat(&quot;10.33&quot;);<br>
+                    parseFloat(&quot;10 20 30&quot;);<br>
+                    parseFloat(&quot;10 years&quot;);<br>
+                    parseFloat(&quot;years 10&quot;);
+                    </div>
+                    <p>If the number cannot be converted, <code>NaN</code> (Not a Number) is returned.</p>
+                    <hr>
+                    <h4 style="color: blue;">Number Properties</h4>
+                    <table class="affichage">
+                      <tr>
+                        <th style="width:25%">Property</th>
+                        <th>Description</th>
+                      </tr>
+                      <tr>
+                        <td>MAX_VALUE</td>
+                        <td>Returns the largest number possible in JavaScript</td>
+                      </tr>
+                      <tr>
+                        <td>MIN_VALUE</td>
+                        <td>Returns the smallest number possible in JavaScript</td>
+                      </tr>
+                      <tr>
+                        <td>POSITIVE_INFINITY</td>
+                        <td>Represents infinity (returned on overflow)</td>
+                      </tr>
+                      <tr>
+                        <td>NEGATIVE_INFINITY</td>
+                        <td>Represents negative infinity (returned on overflow)</td>
+                        </tr>
+                      <tr>
+                        <td>NaN</td>
+                        <td>Represents a "Not-a-Number" value</td>
+                        </tr>
+                    </table>
+                    <h4 style="color: blue;">JavaScript MIN_VALUE and MAX_VALUE</h4>
+                    <p><code class="w3-codespan">MAX_VALUE</code> returns the largest possible number in JavaScript.</p>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    let x = Number.MAX_VALUE;
+                    </div>
+                    <p><code>MIN_VALUE</code> returns the lowest possible number in JavaScript.</p>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    let x = Number.MIN_VALUE;
+                    </div>
+                    <hr>
+                    <h4 style="color: blue;">JavaScript POSITIVE_INFINITY</h4>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    let x = Number.POSITIVE_INFINITY;
+                    </div>
+                    <p><code>POSITIVE_INFINITY</code> is returned on overflow:</p>
+                    <h4 style="color: blue;">Example</h4>
+                    <div class="affichage">
+                    let x = 1 / 0;
+                    </div>
+                    <hr>
+<h4 style="color: blue;">JavaScript NEGATIVE_INFINITY</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = Number.NEGATIVE_INFINITY;
+</div>
+<p><code>NEGATIVE_INFINITY</code> is returned on overflow:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = -1 / 0;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript NaN - Not a Number</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = Number.NaN;
+</div>
+<p><code>NaN</code> is a JavaScript reserved word indicating that a number is not a legal number.</p>
+<p>Trying to do arithmetic with a non-numeric string will result in <code class="w3-codespan">NaN</code> (Not a 
+Number):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 / &quot;Apple&quot;;
+</div>
+<p>
+<hr>
+<h4 style="color: blue;">Number Properties Cannot be Used on Variables</h4>
+<p>Number properties belongs to the JavaScript's number object wrapper called <strong>Number</strong>.</p>
+<p>These properties can only be accessed as <code>Number.MAX_VALUE</code>.</p>
+<p>Using <em>myNumber</em>.MAX_VALUE, where <em>myNumber</em> is a variable, expression, 
+or value, will return <code>undefined</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 6;<br>
+x.MAX_VALUE
+</div>
+</div>
+
+</body>
+</html>

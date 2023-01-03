@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM Nodes lists</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript HTML DOM Node Lists</h4>
+        <hr>
+        <h4 style="color: blue;">The HTML DOM NodeList Object</h4>
+        <p>A <code>NodeList</code> object is a list (collection) of nodes extracted from a 
+        document.</p>
+        <p>A <code>NodeList</code> object is almost the same as an <code>HTMLCollection</code> object.</p>
+        <p>Some (older) browsers return a NodeList object instead of an HTMLCollection 
+        for methods like <code>getElementsByClassName()</code>.</p>
+        <p>All browsers return a NodeList object for the property <code>childNodes</code>.&nbsp; </p>
+        <p>Most browsers return a NodeList object for the method <code>querySelectorAll()</code>.</p>
+        <p>The following code selects all <code>&lt;p&gt;</code> nodes in a document:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const myNodeList = document.querySelectorAll(&quot;p&quot;);
+        </div>
+        <p>The elements in the NodeList can be accessed by an index number.</p>
+          <p>To access the 
+        second &lt;p&gt; node you can write:</p>
+        <div class="affichage">
+        myNodeList[1]
+        </div>
+        <p><b>Note:</b> The index starts at 0.</p>
+        <hr>
+        <h4 style="color: blue;">HTML DOM Node List Length</h4>
+        <p>The <code>length</code> property defines the number of nodes in a node list:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        myNodelist.length
+        </div>
+        <p>The <code>length</code> property is useful when you want to loop through the nodes in a node 
+        list:</p>
+        <h4 style="color: blue;">Example</h4>
+        <p>Change the color of all &lt;p&gt; elements in a node 
+        list:</p>
+        <div class="affichage">
+        const myNodelist = document.querySelectorAll(&quot;p&quot;);<br>
+        for (let i = 0; i &lt; myNodelist.length; i++) {<br>
+        &nbsp; myNodelist[i].style.color = &quot;red&quot;;<br>
+        }
+        </div>
+        <hr>
+        <h4 style="color: blue;">The Difference Between an HTMLCollection and a NodeList</h4>
+        <p>A <b>NodeList</b> and an <b>HTMLcollection</b> is very much the same thing.</p>
+        <p>Both are array-like collections (lists) of nodes (elements) extracted from a 
+        document. The nodes can be accessed by index numbers. The index starts at 0.</p>
+        <p>Both have a <b>length</b> property that returns the number of elements in the list (collection).</p>
+        
+        <p>An HTMLCollection is a collection of <b>document elements</b>.</p>
+        <p>A NodeList is a collection of <b>document nodes</b> (element nodes, attribute nodes, and text nodes).</p>
+        
+        <p>HTMLCollection items can be accessed by their name, id, or index number.</p>
+        <p>NodeList items can only be accessed by their index number.</p>
+        
+        <p>An HTMLCollection is always a <b>live</b> collection. Example: If you add a &lt;li&gt; element to a list in the DOM, the list in the HTMLCollection will also change.</p>
+        
+        <p>A NodeList is most often a <b>static</b> collection. Example: If you add a &lt;li&gt; element to a list in the DOM, the list in NodeList will not change.</p>
+        
+        <p>The <code>getElementsByClassName()</code> and <code>getElementsByTagName()</code>
+        methods return a live HTMLCollection.</p> 
+        
+        <p>The <code>querySelectorAll()</code> method returns a static NodeList.</p>
+        
+        <p>The <code >childNodes</code> property returns a live NodeList.</p> 
+        <hr>
+        <h4 style="color: blue;">Not an Array!</h4>
+        <p>A NodeList may look like an array, but it is not.</p>
+        <p>You can loop through a NodeList and refer to its nodes by index.</p>
+        <p>But, you cannot use Array methods like push(), pop(), or join() on a NodeList.</p>
+    </div>
+</body>
+</html>

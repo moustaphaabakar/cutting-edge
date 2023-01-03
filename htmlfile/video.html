@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html video <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+     <h4 style="color:blue ;">Video</h4>
+     <p>The HTML <code>&lt;video&gt;</code> element is used to show a video on a web page.</p>
+     <hr>
+     <h4 style="color: blue;">example</h4> 
+     <video id="video" style="width:600px;max-width:100%;" controls>
+        <source src="../unite.mp4" type="video/mp4">
+     </video>
+     <div>
+        <button onclick="playpause()">play-pause</button>
+     </div>
+     <script>
+        video=document.getElementById("video")
+        function playpause(){
+            if(video.paused){
+               video.play()
+            }
+            else{
+                video.pause()
+            }
+        }
+     </script>
+     <hr>
+<h4 style="color: blue;">The HTML &lt;video&gt; Element</h4>
+<p>To show a video in HTML, use the <code >&lt;video&gt;</code> element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;<br>
+&nbsp; &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;<br>
+&nbsp; &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;<br>
+Your browser does not support the video tag.<br>
+&lt;/video&gt;
+</div>
+<hr>
+<h4 style="color: blue;">How it Works</h4>
+<p>The <code>controls</code> attribute adds video controls, like play, pause, and volume.</p>
+<p>It is a good idea to always include <code>width</code> and <code>height</code> attributes. If height and width are not set, the page 
+might flicker while the video loads.</p>
+<p>The <code>&lt;source&gt;</code> element allows you to specify alternative video 
+files which the browser may choose from. The browser will use the first recognized format.</p>
+<p>The text between the <code>&lt;video&gt;</code> and <code>&lt;/video&gt;</code> tags will only be displayed 
+in browsers that do not 
+support the <code>&lt;video&gt;</code> element.</p>
+<hr>
+<h4 style="color: blue;">HTML &lt;video&gt; Autoplay</h4>
+<p>To start a video automatically, use the <code>autoplay</code> attribute:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;video width=&quot;320&quot; height=&quot;240&quot; autoplay&gt;<br>
+&nbsp; &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;<br>
+&nbsp; &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;<br>
+Your browser does not support the video tag.<br>
+&lt;/video&gt;
+</div>
+<hr>
+<p><strong>Note:</strong> Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.</p>    
+    <p>Add <code>muted</code> after <code>
+    autoplay</code> to let your video start playing automatically (but muted):</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    &lt;video width=&quot;320&quot; height=&quot;240&quot; autoplay muted&gt;<br>
+    &nbsp; &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;<br>
+    &nbsp; &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;<br>
+    Your browser does not support the video tag.<br>
+    &lt;/video&gt;
+    </div>
+    <hr>
+    <h4 style="color: blue;">Browser Support</h4>
+    <p>The numbers in the table specify the first browser version that fully supports the 
+    <code>&lt;video&gt;</code> element.</p>
+    <table class="affichage">
+      <tr>
+        <th style="width:20%;font-size:16px;text-align:left;">Element</th>
+        <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+        <th style="width:16%;" class="bsEdge" title="Internet Explorer / Edge"></th>
+        <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+        <th style="width:16%;" class="bsSafari" title="Safari"></th>
+        <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+      </tr>
+      <tr>
+        <td style="text-align:left;">&lt;video&gt;</td>
+        <td>4.0</td>
+        <td>9.0</td>
+        <td>3.5</td>
+        <td>4.0</td>
+        <td>10.5</td>
+      </tr>
+    </table>
+    <hr>
+      <h4 style="color: blue;">HTML Video Formats</h4>
+      <p>There are three supported video formats: MP4, WebM, and Ogg. The browser support for the different formats is:</p>
+      <table class="table table-striped">
+      <tr>
+      <th style="width:25%">Browser</th>
+      <th style="width:25%">MP4</th>
+      <th style="width:25%">WebM</th>
+      <th style="width:25%">Ogg</th>
+      </tr>
+      <tr>
+      <td>Edge</td>
+      <td>YES</td>
+      <td>YES</td>
+      <td>YES</td>
+      </tr>
+      <tr>
+      <td>Chrome</td>
+      <td>YES</td>
+      <td>YES</td>
+      <td>YES</td>
+      </tr>
+      <tr>
+      <td>Firefox</td>
+      <td>YES</td>
+      <td>YES</td>
+      <td>YES</td>
+      </tr>
+      <tr>
+      <td>Safari</td>
+      <td>YES</td>
+      <td>YES</td>
+      <td>NO</td>
+      </tr>
+      <tr>
+      <td>Opera</td>
+      <td>YES</td>
+      <td>YES</td>
+      <td>YES</td>
+      </tr>
+      </table>
+      <hr>
+      <h4 style="color: blue;">HTML Video - Media Types</h4>
+<table class="table table-striped" id="table1">
+<tr>
+<th style="width:50%">File Format</th>
+<th style="width:50%">Media Type</th>
+</tr>
+<tr>
+<td>MP4</td>
+<td>video/mp4</td>
+</tr>
+<tr>
+<td>WebM</td>
+<td>video/webm</td>
+</tr>
+<tr>
+<td>Ogg</td>
+<td>video/ogg</td>
+</tr>
+</table>
+<hr>
+<h4 style="color: blue;">HTML Video - Methods, Properties, and Events</h4>
+<p>The HTML DOM defines methods, properties, and events for the <code>&lt;video&gt;</code> element.</p>
+<p>This allows you to load, play, and pause videos, as well as setting duration and volume.</p>
+<p>There are also DOM events that can notify you when a video begins to play, is paused, etc.</p>
+      </div>
+</body>
+</html>

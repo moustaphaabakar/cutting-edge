@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html responsive <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <h4 style="color: blue;">HTML Responsive Web Design</h4>
+        <p>Responsive web design is about creating web pages that look good on all devices! </p>
+        <p>A responsive web design will automatically adjust for different screen sizes and viewports.</p>
+        <hr>
+        <h4 style="color: blue;">What is Responsive Web Design?</h4>
+        <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge,a website, to make it look good on all devices (desktops, tablets, and phones):</p>
+         <p>  
+        <h4 style="color: blue;">What is Responsive Web Design?</h4>
+        <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge,a website, to make it look good on all devices (desktops, tablets, and phones):</p>
+        <p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            </div>   
+            <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.</p>
+            <p>Here is an example of a web page <em>without</em> the viewport meta tag, and the same web page <em>with</em> the viewport meta tag:</p>
+            <h4 style="color: blue;">Responsive Images</h4>
+            <p>Responsive images are images that scale nicely to fit any browser size.</p>
+            <h4 style="color: blue;">Using the width Property</h4>
+            <p>If the CSS <code>width</code> property is set to 100%, the image will be responsive and scale 
+            up and down:</p>
+            <img src="../img_girl.jpg" style="width:100%;height: 200px;">
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                &lt;img src=&quot;img_girl.jpg&quot; <strong>style=&quot;width:100%;&quot;</strong>&gt;
+                </div>
+
+                <p>Notice that in the example above, the image can be scaled up to be larger than its original size.A better solution, in many cases, will be to use the <code>max-width</code> property instead.</p>
+                <h4 style="color:blue ;">Using the max-width Property</h4>
+                <p>If the <code>max-width</code> property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                &lt;img 
+                src=&quot;img_girl.jpg&quot; style=&quot;<strong>max-width:100%;</strong>height:auto;&quot;&gt;
+               </div>
+              
+               <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;picture&gt;<br>&nbsp; &lt;source srcset=&quot;img_smallflower.jpg&quot; media=&quot;(max-width: 
+  600px)&quot;&gt;<br>&nbsp; &lt;source srcset=&quot;img_flowers.jpg&quot; media=&quot;(max-width: 
+  1500px)&quot;&gt;<br>&nbsp; &lt;source srcset=&quot;flowers.jpg&quot;&gt;<br>&nbsp; &lt;img src=&quot;img_smallflower.jpg&quot; 
+  alt=&quot;Flowers&quot;&gt;<br>&lt;/picture&gt;</div>
+<hr>
+<h4 style="color:blue">Responsive Text Size</h4>
+<p>The text size can be set with a &quot;vw&quot; unit, which means the &quot;viewport width&quot;.</p>
+<p>That way the text size will follow the size of the browser window:</p>
+<h4 style="color:blue ;">Hello World</h4>
+<p >Resize the browser window to see how the text size scales.</p>
+<hr>
+<h4 style="color: blue;">Responsive Web Design - Frameworks</h4>
+<p>All popular CSS Frameworks offer responsive design.</p>
+<p>They are free, and easy to use.</p>
+<h4 style="color: blue;">digibit.CSS</h4>
+<p>
+W3.CSS is a modern CSS framework with support for desktop, tablet, and mobile 
+design by default.</p>
+<p>
+W3.CSS is smaller and faster than similar CSS frameworks.</p>
+<p>
+W3.CSS is designed to be a high quality alternative to Bootstrap.</p>
+<p>
+W3.CSS is designed to be independent of jQuery or any other JavaScript library.</p>
+<p>Resize the page to see the responsiveness!</p> 
+</div>
+</body>
+</html>

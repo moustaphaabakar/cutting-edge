@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css web layout<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Website Layout</h4>
+        <hr>
+        <h4 style="color: blue;">Website Layout</h4>
+        <p>A website is often divided into headers, menus, content and a footer:</p>
+          <p style="margin-bottom:8px;padding:30px 0;text-align:center;background-color: aqua;">Header</p>
+          <p style="margin-bottom:8px;padding:12px 0;text-align:center;background-color:aqua ;">Navigation Menu</p>
+          <p style="height:250px;padding:108px 15px 100px 15px;background-color:aqua;"><span>Content</span></p>
+          <p style="height:250px;padding:108px 15px 100px 15px;background-color: aqua;">Main Content</p>
+          <p style="height:250px;padding:108px 15px 100px 15px;background-color:aqua ;"><span >Content</span></p>
+          <p style="margin-top:8px;padding:18px 0;text-align:center;background-color:aqua ;">Footer</p>
+        <p>There are tons of different layout designs to choose from. However, the structure above, is one of the most common, and we will take a closer look at it in this tutorial.</p>
+        <hr>
+        <h4 style="color: blue;">Header</h4>
+        <p>A header is usually located at the top of the website (or right below a top navigation menu). It often contains a logo or the website name:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage"> 
+           .header {<br>&nbsp; background-color: #F1F1F1;<br>&nbsp; text-align: 
+           center;<br>&nbsp; padding: 20px;<br>}
+        </div>
+        <hr>
+<h4 style="color: blue;">Navigation Bar</h4>
+<p>A navigation bar contains a list of links to help visitors navigating through your website:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage"> 
+   /* The navbar container */<br>.topnav {<br>&nbsp; overflow: hidden;<br>&nbsp; 
+   background-color: #333;<br>}<br><br>/* Navbar links */<br>.topnav a {<br>&nbsp;&nbsp;float: 
+   left;<br>&nbsp; display: block;<br>&nbsp; color: 
+   #f2f2f2;<br>&nbsp; text-align: center;<br>&nbsp; 
+   padding: 14px 16px;<br>&nbsp; text-decoration: none;<br>}<br><br>
+   /* Links - change color on hover */<br>.topnav a:hover {<br>&nbsp; 
+   background-color: #ddd;<br>&nbsp; color: black;<br>}</div>
+   <h4 style="color: blue;">Content</h4>   
+   <p style="margin: 10px;">
+     <p style="margin-bottom:8px;height:20px;"></p>
+     <p style="height:120px;"></p>
+     <p style="margin-top:8px;height:20px;"></p>
+     </p>
+   <p>We will create a 3-column layout, and change it to a 1-column layout on smaller screens:</p>
+   <h4 style="color: blue;">Example</h4>
+   <div class="affichage"> 
+      /* Create three equal columns that float next to each other */<br>.column {<br>&nbsp; 
+      float: left;<br>&nbsp; width: 33.33%;<br>}<br><br>/* Clear floats after the 
+      columns */<br>.row:after {<br>&nbsp; content: &quot;&quot;;<br>&nbsp; 
+      display: table;<br>&nbsp; clear: both;<br>}<br><br>/* Responsive 
+      layout - makes the three columns stack on top of each other instead of next 
+      to each other on smaller screens (600px wide or less) */<br>@media screen and (max-width: 
+      600px) {<br>&nbsp;&nbsp;.column 
+      {<br>&nbsp;&nbsp;&nbsp; width: 100%;<br>&nbsp;&nbsp;}<br>}
+   </div>
+   <p><strong>Tip:</strong> To create a 2-column layout, change the width to 50%. To create a 4-column layout, use 25%, etc.</p>
+   <p><strong>Tip:</strong> Do you wonder how the @media rule works?Read more about 
+   it in our CSS Media Queries chapter.</p>
+   <p><strong>Tip:</strong> A more modern way of creating column layouts, is to use CSS Flexbox. 
+   However, it is not supported in Internet Explorer 10 and earlier versions. If you require IE6-10 support, use floats (as shown above). 
+   <br><br>To learn more about the Flexible Box Layout Module,  read our  
+   CSS Flexbox chapter</a>.</p>
+   <h4 style="color: blue;">Example</h4>
+   <div class="affichage"> 
+      .column {<br>&nbsp; float: left;<br>}<br><br>/* Left and right column */<br>
+      .column.side {<br>&nbsp;&nbsp;width: 25%;<br>}<br><br>/* Middle column */<br>.column.middle 
+      {<br>&nbsp;&nbsp;width: 50%;<br>}<br><br>/* Responsive layout - makes 
+      the three columns stack on top of each other instead of next to each other */<br>
+      @media screen and (max-width: 600px) {<br>&nbsp; .column.side, .column.middle 
+      {<br>&nbsp;&nbsp;&nbsp; width: 100%;<br>&nbsp; }<br>}
+   </div>
+   <h4 style="color: blue;">Footer</h4>
+   <p>The footer is placed at the bottom of your page. It often contains 
+   information like copyright and contact info:</p>
+   <h4 style="color: blue;">Example</h4>
+   <div class="affichage"> 
+      .footer {<br>&nbsp; background-color: #F1F1F1;<br>&nbsp; text-align: 
+      center;<br>&nbsp; padding: 10px;<br>}
+   </div>
+</div>
+</body>
+</html>

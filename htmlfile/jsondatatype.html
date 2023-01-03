@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">json data type</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JSON Data Types</h4>
+        <hr>
+        <h4 style="color: blue;">Valid Data Types</h4>
+        <p>In JSON, values must be one of the following data types:</p>
+        <ul>
+          <li>a string</li>
+          <li>a number</li>
+          <li>an object (JSON object)</li>
+          <li>an array</li>
+          <li>a boolean</li>
+          <li><em>null</em></li>
+        </ul>
+        <p>JSON values <strong>cannot </strong>be one of the following data types:</p>
+        <ul>
+          <li>a function</li>
+          <li>a date</li>
+          <li><em>undefined</em></li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">JSON Strings</h4>
+        <p>Strings in JSON must be written in double quotes.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        {&quot;name&quot;:&quot;John&quot;}
+        </div>
+        <hr>
+        <h4 style="color: blue;">JSON Numbers</h4>
+        <p>Numbers in JSON must be an integer or a floating point.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        {&quot;age&quot;:30}
+        </div>
+        <hr>
+        <h4 style="color: blue;">JSON Objects</h4>
+        <p>Values in JSON can be objects.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        {<br>&quot;employee&quot;:{&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;city&quot;:&quot;New York&quot;}<br>
+        }
+        </div>
+        <p>Objects as values in JSON must follow the JSON syntax.</p>
+        <hr>
+        <h4 style="color: blue;">JSON Arrays</h4>
+        <p>Values in JSON can be arrays.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        {<br>&quot;employees&quot;:[&quot;John&quot;, &quot;Anna&quot;, &quot;Peter&quot;]<br>}
+        </div>
+        <hr>
+        <h4 style="color: blue;">JSON Booleans</h4>
+        <p>Values in JSON can be true/false.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          {&quot;sale&quot;:true}</div>
+        <hr>
+        <h4 style="color: blue;">JSON null</h4>
+        <p>Values in JSON can be null.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          {&quot;middlename&quot;:null}</div>
+         </div>
+         
+</body>
+</html>

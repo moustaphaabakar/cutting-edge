@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM navigation</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript HTML DOM Navigation</h4>
+        <hr>
+        <p>With the HTML DOM, you can navigate the node tree using node 
+        relationships.</p>
+        <hr>
+        <h4 style="color: blue;">DOM Nodes</h4>
+        <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+        <ul>
+          <li>The entire document is a document node</li>
+          <li>Every HTML element is an element node</li>
+          <li>The text inside HTML elements are text nodes</li>
+          <li>Every HTML attribute is an attribute node (deprecated)</li>
+          <li>All comments are comment nodes</li>
+        </ul>
+        <p>With the HTML DOM, all nodes in the node tree can be accessed by JavaScript.</p>
+        <p>New nodes can be created, and all 
+        nodes can be modified or deleted. </p>
+        <hr>
+        <h4 style="color: blue;">Node Relationships</h4>
+        <p>The nodes in the node tree have a hierarchical relationship to each other.</p>
+        <p>The terms parent, child, and sibling are used to describe the relationships. </p>
+        <ul>
+          <li>In a node tree, the top node is called the root (or root node)</li>
+          <li>Every node has exactly one parent, except the root (which has no parent)</li>
+          <li>A node can have a number of children</li>
+          <li>Siblings (brothers or sisters) are nodes with the same parent</li>
+        </ul>
+            <div class="affichage">
+        &lt;html&gt;<br><br>
+             &nbsp; &lt;head&gt;<br>
+              &nbsp;&nbsp;&nbsp; &lt;title&gt;DOM Tutorial&lt;/title&gt;<br>
+             &nbsp; &lt;/head&gt;<br><br>&nbsp;
+        &lt;body&gt;<br>
+              &nbsp;&nbsp;&nbsp; &lt;h1&gt;DOM Lesson one&lt;/h1&gt;<br>
+              &nbsp;&nbsp;&nbsp; &lt;p&gt;Hello world!&lt;/p&gt;<br>
+             &nbsp; &lt;/body&gt;<br>
+             <br>&lt;/html&gt;
+            </div>
+        <p>From the HTML above you can read:</p>
+        <ul>
+          <li><code>&lt;html&gt;</code> is the root node</li>
+          <li><code>&lt;html&gt;</code> has no parents </li>
+          <li><code >&lt;html&gt;</code> is the parent of <code >&lt;head&gt;</code> and <code>&lt;body&gt;</code></li>
+          <li><code >&lt;head&gt;</code> is the first child of <code >&lt;html&gt;</code></li>
+          <li><code >&lt;body&gt;</code> is the last child of <code >&lt;html&gt;</code></li>
+        </ul>
+        <p>and:</p>
+        <ul>
+          <li><code>&lt;head&gt;</code> has one child: <code>&lt;title&gt;</code></li>
+          <li><code>&lt;title&gt;</code> has one child (a text node): &quot;DOM Tutorial&quot;</li>
+          <li><code>&lt;body&gt;</code> has two children: <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code></li>
+          <li><code>&lt;h1&gt;</code> has one child: &quot;DOM Lesson one&quot;</li>
+          <li><code>&lt;p&gt;</code> has one child: &quot;Hello world!&quot;</li>
+          <li><code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> are siblings</li>
+        </ul>
+        <hr>
+<h4 style="color:blue">Navigating Between Nodes</h4>
+<p>You can use the following node properties to navigate between nodes with 
+JavaScript:</p>
+<ul>
+  <li><code>parentNode</code></li>
+  <li><code>childNodes[<em>nodenumber</em>]</code></li>
+  <li><code>firstChild</code></li>
+  <li><code>lastChild</code></li>
+  <li><code>nextSibling</code></li>
+  <li><code>previousSibling</code></li>
+</ul>
+<hr>
+<h4 style="color: blue;">Child Nodes and Node Values</h4>
+<p>A common error in DOM processing is to expect an element node to contain text.</p>
+<h4 style="color: blue;">Example:</h4>
+<div class="affichage">
+ &lt;title 
+ id=&quot;demo&quot;&gt;DOM Tutorial&lt;/title&gt;
+</div>
+<p>The element node 
+<code>&lt;title&gt;</code> (in the example above) does <strong>not</strong> contain text.</p>
+<p>It contains a <b>text node</b> with the value &quot;DOM Tutorial&quot;. </p>
+<p>The value of the text node can be accessed by the 
+node's 
+<code>innerHTML</code> property:
+<div class="affichage">
+myTitle = document.getElementById(&quot;demo&quot;).innerHTML;
+</div>
+<p>Accessing the innerHTML property is the same as accessing the <code>nodeValue</code> 
+of the first child:</p>
+<div class="affichage">
+myTitle = document.getElementById(&quot;demo&quot;).firstChild.nodeValue;
+</div>
+<p>Accessing the first child can also be done like this:</p>
+<div class="affichage">
+myTitle = document.getElementById(&quot;demo&quot;).childNodes[0].nodeValue;
+</div>
+<p>All the (3) following examples retrieves the text of an <code>&lt;h1&gt;</code> element and copies it 
+into a <code>&lt;p&gt;</code> element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).innerHTML;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML = document.getElementById(&quot;id01&quot;).firstChild.nodeValue;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;body&gt;<br><br>&lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>&lt;p id=&quot;id02&quot;&gt;Hello!&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+ document.getElementById(&quot;id02&quot;).innerHTML = document.getElementById(&quot;id01&quot;).childNodes[0].nodeValue;<br>
+&lt;/script&gt;<br><br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<hr>
+<h4 style="color: blue;">InnerHTML</h4>
+<p>In this tutorial we use the innerHTML property to retrieve the content of an 
+HTML element.</p>
+<p>However, learning 
+the other methods above is useful for understanding the tree structure and the 
+navigation of the DOM.</p>
+<hr>
+<h4 style="color: blue;">DOM Root Nodes</h4>
+<p>There are two special properties that allow access to the full document:</p>
+<ul>
+  <li><code>document.body</code> - The body of the document</li>
+  <li><code>document.documentElement</code> - The full document</li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;h2&gt;JavaScript HTMLDOM&lt;/h2&gt;<br>&lt;p&gt;Displaying document.body&lt;/p&gt;<br><br>&lt;p 
+id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;demo&quot;).innerHTML 
+= document.body.innerHTML;<br>&lt;/script&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;h2&gt;JavaScript HTMLDOM&lt;/h2&gt;<br>&lt;p&gt;Displaying document.documentElement&lt;/p&gt;<br>
+<br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>
+document.getElementById(&quot;demo&quot;).innerHTML = 
+document.documentElement.innerHTML;<br>&lt;/script&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<hr>
+<h4 style="color: blue;">The nodeName Property</h4>
+<p>The <code>nodeName</code> property specifies the name of a node.</p>
+<ul>
+  <li>nodeName is read-only</li>
+  <li>nodeName of an element node is the same as the tag name</li>
+  <li>nodeName of an attribute node is the attribute name</li>
+  <li>nodeName of a text node is always #text</li>
+  <li>nodeName of the document node is always #document</li>
+</ul>
+<h4 style="color: blue;">Example</h4>
+ <div class="affichage">
+  &lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>
+ &lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).nodeName;<br>&lt;/script&gt;</div>
+<p><b>Note:</b> <code>nodeName</code> always contains the uppercase tag name of an HTML element.</p>
+<hr>
+<h4 style="color: blue;">The nodeValue Property</h4>
+<p>The <code>nodeValue</code> property specifies the value of a node.</p>
+<ul>
+  <li>nodeValue for element nodes is <code>null</code></li>
+  <li>nodeValue for text nodes is the text itself</li>
+  <li>nodeValue for attribute nodes is the attribute value</li>
+</ul>
+<hr>
+<h4 style="color: blue;">The nodeType Property</h4>
+<p>The <code>nodeType</code> property is read only. It returns the type of a node.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ &lt;h1 id=&quot;id01&quot;&gt;My First Page&lt;/h1&gt;<br>
+ &lt;p id=&quot;id02&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>document.getElementById(&quot;id02&quot;).innerHTML 
+ = document.getElementById(&quot;id01&quot;).nodeType;<br>&lt;/script&gt;</div>
+<p>The most important nodeType properties are:</p>
+<table class="table table-striped">
+    <tr>
+    <th>Node</th>
+    <th>Type</th>
+    <th>Example</th>
+    </tr>
+    <tr>
+      <td>ELEMENT_NODE</td>
+      <td>1</td>
+      <td>&lt;h1 class=&quot;heading&quot;&gt;W3Schools&lt;/h1&gt;</td>
+    </tr>
+    <tr>
+      <td>ATTRIBUTE_NODE</td>
+      <td>2</td>
+      <td>&nbsp;class = &quot;heading&quot; (deprecated)</td>
+    </tr>
+    <tr>
+      <td>TEXT_NODE</td>
+      <td>3</td>
+      <td>W3Schools</td>
+    </tr>
+    <tr>
+      <td>COMMENT_NODE</td>
+      <td>8</td>
+      <td>&lt;!-- This is a comment --&gt;</td>
+    </tr>
+    <tr>
+      <td>DOCUMENT_NODE</td>
+      <td>9</td>
+      <td>The HTML document itself (the parent of &lt;html&gt;)</td>
+    </tr>
+    <tr>
+      <td>DOCUMENT_TYPE_NODE</td>
+      <td>10</td>
+      <td>&lt;!Doctype html&gt;</td>
+    </tr>
+    </table>    
+    <p>Type 2 is deprecated in the HTML DOM (but works). It is not deprecated in the XML DOM.</p>
+      </div>
+</body>
+</html>

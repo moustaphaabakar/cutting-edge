@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM elements</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript HTML DOM Elements</h4>
+<hr>
+<p>This page teaches you how to find and access HTML elements in 
+an HTML page.</p>
+<hr>
+<h4 style="color: blue;">Finding HTML Elements</h4>
+<p>Often, with JavaScript, you want to manipulate HTML elements.</p>
+<p>To do so, you have to find the elements first. There are several ways to do this:</p>
+<ul>
+  <li>Finding HTML elements by id</li>
+  <li>Finding HTML elements by tag name </li>
+  <li>Finding HTML elements by class name</li>
+  <li>Finding HTML elements by CSS selectors</li>
+  <li>Finding HTML elements by HTML object collections</li>
+</ul>
+<hr>
+<h4 style="color: blue;">Finding HTML Element by Id</h4>
+<p>The easiest way to find an HTML element in the DOM, is by using the element id.</p>
+<p>This example finds the element with <code>id=&quot;intro&quot;</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const element = document.getElementById(&quot;intro&quot;);
+</div>
+<p>If the element is found, the method will return the element as an object (in element).</p>
+<p>If the element is not found, element will contain <code>null</code>.</p>
+<hr>
+<h4 style="color: blue;">Finding HTML Elements by Tag Name</h4>
+<p>This example finds all <code>&lt;p&gt;</code> elements:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const element = document.getElementsByTagName(&quot;p&quot;);</div>
+<p>This example finds the element with <code>id=&quot;main&quot;</code>, and then finds all <code class="w3-codespan">&lt;p&gt;</code> elements 
+inside <code>&quot;main&quot;</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const x = document.getElementById(&quot;main&quot;);<br>
+const y = x.getElementsByTagName(&quot;p&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">Finding HTML Elements by Class Name</h4>
+<p>If you want to find all HTML elements with the same class name, use 
+<code>getElementsByClassName()</code>.<br>
+</p>
+<p>This example returns a list of all elements with <code>class=&quot;intro&quot;</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const x = document.getElementsByClassName(&quot;intro&quot;);</div>
+<hr>
+<h4 style="color: blue;">Finding HTML Elements by CSS Selectors</h4>
+<p>If you want to find all HTML elements that match a specified CSS selector 
+(id, class names, types, attributes, values of attributes, etc), use the <code>querySelectorAll()</code> method.<br>
+</p>
+<p>This example returns a list of all <code>&lt;p&gt;</code> elements with <code>class=&quot;intro&quot;</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const x = document.querySelectorAll(&quot;p.intro&quot;);</div>
+<hr>
+<h4 style="color: blue;">Finding HTML Elements by HTML Object Collections</h4>
+<p>This example finds the form element with <code>id=&quot;frm1&quot;</code>, in the forms 
+collection, and displays all element 
+values:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const x = document.forms[&quot;frm1&quot;];<br>
+let text = &quot;&quot;;<br>
+for (let i = 0; i &lt; x.length; i++) {<br>&nbsp; text += x.elements[i].value + &quot;&lt;br&gt;&quot;;<br>}<br>document.getElementById(&quot;demo&quot;).innerHTML = text;</div>
+<p>The following HTML objects (and object collections) are also accessible:</p>
+<ul>
+  <li>document.anchors</li>
+  <li>document.body</li>
+  <li>document.documentElement</li>
+  <li>document.embeds</li>
+  <li>document.forms</li>
+  <li>document.head</li>
+  <li>document.images</li>
+  <li>document.links</li>
+  <li>document.scripts</li>
+  <li>document.title</li>
+</ul>
+ </div>
+</body>
+</html>

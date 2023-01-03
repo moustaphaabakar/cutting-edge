@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">json introduction</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JSON  Introduction</h4>    
+        <p>JSON stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</p>
+        <p>JSON is a <b>text format</b> for storing and transporting data</p>
+        <p>JSON is &quot;self-describing&quot; and easy to understand</p>    
+        <h4 style="color: blue;">JSON Example</h4>
+        <p>This example is a JSON string:</p>
+        <div class="affichage">
+        '{&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30, &quot;car&quot;:null}'
+        </div>
+        <p>It defines an object with 3 properties:</p>
+        <ul>
+        <li>name</li>
+        <li>age</li>
+        <li>car</li>
+        </ul>
+        <p>Each property has a value.</p>
+        <p>If you parse the JSON string with a JavaScript program, you can access the data
+        as an object:</p>
+        <div class="affichage">
+        let personName = obj.name;<br>
+        let personAge = obj.age; 
+        </div>
+        <hr>
+        <h4 style="color: blue;">What is JSON?</h4>
+        <ul>
+          <li>JSON stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</li>
+          <li>JSON is a lightweight data-interchange format</li>
+          <li>JSON is plain text written in JavaScript object notation</li>
+          <li>JSON is used to send data between computers</li>
+          <li>JSON is language independent <b>*</b></li>
+        </ul>
+        <p>*<br>
+            The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.</p>
+            <p>Code for reading and generating JSON exists in many programming languages.</p>
+            <p>The JSON format was originally specified by Douglas Crockford</p>
+            <hr>
+            <h4 style="color: blue;">Why Use JSON?</h4>
+            <p>The JSON format is syntactically similar to the code for creating 
+            JavaScript objects.
+            Because of this, a JavaScript program 
+            can easily convert JSON data into JavaScript objects.</p>
+            <p>Since the format is text only, JSON data can easily be sent between computers,
+            and used by any programming language.</p>
+            <p>JavaScript has a built in function for converting JSON strings into JavaScript objects:</p>
+            <p><code>JSON.parse()</code></p>
+            <p>JavaScript also has a built in function for converting an object into a JSON string:</p>
+            <p><code>JSON.stringify()</code></p>
+            <p>You can receive pure text from a server and use it as a JavaScript object.</p>
+            <p>You can send a JavaScript object to a server in pure text format.</p>
+            <p>You can work with data as JavaScript objects, with no complicated 
+            parsing and translations.</p>
+            <hr>
+            <h4 style="color: blue;">Storing Data</h4>
+            <p>When storing data, the data has to be a certain format, and regardless of where you choose to store it, 
+            <em>text</em> is always one of the legal formats.</p>
+            <p>JSON makes it possible to store JavaScript objects as text.</p>
+       </div>
+      
+</body>
+</html>

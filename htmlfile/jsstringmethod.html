@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS strings methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript String Methods</h4>
+        <hr>
+        <p>String methods help you to work with strings.</p>
+        <hr>
+        <h2>String Methods and Properties</h2>
+        <p>Primitive values, like &quot;John Doe&quot;, cannot have properties 
+        or methods (because they are not objects). </p>
+        <p>But with JavaScript, methods and properties are also available to 
+        primitive values, because JavaScript treats primitive values 
+        as objects when executing methods and properties.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript String Length</h4>
+        <p>The <code>length</code> property returns the length of a string:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let txt = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;<br>
+        let length = txt.length;
+        </div>
+        <hr>
+        <h4 style="color: blue;">Extracting String Parts</h4>
+        <p>There are 3 methods for extracting a part of a string:</p>
+        <ul>
+          <li><code>slice(<em>start</em>, <em>end</em>)</code></li>
+          <li><code>substring(<em>start</em>, <em>end</em>)</code></li>
+          <li><code>substr(<em>start</em>, <em>length</em>)</code></li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">JavaScript String slice()</h4>
+        <p><code>slice()</code> extracts a part of a string and returns the 
+        extracted part in a new string.</p>
+        <p>The method takes 2 parameters: the start position, and the end position (end 
+        not included).</p>
+        <h4 style="color: blue;">Example</h4>
+        <p>Slice out a portion of a string from position 7 to position 13 (13 not included):</p>
+        <div class="affichage">
+        let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+        let part = str.slice(7, 13);
+        </div>
+
+        <h4 style="color: blue;">Note</h4>
+<p>JavaScript counts positions from zero.</p>
+<p>First position is 0.</p>
+<p>Second position is 1.</p>
+<p>If a parameter is negative, the position is counted from the 
+end of the string.</p>
+<p>This example slices out a portion of a string from position -12 to position 
+-6: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+let part = str.slice(-12, -6);
+</div>
+<p>If you omit the second parameter, the method will slice out the rest of the string:</p>
+<h3>Example</h4>
+<div class="affichage">
+let part = str.slice(7);
+</div>
+<p>or, counting from the end:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let part = str.slice(-12);
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript String substring()</h4>
+<p><code>substring()</code> is similar to <code>slice()</code>.</p>
+<p>The difference is that start and end values less than 0 are treated as 0 in
+<code>substring()</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+let part = str.substring(7, 13);
+</div>
+<p>If you omit the second parameter, <code>substring()</code> will slice out the rest of the 
+string.</p>
+<hr>
+<h4 style="color: blue;">JavaScript String substr()</h4>
+<p><code>substr()</code> is similar to <code>slice()</code>.</p>
+<p>The difference is 
+that the second parameter specifies the <b>length</b> 
+of the extracted part.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+let part = str.substr(7, 6);
+</div>
+<p>If you omit the second parameter, <code>substr()</code> will slice out the rest of the 
+    string.</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+    let part = str.substr(7);
+    </div>
+    <p>If the first parameter is negative, the position counts from the end of the 
+    string.</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let str = &quot;Apple, Banana, Kiwi&quot;;<br>
+    let part = str.substr(-4);
+    </div>
+    <hr>
+    <h4 style="color: blue;">Replacing String Content</h4>
+    <p>The <code>replace()</code> method replaces a specified value with another 
+    value in a string:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let text = &quot;Please visit Microsoft!&quot;;<br>
+    let newText = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);<br>
+    </div>
+    <h4 style="color: blue;">Note</h4>
+    <p>The <code>replace()</code> method does not change the string it is called on.</p>
+    <p>The <code>replace()</code> method returns a new string.</p>
+    <p>The <code>replace()</code> method replaces <strong>only the first</strong> match</p>
+    <p>If you want to replace all matches, use a regular expression with the /g flag set. See examples below.</p>
+    <p>By default, the <code>replace()</code> method replaces <strong>only the first</strong> match:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let text = &quot;Please visit Microsoft and Microsoft!&quot;;<br>
+    let newText = text.replace(&quot;Microsoft&quot;, &quot;W3Schools&quot;);<br>
+    </div> 
+    <p>By default, the <code>replace()</code> method is case sensitive. Writing MICROSOFT (with 
+    upper-case) will not work:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let text = &quot;Please visit Microsoft!&quot;;<br>
+    let newText = text.replace(&quot;MICROSOFT&quot;, &quot;digibit&quot;);<br>
+    </div>
+    <p>To replace case insensitive, use a <strong>regular expression</strong> with an <code>/i</code> flag (insensitive):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;Please visit Microsoft!&quot;;<br>
+let newText = text.replace(/MICROSOFT/i, &quot;W3Schools&quot;);<br>
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>Regular expressions are written without quotes.</p>
+<p>To replace all matches, use a <strong>regular expression</strong> with a <code class="w3-codespan">/g</code> flag (global match):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;Please visit Microsoft and Microsoft!&quot;;<br>
+let newText = text.replace(/Microsoft/g, &quot;W3Schools&quot;);<br>
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>You will learn a lot more about regular expressions in the chapter JavaScript Regular 
+Expressions.</p>
+<hr>
+<h4 style="color: blue;">Converting to Upper and Lower Case</h4>
+<p>A string is converted to upper case with <code>toUpperCase()</code>:</p>
+<p>A string is converted to lower case with <code>toLowerCase()</code>:</p>
+<hr>
+<h4 style="color: blue;">JavaScript String toUpperCase()</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text1 = &quot;Hello World!";<br>
+let text2 = text1.toUpperCase();
+</div>
+<h4 style="color: blue;">JavaScript String toLowerCase()</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text1 = &quot;Hello World!&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // String<br>
+let text2 = text1.toLowerCase();&nbsp;&nbsp;// text2 is text1 
+converted to lower
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript String concat()</h4>
+<p><code>concat()</code> joins two or more strings:</p>
+
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text1 = &quot;Hello&quot;;<br>
+let text2 = &quot;World&quot;;<br>
+let text3 = text1.concat(&quot; &quot;, text2);
+</div>
+<p>The <code>concat()</code> method can be used instead of the plus operator. 
+These two lines do the same:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+text = &quot;Hello&quot; + &quot; &quot; + &quot;World!&quot;;<br>
+text = &quot;Hello&quot;.concat(&quot; &quot;, &quot;World!&quot;);</div>
+<h4 style="color: blue;">Note</h4>
+<p>All string methods return a new string. They don't modify the original string.</p>
+<p>Formally said:</p><p>Strings are immutable: Strings cannot be changed, only replaced.</p>
+<hr>
+<h4 style="color: blue;">JavaScript String trim()</h4>
+<p>The <code>trim()</code> method removes whitespace from both sides of a string:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text1 = &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello World! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;;<br>
+let text2 = text1.trim();
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript String trimStart()</h4>
+<p>ECMAScript 2019 added the String method <code>trimStart()</code> to JavaScript.
+<p>The <code>trimStart()</code> method works like <code>trim()</code>, but removes whitespace only from the start of a string.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text1 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello World!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";<br>
+let text2 = text1.trimStart();<br>
+</div>
+<p>JavaScript String <code>trimStart()</code> is supported in all browsers since January 2020:</p>
+<table class="table table-striped">
+    <tbody><tr style="height:50px">
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:29%;"></th>                
+    </tr>
+    <tr>
+      <td>Chrome 66</td>    
+      <td>Edge 79</td>
+      <td>Firefox 61</td>
+      <td>Safari 12</td>
+      <td>Opera 50</td>
+    </tr>
+    <tr>
+      <td>Apr 2018</td>
+      <td>Jan 2020</td>    
+      <td>Jun 2018</td>
+      <td>Sep 2018</td>
+      <td>May 2018</td>
+    </tr>
+  </tbody></table>
+  
+  <hr>
+  <h4 style="color: blue;">JavaScript String trimEnd()</h4>
+  <p>ECMAScript 2019 added the String method <code>trimEnd()</code> to JavaScript.
+  <p>The <code>trimEnd()</code> method works like <code >trim()</code>, but removes whitespace only from the end of a string.</p>
+
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  let text1 = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello World!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";<br>
+  let text2 = text1.trimEnd();<br>
+  </div>
+  <p>JavaScript String <code>trimEnd()</code> is supported in all browsers since January 2020:</p><div class="w3-responsive">
+  <table class="table table-striped">
+    <tbody><tr style="height:50px">
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:20%;"></th>
+      <th style="width:19%;"></th>                
+    </tr>
+    <tr>
+      <td>Chrome 66</td>    
+      <td>Edge 79</td>
+      <td>Firefox 61</td>
+      <td>Safari 12</td>
+      <td>Opera 50</td>
+    </tr>
+    <tr>
+      <td>Apr 2018</td>
+      <td>Jan 2020</td>    
+      <td>Jun 2018</td>
+      <td>Sep 2018</td>
+      <td>May 2018</td>
+    </tr>
+  </tbody></table>
+  <hr>
+  <h4 style="color: blue;">JavaScript String Padding</h4>
+  <p>ECMAScript 2017 added two String methods: <code>padStart()</code>
+  and <code>padEnd()</code> to support padding at the beginning and at the end of a string.</p>
+  <hr>
+  <h4 style="color: blue;">JavaScript String padStart()</h4>
+  <p>The <code>padStart()</code> method pads a string with another string:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  let text = &quot;5&quot;;<br>
+  let padded = text.padStart(4,"x");
+  </div>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  let text = &quot;5&quot;;<br>
+  let padded = text.padStart(4,"0");
+  </div>
+  <h4 style="color: blue;">Note</h4>
+  <p>The padStart()</code> method is a string method.</p> 
+  <p>To pad a number, convert the number to a string first.</p>
+  <p>See the example below.</p>
+  <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let numb = 5;<br>
+let text = numb.toString();<br>
+let padded = text.padStart(4,"0");
+</div>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>padStart()</code> is an ECMAScript 2017 feature.</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<h4 style="color: blue;">JavaScript String padEnd()</h4>
+<p>The <code>padEnd()</code> method pads a string with another string:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;5&quot;;<br>
+let padded = text.padEnd(4,"x");
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;5&quot;;<br>
+let padded = text.padEnd(4,"0");
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>The <code>padEnd()</code> method is a string method.</p> 
+<p>To pad a number, convert the number to a string first.</p>
+<p>See the example below.</p>
+
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let numb = 5;<br>
+let text = numb.toString();<br>
+let padded = text.padEnd(4,"0");
+</div>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>padEnd()</code> is an ECMAScript 2017 feature.</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+
+<h4 style="color: blue;">Extracting String Characters</h4>
+<p>There are 3 methods for extracting string characters:</p>
+<ul>
+  <li><code>charAt(<em>position</em>)</code></li>
+  <li><code>charCodeAt(<em>position</em>)</code></li>
+  <li>Property access [ ]</li>
+</ul>
+<hr>
+
+<h4 style="color: blue;">JavaScript String charAt()</h4>
+<p>The <code>charAt()</code> method returns the character at a specified 
+index (position) in a string:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;HELLO WORLD&quot;;<br>
+let char = text.charAt(0);
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript String charCodeAt()</h4>
+<p>The <code>charCodeAt()</code> method returns the unicode of the character 
+at a specified index in a string:</p>
+<p>The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;HELLO WORLD&quot;;<br>
+let char = text.charCodeAt(0);
+</div>
+<hr>
+<h4 style="color: blue;">Property Access</h4>
+<p>ECMAScript 5 (2009) allows property access [ ] on strings:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;HELLO WORLD&quot;;<br>
+let char = text[0];
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>Property access might be a little <strong>unpredictable:</strong> </p>
+<ul>
+  <li>It makes strings look like arrays (but they are not)</li>
+  <li>If no character is found, [ ] returns undefined, while charAt() returns an empty string.</li>
+  <li>It is read only. str[0] = &quot;A&quot; gives no error (but does not work!)</li>
+</ul>
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;HELLO WORLD&quot;;<br>
+text[0] = "A";&nbsp;&nbsp;&nbsp;&nbsp;// Gives no error, but does not work<br>
+</div>
+<hr>
+<h4 style="color: blue;">Converting a String to an Array</h4>
+<p>If you want to work with a string as an array, you can convert it to an array.</p>
+<h4 style="color: blue;">JavaScript String split()</h4>
+<p>A string can be converted to an array with the <code>split()</code> method:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+text.split(&quot;,&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on commas<br>
+text.split(&quot; &quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on spaces<br>
+text.split(&quot;|&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Split on pipe
+</div>
+<p>If the separator is omitted, the returned array will contain the whole string 
+in index [0].</p>
+<p>If the separator is &quot;&quot;, the returned array will be an array of single 
+characters:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+text.split(&quot;&quot;)
+</div>
+</div>
+</body>
+</html>

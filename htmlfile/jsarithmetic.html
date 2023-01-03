@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS arithmetic operators</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Arithmetic</h4>        
+        <h4 style="color: blue;">JavaScript Arithmetic Operators</h4>
+        <p>Arithmetic operators perform arithmetic on numbers (literals or variables).</p>
+        <table class="table table-striped">
+        <tr>
+        <th style="width:25%">Operator</th>
+        <th>Description</th>
+        </tr>
+        <tr>
+        <td>+</td>
+        <td>Addition</td>
+        </tr>
+        <tr>
+        <td>-</td>
+        <td>Subtraction</td>
+        </tr>
+        <tr>
+        <td>*</td>
+        <td>Multiplication</td>
+        </tr>
+        <tr>
+        <td>**</td>
+        </tr>
+        <tr>
+        <td>/</td>
+        <td>Division</td>
+        </tr>
+        <tr>
+        <td>%</td>
+        <td>Modulus (Remainder)</td>
+        </tr>
+        <tr>
+        <td>++</td>
+        <td>Increment</td>
+        </tr>
+        <tr>
+        <td>--</td>
+        <td>Decrement</td>
+        </tr>
+        </table>
+        <h4 style="color: blue;">Arithmetic Operations</h4>
+        <p>A typical arithmetic operation operates on two numbers.</p>
+        <p>The two numbers can be literals:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = 100 + 50;
+        </div>
+        <p>or variables:</p>
+        <h4 style="color:blue ;">Example</h4>
+        <div class="affichage">
+        let x = a + b;
+        </div>
+        <p>or expressions:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let x = (100 + 50) * a;
+        </div>
+        <hr>
+        <h4 style="color: blue;">Operators and Operands</h4>
+        <p>The numbers (in an arithmetic operation) are called <strong>operands</strong>.</p>
+        <p>The operation (to be performed between the two operands) is defined by an <strong>operator</strong>.</p>
+        <table class="table table-striped">
+            <tr>
+             <th>Operand</th>
+             <th>Operator</th>
+             <th>Operand</th>
+            </tr>
+            <tr>
+             <td>100</td>
+             <td>+</td>
+             <td>50</td>
+            </tr>
+           </table>
+<h4 style="color: blue;">Adding</h4>
+<p>The <strong>addition</strong> operator (<code>+</code>) adds numbers:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let y = 2;<br>
+let z = x + y;
+</div>
+<hr>
+<h4 style="color: blue;">Subtracting</h4>
+<p>The <strong>subtraction</strong> operator (<code>-</code>) subtracts numbers.</p>
+<h4 style="color:blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let y = 2;<br>
+let z = x - y;
+</div>
+<hr>
+<h4 style="color: blue;">Multiplying</h4>
+<p>The <strong>multiplication</strong> operator (<code>*</code>) multiplies numbers.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let y = 2;<br>
+let z = x * y;
+</div>
+<hr>
+<h4 style="color: blue;">Dividing</h4>
+<p>The <strong>division</strong> operator (<code>/</code>) divides numbers.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let y = 2;<br>
+let z = x / y;
+</div>
+<hr>
+<h4 style="color: blue;">Remainder</h4>
+<p>The <strong>modulus</strong> operator (<code>%</code>) returns the division remainder.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="w3-code notranslate jsHigh">
+let x = 5;<br>
+let y = 2;<br>
+let z = x % y;
+</div>
+<p>In arithmetic, the division of two integers produces a <strong>quotient</strong>
+and a <strong>remainder</strong>.</p>
+<p>In mathematics, the result of a <strong>modulo operation</strong> is the <strong>remainder</strong> of an arithmetic division.
+</p>
+<hr>
+<h4 style="color:blue ;">Incrementing</h4>
+<p>The <strong>increment</strong> operator (<code>++</code>) increments numbers.</p>
+<h4 style="color: bue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>x++;<br>
+let z = x;</div>
+<hr>
+<h4 style="color: blue;">Decrementing</h4>
+<p>The <strong>decrement</strong> operator (<code>--</code>) decrements numbers.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+ x--;<br>
+let z = x;
+</div>
+<hr>
+<h4 style="color: blue;">Exponentiation</h4>
+<p>The <strong>exponentiation</strong> operator (<code>**</code>) raises the first operand to the power of the second operand.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let z =
+ x ** 2;
+</div>
+<p>x ** y produces the same result as <code>Math.pow(x,y)</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>
+let z =
+  Math.pow(x,2);
+</div>
+<hr>
+<h4 style="color: blue;">Operator Precedence</h4>
+<p>Operator precedence describes the order in which operations are performed in 
+an arithmetic expression.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 + 50 * 3;
+</div>
+<p>Is the result of example above the same as 150 * 3, or is it the same as 100 
++ 150?</p>
+<p>Is the addition or the multiplication done first?</p>
+<p>As in traditional school mathematics, the multiplication is done first.</p>
+<p>Multiplication (<code>*</code>) and division (<code>/</code>) have higher <strong>precedence</strong> than 
+addition (<code>+</code>) and subtraction (<code>-</code>).</p>
+<p>And (as in school mathematics) the precedence can be changed by using 
+parentheses:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = (100 + 50) * 3;
+</div>
+<p>When using parentheses, the operations inside the parentheses are computed 
+first. </p>
+<p>When many operations have the same precedence (like addition and 
+subtraction), they are computed from left to 
+right: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 + 50 - 3;
+</div>
+ </div>
+</body>
+</html>

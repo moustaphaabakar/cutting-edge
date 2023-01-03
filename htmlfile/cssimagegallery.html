@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css images gallery<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+    <h4 style="color: blue;">CSS <span class="color_h1">Image Gallery</span></h4>
+    <hr>
+  <h4 style="color: blue;margin: 10px;">Image Gallery</h4>
+  <p style="margin: 10px;">The following image gallery is created with CSS:</p>
+  <h4 style="color: blue;margin: 10px;">Example</h4>
+  <div class="affichage">
+  &lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;style&gt;<br>
+  div.gallery {<br>
+  &nbsp;&nbsp;margin: 5px;<br>
+    &nbsp; border: 1px solid #ccc;<br>
+    &nbsp;&nbsp;float: left;<br>
+  &nbsp;&nbsp;width: 180px;<br>
+  }<br>
+  <br>
+  div.gallery:hover {<br>
+  &nbsp;&nbsp;border: 1px solid #777;<br>
+  }<br>
+  <br>
+  div.gallery img {<br>
+  &nbsp;&nbsp;width: 100%;<br>
+  &nbsp;&nbsp;height: auto;<br>
+  }<br>
+  <br>
+  div.desc {<br>
+    &nbsp; padding: 15px;<br>
+    &nbsp; text-align: center;<br>
+  }<br>
+  &lt;/style&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  <br>
+    &lt;div class=&quot;gallery&quot;&gt;<br>&nbsp; &lt;a target=&quot;_blank&quot; href=&quot;img_5terre.jpg&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+    &lt;img src=&quot;img_5terre.jpg&quot; alt=&quot;Cinque Terre&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;<br>&nbsp; 
+    &lt;/a&gt;<br>&nbsp; &lt;div class=&quot;desc&quot;&gt;Add a description of the image here&lt;/div&gt;<br>
+    &lt;/div&gt;<br><br>&lt;div class=&quot;gallery&quot;&gt;<br>&nbsp; &lt;a target=&quot;_blank&quot; href=&quot;img_forest.jpg&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+    &lt;img src=&quot;img_forest.jpg&quot; alt=&quot;Forest&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;<br>&nbsp; 
+    &lt;/a&gt;<br>&nbsp; &lt;div class=&quot;desc&quot;&gt;Add a description of the image here&lt;/div&gt;<br>
+    &lt;/div&gt;<br><br>&lt;div class=&quot;gallery&quot;&gt;<br>&nbsp; &lt;a target=&quot;_blank&quot; href=&quot;img_lights.jpg&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+    &lt;img src=&quot;img_lights.jpg&quot; alt=&quot;Northern Lights&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;<br>&nbsp; 
+    &lt;/a&gt;<br>&nbsp; &lt;div class=&quot;desc&quot;&gt;Add a description of the image here&lt;/div&gt;<br>
+    &lt;/div&gt;<br><br>&lt;div class=&quot;gallery&quot;&gt;<br>&nbsp; &lt;a target=&quot;_blank&quot; href=&quot;img_mountains.jpg&quot;&gt;<br>&nbsp;&nbsp;&nbsp; 
+    &lt;img src=&quot;img_mountains.jpg&quot; alt=&quot;Mountains&quot; width=&quot;600&quot; height=&quot;400&quot;&gt;<br>&nbsp; 
+    &lt;/a&gt;<br>&nbsp; &lt;div class=&quot;desc&quot;&gt;Add a description of the image here&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  <br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;
+  </div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css table<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+    <h4 style="color: blue;">tables</h4>
+    <p class="intro">The look of an HTML table can be greatly improved with CSS:</p>
+    <table id="customers" class="table table-striped">
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+    </tr>
+    <tr>
+    <td>Berglunds snabbköp</td>
+    <td>Christina Berglund</td>
+    <td>Sweden</td>
+    </tr>
+    <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+    </tr>
+    <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+    </tr>
+    <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+    </tr>
+    <tr>
+    <td>Königlich Essen</td>
+    <td>Philip Cramer</td>
+    <td>Germany</td>
+    </tr>
+    <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+    </tr>
+    <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+    </tr>
+    </table>
+     <hr>
+    <h4 style="color: blue;">Table Borders</h4>
+    <p>To specify table borders in CSS, use the <code>border</code> property.</p>
+    <p>The example below specifies a solid border for &lt;table&gt;, &lt;th&gt;, and &lt;td&gt; elements:</p>
+    <table class="table table-striped">
+      <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      </tr>
+      <tr>
+      <td>Peter</td>
+      <td>Griffin</td>
+      </tr>
+      <tr>
+      <td>Lois</td>
+      <td>Griffin</td>
+      </tr>
+    </table>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    table, th, td {<br>
+    &nbsp;&nbsp;border: 1px solid;<br>
+    }
+</div>
+  <hr>
+<h4 style="color: blue;">Full-Width Table</h4>
+<p>The table above might seem small in some cases. If you need a table that should span the entire screen (full-width), add <code class="w3-codespan">width: 100%</code> to the 
+&lt;table&gt; element:</p>
+<table class="table table-striped">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+table {<br>
+  &nbsp;&nbsp;width: 100%;<br>
+}
+</div>
+    <h4 style="color: blue;">Double Borders</h4>
+    <p>Notice that the table in the examples above have double borders. This is 
+    because both the table and the &lt;th&gt; and &lt;td&gt; elements have separate borders.</p>
+    <p>To remove double borders, take a look at the example below.</p>
+    <hr>
+
+    <h4 style="color: blue;">Collapse Table Borders</h4>
+<p>The <code>border-collapse</code> property sets whether the table borders 
+should be collapsed into a single border:</p>
+<table class="table table-striped">
+  <tr>
+    <th style="height: 25px">Firstname</th>
+    <th style="height: 25px">Lastname</th>
+  </tr>
+  <tr>
+    <td>Peter</td>
+    <td>Griffin</td>
+  </tr>
+  <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+  </tr>
+</table>
+
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+table
+{<br>
+&nbsp;&nbsp;border-collapse: collapse;<br>
+}</div>
+
+<p style="margin-top:25px;">If you only want a border around the table, only specify the <code>border</code> property for 
+    &lt;table&gt;:</p>
+    <table class="table table-striped">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td>Griffin</td>
+      </tr>
+    </table>
+    <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+table
+{<br>&nbsp; border: 1px solid;<br>
+}</div>
+      </div>
+</body>
+</html>

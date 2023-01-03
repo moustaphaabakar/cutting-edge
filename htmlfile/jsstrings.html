@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS strings</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Strings</h4>
+        <hr>
+        <p>JavaScript strings are for storing and manipulating text.</p>  
+        <p>A JavaScript string is zero or more characters written inside quotes.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let text = &quot;John Doe&quot;;
+        </div>
+        <p>You can use single or double quotes:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let carName1 = &quot;Volvo XC60&quot;;&nbsp; 
+          // Double quotes<br>
+        let carName2 = 'Volvo XC60';&nbsp; // Single quotes </div>
+        <p>You can use quotes inside a string, as long as they don't match the quotes 
+        surrounding the string:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let answer1 = &quot;It's alright&quot;;<br>
+        let answer2 = &quot;He is called 'Johnny'&quot;;<br>
+        let answer3 = 'He is called "Johnny"';<br>
+        </div>
+        <hr>
+        <h4 style="color: blue;">String Length</h4>
+        <p>To find the length of a string, use the built-in <code>length</code> property:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        let text = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;<br>
+        let length = text.length;
+        </div>
+        <hr>
+        <h4 style="color: blue;">Escape Character</h4>
+        <p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+        <div class="affichage">
+        let text = &quot;We are the so-called &quot;Vikings&quot; from the north.&quot;;<br>
+        </div>
+        <p>The string will be chopped to &quot;We are the so-called &quot;.</p>
+        <p>The solution to avoid this problem, is to use the <strong>backslash escape character</strong>.</p>
+        <p>The backslash (<code>\</code>) escape character turns special characters into string characters:</p>
+        <table class="table table-striped">
+            <tr>
+              <th width="25%">Code</th>
+              <th>Result</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>\'</td>
+              <td>'</td>
+              <td>Single quote</td>
+            </tr>
+            <tr>
+              <td>\&quot;</td>
+              <td>&quot;</td>
+              <td>Double quote</td>
+            </tr>
+            <tr>
+              <td>\\</td>
+              <td>\</td>
+              <td>Backslash</td>
+            </tr>
+            </table>
+
+            <p>The sequence <code>\"</code>&nbsp; inserts a double quote in a string:<p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                let text = &quot;We are the so-called \&quot;Vikings\&quot; from the north.&quot;;</div>
+                 sequence <code>\'</code>&nbsp; inserts a single quote in a string:<p>
+                <h4 style="color:blue">Example</h4>
+                <div class="affichage">
+                let text= 'It\'s alright.';<br>
+                </div>
+                <p>The sequence <code>\\</code>&nbsp; inserts a backslash in a string:<p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                let text = &quot;The character \\ is called backslash.&quot;;<br>
+                </div>
+                <p>Six other escape sequences are valid in JavaScript:</p>
+<table class="table table-striped">
+<tr>
+  <th width="25%">Code</th>
+  <th>Result</th>
+</tr>
+<tr>
+  <td>\b</td>
+  <td>Backspace</td>
+</tr>
+<tr>
+  <td>\f</td>
+  <td>Form Feed</td>
+</tr>
+<tr>
+  <td>\n</td>
+  <td>New Line</td>
+</tr>
+<tr>
+  <td>\r</td>
+  <td>Carriage Return</td>
+</tr>
+<tr>
+  <td>\t</td>
+  <td>Horizontal Tabulator</td>
+</tr>
+<tr>
+  <td>\v</td>
+  <td>Vertical Tabulator</td>
+</tr>
+</table>
+    <p>The 6 escape characters above were originally designed to control 
+    typewriters, teletypes, and fax machines. They do not make any sense in HTML. </p>
+    <hr>
+    <h4 style="color: blue;">Breaking Long Code Lines</h4>
+    <p>For best readability, programmers often like to avoid code lines longer than 
+    80 characters.</p>
+    <p>If a JavaScript statement does not fit on one line, the best place to break 
+    it is after an operator:</p>
+    <h4 style="color:blue">Example</h4>
+    <div class="affichage">
+    document.getElementById(&quot;demo&quot;).innerHTML =<br>&quot;Hello Dolly!&quot;;</div>
+    <p>You can also break up a code line <b>within a text string</b> with a single backslash:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    document.getElementById(&quot;demo&quot;).innerHTML = 
+    &quot;Hello \<br>Dolly!&quot;;
+    </div>
+        <p>The <code>\</code> method is not the preferred method. It might not have universal support.<br>Some browsers do 
+        not allow spaces behind the <code >\</code> character.</p> 
+        <p>A safer way to break up a string, is to use string 
+        addition:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        document.getElementById(&quot;demo&quot;).innerHTML = &quot;Hello &quot; + <br>&quot;Dolly!&quot;;
+        </div>
+        <p>You cannot break up a code line with a backslash:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        document.getElementById(&quot;demo&quot;).innerHTML = \ <br>&quot;Hello Dolly!&quot;;
+        </div>
+
+        <hr>
+
+<h2>JavaScript Strings as Objects</h2>
+<p>Normally, JavaScript strings are primitive values, created from literals:</p>
+<div class="w3-example">
+<div class="w3-code notranslate jsHigh">
+let x = &quot;John&quot;;<br>
+</div>
+</div>
+<p>But strings can also be defined as objects with the keyword <code>new</code>:</p>
+<div class="affichage">
+let y = new String(&quot;John&quot;);
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = &quot;John&quot;;<br>
+let y = new String(&quot;John&quot;);<br>
+</div>
+<p>Do not create Strings objects.</p>
+<p>The <code>new</code> keyword complicates the code and slows down execution speed.</p>
+<p>String objects can produce unexpected results:</p>
+    <p> When using the <code>==</code> operator, x and y are <b>equal</b>:</p>
+    <div class="affichage">
+    let x = &quot;John&quot;;<br>
+    let y = new String(&quot;John&quot;);
+    </div>
+    <p>When using the <code>===</code> operator, x and y are <b>not equal</b>
+    <div class="affichage">
+    let x = &quot;John&quot;;<br>
+    let y = new String(&quot;John&quot;);
+    </div>
+        <p>Note the difference between <code>(x==y)</code> and <code>(x===y)</code>.</p>
+        <p><code>(x == y)</code> true or false?</p>
+        <div class="affichage">
+        let x = new String(&quot;John&quot;);<br>
+        let y = new String(&quot;John&quot;);
+        </div>
+        <p><code>(x === y)</code> true or false?</p>
+        <div class="affichage">
+        let x = new String(&quot;John&quot;);<br>
+        let y = new String(&quot;John&quot;);
+        </div>
+        <p>Comparing two JavaScript objects <b>always</b> returns <b>false</b>.</p>
+     </div>
+     
+</body>
+</html>

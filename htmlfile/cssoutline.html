@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css outline<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+ <h4 style="color: blue;">outline</h4>
+ <p>An outline is a line drawn outside the element's border.</p>
+ <hr>
+ <p style="width:98%;border:2px solid black;outline:#04AA6D solid 10px;padding:20px;margin:auto;text-align:center">
+    This element has a black border and a green outline with a width of 10px.
+ </p><hr>
+    <h4 style="color: blue;">CSS Outline</h4>
+    <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element &quot;stand out&quot;.</p>>
+        <p>CSS has the following outline properties:</p>
+        <ul>
+          <li> <code class="w3-codespan">outline-style</code></li>
+          <li> <code class="w3-codespan">outline-color</code></li>
+          <li> <code class="w3-codespan">outline-width</code></li>
+          <li> <code class="w3-codespan">outline-offset</code></li>
+          <li> <code class="w3-codespan">outline</code></li>
+        </ul>
+            <p><b>Note:</b> Outline differs from borders! Unlike border, the outline is 
+            drawn outside the element's border, and may overlap other content. Also, the outline is 
+            NOT a part of the element's dimensions; the element's total width and height
+            is not affected by the width of the outline.</p>
+        <hr>
+        <h4 style="margin: 10px;">CSS Outline Style</h4>
+        <p>The <code>outline-style</code> property specifies the style of the outline, 
+        and can have one of the following values:</p>
+        <ul>
+        <li><code>dotted</code> - Defines a dotted outline</li>
+        <li><code>dashed</code> - Defines a dashed outline</li>
+        <li><code>solid</code> - Defines a solid outline</li>
+        <li><code>double</code> - Defines a double outline</li>
+        <li><code>groove</code> - Defines a 3D grooved outline</li>
+        <li><code>ridge</code> - Defines a 3D ridged outline</li>
+        <li><code>inset</code> - Defines a 3D inset outline</li>
+        <li><code>outset</code> - Defines a 3D outset outline</li>
+        <li><code>none</code> - Defines no outline</li>
+        <li><code>hidden</code> - Defines a hidden outline</li>
+        </ul>
+        <p>The following example shows the different <code>outline-style</code> values:</p>
+        <h4 style="color: blue;">Example</h4>
+        <p>Demonstration of the different outline styles:</p>
+      <div class="affichage">
+        p.dotted {outline-style: dotted;}<br>
+      p.dashed {outline-style: dashed;}<br>p.solid {outline-style: solid;}<br>
+      p.double {outline-style: double;}<br>p.groove {outline-style: groove;}<br>
+      p.ridge {outline-style: ridge;}<br>p.inset {outline-style: inset;}<br>
+      p.outset {outline-style: outset;}
+      </div>
+    <p style="outline-style:dotted;outline-color:red;padding:2px 4px;width: 400px;">A dotted outline.</p>
+    <p style="outline-style:dashed;outline-color:red;padding:2px 4px;width: 400px;">A dashed outline.</p>
+    <p style="outline-style:solid;outline-color:red;padding:2px 4px;width: 400px;">A solid outline.</p>
+    <p style="outline-style:double;outline-color:red;padding:2px 4px;width: 400px;">A double outline.</p>
+    <p style="outline-style:groove;outline-color:red;padding:2px 4px;width: 400px;">A groove outline. The effect depends on the outline-color value.</p>
+    <p style="outline-style:ridge;outline-color:red;padding:2px 4px;width: 400px;">A ridge outline. The effect depends on the outline-color value.</p>
+    <p style="outline-style:inset;outline-color:red;padding:2px 4px;width: 400px;">An inset outline. The effect depends on the outline-color value.</p>
+    <p style="outline-style:outset;outline-color:red;padding:2px 4px;width: 400px;">An outset outline. The effect depends on the outline-color value.</p>
+      </div>
+      
+</body>
+</html>

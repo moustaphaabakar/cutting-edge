@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+   <link rel="stylesheet" href="editors.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Editors</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div style="margin:10px;" class="mediaquery">
+        <h4 style="color: blue;">HTML Editors</h4>
+        <p>A simple text editor is all you need to learn HTML.</p>
+<h4 style="color: blue;">Learn HTML Using Notepad or TextEdit</h4>
+<p>Web pages can be created and modified by using professional HTML editors.</p>
+<p>However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
+<p>We believe that using a simple text editor is a good way to learn HTML.</p>
+<p>Follow the steps below to create your first web page with Notepad or TextEdit.</p>
+<hr>
+<h4 style="color: blue;">Step 1: Open Notepad (PC)</h4>
+<p><strong>Windows 8 or later:</strong></p>
+<p>Open the <strong>Start Screen</strong> (the window symbol at the bottom left on your screen). Type <strong>Notepad</strong>.</p>
+<p><strong>Windows 7 or earlier:</strong></p>
+<p>Open <strong>Start</strong> &gt;<strong> 
+Programs &gt;</strong> <strong>Accessories &gt;</strong> <strong>Notepad</strong></p>
+<hr>
+<h4 style="color: blue;">Step 1: Open TextEdit (Mac)</h4>
+<p>Open <strong>Finder &gt; Applications &gt; TextEdit</strong></p>
+<p>Also change some preferences to get the application to 
+save files correctly.
+<span>In </span><strong>Preferences &gt; Format &gt; 
+</strong>choose<strong> &quot;Plain Text&quot;</strong></p>
+<p>Then under &quot;Open and Save&quot;, check the box that says &quot;Display HTML files as HTML code instead of formatted text&quot;.</p>
+<p><strong>Then open a new document to place the code.</strong></p>
+<hr>
+<h4 style="color: blue;">Step 2: Write Some HTML</h4>
+<p>Write or copy the following HTML code into Notepad:</p>
+<div class="affichage">
+&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My First Heading&lt;/h1&gt;<br><br>
+&lt;p&gt;My first paragraph.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+<p><img alt="Notepad" src="../img_notepad.png"  style="width: 70%;"></p>
+<hr>
+<h4 style="color: blue;">Step 3: Save the HTML Page</h4>
+<p>Save the file on your computer. Select <strong>File &gt; Save as</strong> in the Notepad menu.</p>
+<p>Name the file <strong>&quot;index.htm&quot;</strong> and set the encoding to 
+<strong>UTF-8</strong> (which is the preferred encoding for HTML files).</p>
+<p><img alt="View in Browser"  src="../img_saveas.png" style="width: 70%;"></p>
+<h4 style="color: blue;">Step 4: View the HTML Page in Your Browser</h4>
+<p>Open the saved HTML file in your favorite browser (double click on the file, 
+or right-click - and choose &quot;Open with&quot;).</p>
+<p>The result will look much like this:</p>
+<p><img alt="View in Browser" src="../img_chrome.png" style="width: 70%;"></p>
+</div>
+</body>
+</html>

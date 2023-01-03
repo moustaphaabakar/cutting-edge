@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css opacity / transparency<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Opacity / Transparency</h4>
+        <p>The <code>opacity</code> property specifies the opacity/transparency of an element.</p>
+        <hr>
+        <h4 style="color: blue;">Transparent Image</h4>
+        <p>The <code>opacity</code> property can take a value from 0.0 - 1.0. The lower the value, the more transparent:</p>
+        <img src="../img_forest.jpg" alt="Forest" style="opacity:0.2; width: 450px; justify-content: center;">
+        <p>opacity 0.2</p>
+        <img src="../img_forest.jpg" alt="Forest" style="opacity:0.5;width: 450px;">
+        <p>opacity 0.5</p>        
+        <img src="../img_forest.jpg" alt="Forest" style="width: 450px;">
+        <p>opacity 1<br>(default)</p>
+        <h4 style="color:blue">Example</h4>
+        <div class="affichage">
+        img {<br>&nbsp;&nbsp;opacity: 0.5;<br>}</div>
+        <h4 style="color: blue;">Transparent Box</h4>
+<p>When using the <code>opacity</code> property to add transparency to the background of an element, all of its child elements 
+inherit the same transparency. This can make the text inside a fully transparent element hard to read:</p>
+<p style="background-color:#4CAF50;opacity:1;padding:50px;color:black;"><p>opacity 1</p></p>
+<p style="background-color:#4CAF50;opacity:0.6;padding:50px;color:black;"><p>opacity 0.6</p></p>
+<p style="background-color:#4CAF50;opacity:0.3;padding:50px;color:black"><p>opacity 0.3</p></p>
+<p style="background-color:#4CAF50;opacity:0.1;padding:50px;color:black;"><p>opacity 0.1</p></p>
+<p style="color: blue">Text in Transparent Box</h4>
+<p style="margin: 10px;">This is some text that is placed in the transparent box.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&lt;style&gt;<br>
+div.background {<br>
+  &nbsp; background: url(klematis.jpg) repeat;<br>
+  &nbsp; border: 2px solid black;<br>
+}<br>
+<br>
+div.transbox {<br>
+  &nbsp; margin: 30px;<br>
+  &nbsp; background-color: #ffffff;<br>
+  &nbsp; border: 1px solid black;<br>
+&nbsp;&nbsp;opacity: 0.6;<br>
+}<br>
+<br>
+div.transbox p {<br>
+&nbsp;&nbsp;margin: 5%;<br>
+&nbsp;&nbsp;font-weight: bold;<br>
+  &nbsp; color: #000000;<br>
+}<br>
+&lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+<br>
+&lt;div class=&quot;background&quot;&gt;<br>
+&nbsp; &lt;div class=&quot;transbox&quot;&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;p&gt;This is some text that is placed in the transparent box.&lt;/p&gt;<br>
+&nbsp; &lt;/div&gt;<br>
+&lt;/div&gt;<br>
+<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+</div>
+    <h4 style="color: blue;">Example explained</h4>
+    <p>First, we create a &lt;div&gt; element (class=&quot;background&quot;) with a background image, and a border.
+    </p>
+    <p>Then we create another &lt;div&gt; (class=&quot;transbox&quot;) inside the first &lt;div&gt;. </p>
+    <p>The 
+    &lt;div class=&quot;transbox&quot;&gt; have a background color, and a border - 
+    the div is transparent. </p>
+    <p>Inside the transparent 
+    &lt;div&gt;, we add some text inside a &lt;p&gt; element.</p>
+</div>
+</div>
+
+</body>
+</html>

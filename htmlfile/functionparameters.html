@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> function parameters</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript  Function Parameters</h4>
+        <hr>
+        <p >A JavaScript <code>function</code> does not perform any checking on 
+        parameter values (arguments).</p>
+        <hr>
+        <h4 style="color: blue;">Function Parameters and Arguments</h4>
+        <p>Earlier in this tutorial, you learned that functions can have <strong>
+        parameters</strong>:</p>
+        <div class="affichage">
+         function <em>functionName</em>(<em>parameter1, parameter2, parameter3</em>) {<br>
+          &nbsp; // <em>code to be executed</em><br>
+        }
+        </div>    
+        <p>Function <strong>parameters</strong> are the <strong>names</strong> listed in 
+        the function definition.</p>
+        <p>Function <strong>arguments</strong> are the real <strong>values</strong> 
+        passed to (and received by) the function.</p>
+        <hr>
+        <h4 style="color: blue;">Parameter Rules</h4>
+        <p>JavaScript function definitions do not specify data types for 
+        parameters.</p>
+        <p>JavaScript functions do not perform type checking on the passed 
+        arguments.</p>
+        <p>JavaScript functions do not check the number of arguments received.</p>
+        <hr>
+        <h4 style="color: blue;">Default Parameters</h4>
+        <p>If a function is called with <strong>missing arguments</strong> (less than declared), the missing values are set to
+        <code>undefined</code>.</p>
+        <p>Sometimes this is acceptable, but sometimes it is better to assign a default 
+        value to the parameter:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        function myFunction(x, y) {<br>
+          &nbsp; if (y === undefined) {<br>
+        &nbsp;&nbsp;&nbsp; y = 2;<br>
+          &nbsp;  }
+        <br>
+        }
+        </div>
+        <hr>
+<h4 style="color: blue;">The Arguments Object</h4>
+<p>JavaScript functions have a built-in object called the arguments 
+object.</p>
+<p>The argument object contains an array of the arguments used when the function 
+was called (invoked).</p>
+<p>This way you can simply use a function to find (for instance) the highest 
+value in a list of numbers:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+x = findMax(1, 123, 500, 115, 44, 88);<br><br>function findMax() {<br>
+&nbsp;&nbsp;let max = -Infinity;<br>
+  &nbsp; for (let i = 0; i &lt; arguments.length; i++) {<br>
+  &nbsp;&nbsp;&nbsp; if (arguments[i] &gt; max) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max = arguments[i];<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+  &nbsp;&nbsp;}<br>
+  &nbsp; return max;<br>
+}
+</div>
+<p>Or create a function to sum all input values:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+x = sumAll(1, 123, 500, 115, 44, 88);<br>
+<br>
+function sumAll() {<br>
+&nbsp; let sum = 0;<br>
+  &nbsp; for (let i = 0; i &lt; arguments.length; i++) {<br>
+&nbsp;&nbsp;&nbsp; sum += arguments[i];<br>
+  &nbsp; }<br>
+  &nbsp; return sum;<br>
+}
+</div>
+<p>If a function is called with <strong>too many arguments</strong> (more than declared),
+these arguments can be reached using <strong>the arguments object</strong>.</p>
+<hr>
+<h4 style="color: blue;">Arguments are Passed by Value</h4>
+<p>The parameters, in a function call, are the function's arguments.</p>
+<p>JavaScript arguments are passed by <strong>value</strong>: The function only 
+gets to know the values, not the argument's locations.</p>
+<p>If a function changes an argument's value, it does not change the parameter's 
+original value.</p>
+<p><strong>Changes to arguments are not visible (reflected) outside the function.</strong></p>
+<hr>
+<h4 style="color: blue;">Objects are Passed by Reference</h4>
+<p>In JavaScript, object references are values.</p>
+<p>Because of this, objects will behave like they are passed by <strong>reference:</strong></p>
+<p>If a function changes an object property, it changes the original value.</p>
+<p><strong>Changes to object properties are visible (reflected) outside the function.</strong></p>
+<br>
+ </div>
+</body>
+</html>

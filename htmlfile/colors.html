@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html colors</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <p>HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</p>  
+        <h4 style="color: blue;">Color Names</h4>
+<p>In HTML, a color can be specified by using a color name:</p>
+<div style="margin: 10px; ">
+<div class="w3-row w3-center" style="margin:0 -16px;line-height:80px;color:white;">
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:tomato;">Tomato</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:orange;">Orange</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:dodgerblue;">DodgerBlue</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:mediumseagreen;">MediumSeaGreen</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:gray;">Gray</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:slateblue;">SlateBlue</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:violet;">Violet</div>
+  </div>
+  <div class="w3-col l3 m6 w3-padding">
+    <div style="background-color:lightgray;color:#444444">LightGray</div>
+  </div>
+</div>
+</div>
+<h4 style="color: blue;">Background Color</h4>
+<p>You can set the background color for HTML elements:</p>
+<div style="background-color:dodgerblue; text-align:center;color:white;font-size:24px;">Hello World</div>
+<br>
+<div class="w3-container" style="background-color:tomato;color:white;"><br>
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br><br>
+</div>
+<h4 style="color:blue ;">Example</h4>
+<div class="affichage">
+  &lt;h1 style=&quot;background-color:DodgerBlue;&quot;&gt;Hello World&lt;/h1&gt;<br>&lt;p style=&quot;background-color:Tomato;&quot;&gt;Lorem ipsum...&lt;/p&gt;</div>
+  <hr>
+  <h4 style="color: blue;">Text Color</h4>
+  <p>You can set the color of text:</p>
+  <h3 style="color:tomato">Hello World</h3>
+  <p style="color:dodgerblue">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  <p style="color:mediumseagreen">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+    &lt;h1 style=&quot;color:Tomato;&quot;&gt;Hello 
+    World&lt;/h1&gt;<br>&lt;p style=&quot;color:DodgerBlue;&quot;&gt;Lorem 
+    ipsum...&lt;/p&gt;<br>&lt;p style=&quot;color:MediumSeaGreen;&quot;&gt;Ut wisi 
+    enim...&lt;/p&gt;
+  </div>
+  <hr>
+<h4 style="color: blue;">Border Color</h4>
+<p>You can set the color of borders:</p>
+<h2 style="border: 2px solid Tomato;">Hello World</h2>
+<h2 style="border: 2px solid DodgerBlue;">Hello World</h2>
+<h2 style="border: 2px solid Violet;">Hello World</h2>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;h1 style=&quot;border:2px 
+  solid Tomato;&quot;&gt;Hello 
+  World&lt;/h1&gt;<br>&lt;h1 style=&quot;border:2px 
+  solid DodgerBlue;&quot;&gt;Hello 
+  World&lt;/h1&gt;<br>&lt;h1 style=&quot;border:2px 
+  solid Violet;&quot;&gt;Hello 
+  World&lt;/h1&gt;
+</div>
+<hr>
+<h4 style="color: blue;">Color Values</h4>
+<p>In HTML, colors can also be specified using RGB values, HEX values, HSL 
+values, RGBA values, and HSLA values.</p>
+<p>The following three &lt;div&gt; elements have their background color set with RGB, 
+HEX, and HSL values:</p>
+<div class="w3-center" style="line-height:60px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+  <div style="background-color:rgb(255, 99, 71);margin:10px 0;">rgb(255, 99, 71)</div>
+  <div style="background-color:#ff6347;margin:10px 0;">#ff6347</div>
+  <div style="background-color:hsl(9, 100%, 64%);margin:10px 0;">hsl(9, 100%, 64%)</div>
+</div>
+<p>The following two &lt;div&gt; elements have their background color set with RGBA 
+  and HSLA values, which add an Alpha channel to the color (here we have 50% 
+  transparency):</p>
+  <div class="w3-center" style="line-height:60px;color:white;font-size:20px;font-weight:bold;font-family:Consolas, 'Courier New', Courier, monospace">
+    <div style="background-color:rgba(255, 99, 71, 0.5);margin:10px 0;">rgba(255, 99, 71, 0.5)</div>
+    <div style="background-color:hsla(9, 100%, 64%, 0.5);margin:10px 0;">hsla(9, 100%, 64%, 0.5)</div>
+  </div>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+    &lt;h1 style=&quot;background-color:rgb(255, 
+    99, 71);&quot;&gt;...&lt;/h1&gt;<br>&lt;h1 style=&quot;background-color:#ff6347;&quot;&gt;...&lt;/h1&gt;<br>&lt;h1 style=&quot;background-color:hsl(9, 
+    100%, 64%);&quot;&gt;...&lt;/h1&gt;<br><br>&lt;h1 style=&quot;background-color:rgba(255, 
+    99, 71, 0.5);&quot;&gt;...&lt;/h1&gt;<br>&lt;h1 style=&quot;background-color:hsla(9, 
+    100%, 64%, 0.5);&quot;&gt;...&lt;/h1&gt;
+  </div>
+  <h4 style="color: blue;">Learn more about Color Values</h4>
+</div>
+</body>
+</html>

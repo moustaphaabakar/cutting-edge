@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css pseudo-class<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+
+        <h4 style="color: blue;">CSS Pseudo-classes</h4>
+        <hr>
+        <h4 style="color: blue;">What are Pseudo-classes?</h4>
+        <p>A pseudo-class is used to define a special state 
+        of an element.</p>
+        <p>For example, it can be used to:</p>
+        <ul>
+        <li>Style an element when a user mouses over it</li>
+        <li>Style visited and unvisited links differently</li>
+        <li>Style an element when it gets focus</li>
+        </ul>
+        <h4 style="color: blue;">Syntax</h4>
+<p>The syntax of pseudo-classes:</p>
+<div class="affichage">
+selector:pseudo-class {<br>&nbsp;&nbsp;property: value;<br>}</div>
+<hr>
+    <h4 style="color: blue;">Anchor Pseudo-classes</h4>
+    <p>Links can be displayed in different ways:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+       /* unvisited link */<br>a:link {<br>&nbsp; color: #FF0000;<br>}<br><br>/* visited 
+    link */<br>a:visited {<br>&nbsp; color: #00FF00;<br>}<br><br>/* mouse over link */<br>
+    a:hover {<br>&nbsp;&nbsp;color: #FF00FF;<br>}<br><br>/* selected link */<br>a:active {<br>
+    &nbsp;&nbsp;color: #0000FF;<br>}
+    </div>
+        <p style="margin:10px ;"> <b>Note:</b> <code>a:hover</code> MUST come after <code>a:link</code> and 
+        <code>a:visited</code> in the CSS definition in order to be effective! <code>a:active</code> MUST come after 
+        <code>a:hover</code> in the CSS definition in order to be effective!
+        Pseudo-class names are not case-sensitive.</p>
+        <hr>
+ 
+        <h4 style="color: bue;">Pseudo-classes and HTML Classes</h4>
+        <p>Pseudo-classes can be combined with HTML classes:</p>
+        <p>When you hover over the link in the example, it will change color:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        a.highlight:hover {<br>&nbsp;&nbsp;color: #ff0000;<br>} </div>
+        <h4 style="color: blue;">Hover on &lt;div&gt;</h4>
+        <p>An example of using the <code>:hover</code> pseudo-class on a &lt;div&gt; element:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        div:hover {<br>&nbsp; background-color: blue;<br>}
+    </div>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        p {<br>&nbsp; display: none;<br>&nbsp; 
+        background-color: yellow;<br>&nbsp; padding: 20px;<br>}<br><br>
+        div:hover p {<br>&nbsp; display: block;<br>}</div>
+    <hr>
+<h4 style="color:blue">CSS - The :first-child Pseudo-class</h4>
+<p>The <code>:first-child</code> pseudo-class matches a specified element that is the first child of another element.</p>
+<h4 style="color: blue;">Match the first &lt;p&gt; element</h4>
+<p>In the following example, the selector matches any &lt;p&gt; element that is the first child of any element:</p>
+<h4 style="color:blue ;">Example</h4>
+<div class="affichage">
+p:first-child
+{<br>
+  &nbsp;
+color: blue;<br>
+}
+   </div>
+<hr>
+<h4 style="color: blue;">Match the first &lt;i&gt; element in all &lt;p&gt; elements</h4>
+<p>In the following example, the selector matches the first &lt;i&gt; element in all &lt;p&gt; elements:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+p i:first-child
+{<br>
+  &nbsp;
+color: blue;<br>
+}</div>
+    <hr>
+    <h4 style="color: blue;">Match all &lt;i&gt; elements in all first child &lt;p&gt; elements</h4>
+    <p>In the following example, the selector matches all &lt;i&gt; elements in &lt;p&gt; elements that are the first child of another element:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    p:first-child i
+    {<br>
+    &nbsp;&nbsp;color: blue;<br>
+    }</div>
+    <h4 style="color: blue;">CSS - The :lang Pseudo-class</h4>
+    <p>The <code>:lang</code> pseudo-class allows you to define special rules for different languages.</p>
+    <p>In the example below, <code>:lang</code> defines the quotation marks for &lt;q&gt; elements with lang=&quot;no&quot;:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    &lt;html&gt;<br>
+    &lt;head&gt;<br>
+    &lt;style&gt;<br>
+      q:lang(no) {<br>&nbsp; quotes: &quot;~&quot; &quot;~&quot;;<br>}<br>
+    &lt;/style&gt;<br>
+    &lt;/head&gt;<br>
+    &lt;body&gt;<br><br>
+    &lt;p&gt;Some text &lt;q lang=&quot;no&quot;&gt;A quote in a paragraph&lt;/q&gt; 
+    Some text.&lt;/p&gt;<br><br>
+    &lt;/body&gt;<br>
+    &lt;/html&gt;
+    </div>
+</div>
+
+</body>
+</html>

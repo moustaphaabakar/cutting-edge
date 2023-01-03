@@ -1,0 +1,9 @@
+
+  .affichage{
+    background-color: black;
+    width: 50%;
+    color: white;
+    border: solid 10px  lightgrey;
+    position: relative;
+    left: 100px;
+}

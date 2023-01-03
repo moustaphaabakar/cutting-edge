@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS dates</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Date Objects</h4>
+        <hr>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            const d = new Date();<br>
+            </div>
+            <hr>
+            <h4 style="color: blue;">JavaScript Date Output</h4>
+            <p>By default, JavaScript will use the browser's time zone and display a date as a full text string:</p>
+            <p><strong><script>document.write(xxx)</script></strong></p>
+            <p>You will learn much more about how to display dates, later in this tutorial.</p>
+            <hr>
+            <h4 style="color: blue;">Creating Date Objects</h4>
+            <p>Date objects are created with the 
+            <code>new Date()</code> constructor.</p>
+            <p>There are <strong>4 ways</strong> to create a new date object:</p>
+            <div class="affichage">
+            new Date()<br>new Date(<em>year, month, day, hours, minutes, seconds, milliseconds</em>)<br>
+              new Date(<em>milliseconds</em>)<br>
+            new Date(<em>date string</em>)<br>
+            </div>
+            <hr>
+            <h4 style="color: blue;">new Date()</h4>
+            <p><code>new Date()</code> creates a new date object with the <strong>current date and time</strong>:</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            const d = new Date();
+            </div>
+            <p>Date objects are static. The computer time is ticking, but date objects are not.</p>
+            <hr>
+            <h4 style="color: blue;">new Date(<em>year, month, ...</em>)</h4>
+<p><code >new Date(<em>year, month, ...</em>)</code> creates a new date object with a <strong>specified date and time</strong>.</p>
+<p>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+</div>
+<p><b>Note:</b> JavaScript counts months from <b>0</b> to <b>11</b>:</p>
+<p><b>January = 0</b>.</p>
+<p><b>December = 11</b>.</p>
+<p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+<p>Specifying:</p>
+<div class="affichage">
+const d = new Date(2018, 15, 24, 10, 33, 30);<br>
+</div>
+<p>Is the same as:</p>
+<div class="affichage">
+const d = new Date(2019, 3, 24, 10, 33, 30);<br>
+</div>
+<p>Specifying a day higher than max, will not result in an error but add the overflow to the next month:</p>
+<p>Specifying:</p>
+<div class="affichage">
+const d = new Date(2018, 5, 35, 10, 33, 30);<br>
+</div>
+<p>Is the same as:</p>
+<div class="affichage">
+const d = new Date(2018, 6, 5, 10, 33, 30);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Using 6, 4, 3, or 2 Numbers</h4>
+<p>6 numbers specify year, month, day, hour, minute, second:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11, 24, 10, 33, 30);<br>
+</div>
+<p>5 numbers specify year, month, day, hour, and minute:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11, 24, 10, 33);<br>
+</div>
+<p>4 numbers specify year, month, day, and hour:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11, 24, 10);<br>
+</div>
+<p>3 numbers specify year, month, and day:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11, 24);<br>
+</div>
+<p>2 numbers specify year and month:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018, 11);<br>
+</div>
+<p>You cannot omit month. If you supply only one parameter it will be treated as milliseconds.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(2018);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Previous Century</h4>
+<p>One and two digit years will be interpreted as 19xx:</p>
+<h4 style="color: bue;">Example</h4>
+<div class="affichage">
+const d = new Date(99, 11, 24);<br>
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(9, 11, 24);<br>
+</div>
+<hr>
+<h4 style="color: blue;">new Date(<em>dateString</em>)</h4>
+<p><code >new Date(dateString)</code> creates a new date object from a <strong>date string</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;October 13, 2014 11:13:00&quot;);
+</div>
+<p>Date strings are described in the next chapter.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Stores Dates as Milliseconds</h4>
+<p>JavaScript stores dates as number of milliseconds since January 01, 1970, 00:00:00 UTC (Universal Time Coordinated).</p>
+<p>Zero time is January 01, 1970 00:00:00 UTC.</p>
+<p>Now the time is: <strong><script>document.write(xxx.getTime())</script></strong> milliseconds past January 01, 1970</p>
+<hr>
+<h4 style="color: blue;">new Date(<em>milliseconds</em>)</h4>
+<p><code>new Date(<em>milliseconds</em>)</code> creates a new date object as<strong> zero time plus milliseconds</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(0);
+</div>
+<p>01 January 1970 <strong>plus</strong> 100 000 000 000 milliseconds is approximately 03 March 1973:</p>  
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(100000000000);
+</div>
+<p>January 01 1970 <strong>minus</strong> 100 000 000 000 milliseconds is approximately October 31 1966:</p>  
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+    const d = new Date(-100000000000);
+    </div>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date(86400000);
+    </div>
+    <p>One day (24 hours) is 86 400 000 milliseconds.</p>
+    <hr>
+    <h4 style="color: blue;">Date Methods</h4> 
+    <p>When a Date object is created, a number of <strong>methods</strong> allow you to operate on 
+    it.</p>
+    <p>Date methods allow you to get and set the year, month, day, hour, 
+    minute, second, and millisecond of date objects, using either local time or UTC 
+    (universal, or GMT) time.</p>
+    <p>Date methods and time zones are covered in the next chapters.</p>
+    <hr>
+    <h4 style="color: blue;">Displaying Dates</h4>
+    <p>JavaScript will (by default) output dates in full text string format:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    <script>document.write(new Date())
+    </script>
+    </div>
+    <p>When you display a date object in HTML, it is automatically converted to a 
+    string, with the <code>toString()</code> method.</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date();<br>
+    d.toString();
+    </div>
+    <p>The <code>toUTCString()</code> method converts a date to a UTC string (a date display 
+    standard).</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date();<br>
+    d.toUTCString();
+    </div>
+    <p>The <code>toDateString()</code> method converts a date to a more readable    
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date();<br>
+    d.toDateString();
+    </div>
+    <p>The <code>toISOString()</code> method converts a Date object to a string, using the ISO standard format:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date();<br>
+    d.toISOString();
+    </div>
+  
+</body>
+</html>

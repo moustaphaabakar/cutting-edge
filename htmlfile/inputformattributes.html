@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html input forms attributes <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">HTML Input form* Attributes</h4>
+        <p>This chapter describes the different <code>form*</code> attributes for the HTML <code>&lt;input&gt;</code> element. </p>
+<hr>
+<h4 style="color: blue;">The form Attribute</h4>
+<p>The input <code>form</code> attribute specifies the form 
+the <code>&lt;input&gt;</code> element belongs to.</p>
+<p>The value of this attribute must be equal to the id attribute of the &lt;form&gt; 
+element it belongs to.</p>
+<h4 style="color: blue;">Example</h4>
+<p>An input field located outside of the HTML form (but still a part of the form):</p>
+<div class="affichage">
+    &lt;form action=&quot;/action_page.php&quot; id=&quot;form1&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+    name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;<br><br>&lt;label for=&quot;lname&quot;&gt;Last 
+    name:&lt;/label&gt;<br>&lt;input type=&quot;text&quot; id=&quot;lname&quot; 
+    name=&quot;lname&quot; form=&quot;form1&quot;&gt;<br>
+  </div>
+
+  <h4 style="color: blue;">The formaction Attribute</h4>
+  <p>The input <code>formaction</code> attribute specifies the URL of 
+  the file that will process the input when the form is submitted.</p>
+  <p><strong>Note:</strong> This attribute overrides the <code>
+  action</code> attribute of the <code>&lt;form&gt;</code> element.</p>
+  <p>The <code>formaction</code> attribute works with the 
+  following input types: submit and image.</p>
+  <h4 style="color:blue ;">Example</h4>
+  <p>An HTML form with two submit buttons, with different actions:</p>
+  <div class="affichage">
+      &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+      name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+      &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; 
+      name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&nbsp; 
+      &lt;input type=&quot;submit&quot; formaction=&quot;/action_page2.php&quot; value=&quot;Submit as Admin&quot;&gt;<br>
+      &lt;/form&gt; 
+    </div>
+    <hr>
+    <h4 style="color: blue;">The formenctype Attribute</h4>
+    <p>The input <code>formenctype</code>  attribute specifies how the form-data should be encoded when submitted (only for forms with method=&quot;post&quot;).</p>
+    <p><strong>Note:</strong> This attribute overrides the enctype attribute of the <code>&lt;form&gt;</code> element.</p>
+    <p>The <code>formenctype</code> attribute works with the 
+    following input types: submit and image.</p>
+    <h4 style="color: blue;">Example</h4>
+    <p>A form with two submit buttons. The first sends the form-data with default encoding, 
+    the second sends the form-data encoded as &quot;multipart/form-data&quot;:</p>
+    <div class="affichage">
+        &lt;form action=&quot;/action_page_binary.asp&quot; method=&quot;post&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+        name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; 
+        formenctype=&quot;multipart/form-data&quot;<br>&nbsp; value=&quot;Submit as 
+        Multipart/form-data&quot;&gt;<br>&lt;/form&gt;   
+    </div>
+    <hr>
+    <h4 style="color: blue;">The formmethod Attribute</h4>
+    <p>The input <code>formmethod</code>  attribute defines the HTTP method for sending form-data to the action URL.</p>
+    <p><strong>Note:</strong> This attribute overrides the method  attribute of the <code>&lt;form&gt;</code> element.</p>
+    <p>The <code>formmethod</code> attribute works with the 
+    following input types: submit and image.</p>
+    <p>The form-data can be sent as URL variables (method=&quot;get&quot;) or as an HTTP post 
+    transaction (method=&quot;post&quot;).</p>
+    <p><strong>Notes on the &quot;get&quot; method:</strong></p>
+    <ul>
+      <li>This method appends the form-data to the URL in name/value pairs</li>
+      <li>This method is useful for form submissions where a user want to bookmark 
+      the result</li>
+      <li>There is a limit to how much data you can place in a URL (varies between 
+      browsers), therefore, you cannot be sure that all of the form-data will be 
+      correctly transferred</li>
+      <li>Never use the &quot;get&quot; method to pass sensitive information! (password or 
+      other sensitive information will be visible in the browser's address bar)</li>
+    </ul>
+    <p><strong>Notes on the &quot;post&quot; method:</strong></p>
+    <ul>
+      <li>This method sends the form-data as an HTTP post transaction</li>
+      <li>Form submissions with the &quot;post&quot; method cannot be bookmarked</li>
+      <li>The &quot;post&quot; method is more robust and secure than &quot;get&quot;, and &quot;post&quot; does 
+      not have size limitations</li>
+    </ul>
+    <h4 style="color: blue;">Example</h4>
+    <p>A form with two submit buttons. The first sends the form-data with 
+    method=&quot;get&quot;. The second sends the form-data with method=&quot;post&quot;:</p>
+    <div class="affichage">
+        &lt;form action=&quot;/action_page.php&quot; method=&quot;get&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+        name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+        &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; 
+        name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; value=&quot;Submit using 
+        GET&quot;&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; formmethod=&quot;post&quot; value=&quot;Submit using 
+        POST&quot;&gt;<br>&lt;/form&gt; 
+    </div>
+    <hr>
+    <h4 style="color: blue;">The formtarget Attribute</h4>
+<p>The input <code>formtarget</code> attribute specifies a name or a keyword that indicates where 
+to display the response that is received after submitting the form.</p>
+<p><strong>Note:</strong> This attribute overrides the target attribute of the <code>&lt;form&gt;</code> element.</p>
+<p>The <code>formtarget</code> attribute works with the 
+following input types: submit and image.</p>
+<h4 style="color: blue;">Example</h4>
+<p>A form with two submit buttons, with different target windows:</p>
+<div class="affichage">
+    &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+    name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; 
+    name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&nbsp; 
+    &lt;input type=&quot;submit&quot; formtarget=&quot;_blank&quot; value=&quot;Submit to a new window/tab&quot;&gt;<br>
+    &lt;/form&gt; </div>
+<hr>
+<h4 style="color: blue;">The formnovalidate Attribute</h4>
+<p>The input <code>formnovalidate</code> attribute specifies 
+that an &lt;input&gt; element should not be validated when submitted.</p>
+<p><strong>Note:</strong> This attribute overrides the novalidate attribute of the <code>&lt;form&gt;</code> 
+element.</p>
+<p>The <code>formnovalidate</code> attribute works with the 
+following input types: submit.</p>
+<h4 style="color: blue;">Example</h4>
+<p>A form with two submit buttons (with and without validation):</p>
+<div class="affichage">
+    &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;email&quot;&gt;Enter your 
+    email:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; 
+    formnovalidate=&quot;formnovalidate&quot;<br>&nbsp; value=&quot;Submit without validation&quot;&gt;<br>
+    &lt;/form&gt; </div>
+<hr>
+<h4 style="color: blue;">The novalidate Attribute</h4>
+<p>The <code>novalidate</code> attribute is a <code>&lt;form&gt;</code> attribute.</p>
+<p>When present, novalidate specifies that all of the form-data should not be validated when submitted.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Specify that no form-data should be validated on submit:</p>
+<div class="affichage">
+    &lt;form action=&quot;/action_page.php&quot; novalidate&gt;<br>&nbsp; &lt;label 
+    for=&quot;email&quot;&gt;Enter your email:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;email&quot; 
+    id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;submit&quot; 
+    value=&quot;Submit&quot;&gt;<br>&lt;/form&gt; </div>
+<hr>
+<h4 style="color: blue;">HTML Form and Input Elements</h4>
+<table class="table table-striped">
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>&lt;form&gt;</a></td>
+<td> Defines an HTML form for user input</td>
+</tr>
+<tr>
+<td>&lt;input&gt;</td>
+<td>Defines an input control</td>
+</tr>
+</table>
+      </div>
+</body>
+</html>

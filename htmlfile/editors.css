@@ -1,0 +1,12 @@
+p,h4 ,h1,h2,h3 {
+    margin: 20px;
+}
+img{
+    position: relative;
+    left: 25%;
+}
+h2,h3{
+    background-color: black;
+    color: white;
+    width: 40%;
+}

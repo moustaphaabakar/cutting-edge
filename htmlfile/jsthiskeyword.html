@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS  this keyword</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">The JavaScript <b>this</b> Keyword</h4>
+        <hr>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const <b>person</b> = {<br>
+          &nbsp; firstName: "John",<br>
+        &nbsp;&nbsp;lastName : "Doe",<br>
+          &nbsp; id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;5566,<br>
+          &nbsp; fullName : function() {<br>
+          &nbsp;&nbsp;&nbsp; return <b>this</b>.firstName + &quot; &quot; + <b>this</b>.lastName;<br>
+          &nbsp;&nbsp;}<br>
+        };
+        </div>
+        <hr>
+        <h4 style="color: blue;">What is <b>this</b>?</h4>
+        <p>In JavaScript, the <code>this</code> keyword refers to an <b>object</b>.</p>
+        <p><b>Which</b> object depends on how <code>this</code> is being invoked (used or called).</p>
+        <p>The <code>this</code> keyword refers to different objects depending on how it is used:</p>
+        <table class="table table-striped">
+        <tr><td>In an object method, <code>this</code> refers to the <b>object</b>.</td></tr>
+        <tr><td>Alone, <code>this</code> refers to the <b>global object</b>.</td></tr>
+        <tr><td>In a function, <code>this</code> refers to the <b>global object</b>.</td></tr>
+        <tr><td>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</td></tr>
+        <tr><td>In an event, <code>this</code> refers to the <b>element</b> that received the event.</td></tr>
+        <tr><td>Methods like <code>call()</code>, <code>apply()</code>,
+        and <code>bind()</code> can refer <code>this</code> to <b>any object</b>.</td></tr>
+        </table>
+        <h4 style="color: blue;">Note</h4>
+        <code>this</code> is not a variable. It is a keyword. You cannot change the value of <code>this</code>.
+        <hr>
+<h4 style="color: blue;"><b>this</b> in a Method</h4>
+<p>When used in an object method, <code>this</code> refers to the <b>object</b>.</p>
+<p>In the example on top of this page, <code>this</code> refers to the <b>person</b> object.</p>
+<p>Because the <b>fullName</b> method is a method of the <b>person</b> object.</p>
+<div class="affichage">
+fullName : function() {<br>
+  &nbsp; return <b>this</b>.firstName + &quot; &quot; + <b>this</b>.lastName;<br>}
+</div>
+<hr>
+<h4 style="color: blue;"><b>this</b> Alone</h4>
+<p>When used alone, <code>this</code> refers to the <b>global object</b>.</p>
+<p>Because <code>this</code> is running in the global scope.</p>
+<p>In a browser window the global object is <code>[object Window]</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = this; 
+</div>
+<p>&nbsp;In <strong>strict mode</strong>, when used alone, <cod>this</code> also refers to the <b>global object</b>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &quot;use strict&quot;;<br>let x = this; 
+</div>
+<hr>
+<h4 style="color: blue;"><b>this</b> in a Function (Default)</h4>
+<p>In a function, the <b>global object</b> is the default binding for <code>this</code>.</p>
+<p>In a browser window the global object is <code>[object Window]</code>:</p>
+<div class="w3-example">
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function myFunction() {<br>
+  &nbsp; return this;<br>
+}
+</div>
+<h4 style="color: blue;"><b>this</b> in a Function (Strict) </h4>
+<p>JavaScript <strong>strict mode</strong> does not allow default binding.</p>
+<p>So, when used in a function, in strict mode, <code>this</code> is <code >undefined</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+"use strict";<br>function myFunction() {<br>
+  &nbsp; return this;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;"><b>this</b> in Event Handlers</h4>
+<p>In HTML event handlers, <code >this</code> refers to the HTML element that received the 
+event:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;button onclick=&quot;this.style.display='none'&quot;&gt;<br>&nbsp; Click to 
+  Remove Me!<br>&lt;/button&gt;</div>
+<p>
+<hr>
+<h4 style="color: blue;">Object Method Binding</h4>
+<p>In these examples, <code>this</code> is the <b>person object</b>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const <b>person</b> = {<br>
+  &nbsp; firstName&nbsp; : "John",<br>
+  &nbsp; lastName&nbsp;&nbsp; : "Doe",<br>
+  &nbsp; id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;5566,<br>
+  &nbsp; myFunction : function() {<br>
+&nbsp;&nbsp;&nbsp; return <b>this</b>;<br>&nbsp;&nbsp;}<br>
+};
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const <b>person</b> = {<br>
+  &nbsp; firstName: "John",<br>
+  &nbsp; lastName : "Doe",<br>
+  &nbsp; id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;5566,<br>
+  &nbsp; fullName : function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return <b>this</b>.firstName + " " + 
+<b>this</b>.lastName;<br>&nbsp;&nbsp;}<br>
+};
+</div>
+<p>i.e. <b>this.firstName</b> is the <b>firstName</b> property of <b>this</b> (the person object).</p>  
+<hr>
+<h4 style="color: blue;">Explicit Function Binding</h4>
+<p>The <code>call()</code> and <code>apply()</code> methods are predefined JavaScript methods.</p>
+<p>They can both be used to call an object method with another object as argument.</p>
+<h4 style="color: blue;">See Also:</h4>
+<p>The Function call() Method</p>
+<p>The Function apply() Method</p>
+<p>The Function bind() Method</p>
+<p>The example below calls person1.fullName with person2 as an argument, <b>this</b> refers to person2,
+    even if fullName is a method of person1:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const person1 = {<br>
+      &nbsp; fullName: function() {<br>
+      &nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName;<br>
+      &nbsp;&nbsp;}<br>}<br>
+    <br>
+    const person2 = {<br>
+      &nbsp; firstName:&quot;John&quot;,<br>
+      &nbsp; lastName: &quot;Doe&quot;,<br>
+    }<br>
+    <br>
+    // Return &quot;John Doe&quot;:<br>
+    person1.fullName.call(person2);
+    </div>    
+    <hr>
+    <h4 style="color: blue;">Function Borrowing</h4>
+    <p>With the <code>bind()</code> method, an object can borrow a method from another object.</p>
+    <p>This example creates 2 objects (person and member).</p>
+    <p>The member object borrows the fullname method from the person object:</p> 
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const person = {<br>
+    &nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+    &nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>
+      &nbsp; fullName: function () {<br>
+    &nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName;<br>
+      &nbsp;&nbsp;}<br>
+    }<br>
+    <br>
+    const member = {<br>
+    &nbsp;&nbsp;firstName:&quot;Hege&quot;,<br>
+    &nbsp;&nbsp;lastName: &quot;Nilsen&quot;,<br>
+    }<br>
+    <br>
+    let fullName = person.fullName.bind(member);
+    </div>    
+    <hr>
+    <h4 style="color: blue;"><b>This</b> Precedence</h4>
+    <p>To determine which object <code>this</code> refers to; use the following precedence of order.</p>
+    <table class="table table-striped">
+    <tr></tr>
+    <tr><td width="120px">Precedence</td><td>Object</td></tr>
+    <tr><td>1</td><td>bind()</td></tr>
+    <tr><td>2</td><td>apply() and call()</td></tr>
+    <tr><td>3</td><td>Object method</td></tr>
+    <tr><td>4</td><td>Global scope</td></tr>
+    </table>
+    <p>Is <code>this</code> in a function being called using bind()?</p>
+    <p>Is <code>this</code> in a function being called using apply()?</p>
+    <p>Is <code>this</code> in a function being called using call()?</p>
+    <p>Is <code>this</code> in an object function (method)?
+    <p>Is <code>this</code> in a function in the global scope.</p>
+</div>
+</body>
+</html>

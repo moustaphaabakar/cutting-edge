@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM forms</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Forms</h4>
+        <hr>
+        <h4 style="color: blue;">JavaScript Form Validation</h4>
+        <p>HTML form validation can be done by JavaScript.</p>
+        <p>If a form field (fname) is empty, this function alerts a message, and returns 
+        false, to prevent the form from being submitted:</p>
+        <h4 style="color: blue;">JavaScript Example</h4>
+        <div class="affichage">
+        function validateForm() {<br>
+        &nbsp;&nbsp;let
+        x = document.forms[&quot;myForm&quot;][&quot;fname&quot;].value;<br>
+          &nbsp;
+        if (x == &quot;&quot;) {<br>
+          &nbsp;&nbsp;&nbsp; alert(&quot;Name must be filled out&quot;);<br>
+          &nbsp;&nbsp;&nbsp; return false;<br>
+          &nbsp;&nbsp;}<br>
+        }</div>
+        <p>The function can be called when the form is submitted:</p>
+        <h4 style="color: blue;">HTML Form Example</h4>
+        <div class="affichage">
+        &lt;form name=&quot;myForm&quot; action=&quot;/action_page.php&quot; <strong>onsubmit=&quot;return validateForm()&quot;</strong> 
+        method=&quot;post&quot;&gt;<br>
+         Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt;<br>
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+        &lt;/form&gt;</div>
+        <hr>
+        <h4 style="color: blue;">JavaScript Can Validate Numeric Input</h4>
+        <p>JavaScript is often used to validate numeric input:</p>
+        <p>Please input a number between 1 and 10</p>
+        <input id="numb" type="text">
+        <button type="button" onclick="myFunction()">Submit</button>
+        <hr>
+        <h4 style="color: blue;">Automatic HTML Form Validation</h4>
+        <p>HTML form validation can be performed automatically by the browser:</p>
+        <p>If a form field (fname) is empty, the <code>required</code> attribute prevents this form from being 
+        submitted: </p>
+        <h4 style="color: blue;">HTML Form Example</h4>
+        <div class="affichage">
+        &lt;form action=&quot;/action_page.php&quot; method=&quot;post&quot;&gt;<br>
+        &nbsp; &lt;input type=&quot;text&quot; name=&quot;fname&quot; <strong>required</strong>&gt;<br>
+        &nbsp;
+        &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>
+        &lt;/form&gt;</div>
+        <p>Automatic HTML form validation does not work in Internet Explorer 9 or earlier.</p>
+        <hr>
+        <h4 style="color:blue ;">Data Validation</h4>
+        <p>Data validation is the process of ensuring that user input is clean, 
+        correct, and useful.</p>
+        <p>Typical validation tasks are:</p>
+        <ul>
+          <li>has the user filled in all required fields?</li>
+          <li>has the user entered a valid date?</li>
+            <li>has the user entered text in a numeric field?</li>
+        </ul>
+        <p>Most often, the purpose of data validation is to ensure correct user input.</p>
+        <p>Validation can be defined by many different methods, and deployed in many 
+        different ways.</p>
+        <p><strong>Server side validation</strong> is performed by a web server, after input has been sent to the 
+        server.</p>
+        <p><strong>Client side validation</strong> is performed by a web browser, before input is sent to a web server.</p>
+        <hr>
+        <h4 style="color: blue;">HTML Constraint Validation</h4>
+        <p>HTML5 introduced a new HTML validation concept called <strong>constraint 
+        validation</strong>.</p>
+        <p>HTML constraint validation is based on:</p>
+        <ul>
+         <li>Constraint validation <strong>HTML</strong> <strong>Input Attributes</strong></li>
+         <li>Constraint validation <strong>CSS Pseudo Selectors</strong></li>
+         <li>Constraint validation <strong>DOM Properties and Methods</strong></li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">Constraint Validation HTML Input Attributes</h4>
+        <table class="table table-striped">
+        <tr>
+        <th style="width:25%">Attribute</th>
+        <th>Description</th>
+        </tr>
+        <tr>
+        <td>disabled</td>
+        <td>Specifies that the input element should be disabled</td>
+        </tr>
+        <tr>
+        <td>max</td>
+        <td>Specifies the maximum value of an input element</td>
+        </tr>
+        <tr>
+        <td>min</td>
+        <td>Specifies the minimum value of an input element</td>
+        </tr>
+        <tr>
+        <td>pattern</td>
+        <td>Specifies the value pattern of an input element</td>
+        </tr>
+        <tr>
+        <td>required</td>
+        <td>Specifies that the input field requires an element</td>
+        </tr>
+        <tr>
+        <td>type&nbsp;</td>
+        <td>Specifies the type of an input element</td>
+        </tr>
+        </table>
+<h4 style="color: blue;">Constraint Validation CSS Pseudo Selectors</h4>
+<table class="table table-striped">
+<tr>
+<th style="width:25%">Selector</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>Selects input elements with the &quot;disabled&quot; attribute specified</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>Selects input elements with invalid values</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>Selects input elements with no &quot;required&quot; attribute specified</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>Selects input elements with the &quot;required&quot; attribute specified</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>Selects input elements with valid values</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

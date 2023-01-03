@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS math</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Math Object</h4>
+        <p class="intro">The JavaScript Math object allows you to perform mathematical tasks on 
+        numbers.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        Math.PI;
+        </div>
+        <hr>
+        <h4 style="color: blue;">The Math Object</h4>
+        <p>Unlike other objects, the Math object has no constructor.</p>
+        <p>The Math object is static.</p>
+        <p>All methods and properties can be used without creating a Math object first.</p>
+        <hr>
+        <h4 style="color: blue;">Math Properties (Constants)</h4>
+        <p>The syntax for any Math property is : <code>Math.<i>property</i></code>.</p>
+        <p>JavaScript provides 8 mathematical constants that can be accessed as Math properties:</p>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns Euler's number<br>
+Math.PI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns PI<br>
+Math.SQRT2&nbsp;&nbsp;&nbsp;&nbsp;// returns the square root of 2<br>
+Math.SQRT1_2&nbsp;&nbsp;// returns the square root of 1/2<br>
+Math.LN2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns the natural logarithm of 2<br>
+Math.LN10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns the natural logarithm of 10<br>
+Math.LOG2E&nbsp;&nbsp;&nbsp;&nbsp;// returns base 2 logarithm of E<br>
+Math.LOG10E&nbsp;&nbsp;&nbsp;// returns base 10 logarithm of E
+</div>
+<hr>
+<h4 style="color: blue;">Math Methods</h4>
+<p>The syntax for Math any methods is : <code>Math.<i>method</i>(<i>number</i>)</code></p>
+<hr>
+<h4 style="color: blue;">Number to Integer</h4>
+<p>There are 4 common methods to round a number to an integer:</p>
+<table class="table table-striped">
+<tr><tr><td>Math.round(x)</td><td>Returns x rounded to its nearest integer</td></tr>
+<tr><tr><td>Math.ceil(x)</td><td>Returns x rounded up to its nearest integer</td></tr>
+<tr><tr><td>Math.floor(x)</td><td>Returns x rounded down to its nearest integer</td></tr>
+<tr><tr><td>Math.trunc(x)</td><td>Returns the integer part of x (new in ES6)</td></tr>
+</table>
+<h4 style="color: blue;">Math.round()</h4>
+<p><code>Math.round(x)</code> returns the nearest integer:</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+Math.round(4.6);<br>
+</div>
+<div class="affichage">
+Math.round(4.5);<br>
+</div>
+<div class="affichage">
+Math.round(4.4);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Math.ceil()</h4>
+<p><code>Math.ceil(x)</code> returns the value of x rounded <strong>up</strong> to its nearest integer:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.ceil(4.9);<br>
+Math.ceil(4.7);<br>
+Math.ceil(4.4);<br>
+Math.ceil(4.2);<br>
+Math.ceil(-4.2);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Math.floor()</h4>
+<p><code >Math.floor(x)</code> returns the value of x rounded <strong>down</strong> to its nearest integer:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.floor(4.9);<br>
+Math.floor(4.7);<br>
+Math.floor(4.4);<br>
+Math.floor(4.2);<br>
+Math.floor(-4.2);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Math.trunc()</h4>
+<p><code>Math.trunc(x)</code> returns the integer part of x:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.trunc(4.9);<br>
+Math.trunc(4.7);<br>
+Math.trunc(4.4);<br>
+Math.trunc(4.2);<br>
+Math.trunc(-4.2);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Math.sign()</h4>
+<p><code>Math.sign(x)</code> returns if x is negative, null or positive:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.sign(-4);<br>
+Math.sign(0);<br>
+Math.sign(4);<br>
+</div>
+<p>Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6</a>.</p>
+<hr>
+<h4 style="color: blue;">Math.pow()</h4>
+<p><code>Math.pow(x, y)</code> returns the value of x to the power of y:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.pow(8, 2);
+</div>
+<hr>
+<h4 style="color: blue;">Math.sqrt()</h4>
+<p><code>Math.sqrt(x)</code> returns the square root of x:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.sqrt(64);
+</div>
+<hr>
+<h4 style="color: blue;">Math.abs()</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.abs(-4.7);
+</div>
+<hr>
+<h4 style="color: blue;">Math.sin()</h4>
+<p><code>Math.sin(x)</code> returns the sine (a value between -1 and 1) of the angle x (given in radians).</p>
+<p>If you want to use degrees instead of radians, you have to convert degrees to radians:</p>
+<p>Angle in radians = Angle in degrees x PI / 180.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.sin(90 * Math.PI / 180);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns 1 (the sine of 90 degrees)
+</div>
+<hr>
+<h4 style="color: blue;">Math.cos()</h4>
+<p><code>Math.cos(x)</code> returns the cosine (a value between -1 and 1) of the angle x (given in radians).</p>
+<p>If you want to use degrees instead of radians, you have to convert degrees to radians:</p>
+<p>Angle in radians = Angle in degrees x PI / 180.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.cos(0 * Math.PI / 180);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// returns 1 (the cos of 0 degrees)
+</div>
+<hr>
+<h4 style="color: blue;">Math.min() and Math.max()</h4>
+<p><code>Math.min()</code> and <code >Math.max()</code> can be used to find the lowest or highest value in a list of arguments:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.min(0, 150, 30, 20, -8, -200);
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max(0, 150, 30, 20, -8, -200);
+</div>
+<hr>
+<h4 style="color: blue;">Math.random()</h4>
+<p><code>Math.random()</code> returns a random number between 0 (inclusive), and 1 
+(exclusive):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.random();
+</div>
+<p>You will learn more about <code>Math.random()</code> in the next chapter of this tutorial.</p>
+<hr>
+<h4 style="color: blue;">The Math.log() Method</h4>
+<p><code>Math.log(x)</code> returns the natural logarithm of x.</p>
+<p>The natural logarithm returns the time needed to reach a certain level of growth:</p>
+<h4 style="color: blue;">Examples</h4>
+<div class="affichage">
+Math.log(1);
+</div>
+<div class="affichage">
+Math.log(2);
+</div>
+<div class="affichage">
+Math.log(3);
+</div>
+<p>Math.E and Math.log() are twins.</p>
+<p>How many times must we multiply Math.E to get 10?</p>
+<div class="affichage">
+Math.log(10);
+</div>
+<hr>
+<h4 style="color: blue;">The Math.log2() Method</h4>
+<p><code>Math.log2(x)</code> returns the base 2 logarithm of x.</p>
+<p>How many times must we multiply 2 to get 8?</p>
+<div class="affichage">
+Math.log2(8);
+</div>
+<hr>
+<h4 style="color: blue;">The Math.log10() Method</h4>
+<p><code>Math.log10(x)</code> returns the base 10 logarithm of x.</p>
+<p>How many times must we multiply 10 to get 1000?</p>
+<div class="affichage">
+Math.log10(1000);
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Math Methods</h4>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%">Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>abs(x)</td>
+    <td>Returns the absolute value of x</td>
+  </tr>
+  <tr>
+    <td>acos(x)</td>
+    <td>Returns the arccosine of x, in radians</td>
+  </tr>
+  <tr>
+    <td>acosh(x)</td>
+    <td>Returns the hyperbolic arccosine of x</td>
+  </tr>
+  <tr>
+    <td>asin(x)</td>
+    <td>Returns the arcsine of x, in radians</td>
+  </tr>
+  <tr>
+    <td>asinh(x)</td>
+    <td>Returns the hyperbolic arcsine of x</td>
+  </tr>
+  <tr>
+    <td>atan(x)</td>
+    <td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+  </tr>
+  <tr>
+    <td>atan2(y, x)</td>
+    <td>Returns the arctangent of the quotient of its arguments</td>
+  </tr>
+  <tr>
+    <td>atanh(x)</td>
+    <td>Returns the hyperbolic arctangent of x</td>
+  </tr>
+  <tr>
+    <td>cbrt(x)</td>
+    <td>Returns the cubic root of x</td>
+  </tr>
+  <tr>
+    <td>ceil(x)</td>
+    <td>Returns x, rounded upwards to the nearest integer</td>
+  </tr>
+  <tr>
+    <td>cos(x)</td>
+    <td>Returns the cosine of x (x is in radians)</td>
+  </tr>
+  <tr>
+    <td>cosh(x)</td>
+    <td>Returns the hyperbolic cosine of x</td>
+  </tr>
+  <tr>
+    <td>exp(x)</td>
+    <td>Returns the value of E<sup>x</sup></td>
+  </tr>
+  <tr>
+    <td>floor(x)</td>
+    <td>Returns x, rounded downwards to the nearest integer</td>
+  </tr>
+  <tr>
+    <td>log(x)</td>
+    <td>Returns the natural logarithm (base E) of x</td>
+  </tr>
+  <tr>
+    <td>max(x, y, z, ..., n)</td>
+    <td>Returns the number with the highest value</td>
+  </tr>
+  <tr>
+    <td>min(x, y, z, ..., n)</td>
+    <td>Returns the number with the lowest value</td>
+  </tr>
+  <tr>
+    <td>pow(x, y)</td>
+    <td>Returns the value of x to the power of y</td>
+  </tr>
+  <tr>
+    <td>random()</td>
+    <td>Returns a random number between 0 and 1</td>
+  </tr>
+  <tr>
+    <td>round(x)</td>
+    <td>Rounds x to the nearest integer</td>
+  </tr>
+  <tr>
+    <td>sign(x)</td>
+    <td>Returns if x is negative, null or positive (-1, 0, 1)</td>
+  </tr>
+  <tr>
+    <td>sin(x)</td>
+    <td>Returns the sine of x (x is in radians)</td>
+  </tr>
+  <tr>
+    <td>sinh(x)</td>
+    <td>Returns the hyperbolic sine of x</td>
+  </tr>
+  <tr>
+    <td>sqrt(x)</td>
+    <td>Returns the square root of x</td>
+  </tr>
+  <tr>
+    <td>tan(x)</td>
+    <td>Returns the tangent of an angle</td>
+  </tr>
+  <tr>
+    <td>tanh(x)</td>
+    <td>Returns the hyperbolic tangent of a number</td>
+  </tr>
+  <tr>
+    <td>trunc(x)</td>
+    <td>Returns the integer part of a number (x)</td>
+  </tr>
+  </table>
+</div>
+</body>
+</html>

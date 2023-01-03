@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html youtube</a> <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10p;" class="mediaquery">
+        <h4 style="color: blue;">HTML YouTube Videos</h4>
+        <p>The easiest way to play videos in HTML, is to use YouTube.</p>
+        <hr>
+        <iframe style="margin: 20px;" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" width="100px" height="100px"></iframe>
+        <h4 style="color: blue;">Struggling with Video Formats?</h4>
+        <p>Converting videos to different formats can be difficult and time-consuming.</p>
+        <p>An easier solution is to let YouTube play the videos in your web page.</p>
+        <hr>
+        
+        <h4 style="color: blue;">YouTube Video Id</h4>
+        <p>YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a video.</p>
+        <p>You can use this id, and refer to your video in the HTML code.</p>
+        <hr>
+        
+        <h4 style="color: blue;">Playing a YouTube Video in HTML</h4>
+        <p>To play your video on a web page, do the following:</p>
+        <ul>
+         <li>Upload the video to YouTube</li>
+         <li>Take a note of the video id</li>
+         <li>Define an <code>&lt;iframe&gt;</code> element in your web page</li>
+         <li>Let the <code>src</code> attribute point to the video URL</li>
+         <li>Use the <code>width</code> and <code>
+         height</code> attributes to specify the dimension of the player</li>
+         <li>Add any other parameters to the URL (see below)</li>
+        </ul>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;<br>src=&quot;https://www.youtube.com/embed/tgbNymZ7vqY&quot;&gt;<br>
+&lt;/iframe&gt;
+</div>
+
+<h4 style="color: blue;">YouTube Autoplay + Mute</h4>
+<p>You can let your video start playing automatically when a user visits the 
+page, by adding <code>autoplay=1</code> to the YouTube URL. 
+However, automatically starting a video is annoying for your visitors!</p>
+<p><strong>Note:</strong> Chromium browsers do not 
+allow autoplay in most cases. However, muted autoplay is always allowed.</p>
+<p>Add <code>mute=1</code> after <code>
+autoplay=1</code> to let your video start playing automatically (but muted).</p>
+<h4 style="color: blue;">YouTube - Autoplay + Muted</h4>
+<div class="affichage">
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;<br>src=&quot;https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&amp;mute=1&quot;&gt;<br>
+&lt;/iframe&gt;
+</div>
+
+<hr>
+<h4 style="color: blue;">YouTube Playlist</h4>
+<p>A comma separated list of videos to play (in addition to the original URL).</p>
+<hr>
+<h4 style="color: blue;">YouTube Loop</h4>
+<p>Add <code >loop=1</code> to let your video loop forever.</p>
+<p>Value 0 (default): The video will play only once.</p>
+<p>Value 1: The video will loop (forever).</p>
+<h4 style="color: blue;">YouTube - Loop</h4>
+<div class="affichage">
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;<br>src=&quot;https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&amp;loop=1&quot;&gt;<br>
+&lt;/iframe&gt;
+</div>
+<h4 style="color: blue;">YouTube Controls</h4>
+<p>Add <code>controls=0</code> to not display controls in the 
+video player.</p>
+
+<p>Value 0: Player controls does not display.</p>
+<p>Value 1 (default): Player controls display.</p>
+<h4 style="color: blue;">YouTube - Controls</h4>
+<div class="affichage">
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot;<br>src=&quot;https://www.youtube.com/embed/tgbNymZ7vqY?controls=0&quot;&gt;<br>
+&lt;/iframe&gt;
+</div>
+</div>
+</body>
+</html>

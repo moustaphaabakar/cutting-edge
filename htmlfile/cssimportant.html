@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css important<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS The !important Rule</h4>
+        <hr>
+        <h4 style="color: blue;">What is !important?</h4>
+        <p>The <code>!important</code> rule in CSS is used to add more importance to a property/value than normal.</p>
+        <p>In fact, if you use the <code>!important</code> rule, it will override ALL previous styling rules for that 
+        specific property on that element!</p>
+        <p>Let us look at an example:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        #myid {<br>&nbsp; background-color: blue;<br>}<br><br>.myclass {<br>&nbsp; 
+          background-color: gray;<br>}<br><br>p {<br>&nbsp; background-color: red !important;<br>}</div>
+          <h4 style="color: blue;">Example Explained</h4>
+<p>In the example above. all three paragraphs will get a red background 
+color, even though the ID selector and the class selector have a higher 
+specificity. The <code>!important</code> rule overrides the <code>
+background-color</code> property in both cases.</p>
+<hr>
+<h4 style="color: blue;">Important About !important</h4>
+<p>The only way to override an <code>!important</code> 
+rule is to include another <code>!important</code> 
+rule on a declaration with the same (or higher) specificity in the source code - and here the problem starts!
+This makes the CSS code confusing and the debugging will be hard, especially if 
+you have a large style sheet!</p>
+<p>Here we have created a simple example. It is not very clear, when you look at 
+the CSS source code, which color is considered most important:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  #myid {<br>&nbsp; background-color: blue !important;<br>}<br><br>.myclass {<br>&nbsp; 
+  background-color: gray !important;<br>}<br><br>p {<br>&nbsp; background-color: red !important;<br>}</div>
+<p><strong>Tip:</strong> It is good to know about the <code>!important</code> 
+rule. You might see it in some CSS source code. 
+However, do not use it unless you absolutely have to.</p>
+<hr>
+<h4 style="color: blue;">Maybe One or Two Fair Uses of !important</h4>
+<p>One way to use <code>!important</code> is if you have to override 
+a style that cannot be overridden in any other way. This could be if you are 
+working on a Content Management System (CMS) and cannot edit the CSS code. 
+Then you can set some custom styles to override some of the CMS styles.</p>
+<p>Another way to use <code>!important</code> is: Assume you 
+want a special look for all buttons on a page. Here, buttons are styled with a gray 
+background color, white text, and some padding and border:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  .button {<br>&nbsp; background-color: #8c8c8c; <br>&nbsp; color: white;<br>&nbsp; 
+  padding: 5px;<br>&nbsp; border: 1px solid black; <br>}</div>
+  <p>The look of a button can sometimes change if we put it inside another element with 
+    higher specificity, and the properties get in conflict. Here is an example of this:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+      .button {<br>&nbsp; background-color: #8c8c8c; <br>&nbsp; color: white;<br>&nbsp; 
+      padding: 5px;<br>&nbsp; border: 1px solid black; <br>}<br><br>#myDiv a {<br>&nbsp; 
+      color: red;<br>&nbsp; background-color: yellow; <br>}</div>
+      <p>To &quot;force&quot; all buttons to have the same look, no matter what, we can add the <code class="w3-codespan">!important</code> 
+        rule to the properties of the button, like this:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          .button {<br>&nbsp; background-color: #8c8c8c !important; <br>&nbsp; color: white 
+          !important;<br>&nbsp; 
+          padding: 5px !important;<br>&nbsp; border: 1px solid black !important; <br>}<br><br>#myDiv a {<br>&nbsp; 
+          color: red;<br>&nbsp; background-color: yellow; <br>}</div>
+      </div>
+      
+</body>
+</html>

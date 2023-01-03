@@ -1,0 +1,17 @@
+.secondimg{
+    position:relative;
+    top: 150px;
+    left: 200px;
+   
+}
+ul li span,.tagnames{
+    color: red;
+}
+ul,h5{
+    position: relative;
+    top: 150px;
+}
+.content,table{
+    position: relative;
+    top: 200px;
+}

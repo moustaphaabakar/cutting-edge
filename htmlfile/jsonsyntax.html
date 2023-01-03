@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">json syntax</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JSON Syntax</h4>
+        <hr>
+        <p >The JSON syntax is a subset of the JavaScript syntax.</p>
+        <hr>
+        <h4 style="color: blue;">JSON Syntax Rules</h4>
+        <p>JSON syntax is derived from JavaScript object notation syntax:</p>
+        <ul>
+          <li>Data is in name/value pairs</li>
+          <li>Data is separated by commas</li>
+          <li>Curly braces hold objects</li>
+          <li>Square brackets hold arrays</li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">JSON Data - A Name and a Value</h4>
+        <p>JSON data is written as name/value pairs (aka key/value pairs).</p>
+        <p>A name/value pair consists of a field name (in double quotes), 
+        followed by a colon, followed by a value:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        &quot;name&quot;:&quot;John&quot;
+        </div>
+        <p>JSON names require double quotes.</p>
+        <hr>
+        <h4 style="color: blue;">JSON - Evaluates to JavaScript Objects</h4>
+        <p>The JSON format is almost identical to JavaScript objects.</p>
+        <p>In JSON, <em>keys</em> must be strings, written with double quotes:</p>
+        <h4 style="color: blue;">JSON</h4>
+        <div class="affichage">
+        {&quot;name&quot;:&quot;John&quot;}
+        </div>
+        <p>In JavaScript, keys can be strings, numbers, or identifier names:</p>
+        <h4 style="color: blue;">JavaScript</h4>
+        <div class="affichage">
+        {name:&quot;John&quot;}
+        <br>
+        </div>
+        <hr>
+        <h4 style="color: blue;">JSON Values</h4>
+<p>In <strong>JSON</strong>, <em>values</em> must be one of the following data types:</p>
+<ul>
+  <li>a string</li>
+  <li>a number</li>
+  <li>an object</li>
+  <li>an array</li>
+  <li>a boolean</li>
+  <li>null</li>
+</ul>
+<p>In <strong>JavaScript</strong> values can be all of the above, plus any other valid JavaScript 
+expression, including:</p>
+<ul>
+  <li>a function</li>
+  <li>a date</li>
+  <li>undefined</li>
+</ul>
+<p>In JSON, <em>string values</em> must be written with double quotes:</p>
+<h4 style="color: blue;">JSON</h4>
+<div class="affichage">
+{&quot;name&quot;:&quot;John&quot;}
+</div>
+<p>In JavaScript, you can write string values with double <em>or</em> single quotes:</p>
+<h4 style="color: blue;">JavaScript</h4>
+<div class="affichage">
+{name:'John'}
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Objects</h4>
+<p>Because JSON syntax is derived from JavaScript object notation, very little extra 
+software is needed to work with JSON within JavaScript.</p>
+<p>With JavaScript you can create an object and assign data to 
+it, like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+person = {name:&quot;John&quot;, age:31, city:&quot;New York&quot;};
+</div>
+<p>You can access a JavaScript object like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ // returns John<br>person.name;</div>
+<p>It can also be accessed like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ // returns John<br>person[&quot;name&quot;];</div>
+<p>Data can be modified like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  person.name = &quot;Gilbert&quot;;</div>
+<p>It can also be modified like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  person[&quot;name&quot;] = &quot;Gilbert&quot;;</div>
+<p>You will learn how to convert JavaScript objects into JSON later in this 
+tutorial. </p>
+<hr>
+<h4 style="color: blue;">JavaScript Arrays as JSON</h4>
+<p>The same way JavaScript objects can be written as JSON, JavaScript arrays can 
+also be written as JSON.</p>
+<p>You will learn more about objects and arrays later in this tutorial.</p>
+<hr>
+<h4 style="color:blue ;">JSON Files</h4>
+<ul>
+<li>The file type for JSON files is &quot;.json&quot;</li>
+<li>The MIME type for JSON text is &quot;application/json&quot;</li>
+</ul>
+ </div>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html input attributes <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+    <h4 style="color: blue;">input attributes</h4>
+    <p>This chapter describes the different attributes for the HTML <code>&lt;input&gt;</code> element. </p>
+<hr>
+<h4 style="color: blue;">The value Attribute</h4>
+<p>The input <code>value</code> attribute specifies an initial value for an input field:</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Input fields with initial (default) values:</p>
+<div class="affichage">
+&lt;form&gt;<br>
+&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; 
+  id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;John&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+  name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; 
+  value=&quot;Doe&quot;&gt;<br>&lt;/form&gt;
+</div>
+<hr>
+<h4 style="color: blue;">The readonly Attribute</h4>
+<p>The input <code>readonly</code> attribute specifies that an input field is read-only.</p>
+<p>A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).</p>
+<p>The value of a read-only input field will be sent when submitting the form!</p>
+<h4 style="color: blue;">Example</h4>
+  <p>A read-only input field:</p>
+<div class="affichage">
+&lt;form&gt;<br>
+&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; 
+  id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;John&quot; readonly&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+  name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; 
+  value=&quot;Doe&quot;&gt;<br>&lt;/form&gt;
+</div>
+<hr>
+<h4 style="color: blue;">The disabled Attribute</h4>
+<p>The input <code>disabled</code> attribute specifies that an input field should be disabled.</p>
+<p>A disabled input field is unusable and un-clickable.</p>
+<p>The value of a disabled input field will not be sent when submitting the form!</p>
+<h4 style="color: blue;">Example</h4>
+  <p>A disabled input field:</p>
+<div class="affichage">
+&lt;form&gt;<br>
+&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; 
+  id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;John&quot; disabled&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+  name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; 
+  value=&quot;Doe&quot;&gt;<br>&lt;/form&gt;
+</div>
+<hr>
+<h4  style="color: blue;">The size Attribute</h4>
+<p>The input <code>size</code> attribute specifies the 
+visible width, in characters, of an input field.</p>
+<p>The default value for <code>size</code> is 20.</p>
+<p><strong>Note:</strong> The <code>size</code> attribute 
+works with the following input types: text, search, tel, url, email, and 
+password.</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Set a width for an input field:</p>
+<div class="affichage">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+  type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; size=&quot;50&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label 
+  for=&quot;pin&quot;&gt;PIN:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;pin&quot; name=&quot;pin&quot; 
+  size=&quot;4&quot;&gt;<br>&lt;/form&gt; </div>
+  <hr>
+<h4>The maxlength Attribute</h4>
+<p>The input <code >maxlength</code> attribute specifies the maximum number of characters allowed in an input field.</p>
+<p><strong>Note:</strong> When a <code>maxlength</code> is set, the input field will not accept more than the 
+specified number of characters. However, this attribute does not provide any feedback. 
+So, if you want to alert the user, 
+you must write JavaScript code.</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Set a maximum length for an input field:</p>
+<div class="affichage">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+  type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; size=&quot;50&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label 
+  for=&quot;pin&quot;&gt;PIN:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;pin&quot; name=&quot;pin&quot; 
+  maxlength=&quot;4&quot; size=&quot;4&quot;&gt;<br>&lt;/form&gt; </div>
+ <hr>
+<h4 style="color: blue;">The min and max Attributes</h4>
+<p>The input <code>min</code> and <code>max</code> attributes specify the minimum and maximum values for an 
+input field.</p>
+<p>The <code>min</code> and <code>max</code> attributes work with the following input types: number, range, date, datetime-local, month, time and week.</p>
+<p><strong>Tip:</strong> Use the max and min attributes together to create a 
+range of legal values.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Set a max date, a min date, and a range of legal values:</p>
+<div class="affichage">
+&lt;form&gt;<br>&nbsp; &lt;label for=&quot;datemax&quot;&gt;Enter a date before 
+  1980-01-01:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;date&quot; id=&quot;datemax&quot; name=&quot;datemax&quot; 
+  max=&quot;1979-12-31&quot;&gt;&lt;br&gt;&lt;br&gt;<br><br>&nbsp; &lt;label for=&quot;datemin&quot;&gt;Enter a date 
+  after 2000-01-01:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;date&quot; id=&quot;datemin&quot; name=&quot;datemin&quot; 
+  min=&quot;2000-01-02&quot;&gt;&lt;br&gt;&lt;br&gt;<br><br>&nbsp; &lt;label for=&quot;quantity&quot;&gt;Quantity 
+  (between 1 and 5):&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;number&quot; id=&quot;quantity&quot; 
+  name=&quot;quantity&quot; min=&quot;1&quot; max=&quot;5&quot;&gt;<br>&lt;/form&gt;</div>
+  <hr>
+  <h4 style="color: blue;">The multiple Attribute</h4>
+  <p>The input <code>multiple</code> attribute specifies that the user is allowed to enter more than one value in 
+  an input field.</p>
+  <p>The <code>multiple</code> attribute works with the following input types: email, and file.</p>
+  <h4 style="color: blue;">Example</h4>
+  <p>A file upload field that accepts multiple values:</p>
+  <div class="affichage">
+    &lt;form&gt;<br>&nbsp; &lt;label for=&quot;files&quot;&gt;Select files:&lt;/label&gt;<br>&nbsp; &lt;input 
+    type=&quot;file&quot; id=&quot;files&quot; name=&quot;files&quot; multiple&gt;<br>&lt;/form&gt;</div>
+    <hr>
+    <h4 style="color: blue;">The pattern Attribute</h4>
+    <p>The input <code>pattern</code> attribute specifies a regular expression that the 
+    input field's value is checked against, when the form is submitted.</p>
+    <p>The <code>pattern</code> attribute works with the following input types: text, 
+    date, search, url, tel, email, and password.</p>
+    <h4 style="color: blue;">Example</h4>
+    <p>An input field that can contain only three letters (no numbers or special 
+    characters):</p>
+    <div class="affichage">
+      &lt;form&gt;<br>&nbsp; &lt;label for=&quot;country_code&quot;&gt;Country code:&lt;/label&gt;<br>&nbsp; 
+      &lt;input type=&quot;text&quot; id=&quot;country_code&quot; name=&quot;country_code&quot;<br>&nbsp; 
+      pattern=&quot;[A-Za-z]{3}&quot; title=&quot;Three letter country code&quot;&gt;<br>&lt;/form&gt;</div>
+      <hr>
+<h4 style="color: blue;">The placeholder Attribute</h4>
+<p>The input <code>placeholder</code> attribute specifies 
+a short hint that describes the expected value of an input field (a sample value or a short description of the 
+expected format).</p>
+<p>The short hint is displayed in the input field before the user enters a 
+value.</p>
+<p>The <code>placeholder</code> attribute works with the following input types: text, search, url, tel, email, and password.</p>
+<h4 style="color: blue;">Example</h4>
+<p>An input field with a placeholder text:</p>
+<div class="affichage">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;phone&quot;&gt;Enter a phone number:&lt;/label&gt;<br>&nbsp; 
+  &lt;input type=&quot;tel&quot; id=&quot;phone&quot; name=&quot;phone&quot;<br>&nbsp; 
+  placeholder=&quot;123-45-678&quot;<br>&nbsp; pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{3}&quot;&gt;<br>
+  &lt;/form&gt;</div>
+
+  <hr>
+
+<h4 style="color: blue;">The required Attribute</h4>
+<p>The input <code>required</code> attribute specifies that an input field must be filled out before submitting the form.</p>
+<p>The <code>required</code> attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.</p>
+<h4 style="color: blue;">Example</h4>
+<p>A required input field:</p>
+<div class="blue">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;<br>&nbsp; &lt;input 
+  type=&quot;text&quot; id=&quot;username&quot; name=&quot;username&quot; required&gt;<br>&lt;/form&gt;</div>
+<hr>
+  <h4 style="color: blue;">The step Attribute</h4>
+<p>The input <code>step</code> attribute specifies the legal number intervals for an 
+input field.</p>
+<p>Example: if step=&quot;3&quot;, legal numbers could be -3, 0, 3, 6, etc.</p>
+<p><b>Tip:</b> This attribute can be used together with the max and min attributes to create a range of legal values.</p>
+<p>The <code>step</code> attribute works with the following input types: number, range, date, datetime-local, month, time and week.</p>
+<h4 style="color: blue;">Example</h4>
+<p>An input field with a specified legal number intervals:</p>
+<div class="affichage">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;points&quot;&gt;Points:&lt;/label&gt;<br>&nbsp; &lt;input 
+  type=&quot;number&quot; id=&quot;points&quot; name=&quot;points&quot; step=&quot;3&quot;&gt;<br>&lt;/form&gt;</div>
+<hr>
+<h4 style="color: blue;">The autofocus Attribute</h4>
+<p>The input <code>autofocus</code> attribute specifies that 
+an input field should automatically get focus when the page loads.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Let the &quot;First name&quot; input field automatically get focus when the page loads:</p>
+<div class="affichage">
+  &lt;form&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+  type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; autofocus&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+  name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;<br>
+  &lt;/form&gt;</div>
+  <hr>
+
+  <h4 style="color: blue;">The height and width Attributes</h4>
+  <p>The input <code>height</code> and <code>width</code> attributes specify the height and width of an <code class="w3-codespan">&lt;input 
+  type=&quot;image&quot;&gt;</code> element.</p>
+  <p><strong>Tip:</strong> Always specify both the height and width attributes for 
+  images. If height and width are set, the space required for the image is 
+  reserved when the page is loaded. Without these attributes, the browser does not 
+  know the size of the image, and cannot reserve the appropriate space to it. The 
+  effect will be that the page layout will change during loading (while the images 
+  load).</p>
+  <h4 style="color: blue;">Example</h4>
+  <p>Define an image as the submit button, with height and width attributes:</p>
+  <div class="affichage">
+    &lt;form&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp; &lt;input 
+    type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+    name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;input type=&quot;image&quot; src=&quot;img_submit.gif&quot; alt=&quot;Submit&quot; width=&quot;48&quot; height=&quot;48&quot;&gt;
+    <br>&lt;/form&gt;</div>
+    <hr>
+    <h4 style="color: blue;">The list Attribute</h4>
+    <h4 style="color: blue;">Example</h4>
+    <p>An &lt;input&gt; element with pre-defined values in a &lt;datalist&gt;:</p>
+    <div class="affichage">
+      &lt;form&gt;<br>&nbsp;
+    &lt;input list=&quot;browsers&quot;&gt;<br>&nbsp;
+     &lt;datalist id=&quot;browsers&quot;&gt;<br>
+     &nbsp;&nbsp;&nbsp; &lt;option value=&quot;Internet Explorer&quot;&gt;<br>
+    &nbsp;
+    &nbsp; &lt;option value=&quot;Firefox&quot;&gt;<br>
+    &nbsp;
+    &nbsp; &lt;option value=&quot;Chrome&quot;&gt;<br>
+    &nbsp;
+    &nbsp; &lt;option value=&quot;Opera&quot;&gt;<br>
+    &nbsp;
+    &nbsp; &lt;option value=&quot;Safari&quot;&gt;<br>
+     &nbsp;
+     &lt;/datalist&gt;<br>&lt;/form&gt;</div>
+     <hr>
+     <h4 style="color: blue;">The autocomplete Attribute</h4>
+<p>The input <code>autocomplete</code> attribute specifies whether a form or 
+an input field should have autocomplete on or off.</p>
+<p>Autocomplete allows the browser to predict the value. When a user starts to 
+type in a field, the browser should display options to fill in the field, based 
+on earlier typed values.</p>
+<p>The <code>autocomplete</code> attribute works with <code>&lt;form&gt;</code> and the 
+following <code>&lt;input&gt;</code> types: text, search, url, tel, email, password, datepickers, range, and color.</p>
+<h4 style="color: blue;">Example</h4>
+<p>An HTML form with autocomplete on, and off for one input field:</p>
+<div class="affichage">
+    &lt;form action=&quot;/action_page.php&quot; autocomplete=&quot;on&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+    name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; 
+    name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;<br>&nbsp; 
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;off&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;
+</div>
+<p><strong>Tip:</strong> In some browsers you may need to activate an autocomplete function for this to work (Look under &quot;Preferences&quot; in the  browser's menu).</p>
+      </div>
+</body>
+</html>

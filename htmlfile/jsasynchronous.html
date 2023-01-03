@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">js asynchronous</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">Asynchronous JavaScript</h4>
+<hr>
+<p><i>"I will finish later!"</i></p>
+<p>Functions running in parallel with other functions are called asynchronous</p>
+<p>A good example is JavaScript setTimeout()</p>
+<h4 style="color: blue;">Asynchronous JavaScript</h4>
+<p>The examples used in the previous chapter, was very simplified.</p>
+<p>The purpose of the examples was to demonstrate the syntax of callback functions:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  function myDisplayer(something) {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML 
+  = something;<br>}<br><br>function myCalculator(num1, num2, myCallback) {<br>&nbsp; let sum = num1 + num2;<br>&nbsp; 
+  myCallback(sum);<br>}<br><br>myCalculator(5, 5, myDisplayer);
+</div>
+<p>In the example above, <code>myDisplayer</code> is the name of a function.</p>
+<p>It is passed to <code>myCalculator()</code> as an argument.</p>
+<p>In the real world, callbacks are most often used with asynchronous functions.</p>
+<p>A typical example is JavaScript <code>setTimeout()</code>.</p>
+<hr>
+<h4 style="color: blue;">Waiting for a Timeout</h4>
+<p>When using the JavaScript function <code>setTimeout()</code>,
+you can specify a callback function to be executed on time-out:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+setTimeout(myFunction, 3000);<br>
+<br>
+function myFunction() {<br>
+&nbsp; document.getElementById("demo").innerHTML = "I love You !!";<br>
+}
+</div>
+<p>In the example above, <code>myFunction</code> is used as a callback.</p>
+<p><code>myFunction</code> is passed to <code>setTimeout()</code> as an argument.</p>
+<p>3000 is the number of milliseconds before time-out, so
+<code>myFunction()</code> will be called after 3 seconds.</p>
+<p>When you pass a function as an argument, remember not to use parenthesis.</p>
+<p>Right: setTimeout(myFunction, 3000);</p>
+<p>Wrong: <del>setTimeout(myFunction(), 3000)</del>;</p>
+<p>Instead of passing the name of a function as an argument to another function,
+you can always pass a whole function instead:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+setTimeout(function() { myFunction("I love You !!!"); }, 3000);<br>
+<br>
+function myFunction(value) {<br>
+&nbsp; document.getElementById("demo").innerHTML = value;<br>
+}
+</div>
+<p>In the example above, <code>function(){ myFunction("I love You !!!"); }</code>
+    is used as a callback. It is a complete function.
+    The complete function is passed to setTimeout() as an argument.</p>
+    <p>3000 is the number of milliseconds before time-out, so
+    <code>myFunction()</code> will be called after 3 seconds.</p>
+    <hr>
+    <h4 style="color: blue;">Waiting for Intervals:</h4>
+    <p>When using the JavaScript function <code>setInterval()</code>,
+    you can specify a callback function to be executed for each interval:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    setInterval(myFunction, 1000);<br>
+    <br>
+    function myFunction() {<br>
+    &nbsp; let d = new Date();<br>
+    &nbsp; document.getElementById("demo").innerHTML=<br>
+    &nbsp; d.getHours() + ":" +<br>
+    &nbsp; d.getMinutes() + ":" + <br>
+    &nbsp; d.getSeconds();<br>
+    }
+    </div>
+    <p>In the example above, <code>myFunction</code> is used as a callback.</p>
+    <p><code>myFunction</code> is passed to <code>setInterval()</code> as an argument.</p>
+    <p>1000 is the number of milliseconds between intervals, so
+    <code>myFunction()</code> will be called every second.</p>
+    <hr>
+    <h4 style="color: blue;">Waiting for Files</h4>
+    <p>If you create a function to load an external resource (like a script or a file),
+    you cannot use the content before it is fully loaded.</p>
+    <p>This is the perfect time to use a callback.</p>
+    <p>This example loads an HTML file (<code>mycar.html</code>), and displays the HTML file in a web page,
+    after the file is fully loaded:</p>
+    <h4 style="color: blue;">Waiting for a File:</h4>
+    <div class="affichage">
+    function myDisplayer(some) {<br>
+      &nbsp;
+      document.getElementById("demo").innerHTML = some;<br>
+    }<br>
+    <br>
+    function getFile(myCallback) {<br>
+    &nbsp; let req = new XMLHttpRequest();<br>
+    &nbsp; req.open('GET', &quot;mycar.html&quot;);<br>
+    &nbsp; req.onload = function() {<br>
+    &nbsp;&nbsp;&nbsp; if (req.status == 200) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(this.responseText);<br>
+    &nbsp;&nbsp;&nbsp; } else {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(&quot;Error: &quot; + req.status);<br>
+    &nbsp;&nbsp;&nbsp; }<br>
+    &nbsp; }<br>
+    &nbsp; req.send();<br>
+    }<br><br>
+    getFile(myDisplayer);
+    </div>
+    <p>In the example above, <code>myDisplayer</code> is used as a callback.</p>
+<p><code>myDisplayer</code> is passed to <code>getFile()</code> as an argument.</p>
+<p>Below is a copy of <code>mycar.html</code>:</p>
+<h4 style="color: blue;">mycar.html</h4>
+<div class="affichage">
+<br>
+&lt;img src="img_car.jpg" alt="Nice car" style="width:100%"&gt;<br>
+<br>
+&lt;p&gt;A car is a wheeled, self-powered motor vehicle used for transportation.<br>
+Most definitions of the term specify that cars are designed to run primarily on roads,
+to have seating for one to eight people, to typically have four wheels.&lt;/p&gt;<br><br>
+&lt;p&gt;(Wikipedia)&lt;/p&gt;<br>
+<br>
+</div>
+</div>
+</body>
+</html>

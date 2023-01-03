@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS array iteration</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Array Iteration</h4>
+        <p>Array iteration methods operate on every array item.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Array forEach()</h4>
+        <p>The <code>forEach()</code> method calls a function (a callback function) once for each array element.</p>
+        <h4 style="color:blue">Example</h4>
+        <div class="affichage">
+        const numbers = [45, 4, 9, 16, 25];<br>
+        let txt = &quot;&quot;;<br>
+        numbers.forEach(myFunction);<br><br>
+        function myFunction(value, index, array) {<br>
+          &nbsp;
+        txt += value + &quot;&lt;br&gt;&quot;;<br>
+        }
+        </div>
+        <p>Note that the function takes 3 arguments:</p>
+        <ul>
+        <li>The item value</li>
+        <li>The item index </li>
+        <li>The array itself</li>
+        </ul>
+        <p>The example above uses only the value parameter. The example can be rewritten 
+        to:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const numbers = [45, 4, 9, 16, 25];<br>
+        let txt = &quot;&quot;;<br>
+        numbers.forEach(myFunction);<br><br>
+        function myFunction(value) {<br>
+          &nbsp;
+        txt += value + &quot;&lt;br&gt;&quot;; <br>
+        }
+        </div>
+        <hr>
+<h4 style="color: blue;">JavaScript Array map()</h4>
+<p>The <code>map()</code> method creates a new array by performing a function on each array element.</p>
+<p>The <code>map()</code> method does not execute the function for array 
+elements without values.</p>
+<p>The <code>map()</code> method does not change the original array.</p>
+<p>This example multiplies each array value by 2: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers1 = [45, 4, 9, 16, 25];<br>
+const numbers2 = numbers1.map(myFunction);<br>
+  <br>
+function myFunction(value, index, array) {<br>
+  &nbsp; return value * 2;<br>
+}
+</div>
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+<li>The item value</li>
+<li>The item index </li>
+<li>The array itself</li>
+</ul>
+<p>When a callback function uses only the value parameter, the index and array 
+parameters can be omitted: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers1 = [45, 4, 9, 16, 25];<br>
+const numbers2 = numbers1.map(myFunction);<br>
+  <br>
+function myFunction(value) {<br>
+  &nbsp; return value * 2;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Array filter()</h4>
+<p>The <code >filter()</code> method creates a new array with array elements that pass a test.</p>
+<p>This example creates a new array from elements with a value larger than 18:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [45, 4, 9, 16, 25];<br>
+const over18 = numbers.filter(myFunction);<br><br>
+function myFunction(value, index, array) {<br>&nbsp;&nbsp;return value &gt; 18;<br>} </div>
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+<li>The item value</li>
+<li>The item index </li>
+<li>The array itself</li>
+</ul>
+<p>In the example above, the callback function does not use the index and array 
+    parameters, so they can be omitted:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const numbers = [45, 4, 9, 16, 25];<br>
+    const over18 = 
+      numbers.filter(myFunction);<br><br>function myFunction(value) {<br>&nbsp;&nbsp;return value &gt; 18;<br>} </div>
+      <hr>
+      <h4 style="color: blue;">JavaScript Array reduce()</h4>
+      <p>The <code >reduce()</code> method runs a function on each array element to produce (reduce it to) a single value.</p>
+      <p>The <code >reduce()</code> method works from left-to-right in the array. See also <code>reduceRight()</code>.</p>
+      <div >
+      <p>The <code >reduce()</code> method does not reduce the original array.</p>
+      <p>This example finds the sum of all numbers in an array:</p>
+      <h4 style="color: blue;">Example</h4>
+      <div class="affichage">
+      const numbers = [45, 4, 9, 16, 25];<br>
+      let sum = numbers.reduce(myFunction);<br>
+        <br>function myFunction(total, value, index, array) {<br>&nbsp; 
+        return total + value;<br>} </div>
+
+
+        <p>Note that the function takes 4 arguments:</p>
+<ul>
+  <li>The total (the initial value / previously returned value)</li>
+  <li>The item value</li>
+  <li>The item index </li>
+  <li>The array itself</li>
+</ul>
+<p>The example above does not use the index and array parameters. It can be 
+rewritten to:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [45, 4, 9, 16, 25];<br>
+let sum = numbers.reduce(myFunction);<br>
+  <br>function myFunction(total, value) {<br>&nbsp; 
+  return total + value;<br>} </div>
+<p>The <code >reduce()</code> method can accept an initial value:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [45, 4, 9, 16, 25];<br>
+let sum = numbers.reduce(myFunction, 
+  100);<br>
+  <br>function myFunction(total, value) {<br>&nbsp;&nbsp;return total + value;<br>} </div>
+  <hr>
+  <h4 style="color: blue;">JavaScript Array reduceRight()</h4>
+  <p>The <code>reduceRight()</code> method runs a function on each array element to produce (reduce it to) a single value.</p>
+  <p>The <code >reduceRight()</code> works from right-to-left in the array. See also <code>reduce()</code>.</p>
+  <p>The <code class="w3-codespan">reduceRight()</code> method does not reduce the original array.</p>
+  <p>This example finds the sum of all numbers in an array:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  const numbers = [45, 4, 9, 16, 25];<br>
+  let sum = numbers.reduceRight(myFunction);<br>
+    <br>function myFunction(total, value, index, array) {<br>&nbsp; 
+    return total + value;<br>} </div>
+  <p>Note that the function takes 4 arguments:</p>
+  <ul>
+  <li>The total (the initial value / previously returned value)</li>
+    <li>The item value</li>
+    <li>The item index </li>
+    <li>The array itself</li>
+  </ul>
+  <p>The example above does not use the index and array parameters. It can be 
+  rewritten to:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  const numbers = [45, 4, 9, 16, 25];<br>
+  let sum = numbers.reduceRight(myFunction);<br>
+    <br>function myFunction(total, value) {<br>&nbsp;&nbsp;return total + value;<br>} </div>  
+  <hr>
+  <h4 style="color: blue;">JavaScript Array every()</h4>
+  <p>The <code>every()</code> method checks if all array values pass a test.</p>
+  <p>This example checks if all array values are larger than 18:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  const numbers = [45, 4, 9, 16, 25];<br>
+  let allOver18 = 
+    numbers.every(myFunction);<br><br>function myFunction(value, index, array) {<br>
+    &nbsp; return 
+    value &gt; 18;<br>} </div>
+  <p>Note that the function takes 3 arguments:</p>
+  <ul>
+    <li>The item value</li>
+    <li>The item index </li>
+    <li>The array itself</li>
+  </ul>
+  <p>When a callback function uses the first parameter only (value), the other 
+  parameters can be omitted:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  const numbers = [45, 4, 9, 16, 25];<br>
+  let allOver18 = 
+    numbers.every(myFunction);<br><br>function myFunction(value) {<br>&nbsp; return 
+    value &gt; 18;<br>} </div>
+    <hr>
+    <h4 style="color: blue;">JavaScript Array some()</h4>
+    <p>The <code >some()</code> method checks if some array values pass a test.</p>
+    <p>This example checks if some array values are larger than 18:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const numbers = [45, 4, 9, 16, 25];<br>
+    let someOver18 = numbers.some(myFunction);<br><br>function myFunction(value, index, array) {<br>
+      &nbsp; return 
+      value &gt; 18;<br>} </div>
+    <p>Note that the function takes 3 arguments:</p>
+    <ul>
+      <li>The item value</li>
+    <li>The item index </li>
+    <li>The array itself</li>
+    </ul>
+    <hr>
+    <h4 style="color: blue;">JavaScript Array indexOf()</h4>
+    <p>The <code>indexOf()</code> method searches an array for an element value and returns its position.</p>
+    <p><strong>Note:</strong> The first item has position 0, the second item has position 1, and so on.</p>
+    <h4 style="color: blue;">Example</h4>
+<p>Search an array for the item "Apple":</p>
+<div class="affichage">
+const fruits = [&quot;Apple&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+let position = fruits.indexOf("Apple") + 1;
+</div>
+<h4 style="color: blue;">Syntax</h4>
+<p><i>array</i>.indexOf(<em>item</em>,<em> start</em>)</p>
+<table class="table table-striped"> 
+  <tr>
+    <td><em>item</em></td>
+    <td>Required. The item to search for.</td>
+  </tr>
+  <tr>
+    <td><em>start</em></td>
+    <td>Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.</td>
+  </tr>
+</table>
+<p><code>Array.indexOf()</code> returns -1 if the item is not found.</p>
+<p>If the item is present more than once, it returns the position of the first 
+occurrence.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Array lastIndexOf()</h4>
+<p><code>Array.lastIndexOf()</code> is the same as <code>Array.indexOf()</code>, but 
+returns the position of the last occurrence of the specified element.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Search an array for the item "Apple":</p>
+<div class="affichage">
+const fruits = [&quot;Apple&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+let position = fruits.lastIndexOf("Apple") + 1;
+</div>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+<i>array</i>.lastIndexOf(<em>item</em>,<em> start</em>)</div>
+<table class="table table-striped"> 
+  <tr>
+    <td><em>item</em></td>
+    <td>Required. The item to search for</td>
+  </tr>
+  <tr>
+    <td><em>start</em></td>
+    <td>Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning</td>
+  </tr>
+</table>
+<h4 style="color:blue">JavaScript Array find()</h4>
+<p>The <code>find()</code> method returns the value of the first array element that passes a 
+test function.</p>
+<p>This example finds (returns the value of) the first element that is larger 
+than 18:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [4, 9, 16, 25, 29];<br>
+let first = 
+  numbers.find(myFunction);<br><br>function myFunction(value, index, array) {<br>&nbsp;&nbsp;return 
+  value &gt; 18;<br>} </div>
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+  <li>The item value</li>
+  <li>The item index </li>
+  <li>The array itself</li>
+</ul>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code class="w3-codespan">find()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>find()</code> is not supported in Internet Explorer.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Array findIndex()</h4>
+<p>The <code>findIndex()</code> method returns the index of the first array element that 
+passes a test function.</p>
+<p>This example finds the index of the first element that is larger than 18:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const numbers = [4, 9, 16, 25, 29];<br>
+let first = 
+  numbers.findIndex(myFunction);<br><br>function myFunction(value, index, array) {<br>
+  &nbsp; return 
+  value &gt; 18;<br>} </div>
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+  <li>The item value</li>
+<li>The item index </li>
+<li>The array itself</li>
+</ul>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>findIndex()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>findIndex()</code> is not supported in Internet Explorer.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Array.from()</h4>
+<p>The <code >Array.from()</code> method returns an Array object from any object with a length 
+property or any iterable object.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Create an Array from a String:</p>
+<div class="affichage">
+Array.from("ABCDEFG");<br>
+</div>
+<h2>Browser Support</h2>
+<p><code>from()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>from()</code> is not supported in Internet Explorer.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Array Keys()</h4>
+<p>The <code>Array.keys()</code> method returns an Array Iterator object with the keys of an array.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Create an Array Iterator object, containing the keys of the array:</p>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const keys = fruits.keys();<br><br>
+for (let x of keys) {<br>
+&nbsp; text += x + &quot;&lt;br&gt;&quot;;<br>}
+</div>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>keys()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>keys()</code> is not supported in Internet Explorer.</p>
+<hr>
+<h4 style="color: blue;">Example</h4>
+<p>Create an Array Iterator, and then iterate over the key/value pairs:</p>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const f = fruits.entries();<br><br>for (let x of f) {<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML += x;<br>}
+</div>
+<p>The <code>entries()</code> method returns an Array Iterator object with key/value pairs:</p>
+<p>[0, &quot;Banana&quot;]<br>[1, &quot;Orange&quot;]<br>[2, &quot;Apple&quot;]<br>[3, &quot;Mango&quot;]</p>
+<p>The <code>entries()</code> method does not change the original array.</p>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>entries()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+</div>
+<p><code >entries()</code> is not supported in Internet Explorer.</p>
+<hr>
+
+
+
+
+<h2>JavaScript Array includes()</h2>
+<p>ECMAScript 2016 introduced <code class="w3-codespan">Array.includes()</code> to arrays.
+This allows us to check if an element is present in an array (including NaN, unlike indexOf).</p>
+<div class="w3-example">
+
+<h3>Example</h3>
+<div class="w3-code notranslate jsHigh">
+const fruits = ["Banana", "Orange", "Apple", "Mango"];<br><br>
+fruits.includes("Mango"); // is true
+</div>
+<a class="w3-btn w3-margin-bottom" href="tryit.asp?filename=tryjs_array_includes" target="_blank">Try it Yourself &raquo;</a>
+</div>
+
+<h3>Syntax</h3>
+<div class="w3-code w3-border notranslate">
+<i>array</i>.includes(<em>search-item</em>)
+</div>
+<div class="w3-note">
+<p>Array.includes() allows to check for NaN values. Unlike Array.indexOf().</p>
+</div>
+
+<p>Array.includes() is not supported in Internet Explorer and Edge 12/13.</p>
+<p>The first browser versions with full support are:</p>
+
+
+<h2>Browser Support</h2>
+<p><code class="w3-codespan">includes()</code> is an ECMAScript 2016 feature.</p>
+<p>It is supported in all modern browsers:</p>
+<div class="w3-responsive">
+<table class="browserref notranslate">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+</div>
+<p><code>includes()</code> is not supported in Internet Explorer.</p>
+<hr>
+</div>
+</body>
+</html>

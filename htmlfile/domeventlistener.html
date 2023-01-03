@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">DOM event listener</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript HTML DOM EventListener</h4>
+<hr>
+<h4 style="color: blue;">The addEventListener() method</h4>
+<h4 style="color: blue;">Example</h4>
+<p>Add an event listener that fires when a user clicks a button:</p>
+<div class="affichage">
+ document.getElementById("myBtn").addEventListener("click", displayDate);</div>
+<p>The <code>addEventListener()</code> method attaches an event handler to the specified element.</p>
+<p>The <code>addEventListener()</code> method attaches an event handler to an element without overwriting existing event handlers.</p>
+<p>You can add many event handlers to one element.</p>
+<p>You can add many event handlers of the same type to one element, i.e two &quot;click&quot; events.</p>
+<p>You can add event listeners to any DOM object not only HTML elements. i.e the window object.</p>
+<p>The <code>addEventListener()</code> method makes it easier to control how the event reacts to bubbling.</p>
+<p>When using the <code>addEventListener()</code> method, the JavaScript is separated from the HTML markup, for better readability 
+and allows you to add event listeners even when you do not control the HTML markup.</p>
+<p>You can easily remove an event listener by using the <code>removeEventListener()</code> method.<br></p>
+<hr>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+ <em>element</em>.addEventListener(<em>event, function, useCapture</em>);
+<p>The first parameter is the type of the event (like &quot;<code>click</code>&quot; or &quot;<code>mousedown</code>&quot; 
+or any other HTML DOM Event.)</p>
+<p>The second parameter is the function we want to call when the event occurs. </p>
+<p>The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.</p>
+<p>Note that you don't use the 
+&quot;on&quot; prefix for the event; use &quot;<code>click</code>&quot; instead of &quot;<code>onclick</code>&quot;.</p>
+</div>
+<hr>
+<h4 style="color: blue;">Add an Event Handler to an Element</h4>
+<h4 style="color: blue;">Example</h4>
+<p>Alert &quot;Hello World!&quot; when the user clicks on an element:</p>
+<div class="affichage">
+ <em>element</em>.addEventListener("click", function(){ alert("Hello World!"); });</div>
+<p>You can also refer to an external &quot;named&quot; function:</p>
+<h4 style="color: blue;">Example</h4>
+<p>Alert &quot;Hello World!&quot; when the user clicks on an element:</p>
+<div class="affichage">
+  <em>element</em>.addEventListener(&quot;click&quot;,  myFunction);<br><br>function myFunction() {<br>&nbsp;&nbsp;alert (&quot;Hello World!&quot;);<br>}</div>
+  <hr>
+<h4 style="color: blue;">Add Many Event Handlers to the Same Element</h4>
+<p>The <code >addEventListener()</code> method allows you to add many events to the same 
+element, without overwriting existing events:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ <em>element</em>.addEventListener(&quot;click&quot;, myFunction);<br>
+ <em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
+ </div>
+<p>You can add events of different types to the same element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+<em>element</em>.addEventListener(&quot;mouseover&quot;, myFunction);<br>
+<em>element</em>.addEventListener(&quot;click&quot;, mySecondFunction);<br>
+<em>element</em>.addEventListener(&quot;mouseout&quot;, myThirdFunction);</div>
+<hr>
+<h4 style="color: blue;">Add an Event Handler to the window Object</h4>
+<p>The <code>addEventListener()</code> method allows you to add event listeners on any HTML 
+DOM object such as HTML elements, the HTML document, the window object, or other 
+objects that support events, like the <code>xmlHttpRequest</code> object.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Add an event listener that fires when a user resizes the window:</p>
+<div class="affichage">
+window.addEventListener(&quot;resize&quot;, function(){<br>
+&nbsp;&nbsp;document.getElementById("demo").innerHTML = <em>sometext</em>;<br>
+});
+</div>
+<hr>
+<h4 style="color: blue;">Passing Parameters</h4>
+<p>When passing parameter values, use 
+an &quot;anonymous function&quot; that calls the specified function with the parameters:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+<em>element</em>.addEventListener(&quot;click&quot;, function(){ myFunction(p1, p2); });
+</div>
+<hr>
+<h4 style="color: blue;">Event Bubbling or Event Capturing?</h4>
+<p>There are two ways of event propagation in the HTML DOM, bubbling and capturing.</p>
+<p>Event propagation is a way of defining the element order when an event occurs.
+If you have a &lt;p&gt; element inside a &lt;div&gt; element, and the user clicks on the &lt;p&gt; element, which element's 
+&quot;click&quot; event should be handled first?</p>
+<p>In <em>bubbling </em>the inner most element's event is handled first and then the outer:
+the &lt;p&gt; element's click event is handled first, then the &lt;div&gt; element's click event.</p>
+<p>In <em>capturing </em>the outer most element's event is handled first and then the inner:
+the &lt;div&gt; element's click event will be handled first, then the &lt;p&gt; element's click event.</p>
+<p>With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:</p>
+<div class="affichage">
+addEventListener(<em>event</em>, <em>function</em>, <span class="marked"><em>useCapture</em></span>);</div>
+<p>The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+document.getElementById("myP").addEventListener(&quot;click&quot;, myFunction, true);<br>
+document.getElementById("myDiv").addEventListener(&quot;click&quot;, myFunction, true);
+</div>
+<hr>
+<h4 style="color: blue;">The removeEventListener() method</h4>
+<p>The <code>removeEventListener()</code> method removes event handlers that have been 
+attached with the addEventListener() method:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+<em>element</em>.removeEventListener(&quot;mousemove&quot;, myFunction);</div>
+<hr>
+<h4 style="color: blue;">HTML DOM Event Object Reference</h4>
+<p>For a list of all HTML DOM events, look at our complete HTML DOM Event Object Reference</p>
+ </div>
+</body>
+</html>

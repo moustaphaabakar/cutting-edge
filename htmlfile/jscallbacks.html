@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">js callbacks</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Callbacks</h4>
+        <hr>
+        <p class="w3-xlarge"><i>"I will call back later!"</i></p>
+        <p>A callback is a function passed as an argument to another function</p>
+        <p>This technique allows a function to call another function</p>
+        <p>A callback function can run after another function has finished</p>
+        <h4 style="color: blue;">Function Sequence</h4>
+        <p>JavaScript functions are executed in the sequence they are called.
+        Not in the sequence they are defined.</p>
+        <p>This example will end up displaying "Goodbye":</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          function myFirst() {<br>&nbsp; myDisplayer(&quot;Hello&quot;);<br>}<br><br>function 
+          mySecond() {<br>&nbsp; 
+          myDisplayer(&quot;Goodbye&quot;);<br>}<br><br>myFirst();<br>mySecond();
+          </div>    
+        <p>This example will end up displaying "Hello":</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          function myFirst() {<br>&nbsp; myDisplayer(&quot;Hello&quot;);<br>}<br><br>function 
+          mySecond() {<br>&nbsp; 
+          myDisplayer(&quot;Goodbye&quot;);<br>}<br><br>mySecond();<br>myFirst();</div>
+        <hr>
+        <h4 style="color: blue;">Sequence Control</h4>
+        <p>Sometimes you would like to have better control over when to execute a function.</p>
+        <p>Suppose you want to do a calculation, and then display the result.</p>
+        <p>You could call a calculator function (<code>myCalculator</code>), save the result,
+        and then call another function (<code>myDisplayer</code>) to display the result:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        function myDisplayer(some) {<br>
+        &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = some;<br>}<br><br>
+        function myCalculator(num1, num2) {<br>
+        &nbsp; let sum = num1 + num2;<br>
+        &nbsp; return sum;
+        <br>
+        }<br><br>let result = myCalculator(5, 5);<br>
+        myDisplayer(result);</div>
+        <p>Or, you could call a calculator function (<code>myCalculator</code>),
+        and let the calculator function call the display function (<code>myDisplayer</code>):</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          function myDisplayer(some) {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML 
+          = some;<br>}<br><br>function myCalculator(num1, num2) {<br>&nbsp; 
+          let sum = num1 + num2;<br>&nbsp; 
+          myDisplayer(sum);<br>}<br><br>myCalculator(5, 5);
+        </div>
+        <p>The problem with the first example above, is that you have to call two functions to display the result.</p>
+        <p>The problem with the second example, is that you cannot prevent the calculator function from 
+        displaying the result.</p>
+        <p>Now it is time to bring in a callback.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Callbacks</h4>
+        <p>A callback is a function passed as an argument to another function.</p>
+        <p>Using a callback, you could call the calculator function (<code>myCalculator</code>)
+        with a callback, and let the calculator function run the callback after the calculation is finished:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          function myDisplayer(some) {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML 
+          = some;<br>}<br><br>function myCalculator(num1, num2, myCallback) {<br>&nbsp; 
+          let sum = num1 + num2;<br>&nbsp; 
+          myCallback(sum);<br>}<br><br>myCalculator(5, 5, myDisplayer);
+        </div>
+        <p>In the example above, <code>myDisplayer</code> is the name of a function.</p>
+        <p>It is passed to <code>myCalculator()</code> as an argument.</p>
+        <p>When you pass a function as an argument, remember not to use parenthesis.</p>
+        <p>Right: myCalculator(5, 5, myDisplayer);</p>
+        <p>Wrong: <del>myCalculator(5, 5, myDisplayer())</del>;</p>
+        <hr>
+        <h4 style="color: blue;">When to Use a Callback?</h4>
+        <p>The examples above are not very exciting.</p>
+        <p>They are simplified to teach you the callback syntax.</p>
+        <p>Where callbacks really shine are in asynchronous functions, 
+        where one function has to wait for another function (like waiting for a file to load).</p>
+        <p>Asynchronous functions are covered in the next chapter.</p>
+     </div>
+    
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> function apply</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Function apply()</h4>
+<hr>
+<h4 style="color: blue;">Method Reuse</h4>
+<p>With the <code>apply()</code> method, you can write a method that can be used on different 
+objects.</p>
+<hr>
+<h4 style="color: blue;">The JavaScript apply() Method</h4>
+<p>The <code>apply()</code> method is similar to the <code>call()</code> method (previous chapter).</p>
+<p>In this example the <strong>fullName</strong> method of <strong>person</strong> is <b>applied</b> on <strong>person1</strong>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+  &nbsp; fullName: function() {<br>
+  &nbsp;&nbsp;&nbsp; return this.firstName + &quot; &quot; + this.lastName;<br>
+  &nbsp;&nbsp;}<br>}<br>
+<br>
+const person1 = {<br>
+&nbsp;&nbsp;firstName: &quot;Mary&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;<br>}<br>
+<br>
+// This will return &quot;Mary Doe&quot;:<br>
+person.fullName.apply(person1);
+</div>
+<hr>
+<h4 style="color: blue;">The Difference Between call() and apply()</h4>
+<p>The difference is:</p>
+<p>The <code>call()</code> method takes arguments <strong>separately</strong>.</p>
+<p>The <code>apply()</code> method takes arguments as an <strong>array</strong>.</p>
+<p>The apply() method is very handy if you want to use an array instead of an argument list.</p>
+<hr>
+<h4 style="color: blue;">The apply() Method with Arguments</h4>
+<p>The <code>apply()</code> method accepts arguments in an array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+  &nbsp; fullName: function(city, country) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName 
+  + "," + city + "," + country;<br>
+  &nbsp;&nbsp;}<br>}<br>
+<br>
+const person1 = {<br>
+&nbsp;&nbsp;firstName:&quot;John&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>
+}<br>
+<br>
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+</div>
+<p>Compared with the <code>call()</code> method:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp;&nbsp;fullName: function(city, country) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName 
+  + "," + city + "," + country;<br>
+  &nbsp;&nbsp;}<br>}<br>
+<br>
+const person1 = {<br>
+  &nbsp; firstName:&quot;John&quot;,<br>
+  &nbsp; lastName: &quot;Doe&quot;<br>
+}<br>
+<br>
+person.fullName.call(person1, "Oslo", "Norway");
+</div>
+<hr>
+<h4 style="color: blue;">Simulate a Max Method on Arrays</h4>
+<p>You can find the largest number (in a list of numbers) using the <code>Math.max()</code> method:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max(1,2,3);&nbsp; // Will return 3
+</div>
+<p>Since JavaScript <strong>arrays</strong> do not have a max() method, you can apply the 
+<code>Math.max()</code> method instead.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max.apply(null, [1,2,3]); // Will also return 3
+</div>
+<p>
+<p>The first argument (null) does not matter. It is not used in this example.</p>
+<p>These examples will give the same result:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max.apply(Math, [1,2,3]); // Will also return 3
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max.apply(&quot; &quot;, [1,2,3]); // Will also return 3
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+Math.max.apply(0, [1,2,3]); // Will also return 3
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Strict Mode</h4>
+<p>In JavaScript strict mode, if the first argument of the <code>apply()</code> method is not an object,
+it becomes the owner (object) of the invoked function.
+In "non-strict" mode, it becomes the global object.</p>
+ </div>
+</body>
+</html>

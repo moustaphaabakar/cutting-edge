@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">js asyn/await</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Async</h4>
+       <hr>
+        <p><i>"async and await make promises easier to write"</i></p>
+        <p><b>async</b> makes a function return a Promise</p>
+        <p><b>await</b> makes a function wait for a Promise</p>
+        <h4 style="color: blue;">Async Syntax</h4>
+        <p>The keyword <code >async</code> before a function makes the function return a promise:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        async function myFunction() {<br>
+        &nbsp; return "Hello";<br>
+        }
+        </div>
+        <p>Is the same as:</p>
+        <div class="affichage">
+        function myFunction() {<br>
+        &nbsp; return Promise.resolve("Hello");<br>
+        }
+        </div>
+        <p>Here is how to use the Promise:</p>
+        <div class="affichage">
+        myFunction().then(<br>
+        &nbsp; function(value) { /* code if successful */ },<br>
+        &nbsp; function(error) { /* code if some error */ }<br>
+        );
+        </div>
+        <h4 style="color:blue">Example</h4>
+        <div class="affichage">
+        async function myFunction() {<br>
+        &nbsp; return "Hello";<br>
+        }<br>myFunction().then(<br>&nbsp; function(value) {myDisplayer(value);},
+          <br>&nbsp; function(error) {myDisplayer(error);}<br>);
+        </div>
+        <p>Or simpler, since you expect a normal value (a normal response, not an error):</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        async function myFunction() {<br>
+        &nbsp; return "Hello";<br>
+        }<br>myFunction().then(<br>&nbsp; function(value) {myDisplayer(value);}
+        <br>);
+        </div>
+        <hr>
+<h4 style="color: blue;">Await Syntax</h4>
+<p>The <code>await</code> keyword can only be used inside an
+<code>async</code> function.</p>
+<p>The <code>await</code> keyword makes the function pause the execution 
+and wait for a resolved promise before it continues:</p>
+<div class="affichage">
+let value = await promise;
+</div>
+<hr>
+<h4 style="color: blue;">Example</h4>
+<p>Let's go slowly and learn how to use it.</p>
+<h4 style="color: blue;">Basic Syntax</h4>
+<div class="affichage">
+async function myDisplay() {<br>
+&nbsp; let myPromise = new Promise(function(resolve,  reject) {<br>
+&nbsp;&nbsp;&nbsp; resolve(&quot;I love You !!&quot;);<br>
+&nbsp; });<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = await myPromise;<br>}<br><br>
+ myDisplay();
+</div>
+<p>The two arguments (resolve and reject) are pre-defined by JavaScript.</p>
+<p>We will not create them, but call one of them when the executor function is ready.</p>
+<p>Very often we will not need a reject function.</p>
+<h4 style="color: blue;">Example without reject</h4>
+<div class="affichage">
+async function myDisplay() {<br>
+&nbsp; let myPromise = new Promise(function(resolve) {<br>
+&nbsp;&nbsp;&nbsp; resolve(&quot;I love You !!&quot;);<br>
+&nbsp; });<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = await myPromise;<br>}<br><br>
+ myDisplay();
+</div>
+<h4 style="color: blue;">Waiting for a Timeout</h4>
+<div class="affichage">
+async function myDisplay() {<br>
+&nbsp; let myPromise = new Promise(function(resolve) {<br>
+&nbsp;&nbsp;&nbsp; setTimeout(function() {resolve("I love You !!");}, 3000);<br>
+&nbsp; });<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = await myPromise;<br>}<br><br>
+ myDisplay();
+</div>
+<h4 style="color: blue;">Waiting for a File</h>
+<div class="affichage">
+async function getFile() {<br>
+&nbsp; let myPromise = new Promise(function(resolve) {<br>
+&nbsp;&nbsp;&nbsp; let req = new XMLHttpRequest();<br>
+&nbsp;&nbsp;&nbsp; req.open('GET', "mycar.html");<br>
+&nbsp;&nbsp;&nbsp; req.onload = function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (req.status == 200) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resolve(req.response);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resolve("File not Found");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; };<br>
+&nbsp;&nbsp;&nbsp; req.send();<br>
+&nbsp; });<br>
+&nbsp; document.getElementById("demo").innerHTML = await myPromise;<br>
+}<br>
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>ECMAScript 2017 introduced the JavaScript keywords
+<code>async</code> and <code>await</code>.</p>
+<p>The following table defines the first browser version with full support for both:</p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 55</td>
+    <td>Edge 15</td>    
+    <td>Firefox 52</td>
+    <td>Safari 11</td>
+    <td>Opera 42</td>
+  </tr>
+  <tr>
+    <td>Dec, 2016</td>
+    <td>Apr, 2017</td>    
+    <td>Mar, 2017</td>
+    <td>Sep, 2017</td>
+    <td>Dec, 2016</td>
+  </tr></tbody>
+</table>
+</div>
+</body>
+</html>

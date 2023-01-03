@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html classes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <h4 style="color: blue;">classes</h4>
+       <p>The HTML <code>class</code> attribute is 
+        used to specify a class for an HTML element.</p>
+        <p>Multiple HTML elements can share the same class.</p>
+        <hr>
+        <h4 style="color: blue;">Using The class Attribute</h4>
+        <p>The <code>class</code> attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and  manipulate elements with the specific class name.</p>
+        <p>In the following example we have three <code >&lt;div&gt;</code> elements with a <code>class</code> attribute with the value of 
+        &quot;city&quot;. All of the three <code>&lt;div&gt;</code> elements will be styled equally according to the <code>.city</code>  style definition in the head section:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+         &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>
+          .city {<br>&nbsp;&nbsp;background-color: tomato;<br>&nbsp; color: white;<br>&nbsp; 
+          border: 2px solid black;<br>&nbsp; margin: 20px;<br>
+          &nbsp; padding: 20px;<br>} <br>&lt;/style&gt;<br>
+         &lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;div class="city"&gt;<br>
+         &nbsp;
+         &lt;h2&gt;London&lt;/h2&gt;<br>&nbsp; &lt;p&gt;London is the capital of England.&lt;/p&gt;<br>
+         &lt;/div&gt;<br><br>&lt;div class="city"&gt;<br>
+         &nbsp;
+         &lt;h2&gt;Paris&lt;/h2&gt;<br>&nbsp; &lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;div class="city"&gt;<br>
+         &nbsp;
+         &lt;h2&gt;Tokyo&lt;/h2&gt;<br>&nbsp; &lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;<br>&lt;/div&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <p>In the following example we have two <code>&lt;span&gt;</code> elements   with a <code>class</code> attribute with the value of &quot;note&quot;. Both <code>&lt;span&gt;</code> elements will be styled equally according to the <code>.note</code> style definition in the head section:</p>
+       <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>.note {<br>
+  &nbsp; font-size: 120%;<br>&nbsp;&nbsp;color: red;<br>}<br>
+ &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1&gt;My &lt;span class="note"&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;<br>&lt;p&gt;This is some &lt;span class="note"&gt;important&lt;/span&gt; text.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+ <p><strong>Tip:</strong> The <code>class</code> attribute can be used on <strong>any</strong> HTML element.</p>
+  <p><strong>Note:</strong> The class name is case sensitive!</p>
+  <h4 style="color: blue;">The Syntax For Class</h4>
+  <p>To create a class; write a period (.) character, followed by a 
+  class name. 
+  Then, define the CSS properties within curly braces {}:</p>
+  <h4 style="color: blue;">Example</h4>
+  <p>Create a class named "city":</p>
+  <div class="affichage">
+    &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>.city {<br>&nbsp; 
+    background-color: tomato;<br>&nbsp; color: white;<br>&nbsp; padding: 10px;<br>
+    }<br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h2 class=&quot;city&quot;&gt;London&lt;/h2&gt;<br>
+    &lt;p&gt;London is the capital of England.&lt;/p&gt;<br><br>&lt;h2 class=&quot;city&quot;&gt;Paris&lt;/h2&gt;<br>
+    &lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br><br>&lt;h2 class=&quot;city&quot;&gt;Tokyo&lt;/h2&gt;<br>
+    &lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;<br></div>
+  <hr>
+  <h4 style="color: blue;">Multiple Classes</h4>
+  <p>HTML elements can belong to more than one class.</p>
+  <p>To define multiple classes, separate the class names with a space, e.g. &lt;div 
+  class=&quot;city main&quot;&gt;. The element will be styled according to all the 
+  classes specified.</p>
+  <p>In the following example, the first <code >&lt;h2&gt;</code> element belongs to both the <code >
+  city</code> class and also to the <code >main</code> class, 
+  and will get the CSS styles from both of the classes:&nbsp;
+</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;h2 
+  class=&quot;city main&quot;&gt;London&lt;/h2&gt;<br>&lt;h2 class=&quot;city&quot;&gt;Paris&lt;/h2&gt;<br>&lt;h2 
+  class=&quot;city&quot;&gt;Tokyo&lt;/h2&gt;<br>
+</div>
+<h4 style="color: blue;">Different Elements Can Share Same Class</h4>
+<p>Different HTML elements can point to the same class name.</p>
+<p>In the following example, both <code>&lt;h2&gt;</code> and <code>&lt;p&gt;</code> 
+point to the &quot;city&quot; class 
+and will share the same style:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+      &lt;h2 class=&quot;city&quot;&gt;Paris&lt;/h2&gt;<br>&lt;p 
+      class=&quot;city&quot;&gt;Paris is the capital of France&lt;/p&gt;<br>
+    </div>
+    <h4 style="color: blue;">Use of The class Attribute in JavaScript</h4>
+    <p>The class name can also be used by JavaScript to perform certain tasks for 
+    specific elements.</p>
+    <p>JavaScript can access elements with a specific class name with the <code>getElementsByClassName()</code> method:</p>
+    <h4 style="color: blue;">Example</h4>
+  <p>Click on a button to hide all elements with the class name 
+  &quot;city&quot;:</p>
+<div class="affichage">
+  &lt;script&gt;<br>function myFunction() {<br>&nbsp; var x = <strong>document.getElementsByClassName(&quot;city&quot;)</strong>;<br>&nbsp; for (var i = 0; i &lt; x.length; 
+  i++) {<br>&nbsp;&nbsp;&nbsp; x[i].style.display = &quot;none&quot;;<br>&nbsp; }<br>}<br>&lt;/script&gt;
+</div>
+<h4 style="color: blue;">Chapter Summary</h4>
+<ul>
+<li>The HTML <code>class</code> attribute specifies one or more class names for an element</li>
+  <li>Classes are used by CSS and JavaScript to select and access specific elements</li>
+  <li>The <code>class</code> attribute can be used on any HTML element</li>
+  <li>The class name is case sensitive</li>
+  <li>Different HTML elements can point to the same class name</li>
+  <li>JavaScript can access elements with a specific class name with the <code class="w3-codespan">getElementsByClassName()</code> method</li>
+</ul>
+</div>
+</body>
+</html>

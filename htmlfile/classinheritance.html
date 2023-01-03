@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> class inheritance</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Class Inheritance</h4>
+<hr>
+<h4 style="color:blue ;">Class Inheritance</h4>
+<p>To create a class inheritance, use the <code>extends</code> 
+keyword.</p>
+<p>A class created with a class inheritance inherits all the methods from 
+another class:</p>
+<h4 style="color: blue;">Example</h4>
+<p>Create a class named "Model" which will inherit the methods from the &quot;Car&quot; 
+class:</p>
+<div class="affichage">
+class Car {<br>&nbsp; constructor(brand) {<br>&nbsp;&nbsp;&nbsp; this.carname = 
+  brand;<br>&nbsp;
+  }<br>&nbsp; present() {<br>&nbsp;&nbsp;&nbsp; return 'I have a ' + this.carname;<br>&nbsp;
+  }<br>}<br><br>class Model extends Car {<br>&nbsp;
+  constructor(brand, mod) {<br>&nbsp;&nbsp;&nbsp; super(brand);<br>&nbsp;&nbsp;&nbsp; this.model = mod;<br>&nbsp;
+  }<br>&nbsp; show() {<br>&nbsp;&nbsp;&nbsp;
+      return this.present() + ', it is a ' + this.model;<br>&nbsp;
+  }<br>}<br><br>let myCar = new Model(&quot;Ford&quot;, &quot;Mustang&quot;);<br>document.getElementById(&quot;demo&quot;).innerHTML 
+  = myCar.show();
+</div>
+<p>The <code>super()</code> method refers to the parent 
+class.</p>
+<p>By calling the <code>super()</code> method in the 
+constructor method, we call the parent's constructor method and gets access to 
+the parent's properties and methods.</p>
+<p>Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.</p>
+<hr>
+<h4 style="color: blue;">Getters and Setters</h4>
+<p>Classes also allows you to use getters and setters.</p>
+<p>It can be smart to use getters and setters for your properties, especially if 
+you want to do something special with the value before returning them, or before 
+you set them.</p>
+<p>To add getters and setters in the class, use the <code >
+get</code> and <code>set</code> keywords.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Create a getter and a setter for the &quot;carname&quot; property:</p>
+<div class="affichage">
+  class Car {<br>&nbsp; constructor(brand) {<br>&nbsp;&nbsp;&nbsp; this.carname 
+  = brand;<br>&nbsp; }<br>&nbsp; get cnam() {<br>&nbsp;&nbsp;&nbsp; 
+  return this.carname;<br>&nbsp; }<br>&nbsp; set cnam(x) {<br>&nbsp;&nbsp;&nbsp; 
+  this.carname = x;<br>&nbsp; }<br>}<br><br>let myCar = new Car(&quot;Ford&quot;);<br><br>
+  document.getElementById(&quot;demo&quot;).innerHTML = myCar.cnam;</div>
+<p><strong>Note:</strong> even if the getter is a method, you do not use parentheses when you 
+want to get the property value.</p>
+<p>The name of the getter/setter method cannot be the same as the name of the 
+property, in this case <code>carname</code>.</p>
+<p>
+<p>Many programmers use an underscore character <code>_</code>
+before the property name to separate the getter/setter from the actual property:</p>
+<h4 style="color:blue">Example</h4>
+<p>You can use the underscore character to separate the getter/setter from the 
+actual property:</p>
+<div class="affichage">
+  class Car {<br>&nbsp; constructor(brand) {<br>&nbsp;&nbsp;&nbsp; this._carname 
+  = brand;<br>&nbsp; }<br>&nbsp; get carname() {<br>&nbsp;&nbsp;&nbsp; 
+  return this._carname;<br>&nbsp; }<br>&nbsp; set carname(x) {<br>&nbsp;&nbsp;&nbsp; 
+  this._carname = x;<br>&nbsp; }<br>}<br><br>let myCar = new Car(&quot;Ford&quot;);<br><br>
+  document.getElementById(&quot;demo&quot;).innerHTML = myCar.carname;</div>
+<p>To use a <em>setter</em>, use the same syntax as when you set a property value, without parentheses:</p>
+<h4 style="color: blue;">Example</h4>
+<p>Use a setter to change the carname to &quot;Volvo&quot;:</p>
+<div class="affichage">
+  class Car {<br>&nbsp; constructor(brand) {<br>&nbsp;&nbsp;&nbsp; this._carname 
+  = brand;<br>&nbsp; }<br>&nbsp; get carname() {<br>&nbsp;&nbsp;&nbsp; 
+  return this._carname;<br>&nbsp; }<br>&nbsp; set carname(x) {<br>&nbsp;&nbsp;&nbsp; 
+  this._carname = x;<br>&nbsp; }<br>}<br><br>let myCar = new Car(&quot;Ford&quot;);<br>
+  myCar.carname = &quot;Volvo&quot;;<br>
+  document.getElementById(&quot;demo&quot;).innerHTML = myCar.carname;</div>
+<hr>
+<h4 style="color: blue;">Hoisting</h4>
+<p>Unlike functions, and other JavaScript declarations, class declarations are not hoisted.</p>
+<p>That means that you must declare a class before you can use it:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  //You cannot use the class yet.<br>//myCar = new Car(&quot;Ford&quot;)<br>//This would 
+  raise an error.<br><br>class Car {<br>&nbsp;
+  constructor(brand) {<br>&nbsp;&nbsp;&nbsp; this.carname = brand;<br>&nbsp;
+  }<br>}<br><br>//Now you can use the class:<br>let myCar = new Car(&quot;Ford&quot;)</div>
+<p><strong>Note:</strong> For other declarations, like functions, you will NOT get an 
+error when you try to use it before it is declared, because the default behavior 
+of JavaScript declarations are hoisting (moving the declaration to the top).</p>
+ </div>
+</body>
+</html>

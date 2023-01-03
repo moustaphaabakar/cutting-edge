@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS array constant</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin:10px">
+        <h4 style="color: blue;">JavaScript Array Const</h4>
+<hr>
+<h4 style="color: blue;">ECMAScript 2015 (ES6)</h4>
+<p>In 2015, JavaScript introduced an important new keyword: <code>const</code>.</p>
+<p>It has become a common practice to declare arrays using <code>const</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br>
+</div>
+<hr>
+<h4 style="color: blue;">Cannot be Reassigned</h4>
+<p>An array declared with <code>const</code> cannot be reassigned:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br>
+cars = [&quot;Toyota&quot;, &quot;Volvo&quot;, &quot;Audi&quot;];&nbsp;&nbsp;&nbsp; // ERROR
+</div>
+<hr>
+<h4 style="color: blue;">Arrays are Not Constants</h2>
+<p>The keyword <code>const</code> is a little misleading.</p>
+<p>It does NOT define a constant array. It defines a constant reference to an array.</p>
+<p>Because of this, we can still change the elements of a constant array.</p>
+<hr>
+<h4 style="color: blue;">Elements Can be Reassigned</h4>
+<p>You can change the elements of a constant array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// You can create a constant array:<br>
+const cars = [&quot;Saab&quot;, &quot;Volvo&quot;, &quot;BMW&quot;];<br><br>
+// You can change an element:<br>
+cars[0] = &quot;Toyota&quot;;<br><br>
+// You can add an element:<br>
+cars.push(&quot;Audi&quot;);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>The <code >const</code> keyword is not supported in Internet Explorer 10 or earlier.</p>
+<p>The following table defines the first browser versions with full support for the <code>const</code> keyword: </p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 49</td>
+    <td>IE 11 / Edge</td>    
+    <td>Firefox 36</td>
+    <td>Safari 10</td>
+    <td>Opera 36</td>
+  </tr>
+  <tr>
+    <td>Mar, 2016</td>
+    <td>Oct, 2013</td>    
+    <td>Feb, 2015</td>
+    <td>Sep, 2016</td>
+    <td>Mar, 2016</td>
+  </tr></tbody>
+</table>
+<h4 style="color: blue;">Assigned when Declared</h4>
+<p>JavaScript <code>const</code> variables must be assigned a value when they are declared:
+<p>Meaning: An array declared with <code>const</code> must be initialized when it is declared.</p>
+<p>Using <code>const</code> without initializing the array is a syntax 
+error:</p> 
+<h4 style="color: blue;">Example</h4>
+<p>This will not work:</p>
+<div class="affichage">
+const cars;<br>
+cars = ["Saab", "Volvo", "BMW"];<br>
+</div>
+<p>Arrays declared with <code >var</code> can be initialized at any time.</p>
+<p>You can even use the array before it is declared:</p>
+<h4 style="color: blue;">Example</h4>
+<p>This is OK:</p>
+<div class="affichage">
+cars = ["Saab", "Volvo", "BMW"];<br>
+var cars;
+</div>
+<hr>
+<h4 style="color: blue;">Const Block Scope</h4>
+<p>An array declared with <code>const</code> has <b>Block Scope</b>.</p>
+<p>An array declared in a block is not the same as an array declared outside the block:</p>
+<h4 style="color:blue">Example</h4>
+<div class="affichage">
+const cars = ["Saab", "Volvo", "BMW"];<br>
+// Here cars[0] is "Saab"<br>
+{<br>
+&nbsp;&nbsp;const cars = ["Toyota", "Volvo", "BMW"];<br> 
+&nbsp;&nbsp;// Here cars[0] is "Toyota"<br>
+}<br>
+// Here cars[0] is <b>"Saab"</b>
+</div>
+
+<p>An array declared with <code>var</code> does not have block scope:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+var cars = ["Saab", "Volvo", "BMW"];<br>
+// Here cars[0] is "Saab"<br>
+{<br>
+&nbsp;&nbsp;var cars = ["Toyota", "Volvo", "BMW"];<br> 
+&nbsp;&nbsp;// Here cars[0] is "Toyota"<br>
+}<br>
+// Here cars[0] is <b>"Toyota"</b>
+</div>
+<hr>
+<h4 style="color:blue ;">Redeclaring Arrays</h4>
+<p>Redeclaring an array declared with <code>var</code> is allowed anywhere in a program:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+var cars = ["Volvo", "BMW"]; &nbsp;&nbsp;// Allowed<br>
+var cars = ["Toyota", "BMW"]; &nbsp;// Allowed<br>
+cars = ["Volvo", "Saab"]; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+</div>
+<p>Redeclaring or reassigning an array to <code>const</code>, in the same scope, or in 
+the same block, is not allowed:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+var cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Allowed<br>
+const cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Not allowed<br>
+{<br>
+&nbsp;&nbsp;var cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Allowed<br>
+&nbsp;&nbsp;const cars = ["Volvo", "BMW"];&nbsp;// Not allowed<br>
+}
+</div>
+<p>Redeclaring or reassigning an existing <code>const</code> array, in the same scope, or in 
+the same block, is not allowed:</p>
+<h4 style="color:blue">Example</h4>
+<div class="affichage">
+const cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Allowed<br>
+const cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Not allowed<br>
+var cars = ["Volvo", "BMW"];&nbsp; &nbsp;&nbsp;&nbsp;// Not allowed<br>
+cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+<br>
+{<br>
+&nbsp;&nbsp;const cars = ["Volvo", "BMW"];&nbsp;// Allowed<br>
+&nbsp;&nbsp;const cars = ["Volvo", "BMW"];&nbsp;// Not allowed<br>
+&nbsp;&nbsp;var cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Not allowed<br>
+&nbsp;&nbsp;cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Not allowed<br>
+}
+</div>
+<p>Redeclaring an array with <code>const</code>, in another scope, or in another block, is allowed:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const cars = ["Volvo", "BMW"];&nbsp;&nbsp;&nbsp;// Allowed<br>
+{<br>
+&nbsp;&nbsp;const cars = ["Volvo", "BMW"];&nbsp;// Allowed<br>
+}<br>
+{<br>
+&nbsp;&nbsp;const cars = ["Volvo", "BMW"];&nbsp;// Allowed<br>
+}
+</div>
+</div>s
+</body>
+</html>

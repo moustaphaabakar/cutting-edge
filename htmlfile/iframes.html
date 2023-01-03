@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html iframes</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <h4 style="color: blue;">iframes</h4>
+        <p class="intro">An HTML iframe is used to display a web page within a web page.</p>
+        <hr>
+        <h4 style="color: blue;">HTML Iframe Syntax</h4>
+<p>The HTML <code>&lt;iframe&gt;</code> tag specifies an inline frame.</p>
+<p>An inline frame is used to embed another document within the current HTML document.</p>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+&lt;iframe src=&quot;<i>url</i>&quot; title=&quot;<em>description</em>&quot;&gt;&lt;/iframe&gt;
+</div>
+<p style="margin: 10x;"><strong>Tip:</strong> It is a good practice to always include a <code>title</code> attribute for the <code>&lt;iframe&gt;</code>. This is used by screen readers to read out what the content of the iframe is.</p>
+<hr>
+<h4 style="color: blue;">Iframe - Set Height and Width</h4>
+<p>Use the <code>height</code> and <code>width</code> attributes to specify the size of the iframe.</p>
+<p>The height and width are specified in pixels by default:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;iframe src=&quot;demo_iframe.htm&quot; height=&quot;200&quot; width=&quot;300&quot; 
+  title=&quot;Iframe Example&quot;&gt;&lt;/iframe&gt;</div>
+    <p>Or you can add the <code>style</code> attribute and use  the CSS <code>height</code> and <code>width</code>  properties:</p>
+        <h4 style="color:blue;">Example</h4>
+        <div class="affichage">
+        &lt;iframe src=&quot;demo_iframe.htm&quot; style=&quot;height:200px;width:300px;&quot; 
+          title=&quot;Iframe Example&quot;&gt;&lt;/iframe&gt;</div>
+        <hr>
+    <h4 style="color: blue;">Iframe - Remove the Border</h4>
+    <p>By default, an iframe has a border around it. </p>
+    <p>To remove the border, add the <code>style</code> attribute and use the CSS 
+    <code>border</code> property:</p>
+    <h4 style="color:blue ;">Example</h4>
+    <div class="affichage">
+    &lt;iframe src=&quot;demo_iframe.htm&quot; style=&quot;border:none;&quot; 
+      title=&quot;Iframe Example&quot;&gt;&lt;/iframe&gt;</div>
+    <p>With CSS, you can also change the size, style and color of the iframe's border:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    &lt;iframe src=&quot;demo_iframe.htm&quot; style=&quot;border:2px solid red;&quot; 
+      title=&quot;Iframe Example&quot;&gt;&lt;/iframe&gt;</div>
+    <hr>
+    <h4 style="color: 10px;">Iframe - Target for a Link</h4>
+    <p>An iframe can be used as the target frame for a link.</p>
+    <p>The <code>target</code> attribute  of the link must refer to the <code>name</code> attribute of the iframe:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+     &lt;iframe src=&quot;demo_iframe.htm&quot; name=&quot;iframe_a&quot; title=&quot;Iframe 
+      Example&quot;&gt;&lt;/iframe&gt;<br><br>
+     &lt;p&gt;&lt;a href=&quot;https://www.w3schools.com&quot; target=&quot;iframe_a&quot;&gt;W3Schools.com&lt;/a&gt;&lt;/p&gt;
+    </div>
+    <hr>
+    <h4 style="color:blue ;">Chapter Summary</h4>
+    <ul>
+    <li>The HTML <code>&lt;iframe&gt;</code> tag specifies an inline frame</li>
+      <li>The <code>src</code> attribute defines the URL of the page to embed</li>
+      <li>Always include a <code> title</code> attribute (for screen readers)</li>
+      <li>The <code>height</code> and <code>width</code> attributes specify the size of the iframe</li>
+      <li>Use <code >border:none;</code> to remove the border  around the iframe</li>
+    </ul>
+</div>
+
+</body>
+</html>

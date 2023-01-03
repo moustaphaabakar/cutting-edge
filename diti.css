@@ -1,0 +1,35 @@
+
+h1{
+    margin: 19px;
+}
+
+#badge{
+    display:inline;
+}
+div{
+    text-align: center;
+    
+    margin: 20px;
+}
+.card{
+    float: left;
+    margin: left 100px;
+    background-color: black;
+    color: white;
+}
+
+.card:hover{
+    height:20px;
+    width:20%;
+    color:black;
+    cursor: pointer;
+    background-color: #d4edda;
+    transition: 2s;
+}
+footer nav{
+    position: absolute;
+    top:50px;
+}
+footer p{
+    justify-content: center;
+}

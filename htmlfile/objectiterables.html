@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object iterables</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Iterables</h4>
+<hr>
+<p>Iterable objects are objects that can be iterated over with <code>for..of</code>.</p>
+<p>Technically, iterables must implement the <code>Symbol.iterator</code> method.</p>
+<h4 style="color: blue;">Iterating Over a String</h4>
+<p>You can use a <code >for..of</code> loop to iterate over the elements of a string:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+for (const x of "W3Schools") {<br>
+&nbsp;&nbsp;// code block to be executed<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Iterating Over an Array</h4>
+<p>You can use a <code>for..of</code> loop to iterate over the elements of an Array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+for (const x of [1,2,3,4,5]) {<br>
+&nbsp;&nbsp;// code block to be executed<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Iterators</h4>
+<p>The <b>iterator protocol</b> defines how to produce a <b>sequence of values</b> from an object.</p> 
+<p>An object becomes an <b>iterator</b> when it implements a <code>next()</code> method.</p>
+<p>The <code>next()</code> method must return an object with two properties:
+<ul>
+<li>value (the next value)</li>
+<li>done (true or false)</li>
+</ul>
+<table class="table table-striped">
+    <tr>
+    <th>value</th>
+    <td>The value returned by the iterator<br>
+    (Can be omitted if done is true)</td>
+    </tr>
+    <tr>
+    <th>done</th>
+    <td>
+    <i>true</i> if the iterator has completed<br>
+    <i>false</i> if the iterator has produced a new value</td>
+    </tr>
+    </table>
+    <h4 style="color: blue;">Home Made Iterable</h4>
+    <p>This iterable returns never ending: 10,20,30,40,.... Everytime <code>
+    next()</code> is called:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    // Home Made Iterable<br>
+    function myNumbers() {<br>
+    &nbsp;&nbsp;let n = 0;<br>
+    &nbsp;&nbsp;return {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;next: function() {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n += 10;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {value:n, done:false};<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;};<br>
+    }<br>
+    <br>
+    // Create Iterable<br>
+    const n = myNumbers();<br>
+    n.next(); // Returns 10<br>
+    n.next(); // Returns 20<br>
+    n.next(); // Returns 30<br>
+    </div>
+    <p>The problem with a home made iterable:</p>
+    <p>It does not support the JavaScript <code>for..of</code> statement.</p> 
+    <p>A JavaScript iterable is an object that has a <b>Symbol.iterator</b>.</p>
+<p>The <code>Symbol.iterator</code> is a function that returns a <code>next()</code> function.</p>
+<p>An iterable can be iterated over with the code: <code>for (const x of iterable) { }</code>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create an Object<br>
+myNumbers = {};<br>
+<br>
+// Make it Iterable<br>
+myNumbers[Symbol.iterator] = function() {<br>
+&nbsp;&nbsp;let n = 0;<br>
+&nbsp;&nbsp;done = false;<br>
+&nbsp;&nbsp;return {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;next() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n += 10;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (n == 100) {done = true}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return {value:n, done:done};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;};<br>
+}<br>
+</div>
+<p>Now you can use <code>for..of</code></p>
+<div class="affichage">
+for (const num of myNumbers) {<br>
+&nbsp;&nbsp;// Any Code Here<br>
+}<br>
+</div>
+<p>The Symbol.iterator method is called automatically by <code>for..of</code>.
+<p>But we can also do it "manually":
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let iterator = myNumbers[Symbol.iterator]();<br>
+<br>
+while (true) {<br>
+&nbsp;&nbsp;const result = iterator.next();<br>
+&nbsp;&nbsp;if (result.done) break;<br>
+&nbsp;&nbsp;// Any Code Here<br>
+}
+</div>
+</div>
+
+</body>
+</html>

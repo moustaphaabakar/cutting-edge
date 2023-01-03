@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Object Methods</h4>
+        <hr>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const <strong>person</strong> = {<br>
+          &nbsp; firstName: "John",<br>
+        &nbsp;&nbsp;lastName: "Doe",<br>
+        &nbsp;&nbsp;id: 5566,<br>
+        &nbsp;&nbsp;fullName: function() {<br>
+        &nbsp;&nbsp;&nbsp; return <strong>this</strong>.firstName + " " + 
+        <strong>this</strong>.lastName;<br>&nbsp;&nbsp;}<br>
+        };
+        </div>
+        <hr>
+        <h4 style="color:blue ;">What is <b>this</b>?</h4>
+        <p>In JavaScript, the <code>this</code> keyword refers to an <b>object</b>.</p>
+        <p><b>Which</b> object depends on how <code>this</code> is being invoked (used or called).</p>
+        <p>The <code>this</code> keyword refers to different objects depending on how it is used:</p>
+        <table class="table table-striped">
+        <tr><td>In an object method, <code>this</code> refers to the <b>object</b>.</td></tr>
+        <tr><td>Alone, <code>this</code> refers to the <b>global object</b>.</td></tr>
+        <tr><td>In a function, <code>this</code> refers to the <b>global object</b>.</td></tr>
+        <tr><td>In a function, in strict mode, <code>this</code> is <code>undefined</code>.</td></tr>
+        <tr><td>In an event, <code>this</code> refers to the <b>element</b> that received the event.</td></tr>
+        <tr><td>Methods like <code>call()</code>, <code>apply()</code>,
+        and <code>bind()</code> can refer <code>this</code> to <b>any object</b>.</td></tr>
+        </table>
+        <h4 style="color: blue;">Note</h4>
+        <code>this</code> is not a variable. It is a keyword. You cannot change the value of <code class="w3-codespan">this</code>.
+        <hr>
+        <h4 style="color: blue;">JavaScript Methods</h4>
+        <p>JavaScript methods are actions that can be performed on objects.</p>
+        <p>A JavaScript <strong>method</strong> is a property containing a <strong>function 
+        definition</strong>.</p>
+        <table class="table-striped table">
+         <tr>
+          <th style="width:20%">Property</th>
+          <th>Value</th>
+         </tr>
+         <tr>
+          <td>firstName</td>
+          <td>John</td>
+         </tr>
+         <tr>
+          <td>lastName</td>
+          <td>Doe</td>
+         </tr>
+         <tr>
+          <td>age</td>
+          <td>50</td>
+         </tr>
+         <tr>
+          <td>eyeColor</td>
+          <td>blue</td>
+         </tr>
+         <tr>
+          <td>fullName</td>
+          <td>function() {return this.firstName + &quot; &quot; + this.lastName;}</td>
+         </tr>
+        </table>
+            <p>Methods are functions stored as object properties.</p>
+            <hr>
+            <h4 style="color: blue;">Accessing Object Methods</h4>
+            <p>You access an object method with the following syntax:</p>
+            <div class="affichage">
+            <i>objectName.methodName()</i></div>
+            <p>You will typically describe fullName() as a method of the person object, and 
+            fullName as a property. </p>
+            <p>The fullName property will execute (as a function) when it is invoked with ().</p>
+            <p>This example accesses the fullName() <strong>method</strong> of a person object:</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            name = person.fullName();</div>
+            <p>If you access the fullName <strong>property</strong>, without (), it 
+            will return the <strong>function definition</strong>:</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            name = person.fullName;</div>
+            <hr>        
+            <h4 style="color: blue;">Adding a Method to an Object</h4>
+            <p>Adding a new method to an object is easy: </p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+              person.name = function () {<br>&nbsp;&nbsp;return this.firstName + &quot; &quot; + this.lastName;<br>};
+            </div>
+            <h4 style="color: blue;">Using Built-In Methods</h4>
+            <p>This example uses the <code>toUpperCase()</code> method of the String object, to convert a text 
+            to uppercase:</p>
+            <div class="affichage">
+            <div>
+            let message = &quot;Hello world!&quot;;<br>
+            let x = message.toUpperCase();</div></div>
+            <p>The value of x, after execution of the code above will be:</p>
+            <div class="affichage">
+            HELLO WORLD!</div>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            person.name = function () {<br>
+            &nbsp;&nbsp;return (this.firstName + &quot; &quot; + this.lastName).toUpperCase();<br>
+            };
+            </div>
+         </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html plug-ins</a> <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">HTML Plug-ins</h4>
+        <p class="intro">Plug-ins are computer programs that extend the standard functionality of the browser.</p>
+        <hr>
+        <h4 style="color:blue;">Plug-ins</h4>
+        <p>Plug-ins were designed to be used for many different purposes:
+        <ul>
+        <li>To run Java applets</li>
+        <li>To run Microsoft ActiveX controls</li>
+        <li>To display Flash movies</li>
+        <li>To display maps</li>
+        <li>To scan for viruses</li> 
+        <li>To verify a bank id</li>
+        </ul>
+        <p><b>Warning !</b></p>
+        <p>Most browsers no longer support Java Applets and Plug-ins.</p>
+        <p>ActiveX controls are no longer supported in any browsers.</p>
+        <p>The support for Shockwave Flash has also been turned off in modern browsers.</p>    
+        <hr>
+        <h4 style="color: blue;">The &lt;object&gt; Element</h4>
+        <p>The <code>&lt;object&gt;</code> element is supported by all browsers.</p>
+        <p>The <code>&lt;object&gt;</code> element defines an embedded object within an HTML document.</p>
+        <p>It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages,
+        but can also be used to include HTML in HTML:</p>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;object width=&quot;100%&quot; height=&quot;500px&quot; data=&quot;snippet.html&quot;&gt;&lt;/object&gt;
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;object data=&quot;audi.jpeg&quot;&gt;&lt;/object&gt;
+</div>
+        <hr>
+        <h4 style="color: blue;">The &lt;embed&gt; Element</h4>
+        <p>The <code>&lt;embed&gt;</code> element is supported in all major browsers.</p>
+        <p>The <code>&lt;embed&gt;</code> element also defines an embedded object within an HTML document.</p>
+        <p>Web browsers have supported the &lt;embed&gt; element for a 
+        long time. However, it has not been a part of the HTML  
+        specification before HTML5.</p>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;embed src=&quot;audi.jpeg&quot;&gt;
+</div>
+    <p>Note that the &lt;embed&gt; element does not have a closing tag. It can not 
+    contain alternative text.</p>    
+    <p>The <code>&lt;embed&gt;</code> element can also be used to include HTML in HTML:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+         &lt;embed width=&quot;100%&quot; height=&quot;500px&quot; src=&quot;snippet.html&quot;&gt;
+        </div>
+      </div>
+      
+</body>
+</html>

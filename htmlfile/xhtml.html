@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> xml <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">Html</h4>
+        <p>XHTML is a stricter, more XML-based version of HTML.</p>
+        <hr>
+        <h4 style="color: blue;">What is XHTML?</h4>
+        <ul>
+        <li>XHTML stands for E<strong>X</strong>tensible <strong>H</strong>yper<strong>T</strong>ext 
+        <strong>M</strong>arkup <strong>L</strong>anguage</li>
+        <li>XHTML is a stricter, more XML-based version of HTML</li>
+        <li>XHTML is HTML defined as an XML application</li>
+        <li>XHTML is supported by all major browsers</li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">Why XHTML?</h4>
+<p>XML is a markup language where all documents must be marked up correctly (be &quot;well-formed&quot;).</p>
+<p>XHTML was developed to make HTML more extensible and flexible to work with 
+other data formats (such as XML). In addition, browsers ignore errors in HTML 
+pages, and try to display the website even if it has some errors in the markup. 
+So XHTML comes with a much stricter error handling.</p>
+<hr>
+<h4 style="color: blue;">The Most Important Differences from HTML</h4>
+<ul>
+  <li>&lt;!DOCTYPE&gt; is <strong>mandatory</strong></li>
+  <li>The xmlns attribute in &lt;html&gt; is <strong>mandatory</strong></li>
+  <li>&lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt; are <strong>mandatory</strong></li>
+  <li>Elements must always be <b> properly nested</b></li>
+  <li>Elements must always be <b>closed</b></li>
+  <li>Elements must always be in <b>lowercase</b></li>
+  <li>Attribute names must always be in <b>lowercase</b></li>
+  <li>Attribute values must always be <b>quoted</b></li>
+  <li>Attribute minimization is <b>forbidden</b></li>
+</ul>
+<hr>
+<h4 style="color: blue;">XHTML - &lt;!DOCTYPE ....&gt; Is Mandatory</h4>
+<p>An XHTML document must have an XHTML &lt;!DOCTYPE&gt; declaration.</p>
+<p>The &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt; elements must also be present, and the xmlns attribute in &lt;html&gt; 
+must specify the xml namespace for the document.</p>
+<h4 style="color: blue;">Example</h4>
+<p>Here is an XHTML document with a minimum of required tags:&nbsp;</p>
+<div class="affichage">
+  &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot;<br>
+&lt;head&gt;<br>
+&nbsp;
+&lt;title&gt;Title of document&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br><br>&nbsp; <em>some content here...</em> <br>
+  <br>&lt;/body&gt;<br>
+&lt;/html&gt;</div>
+<hr>
+<h4 style="color: blue;">XHTML Elements Must be Properly Nested</h4>
+<p style="margin: 10px;"> In XHTML, elements must always be properly nested within each other, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+&lt;b&gt;&lt;i&gt;Some 
+  text&lt;/i&gt;&lt;/b&gt;</div>
+<h4 style="color: blue;">Wrong:</h4>
+<div class="affichage">
+&lt;b&gt;&lt;i&gt;Some 
+  text&lt;/b&gt;&lt;/i&gt;</div>
+<hr>
+<h4 style="color: blue;">XHTML Elements Must Always be Closed</h4>
+<p style="margin: 10px;"> In XHTML, elements must always be closed, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&lt;p&gt;This is another paragraph&lt;/p&gt;</div>
+<h4 style="color: blue;">Wrong:</h4>
+<div class="affichage">
+&lt;p&gt;This is a paragraph<br>
+&lt;p&gt;This is another paragraph</div>
+<hr>
+<h4 style="color: blue">XHTML Empty Elements Must Always be Closed</h4>
+<p>In XHTML, empty elements must always be closed, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+A break: &lt;br /&gt;<br>
+A horizontal rule: &lt;hr /&gt;<br>
+An image: &lt;img src=&quot;happy.gif&quot; alt=&quot;Happy face&quot; /&gt;</div>
+<h4 style="color: blue;">Wrong:</h4>
+<div class="affichage">
+A break: &lt;br&gt;<br>
+A horizontal rule: &lt;hr&gt;<br>
+An image: &lt;img src=&quot;happy.gif&quot; alt=&quot;Happy face&quot;&gt;</div>
+<hr>
+<h4 style="color: blue;">XHTML Elements Must be in Lowercase</h4>
+<p>In XHTML, element names must always be in lowercase, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+&lt;body&gt;<br>
+&lt;p&gt;This is a paragraph&lt;/p&gt;<br>
+&lt;/body&gt;</div>
+<h4 style="color: blue;">Wrong:</h>
+<div class="affichage">
+&lt;BODY&gt;<br>
+&lt;P&gt;This is a paragraph&lt;/P&gt;<br>
+&lt;/BODY&gt;</div>
+<hr>
+<h4 style="color: blue;">XHTML Attribute Names Must be in Lowercase</h4>
+<p style="margin: 10px;">In XHTML, attribute names must always be in lowercase, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+  &lt;a href=&quot;https://www.digibit.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<h4 style="color: blue;">Wrong:</h4>
+<div class="affichage">
+  &lt;a HREF=&quot;https://www.digibit.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<hr>
+<h4 style="color: blue;">XHTML Attribute Values Must be Quoted</h4>
+<p style="margin: 10px;"> In XHTML, attribute values must always be quoted, like this:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+  &lt;a href=&quot;https://www.digibit.com/html/&quot;&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<h4 style="color: blue;">Wrong:</h4>
+<div class="affichage">
+  &lt;a href=https://www.digibit.com/html/&gt;Visit our HTML tutorial&lt;/a&gt;</div>
+<hr>
+
+<h4 style="color: blue;">XHTML Attribute Minimization is Forbidden</h4>
+<p>In XHTML, attribute minimization is forbidden:</p>
+<h4 style="color: blue;">Correct:</h4>
+<div class="affichage">
+ &lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;car&quot; checked=&quot;checked&quot; /&gt;<br>&lt;input type=&quot;text&quot; name=&quot;lastname&quot; disabled=&quot;disabled&quot; /&gt;</div>
+<h4 style="color:blue ;">Wrong:</h4>
+<div class="affichage">
+ &lt;input type=&quot;checkbox&quot; name=&quot;vehicle&quot; value=&quot;car&quot; checked /&gt;<br>&lt;input type=&quot;text&quot; name=&quot;lastname&quot; disabled /&gt;
+</div>
+<hr>
+<h4 style="color: blue;">Validate HTML With The digibit Validator</h4>
+<form method="get" action="https://validator.w3.org/check" target="_blank">
+<p >Put your web address in the box below:</p>
+<p ><input name="uri" size="60" value="https://www.digibit.com/html/html_validate.html" style="max-width:100%"/></p>
+<p ><input type="submit" value="Validate the page"></p>
+</form>
+</div>
+</body>
+</html>

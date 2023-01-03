@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS date formats</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Date Formats</h4>
+        <hr>
+        <h4 style="color: blue;">JavaScript Date Input</h4>
+        <p>There are generally 3 types of JavaScript date input formats:</p>
+        <table class="table table-striped">
+         <tr>
+          <th>Type</th>
+          <th>Example</th>
+         </tr>
+         <tr>
+          <td>ISO Date</td>
+          <td>&quot;2015-03-25&quot;  (The International Standard)</td>
+         </tr>
+         <tr>
+          <td>Short Date</td>
+          <td>&quot;03/25/2015&quot;</td>
+         </tr>
+         <tr>
+          <td>Long Date</td>
+          <td>&quot;Mar 25 2015&quot; or &quot;25 Mar 2015&quot;</td>
+         </tr>
+        </table>
+        <p>The ISO format follows a strict standard in JavaScript.</p>
+         <p>The other formats are not 
+         so well defined and might be browser specific.</p>    
+        <h4 style="color: blue;">JavaScript Date Output</h4>
+        <p>Independent of input format, JavaScript will (by default) output dates in full 
+        text string format:</p>      
+        <hr>
+        <h4 style="color: blue;">JavaScript ISO Dates</h4>
+        <p>ISO 8601 is the international standard for the representation of dates and 
+            times.</p>
+            <p>The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format:</p>
+            <h4 style="color: blue;">Example (Complete date)</h4>
+            <div class="affichage">
+            const d = new Date(&quot;2015-03-25&quot;);
+            </div>
+            <p>The computed date will be relative to your time zone.<br>Depending on your time zone, the result above 
+            will vary between March 24 and March 25.</p>
+            <hr>
+            <h4 style="color: blue;">ISO Dates (Year and Month)</h4>
+            <p>ISO dates can be written without specifying the day (YYYY-MM):</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            const d = new Date(&quot;2015-03&quot;);
+            </div>
+            <p>Time zones will vary the result above between February 28 and March 01.</p>    
+            <hr>
+            <h4 style="color: blue;">ISO Dates (Only Year)</h4>
+            <p>ISO dates can be written without month and day (YYYY):</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            const d = new Date(&quot;2015&quot;);
+            </div>
+            <p>Time zones will vary the result above between December 31 2014 and January 01 2015.</p>
+            <hr>
+<h4 style="color: blue;">ISO Dates (Date-Time)</h4>
+<p>ISO dates can be written with added hours, minutes, and seconds 
+(YYYY-MM-DDTHH:MM:SSZ):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;2015-03-25T12:00:00Z&quot;);
+</div>
+<p>Date and time is separated with a capital T.</p>
+<p>UTC time is defined with a capital letter Z.</p>
+<p>If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM 
+instead: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;2015-03-25T12:00:00-06:30&quot;);
+</div>
+<p>UTC (Universal Time Coordinated)  is the same as GMT (Greenwich Mean Time).</p>
+<p>Omitting T or Z in a date-time string can give different results in different browsers.</p>
+<hr>
+<h4 style="color: blue;">Time Zones</h4>
+<p>When setting a date, without specifying the time zone, JavaScript will use 
+the browser's time zone.</p>
+<p>When getting a date, without specifying the time zone, the result is 
+converted to the browser's time zone.</p>
+<p>In other words: If a date/time is created in GMT (Greenwich Mean Time), the 
+date/time will be converted to CDT (Central US Daylight Time) if a user browses 
+from central US.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Short Dates.</h4>
+<p>Short dates are written with an &quot;MM/DD/YYYY&quot; syntax like this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;03/25/2015&quot;);</div>  
+<hr>
+<h4 style="color: blue;">WARNINGS !</h4>
+<p>In some browsers, months or days with no leading zeroes may produce an error: </p>
+<div class="affichage">
+const d = new Date(&quot;2015-3-25&quot;);
+</div>
+<p>The behavior of &quot;YYYY/MM/DD&quot; is undefined.<br>Some browsers will 
+try to guess the format. Some will return NaN.</p>
+<div class="affichage">
+const d = new Date(&quot;2015/03/25&quot;);</div>
+<p>The behavior of&nbsp; &quot;DD-MM-YYYY&quot; is also undefined.<br>Some browsers will 
+try to guess the format. Some will return NaN.</p>
+<div class="affichage">
+const d = new Date(&quot;25-03-2015&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Long Dates.</h4>
+<p>Long dates are most often written with a &quot;MMM DD YYYY&quot; syntax like this: </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;Mar 25 2015&quot;);
+</div>
+<p>Month and day can be in any order:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;25 Mar 2015&quot;);
+</div>
+<p>And, month can be written in full (January), or abbreviated (Jan):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date(&quot;January 25 2015&quot;);
+</div>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date(&quot;Jan 25 2015&quot;);
+    </div>
+    <p>Commas are ignored. Names are case insensitive:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const d = new Date(&quot;JANUARY, 25, 2015&quot;);
+    </div>
+    <hr>
+    <h4 style="color: blue;">Date Input - Parsing Dates</h4>
+    <p>If you have a valid date string, you can use the <code>
+    Date.parse()</code> method to convert it to milliseconds.</p>
+    <p><code>Date.parse()</code> returns the number of milliseconds between the date and January 
+    1, 1970:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let msec = Date.parse(&quot;March 21, 2012&quot;);<br>
+    </div>
+    <p>You can then use the number of milliseconds to <strong>convert it to a date</strong> object:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let msec = Date.parse(&quot;March 21, 2012&quot;);<br>
+    const d = new Date(msec);<br>
+    </div>
+    </div>
+    
+</body>
+</html>

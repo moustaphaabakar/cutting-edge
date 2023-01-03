@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html forms <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="margin: 10px;">forms</h4>
+        <p class="intro">An HTML form is used to collect user input. The user input is most often sent to a server for processing. </p>
+        <hr>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+<form action="/action_page.php" target="_blank">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+</div>
+<h4 style="color: blue;">The &lt;form&gt; Element</h4>
+<p>The HTML <code>&lt;form&gt;</code> element is used to create an HTML form for user input:</p>
+<div class="affichage">
+ &lt;form&gt;<br>
+ .<br>
+<i>form elements</i><br>
+ .<br>
+ &lt;/form&gt;<br>
+</div>
+
+<p>
+    <p>The <code>&lt;form&gt;</code> element is a container for different types of input elements,such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+    <p>All
+    the different form elements are covered in this chapter:
+</p>
+<hr>
+    <h4 style="color: 10px;">The &lt;input&gt; Element</h4>
+<p>The HTML <code>&lt;input&gt;</code> element is the most used form element. </p>
+<p>An <code>&lt;input&gt;</code> element can be displayed in many ways, depending on the <code>type</code> 
+attribute.</p>
+<p>Here are some examples:</p>
+<table class="table table-striped">
+ <tr>
+  <th>Type</th>
+  <th>Description</th>
+ </tr>
+ <tr>
+  <td>&lt;input type=&quot;text&quot;&gt;</td>
+  <td>Displays a single-line text input field</td>
+ </tr>
+ <tr>
+  <td>&lt;input type=&quot;radio&quot;&gt;</td>
+  <td>Displays a radio button (for selecting one of many choices)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type=&quot;checkbox&quot;&gt;</td>
+  <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type=&quot;submit&quot;&gt;</td>
+  <td>Displays a submit button (for submitting the form)</td>
+ </tr>
+ <tr>
+  <td>&lt;input type=&quot;button&quot;&gt;</td>
+  <td>Displays a clickable button</td>
+ </tr>
+ </table>
+<p>All the different input types are covered in this chapter:</p>
+    <h4 style="color: blue;">Text Fields</h4>
+    <p>The <code>&lt;input type="text"&gt;</code> defines a single-line input field for text input.</p>
+    <h4 style="color: blue;">Example</h4>
+      <p>A form with input fields for text:</p>
+    <div class="affichage">
+     &lt;form&gt;<br>
+      &nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+      type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last 
+      name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname"&gt;<br>&lt;/form&gt;
+    </div>
+    <p>This is how the HTML code above will be displayed in a browser:</p>
+    <form>
+    First name:<br>
+    <input type="text" name="fname"><br>
+    Last name:<br>
+    <input type="text" name="lname">
+    </form>    
+    <h4 style="color: blue;">The &lt;label&gt; Element</h4>
+    <p>Notice the use of the <code>&lt;label&gt;</code> element in the 
+    example above. </p>
+    <p>The <code>&lt;label&gt;</code> tag defines a label for many form elements.</p>
+    <p>The <code>&lt;label&gt;</code> element is useful for 
+    screen-reader users, because the screen-reader will read out loud the label when 
+    the user focus on the input element.</p>
+    <p>The <code>&lt;label&gt;</code> element also help users who have 
+    difficulty clicking on very small regions (such as radio buttons or checkboxes) 
+    - because when the user clicks the text within the <code>&lt;label&gt;</code> element, it toggles 
+    the radio button/checkbox.</p>
+    <p>The <code>for</code> attribute of the <code>&lt;label&gt;</code> tag should 
+    be equal to the <code>id</code> attribute of the <code>&lt;input&gt;</code>  
+    element to bind them together. </p>
+    <hr>
+    <h4 style="color: blue;">Radio Buttons</h4>
+    <p>The <code>&lt;input type="radio"&gt;</code> defines a radio button.</p>
+    <p>Radio buttons let a user select ONE of a limited number of choices.</p>
+     <h4 style="color: blue;">Example</h4>
+      <p>A form with radio buttons:</p>
+    <div class="affichage">
+    &lt;p&gt;Choose your favorite Web language:&lt;/p&gt;<br><br>
+    &lt;form&gt;<br>&nbsp; &lt;input type=&quot;radio&quot; id=&quot;html&quot; name=&quot;fav_language&quot; 
+      value=&quot;HTML&quot;&gt;<br>&nbsp; &lt;label for=&quot;html&quot;&gt;HTML&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+      type=&quot;radio&quot; id=&quot;css&quot; name=&quot;fav_language&quot; value=&quot;CSS&quot;&gt;<br>&nbsp; &lt;label 
+      for=&quot;css&quot;&gt;CSS&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;radio&quot; id=&quot;javascript&quot; 
+      name=&quot;fav_language&quot; value=&quot;JavaScript&quot;&gt;<br>&nbsp; &lt;label for=&quot;javascript&quot;&gt;JavaScript&lt;/label&gt;<br>&lt;/form&gt;
+    </div>
+    <p>Choose your favorite Web language:</p>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+    <hr>
+    <h4 style="color: blue;">Checkboxes</h4>
+    <p>The <code>&lt;input type=&quot;checkbox&quot;&gt;</code> defines a <strong>checkbox</strong>.</p>
+    <p>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+    <div>
+     <h4 style="color: blue;">Example</h4>
+      <p>A form with checkboxes:</p>
+    <div class="affichage">
+     &lt;form&gt;<br>&nbsp; &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;<br>&nbsp; 
+      &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input 
+      type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;<br>&nbsp; &lt;label for=&quot;vehicle2&quot;&gt; 
+      I have a car&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;checkbox&quot; 
+      id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; 
+      value=&quot;Boat&quot;&gt;<br>&nbsp; &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;<br>
+     &lt;/form&gt;
+    </div>
+    <h4 style="color: blue;">The Submit Button</h4>
+    <p>The <code>&lt;input type="submit"&gt;</code> defines a button for submitting the form data to a form-handler.</p>
+    <p>The form-handler is typically a file on the server with a script for processing 
+    input data.</p>
+    <p>The form-handler is specified in the form's <code>action</code> 
+    attribute.</p>
+    <h4 style="color: blue;">Example</h4>
+      <p>A form with a submit button:</p>
+    <div class="affichage">
+     &lt;form action="/action_page.php"&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+      name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; 
+      value=&quot;John&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; 
+      &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;
+    </div>
+    <h4 style="color: blue;">The Name Attribute for &lt;input&gt;</h4>
+    <p>Notice that each input field must have a <code>name</code> attribute to be submitted.</p>
+    <p>If the <code>name</code> attribute is omitted, the value of the input field will not be sent at all.</p>
+    <h4 style="color: blue;">Example</h4>
+    <p>This example will not submit the value of the &quot;First name&quot; input field:&nbsp;</p>
+    <div class="affichage">
+     &lt;form action="/action_page.php"&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First 
+      name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot; value=&quot;John&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; 
+      &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;
+    </div>
+      </div>
+</body>
+</html>

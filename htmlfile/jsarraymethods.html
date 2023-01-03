@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS array methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Array Methods</h4>
+        <hr>
+        <h4 style="color: blue;">Converting Arrays to Strings</h4>
+        <p>The JavaScript method <code>toString()</code> converts an array to a 
+        string of (comma separated) array values.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        document.getElementById(&quot;demo&quot;).innerHTML = fruits.toString();
+        </div>
+        <p>Result:</p>
+        <p>
+         Banana,Orange,Apple,Mango<br>
+        </p>    
+        <p>The <code>join()</code> method also joins all array elements into a string.</p>
+        <p>It behaves just like <code>toString()</code>, but in addition you can specify the separator:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        document.getElementById(&quot;demo&quot;).innerHTML = fruits.join(&quot; * &quot;);
+        </div>
+        <p>Result:</p>
+        <p>
+         Banana * Orange * Apple * Mango</p>
+         <hr>
+         <h4 style="color: blue;">Popping and Pushing</h4>
+         <p>When you work with arrays, it is easy to remove elements and add 
+         new elements.</p>
+         <p>This is what popping and pushing is:</p>
+         <p>Popping items <strong>out</strong> of an array, or pushing 
+         items <strong>into</strong> an array.</p>
+         <h4 style="color: blue;">JavaScript Array pop()</h4>
+         <p>The <code>pop()</code> method removes the last element from an array: </p>
+         <h4 style="color: blue;">Example</h4>
+         <div class="affichage">
+         const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+         fruits.pop();
+         </div>
+         <p>The <code>pop()</code> method returns the value that was &quot;popped out&quot;:</p>
+         <h4 style="color: blue;">Example</h4>
+         <div class="affichage">
+         const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+         let fruit = fruits.pop();
+         </div>  
+<hr>
+<h4 style="color: blue;">JavaScript Array push()</h4>
+<p>The <code>push()</code> method adds a new element to an array (at the end):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+fruits.push(&quot;Kiwi&quot;);
+</div>
+<p>The <code>push()</code> method returns the new array length:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+let length = fruits.push(&quot;Kiwi&quot;);
+</div>
+<h4 style="color: blue;">Shifting Elements</h4>
+<p>Shifting is equivalent to popping, but working on the first element instead of 
+the last.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Array shift()</h4>
+<p>The <code>shift()</code> method removes the first array element and &quot;shifts&quot; all 
+    other elements to a lower index.</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+    fruits.shift();
+    </div>
+    <p>The <code>shift()</code> method returns the value that was &quot;shifted out&quot;:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+    let fruit = fruits.shift();
+    </div>
+    <hr>
+    <h4 style="color: blue;">JavaScript Array unshift()</h4>
+    <p>The <code>unshift()</code> method adds a new element to an array (at the beginning), and &quot;unshifts&quot; 
+    older elements: </p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+    fruits.unshift(&quot;Lemon&quot;);
+    </div>
+    <p>The <code>unshift()</code> method returns the new array length.</p>
+<h3>Example</h3>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+fruits.unshift(&quot;Lemon&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">Changing Elements</h4>
+<p>Array elements are accessed using their <strong>index number</strong>:</p>
+<p>Array <strong>indexes</strong> start with 0:</p>
+<p>[0] is the first array element<br>[1] is the second<br>[2] is the third ...</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+fruits[0] = &quot;Kiwi&quot;;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Array length</h4>
+<p>The <code>length</code> property provides an easy way to append a new element to an array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+fruits[fruits.length] = &quot;Kiwi&quot;;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Array delete()</h4>
+<h4 style="color: blue;">Warning !</h4>
+<p>Array elements can be deleted using the JavaScript operator <code>delete</code>.</p>
+<p>Using <code>delete</code> leaves <code>undefined</code> holes in the 
+array.</p>
+<p>Use pop() or shift() instead.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+delete fruits[0];
+</div>
+<hr>
+<h4 style="color: blue;">Merging (Concatenating) Arrays</h4>
+<p>The <code>concat()</code> method creates a new array by merging (concatenating) 
+existing arrays:</p>
+<h3>Example (Merging Two Arrays)</h3>
+<div class="affichage">
+const myGirls = [&quot;Cecilie&quot;, &quot;Lone&quot;];<br>
+const myBoys = [&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;];<br>
+<br>
+const myChildren = myGirls.concat(myBoys);
+</div>
+    <p>The <code>concat()</code> method does not change the existing arrays. It always returns a new array.</p>
+    <p>The <code>concat()</code> method can take any number of array arguments:</p>
+    <h4 style="color: 10px;">Example (Merging Three Arrays)</h4>
+    <div class="affichage">
+    const arr1 = [&quot;Cecilie&quot;, &quot;Lone&quot;];<br>
+    const arr2 = [&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;];<br>
+    const arr3 = [&quot;Robin&quot;, &quot;Morgan&quot;];<br>
+    const myChildren = arr1.concat(arr2, arr3);
+    </div>
+    <p>The <code>concat()</code> method can also take strings as arguments:</p>
+    <h4 style="color: blue;">Example (Merging an Array with Values)</h4>
+    <div class="affichage">
+    const arr1 = [&quot;Emil&quot;, &quot;Tobias&quot;, &quot;Linus&quot;];<br>
+    const myChildren = arr1.concat(&quot;Peter&quot;);&nbsp;</div>
+    <hr>
+    <h2>Splicing and Slicing Arrays</h2>
+    <p>The <code>splice()</code> method adds new items to an array.</p>
+    <p>The <code>slice()</code> method slices out a piece of an array.</p>
+    <hr>
+    <h4 style="color: blue;">JavaScript Array splice()</h4>
+    <p>The <code>splice()</code> method can be used to add new items to an array: </p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        fruits.splice(2, 0, &quot;Lemon&quot;, &quot;Kiwi&quot;);
+        </div>
+        <p>The first parameter (2) defines the position <strong>where</strong> new elements should be 
+        <strong>added</strong> (spliced in).</p>
+        <p>The second parameter (0) defines <strong>how many</strong> elements should be
+        <strong>removed</strong>.</p>
+        <p>The rest of the parameters (&quot;Lemon&quot; , &quot;Kiwi&quot;) define the new elements to be
+        <strong>added</strong>.</p>
+        <p>The <code>splice()</code> method returns an array with the deleted items: </p>
+        <h4 style="color:blue">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        fruits.splice(2, 2, &quot;Lemon&quot;, &quot;Kiwi&quot;);
+        </div>
+        <hr>
+        <h4 style="color:blue ;">Using splice() to Remove Elements</h4>
+        <p>With clever parameter setting, you can use <code >splice()</code> to remove elements without leaving 
+        &quot;holes&quot; in the array: </p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        fruits.splice(0, 1);
+        </div>
+        <p>The first parameter (0) defines the position where new elements should be 
+        <strong>added</strong> (spliced in).</p>
+        <p>The second parameter (1) defines <strong>how many</strong> elements should be
+        <strong>removed</strong>.</p>
+        <p>The rest of the parameters are omitted. No new elements will be added.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Array slice()</h4>
+        <p>The <code>slice()</code> method slices out a piece of an array into a new 
+        array.</p>
+        <p>This example slices out a part of an array starting from array element 1 
+        (&quot;Orange&quot;):</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        const citrus = fruits.slice(1);
+        </div>
+        <h4 style="color: blue;">Note</h4>
+        <p>The <code >slice()</code> method creates a new array.</p>
+        <p>The <code >slice()</code> method does not remove any elements from the source array.</p>
+        <p>This example slices out a part of an array starting from array element 3 
+        (&quot;Apple&quot;):</p>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const citrus = fruits.slice(3);
+</div>
+<p>The <code>slice()</code> method can take two arguments like <code>slice(1, 3)</code>.</p>
+<p>The method then selects elements from the start argument, and up to (but not 
+including) the end argument.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const citrus = fruits.slice(1, 3);
+</div>
+<p>If the end argument is omitted, like in the first examples, the <code>slice()</code> 
+method slices out the rest of the array.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+const citrus = fruits.slice(2);
+</div>
+<hr>
+<h4 style="color: blue;">Automatic toString()</h4>
+<p>JavaScript automatically converts an array to a comma separated string when a 
+primitive value is expected.</p>
+<p>This is always the case when you try to output an array. </p>
+<p>These two examples will produce the same result:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+document.getElementById(&quot;demo&quot;).innerHTML = fruits.toString();</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+document.getElementById(&quot;demo&quot;).innerHTML = fruits;
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>All JavaScript objects have a toString() method.</p>
+<hr>
+<h4 style="color: blue;">Finding Max and Min Values in an Array</h4>
+<p>There are no built-in functions for finding the highest 
+or lowest value in a JavaScript array.</p>
+<p>You will learn how you solve this problem in the next 
+chapter of this tutorial.</p>
+<hr>
+<h4 style="color: blue;">Sorting Arrays</h4>
+<p>Sorting arrays are covered in the next chapter of this tutorial.</p>
+<h4 style="color: blue;">Complete Array Reference</h4>
+<p>For a complete Array reference, go to our:</p>
+<p>Complete JavaScript Array Reference.</p>
+<p>The reference contains descriptions and examples of all Array 
+properties and methods.</p>
+</div>
+</body>
+</html>

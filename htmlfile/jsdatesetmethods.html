@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS date set methods</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Set Date Methods</h4>
+        <hr>
+        <p>Set Date methods let you set date values (years, 
+        months, days, hours, minutes, seconds, milliseconds) for a Date Object.</p>
+        <hr>
+        <h4 style="color: blue;">Set Date Methods</h4>
+        <p>Set Date methods are used for setting a part of a date:</p>
+        <table class="table table-striped">
+        <tr>
+        <th>Method</th>
+        <th>Description</th>
+        </tr>
+        <tr>
+        <td>setDate()</td>
+        <td>Set the day as a number (1-31)</td>
+        </tr>
+        <tr>
+        <td>setFullYear()</td>
+        <td>Set the year (optionally month and day)</td>
+        </tr>
+        <tr>
+        <td>setHours()</td>
+        <td>Set the hour (0-23)</td>
+        </tr>
+        <tr>
+        <td>setMilliseconds()</td>
+        <td>Set the milliseconds (0-999)</td>
+        </tr>
+        <tr>
+        <td>setMinutes()</td>
+        <td>Set the minutes (0-59)</td>
+        </tr>
+        <tr>
+        <td>setMonth()</td>
+        <td>Set the month (0-11)</td>
+        </tr>
+        <tr>
+        <td>setSeconds()</td>
+        <td>Set the seconds (0-59)</td>
+        </tr>
+        <tr>
+        <td>setTime()</td>
+        <td>Set the time (milliseconds since January 1, 1970)</td>
+        </tr>
+        </table>
+        <h4 style="color: blue;">The setFullYear() Method</h4>
+<p>The <code>setFullYear()</code> method sets the year of a date object. In this example to 2020:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setFullYear(2020);<br>
+</div>
+<p>The <code>setFullYear()</code> method can <strong>optionally</strong> set month and day:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setFullYear(2020, 11, 3);<br>
+</div>
+<hr>
+<h4 style="color:blue ;">The setMonth() Method</h4>
+<p>The <code >setMonth()</code> method sets the month of a date object (0-11):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setMonth(11);<br>
+</div>
+<h4 style="color: blue;">The setDate() Method</h4>
+<p>The <code>setDate()</code> method sets the day of a date object (1-31):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setDate(15);
+</div>
+<p>The <code>setDate()</code> method can also be used to <strong>add days</strong> to a date:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setDate(d.getDate() + 50);
+</div>
+<p>If adding days shifts the month or year, the changes are handled automatically by the Date object.</p>
+<hr>
+<h4 style="color: blue;">The setHours() Method</h4>
+<p>The <code>setHours()</code> method sets the hours of a date object (0-23):</p>
+<h4 style="color:blue">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setHours(22);<br>
+</div>
+<hr>
+<h4 style="color: blue;">The setMinutes() Method</h4>
+<p>The <code>setMinutes()</code> method sets the minutes of a date object (0-59):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setMinutes(30);<br>
+</div>
+<hr>
+<h4 style="color: blue;">The setSeconds() Method</h4>
+<p>The <code >setSeconds()</code> method sets the seconds of a date object (0-59):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const d = new Date();<br>
+d.setSeconds(30);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Compare Dates</h4>
+<p>Dates can easily be compared.</p>
+<p>The following example compares today's date with January 14, 2100:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = "";<br>
+const today = new Date();<br>
+const someday = new Date();<br>
+ someday.setFullYear(2100, 0, 14);<br><br>if (someday &gt; today) {<br>&nbsp; text = &quot;Today is before January 14, 2100.&quot;;<br>} else {<br>
+  &nbsp; text = &quot;Today is after January 14, 2100.&quot;;<br>}
+</div>
+<p>JavaScript counts months from 0 to 11. January is 0. December is 11.</p>
+<h4 style="color: blue;">Complete JavaScript Date Reference</h4>
+<p>For a complete Date reference, go to our:</p>
+<p>Complete JavaScript Date Reference</p>
+<p>The reference contains descriptions and examples of all Date properties and 
+methods.</p>
+</div>
+</body>
+</html>

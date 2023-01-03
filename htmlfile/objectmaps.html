@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object maps</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div  class="mediaquery" style="margin: 10px;">
+        <h4 style="color: blue;">JavaScript Maps</h4>
+        <hr>
+        <p>A Map holds key-value pairs where the keys can be any datatype.</p>
+        <p>A Map remembers the original insertion order of the keys.</p>
+        <p>A Map has a property that represents the size of the map.</p>
+        <h4 style="color: blue;">Map Methods</h4>
+        <table class="table table-striped">
+        <tr><th width="120px">Method</th><th>Description</th></tr>
+        <tr><td>new Map()</td><td>Creates a new Map object</td></tr>
+        <tr><td>set()</td><td>Sets the value for a key in a Map</td></tr>
+        <tr><td>get()</td><td>Gets the value for a key in a Map</td></tr>
+        <tr><td>clear()</td><td>Removes all the elements from a Map</td></tr>
+        <tr><td>delete()</td><td>Removes a Map element specified by a key</td></tr>
+        <tr><td>has()</td><td>Returns true if a key exists in a Map</td></tr>
+        <tr><td>forEach()</td><td>Invokes a callback for each key/value pair in a Map</td></tr>
+        <tr><td>entries()</td><td>Returns an iterator object with the [key, value] pairs in a Map</td></tr>
+        <tr><td>keys()</td><td>Returns an iterator object with the keys in a Map</td></tr>
+        <tr><td>values()</td><td>Returns an iterator object of the values in a Map</td></tr>
+        </table>
+        <table class="table table-striped">
+        <tr><th width="120px">Property</th><th>Description</th></tr>
+        <tr><td>size</td><td>Returns the number of Map elements</td></tr>
+        </table>
+        <hr>
+        <h4 style="color: blue;">How to Create a Map</h4>
+        <p>You can create a JavaScript Map by:</p>
+        <ul>
+        <li>Passing an Array to <code>new Map()</code></li>
+        <li>Create a Map and use <code>Map.set()</code></li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">new Map()</h4>
+        <p>You can create a Map by passing an Array to the <code>new Map()</code> constructor:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        // Create a Map<br>
+        const fruits = new Map([<br>
+        &nbsp; ["apples", 500],<br>
+        &nbsp; ["bananas", 300],<br>
+        &nbsp; ["oranges", 200]<br>
+        ]);<br>
+        </div>
+        <hr>
+<h4 style="color: blue;">Map.set()</h4>
+<p>You can add elements to a Map with the <code>set()</code> method:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create a Map<br>
+const fruits = new Map();<br>
+<br>
+// Set Map Values<br>
+fruits.set("apples", 500);<br>
+fruits.set("bananas", 300);<br>
+fruits.set("oranges", 200);<br>
+</div>
+<p>The <code>set()</code> method can also be used to change existing Map values:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.set("apples", 500);
+</div>
+<hr>
+<h4 style="color: blue;">Map.get()</h4>
+<p>The <code>get()</code> method gets the value of a key in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.get("apples");&nbsp;&nbsp;&nbsp;&nbsp;// Returns 500<br>
+</div>
+<hr>
+<h4 style="color: blue;">Map.size</h4>
+<p>The <code>size</code> property returns the number of elements in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.size;
+</div>
+<hr>
+<h4 style="color: blue;">Map.delete()</h4>
+<p>The <code>delete()</code> method removes a Map element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.delete("apples");
+</div>
+<hr>
+<h4 style="color: blue;">Map.clear()</h4>
+<p>The <code>clear()</code> method removes all the elements from a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.clear();
+</div>
+<hr>
+<h4 style="color: blue;">Map.has()</h4>
+<p>The <code>has()</code> method returns true if a key exists in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.has("apples");
+</div>
+<hr>
+<h4 style="color: blue;">Maps are Objects</h4>
+<p><code>typeof</code> returns object:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Returns object:<br>
+typeof fruits;
+</div>
+<p><code>instanceof</code> Map returns true:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Returns true:<br>
+fruits instanceof Map;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Objects vs Maps</h4>
+<h4 style="color: blue;">Differences between JavaScript Objects and Maps:</h4>
+<table class="table table-striped">
+<tr><th>Object</th><th>Map</th></tr>
+<tr>
+<td>Not directly iterable</td>
+<td>Directly iterable</td></tr>
+<tr>
+<td>Do not have a size property</td>
+<td>Have a size property</td></tr>
+<tr>
+<td>Keys must be Strings (or Symbols)</td>
+<td>Keys can be any datatype</td></tr>
+<tr>
+<td>Keys are not well ordered</td>
+<td>Keys are ordered by insertion</td></tr>
+<tr>
+<td>Have default keys</td>
+<td>Do not have default keys</td></tr>
+</table>
+<h4 style="color: blue;">Map.forEach()</h4>
+<p>The <code>forEach()</code> method invokes a callback for each key/value pair in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// List all entries<br>
+let text = "";<br>
+fruits.forEach (function(value, key) {<br>
+&nbsp;&nbsp;text += key + ' = ' + value;<br>
+})
+</div>
+<hr>
+<h4 style="color: blue;">Map.entries()</h4>
+<p>The <code>entries()</code> method returns an iterator object with the [key,values] in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// List all entries<br>
+let text = "";<br>
+for (const x of fruits.entries()) {<br>
+&nbsp;&nbsp;text += x;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Map.keys()</h4>
+<p>The <code>keys()</code> method returns an iterator object with the keys in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// List all keys<br>
+let text = "";<br>
+for (const x of fruits.keys()) {<br>
+&nbsp;&nbsp;text += x;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Map.values()</h4>
+<p>The <code>values()</code> method returns an iterator object with the values in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// List all values<br>
+let text = "";<br>
+for (const x of fruits.values()) {<br>
+&nbsp;&nbsp;text += x;<br>
+}
+</div>
+<p>You can use the <code>values()</code> method to sum the values in a Map:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Sum all values<br>
+let total = 0;<br>
+for (const x of fruits.values()) {<br>
+&nbsp;&nbsp;total += x;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Objects as Keys</h4>
+<p>Being able to use objects as keys is an important Map feature.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create Objects<br>
+const apples = {name: 'Apples'};<br>
+const bananas = {name: 'Bananas'};<br>
+const oranges = {name: 'Oranges'};<br>
+<br>
+// Create a Map<br>
+const fruits = new Map();<br>
+<br>
+// Add new Elements to the Map<br>
+fruits.set(apples, 500);<br>
+fruits.set(bananas, 300);<br>
+fruits.set(oranges, 200);<br>
+</div>
+<p>Remember: The key is an object (apples), not a string ("apples"):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+fruits.get("apples");&nbsp;&nbsp;// Returns undefined<br>
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>JavaScript Maps are supported in all browsers, except Internet Explorer:</p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px">
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>    
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+</tbody></table>
+ </div>
+</body>
+</html>

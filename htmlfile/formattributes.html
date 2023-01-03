@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html forms attributes <head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+      <h4 style="color: blue;margin: 10px;">forms</h4>
+      <p style="margin: 10px;">An HTML form is used to collect user input. The user input is  most often sent to a server for processing. </p>
+      <hr>
+      <h4 style="color: blue;margin: 10px;">The &lt;form&gt; Element</h4>
+      <p style="margin: 10px;">The HTML <code >&lt;form&gt;</code> element is used to create an HTML form for user input:</p>
+      <div class="affichage">
+       &lt;form&gt;<br>
+       .<br>
+      <i>form elements</i><br>
+       .<br>
+       &lt;/form&gt;<br>
+      </div>
+      <p>The <code>&lt;form&gt;</code> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+      <p>Allthe different form elements are covered in this chapter:</p>
+      <hr>
+      <h4 style="color: blue;margin: 10px;">The &lt;input&gt; Element</h4>
+      <p >The HTML <code>&lt;input&gt;</code> element is the most used form element. </p>
+      <p>An <code>&lt;input&gt;</code> element can be displayed in many ways, depending on the <code>type</code> attribute.</p>
+      <p>Here are some examples:</p>
+      <table class="table table-striped">
+       <tr>
+        <th>Type</th>
+        <th>Description</th>
+       </tr>
+       <tr>
+        <td>&lt;input type=&quot;text&quot;&gt;</td>
+        <td>Displays a single-line text input field</td>
+       </tr>
+       <tr>
+        <td>&lt;input type=&quot;radio&quot;&gt;</td>
+        <td>Displays a radio button (for selecting one of many choices)</td>
+       </tr>
+       <tr>
+        <td>&lt;input type=&quot;checkbox&quot;&gt;</td>
+        <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+       </tr>
+       <tr>
+        <td>&lt;input type=&quot;submit&quot;&gt;</td>
+        <td>Displays a submit button (for submitting the form)</td>
+       </tr>
+       <tr>
+        <td>&lt;input type=&quot;button&quot;&gt;</td>
+        <td>Displays a clickable button</td>
+       </tr>
+       </table>
+      </div>
+</body>
+</html>

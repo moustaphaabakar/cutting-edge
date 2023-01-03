@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS temaplates</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Template Literals</h4>
+        <p>Synonyms:</p>
+        <ul>
+        <li>Template Literals</li>
+        <li>Template Strings</li>
+        <li>String Templates</li>
+        <li>Back-Tics Syntax</li>
+        </ul>
+        <h4 style="color: blue;">Back-Tics Syntax</h4>
+<p><b>Template Literals</b> use back-ticks (``) rather than the quotes ("") to define a string:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = `Hello World!`;
+</div>
+<hr>
+<h4 style="color: blue;">Quotes Inside Strings</h4>
+<p>With <b>template literals</b>, you can use both single and double quotes inside a string:</p>
+<h4 style="color: blue;">Example</h4>
+<p>
+let text = `He's often called "Johnny"`;
+</p>
+<hr>
+<h4 style="color: blue;">Multiline Strings</h4>
+<p><b>Template literals</b> allows multiline strings:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text =<br>
+`The quick<br>
+brown fox<br>
+jumps over<br>
+the lazy dog`;<br>
+</div>
+<hr>
+<h4 style="color: blue;">Interpolation</h4>
+<p><b>Template literals</b> provide an easy way to interpolate variables and expressions into strings.</p>
+<p>The method is called string interpolation.</p>
+<hr>
+<h4 style="color: blue;">Variable Substitutions</h4>
+<p><b>Template literals</b> allow variables in strings:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let firstName = "John";<br>
+let lastName = "Doe";<br>
+<br>
+let text = `Welcome ${firstName}, ${lastName}!`;
+</div>
+<p>Automatic replacing of variables with real values is called <b>string interpolation</b>.</p>
+<hr>
+<h4 style="color: blue;">Expression Substitution</h4>
+<p><b>Template literals</b> allow expressions in strings:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let price = 10;<br>
+let VAT = 0.25;<br>
+<br>
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+</div>
+<p>Automatic replacing of expressions with real values is called <b>string interpolation</b>.</p>
+<hr>
+<h4 style="color: blue;">HTML Templates</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let header = "Templates Literals";<br>
+let tags = ["template literals", "javascript", "es6"];<br>
+<br>
+let html = `&lt;h2&gt;${header}&lt;/h2&gt;&lt;ul&gt;`;
+<br>
+for (const x of tags) {<br>
+&nbsp; html += `&lt;li&gt;${x}&lt;/li&gt;`;<br>
+}<br>
+<br>
+html += `&lt;/ul&gt;`;
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>Template Literals</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>Template Literals</code> is not supported in Internet Explorer.</p>
+</div>
+
+</body>
+</html>

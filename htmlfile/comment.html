@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html comment</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+           <h4 style="color:blue ;">comments</h4>
+           <p>HTML comments are not displayed in the browser, but they can help document your HTML source code.</p>
+           <hr>
+           <h4 style="color:blue ;">HTML Comment Tag</h4>
+           <p>You can add comments to your HTML source by using the following syntax:</p>
+           <div>
+           <div class="affichage">
+           &lt;!-- Write your comments here --&gt;
+           </div></div>
+           <p>Notice that there is an exclamation point (!) in the start tag, but not in the end tag.</p>
+           <div>
+            <p><strong>Note:</strong> Comments are not displayed by the browser, but they can help document your HTML source code.</p>
+           </div>
+           <hr>
+           <h4 style="color:blue ;">Hide Content</h4>
+           <p>Comments can be used to hide content.</p>
+           <p>This can be helpful if you hide content temporarily:</p>
+           <h4 style="color:blue ;">Example</h4>
+           <div class="affichage">
+           &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>&lt;!-- &lt;p&gt;This is another paragraph 
+           &lt;/p&gt; --&gt;<br><br>&lt;p&gt;This is a paragraph too.&lt;/p&gt;
+           </div>
+           <hr>
+           <p>You can also hide more than one line. Everything between the <code>&lt;!--</code> and the <code class="w3-codespan">--></code>will be hidden from the display.</p>
+           <h4 style="color:blue ;">Example</h4>
+           <p>Hide a section of HTML code:</p>
+           <div class="affichage">
+             &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>&lt;!--<br>&lt;p&gt;Look at this cool 
+             image:&lt;/p&gt;<br>
+           &lt;img border=&quot;0&quot; src=&quot;pic_trulli.jpg&quot; 
+           alt=&quot;Trulli&quot;&gt;<br>--&gt;<br>&lt;p&gt;This is a paragraph too.&lt;/p&gt;
+           </div>
+           <p>Comments are also great for debugging HTML, because you can comment out HTML lines of code, one at a time, to search for errors.</p>
+           <h4 style="color: blue;">Hide Inline Content</h4>
+           <p>Comments can be used to hide parts in the middle of the HTML code.</p>
+           <h4 style="color: blue;">Example</h4>
+           <p>Hide a part of a paragaph:</p>
+           <div class="affichage">
+             &lt;p&gt;This &lt;!-- great text --&gt; is a paragraph.&lt;/p&gt;
+           </div>
+      </div>
+  
+</body>
+</html>

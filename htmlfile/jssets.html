@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS Sets</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin:10px">
+        <h4 style="color: blue;">JavaScript Sets</h4>
+        <p>A JavaScript Set is a collection of unique values.</p>
+        <p>Each value can only occur once in a Set.</p>
+        <h4 style="color: blue;">Essential Set Methods</h4>
+        <table class="table table-striped">
+        <tr><th width="120px">Method</th><th>Description</th></tr>
+        <tr><td>new Set()</td><td>Creates a new Set</td></tr>
+        <tr><td>add()</td><td>Adds a new element to the Set</td></tr>
+        <tr><td>delete()</td><td>Removes an element from a Set</td></tr>
+        <tr><td>has()</td><td>Returns true if a value exists in the Set</td></tr>
+        <tr><td>forEach()</td><td>Invokes a callback for each element in the Set</td></tr>
+        <tr><td>values()</td><td>Returns an iterator with all the values in a Set</td></tr>
+        <tr><th width="120px">Property</th><th>Description</th></tr>
+        <tr><td>size</td><td>Returns the number of elements in a Set</td></tr>
+        </table>
+        <h4 style="color: blue;">How to Create a Set</h4>
+        <p>You can create a JavaScript Set by:</p>
+        <ul>
+        <li>Passing an Array to <code>new Set()</code></li>
+        <li>Create a new Set and use <code>add()</code> to add values</li>
+        <li>Create a new Set and use <code>add()</code> to add variables</li>
+        </ul>
+        <hr>
+        <h4 style="color: blue;">The new Set() Method</h4>
+        <p>Pass an Array to the <code>new Set()</code> constructor:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        // Create a Set<br>
+        const letters = new Set(["a","b","c"]);
+        </div>
+        <p>Create a Set and add values:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        // Create a Set<br>
+        const letters = new Set();<br>
+        <br>
+        // Add Values to the Set<br>
+        letters.add("a");<br>
+        letters.add("b");<br>
+        letters.add("c");<br>
+        </div>    
+        <p>Create a Set and add variables:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        // Create a Set<br>
+        const letters = new Set();<br>
+        <br>
+        // Create Variables<br>
+        const a = "a";<br>
+        const b = "b";<br>
+        const c = "c";<br>
+        <br>
+        // Add Variables to the Set<br>
+        letters.add(a);<br>
+        letters.add(b);<br>
+        letters.add(c);<br>
+        </div>
+        <hr>
+        <h4 style="color: blue;">The add() Method</h4>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        letters.add("d");<br>
+        letters.add("e");
+        </div>
+        <p>If you add equal elements, only the first will be saved:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+letters.add("a");<br>
+letters.add("b");<br>
+letters.add("c");<br>
+letters.add("c");<br>
+letters.add("c");<br>
+letters.add("c");<br>
+letters.add("c");<br>
+letters.add("c");<br>
+</div>
+<hr>
+<h4 style="color: blue;">The forEach() Method</h4>
+<p>The <code>forEach()</code> method invokes (calls) a function for each Set element:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create a Set<br>
+const letters = new Set(["a","b","c"]);<br>
+<br>
+// List all Elements<br>
+let text = "";<br>
+letters.forEach (function(value) {<br>
+&nbsp;&nbsp;text += value;<br>
+})<br>
+</div>
+<hr>
+<h4 style="color: blue;">The values() Method</h4>
+<p>The <code>values()</code> method returns a new iterator object containing all the values in a Set:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+letters.values()&nbsp;&nbsp;&nbsp;// Returns [object Set Iterator]
+</div>
+<p>Now you can use the Iterator object to access the elements:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// List all Elements<br>
+let text = "";<br>
+for (const x of letters.values()) {<br>
+&nbsp;&nbsp;text += x;<br>
+}<br>
+</div>
+ </div>
+ 
+</body>
+</html>

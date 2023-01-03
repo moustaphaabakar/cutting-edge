@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+   <link rel="stylesheet" href="editors.css">
+   <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html elements</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <h4 style="color:blue">HTML elements</h4>
+        <p>An HTML element is defined by a start tag, some content, and an end tag.</p>
+        <hr>
+        <h4 style="color: blue;">HTML Elements</h4>
+        <p>The HTML <strong>element</strong> is everything from the start tag to the end tag:</p>
+            <span class="spes_tagname"><span>&lt;</span>tagname<span>&gt;</span></span>Content goes here...<span class="spes_tagname"><span class="spes_tag">&lt;</span>/tagname<span>&gt;</span></span>
+            <p>Examples of some HTML elements:</p>
+        <span ><span>&lt;<span>h1</span>&gt;</span></span>My First Heading<span><span>&lt;</span>/h1<span>&gt;</span></span>
+            <span><span>&lt;</span>p<span>&gt;</span></span>My first paragraph.<span><span>&lt;</span>/p<span>&gt;</span></span>
+        <table class="table table-striped">
+            <tr>
+            <th>Start tag</th>
+            <th>Element content</th>
+            <th>End tag</th>
+            </tr>
+            <tr>
+            <td>&lt;h1&gt;</td>
+            <td>My First Heading</td>
+            <td>&lt;/h1&gt;</td>
+            </tr>
+            <tr>
+            <td>&lt;p&gt;</td>
+            <td>My first paragraph.</td>
+            <td>&lt;/p&gt;</td>
+            </tr>
+            <tr>
+            <td>&lt;br&gt;</td>
+            <td><em>none</em></td>
+            <td><em>none</em></td>
+            </tr>
+            </table>
+                <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt; <p style="color: blue;">Nested HTML Elements</p>
+                <p>HTML elements can be nested (this means that elements can contain other elements).</p>
+                    <p>All HTML documents consist of nested HTML elements.</p>
+                    <p>The following example contains four HTML elements (<code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;h1&gt;</code> 
+                    and <code>&lt;p&gt;</code>):</p>element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+        
+                <hr>
+                <p style="color: blue;">Example</p>
+                <div class="affichage">
+                &lt;!DOCTYPE html&gt;<br>
+                &lt;html&gt;<br>&lt;body&gt;<br><br>
+                 &lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br><br>
+                &lt;/body&gt;<br>&lt;/html&gt;  
+               </div>
+               <p style="color: blue;">Example Explained</p>
+               <p>The <code>&lt;html&gt;</code> element is the root element and it defines the whole HTML document.</p>
+               <p>It has a start tag <code>&lt;html&gt;</code> and an end tag <code>&lt;/html&gt;</code>.</p>
+               <p>Then, inside the <code>&lt;html&gt;</code> element there is a <code>&lt;body&gt;</code> element:</p>
+                <h4 style="color: blue;">example</h4>
+               <div class="affichage">
+                &lt;body&gt;<br><br>
+                 &lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;<br><br>
+                &lt;/body&gt;
+                </div> 
+                
+                <p>The <code>&lt;body&gt;</code> element defines the document's body.</p>
+                <p>It has a start tag <code>&lt;body&gt;</code> and an end tag <code>&lt;/body&gt;</code>.</p>
+                <p>Then, inside the <code>&lt;body&gt;</code> element there are two other elements:<code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code>:</p>
+                <h4 style="color: blue;">example</h4>
+                <div class="affichage"> &lt;h1&gt;My First Heading&lt;/h1&gt;<br>&lt;p&gt;My first paragraph.&lt;/p&gt;</div>     
+                <hr>
+                <h4 style="color: blue;">Never Skip the End Tag</h4>
+                <p>Some HTML elements will display correctly, even if you forget the end tag:</p>
+                <h4 style="color: blue;">example</h4>
+                <div class="affichage">
+                    &lt;html&gt;<br>&lt;body&gt;<br><br>
+                     &lt;p&gt;This is a paragraph<br>
+                     &lt;p&gt;This is a paragraph<br>
+                    <br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+                <h4 style="color: blue;">HTML is Not Case Sensitive</h4>
+                <p>HTML tags are not case sensitive: <code>&lt;P&gt;</code> means the same as <code>&lt;p&gt;</code>.</p>
+                <p>The HTML standard does not require lowercase tags, but W3C
+                <b>recommends</b> lowercase in HTML, and <b>demands</b> lowercase for stricter document types like XHTML.</p>
+                <div>
+                  
+</body>
+</html>  

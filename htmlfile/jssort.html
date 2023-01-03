@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS array Sorting</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color:blue">JavaScript Sorting Arrays</h4>
+        <hr>
+        <h4 style="color: blue;">Sorting an Array</h4>
+        <p>The <code>sort()</code> method sorts an array alphabetically: </p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        fruits.sort();
+        </div>
+        <hr>
+        <h4 style="color: blue;">Reversing an Array</h4>
+        <p>The <code>reverse()</code> method reverses the elements in an array.</p>
+        <p>You can use it to 
+        sort an array in descending order: </p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];<br>
+        fruits.sort();<br>
+        fruits.reverse();
+        </div>
+        <hr>
+        <h4 style="color: blue;">Numeric Sort</h4>
+        <p>By default, the <code>sort()</code> function sorts values as <strong>strings</strong>.</p>
+        <p>This works well for strings (&quot;Apple&quot; comes before &quot;Banana&quot;).</p>
+        <p>However, if numbers are sorted as strings, &quot;25&quot; is bigger than &quot;100&quot;, 
+        because &quot;2&quot; is bigger than &quot;1&quot;.</p>
+        <p>Because of this, the <code>sort()</code> method will produce incorrect result when sorting 
+        numbers.</p>
+        <p>You can fix this by providing a <strong>compare function</strong>:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const points = [40, 100, 1, 5, 25, 10];<br>
+        points.sort(function(a, b){return a - b});
+        </div>
+        <p>Use the same trick to sort an array descending:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const points = [40, 100, 1, 5, 25, 10];<br>
+        points.sort(function(a, b){return b - a});
+        </div>
+        <hr>
+        <h4 style="color: blue;">The Compare Function</h4>
+        <p>The purpose of the compare function is to define an alternative sort 
+        order.</p>
+        <p>The compare function should return a negative, zero, or positive value, depending on 
+        the arguments:</p>
+        <div class="affichage">
+        function(a, b){return a - b}
+        </div>
+        <p>When the <code>sort()</code> function compares two values, it sends the values to the 
+        compare function, and sorts the values according to the returned (negative, 
+        zero, positive) value.</p>
+        <p>If the result is negative, <code>a</code> is sorted before
+        <code>b</code>.</p>
+        <p>If the result is positive, <code>b</code> is sorted 
+        before <code>a</code>.</p>
+        <p>If the result is 0, no changes are done with the sort order of the two 
+        values.</p>
+        <p><strong>Example:</strong></p>
+        <p>The compare function compares all the values in the array, two values at a 
+        time <code>(a, b)</code>.</p>
+        <p>When comparing 40 and 100, the <code>sort()</code> method calls the compare function(40, 100).</p>
+        <p>The function calculates 40 - 100 <code>(a - b)</code>, and 
+        since the result is negative (-60),&nbsp; the sort function will sort 40 as a value lower than 100.</p>
+        <p>You can use this code snippet to experiment with numerically and 
+        alphabetically sorting:</p>
+        <div class="affichage">
+         &lt;button onclick=&quot;myFunction1()&quot;&gt;Sort Alphabetically&lt;/button&gt;<br>&lt;button 
+         onclick=&quot;myFunction2()&quot;&gt;Sort Numerically&lt;/button&gt;<br><br>&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br>
+         <br>&lt;script&gt;<br>const points = [40, 100, 1, 5, 25, 10];<br>
+         document.getElementById(&quot;demo&quot;).innerHTML = points;<br><br>function 
+         myFunction1() {<br>&nbsp;&nbsp;points.sort();<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML 
+         = points;<br>}<br><br>function myFunction2() {<br>&nbsp; points.sort(function(a, b){return 
+         a - b});<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = points;<br>}<br>
+         &lt;/script&gt;</div>
+        <hr>
+        <h4 style="color:blue ;">Sorting an Array in Random Order</h4>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const points = [40, 100, 1, 5, 25, 10];<br>
+points.sort(function(){return 0.5 - Math.random()});
+</div>
+<hr>
+<h4 style="color: blue;">The Fisher Yates Method</h4>
+<p>The above example, <em>array</em>.sort(), is not accurate. It will favor some 
+numbers over the others.</p>
+<p>The most popular correct method, is called the Fisher Yates shuffle, and was 
+introduced in data science as early as 1938!</p>
+<p>In JavaScript the method can be translated to this:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const points = [40, 100, 1, 5, 25, 10];<br><br>
+for (let i = points.length -1; i &gt; 0; i--) {<br>
+&nbsp; let j = Math.floor(Math.random() * (i+1));<br>
+&nbsp; let k = points[i];<br>&nbsp; 
+  points[i] = points[j];<br>
+&nbsp; points[j] = k;<br>}
+</div>
+<hr>
+<h4 style="color: blue;">Find the Highest (or Lowest) Array Value</h4>
+<p>There are no built-in functions for finding the max or min 
+value in an array.</p>
+<p>However, after you have sorted an array, you can use the 
+index to obtain the highest and lowest values.</p>
+<p>Sorting ascending:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const points = [40, 100, 1, 5, 25, 10];<br>
+points.sort(function(a, b){return a - b});<br>
+// now points[0] contains the lowest value<br>
+// and points[points.length-1] contains the highest value</div>
+<p>Sorting descending:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const points = [40, 100, 1, 5, 25, 10];<br>
+points.sort(function(a, b){return b - a});<br>
+// now points[0] contains the highest value<br>
+// and points[points.length-1] contains the lowest value</div>
+<p>Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.</p>
+<hr>
+<h4 style="color: blue;">Using Math.max() on an Array</h4>
+<p>You can use <code >Math.max.apply</code> to find the highest number in an array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function myArrayMax(arr) {<br>
+  &nbsp; return Math.max.apply(null, arr);<br>}
+</div>
+<p><code>Math.max.apply(null, [1, 2, 3])</code> is equivalent to <code>Math.max(1, 2, 3)</code>.</p>
+<hr>
+<h4 style="color: blue;">Using Math.min() on an Array</h4>
+<p>You can use <code>Math.min.apply</code> to find the lowest number in an array:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function myArrayMin(arr) {<br>
+&nbsp;&nbsp;return Math.min.apply(null, arr);<br>}
+</div>
+<p><code>Math.min.apply(null, [1, 2, 3])</code> is equivalent to <code>Math.min(1, 2, 3)</code>.</p>
+<hr>
+<h4 style="color: blue;">My Min / Max JavaScript Methods</h4>
+<p>The fastest solution is to use a &quot;home made&quot; method.</p>
+<p>This function loops through an array comparing each value with the highest 
+value found: </p>
+<h4 style="color: blue;">Example (Find Max)</h4>
+<div class="affichage">
+function myArrayMax(arr) {<br>
+&nbsp;&nbsp;let len = arr.length;<br>
+&nbsp;&nbsp;let max = -Infinity;<br>
+&nbsp;&nbsp;while (len--) {<br>
+    &nbsp;&nbsp;&nbsp; 
+  if (arr[len] &gt; max) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  max = arr[len];<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp; return max;<br>}</div>
+<p>This function loops through an array comparing each value with the lowest 
+value found: </p>
+<h4 style="color: blue;">Example (Find Min)</h4>
+<div class="affichage">
+  function myArrayMin(arr) {<br>&nbsp;&nbsp;let len = arr.length;<br>&nbsp;&nbsp;let min = Infinity;<br>&nbsp;&nbsp;while (len--) {<br>&nbsp;&nbsp;&nbsp; 
+  if (arr[len] &lt; min) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  min = arr[len];<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return min;<br>}</div>
+  <hr>
+  <h4 style="color: blue;">Sorting Object Arrays</h4>
+  <p>JavaScript arrays often contain objects:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  const cars = [<br>
+   &nbsp;
+   {type:&quot;Volvo&quot;, year:2016},<br>
+   &nbsp;
+   {type:&quot;Saab&quot;, year:2001},<br>
+   &nbsp;
+   {type:&quot;BMW&quot;, year:2010}<br>];</div>
+  <p>Even if objects have properties of different data types, the <code>sort()</code> method 
+  can be used to sort the array. </p>
+  <p>The solution is to write a compare function to compare the property values:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+   cars.sort(function(a, b){return a.year - b.year});</div>
+  <p>Comparing string properties is a little more complex:</p>
+  <h4 style="color: blue;">Example</h4>
+  <div class="affichage">
+  cars.sort(function(a, b){<br>
+  &nbsp;&nbsp;let x = a.type.toLowerCase();<br>
+  &nbsp;&nbsp;let y = b.type.toLowerCase();<br>
+    &nbsp; if (x &lt; y) {return -1;}<br>&nbsp; 
+   if (x &gt; y) {return 1;}<br>&nbsp; return 0;<br>});</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">js promises</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Promises</h4>
+<p><i>"I Promise a Result!"</i></p>
+<p>"Producing code" is code that can take some time</p>
+<p>"Consuming code" is code that must wait for the result</p>
+<p>A Promise is a JavaScript object that links producing code and consuming code</p>
+<h4 style="color: blue;">JavaScript Promise Object</h4>
+<p>A JavaScript Promise object contains both the producing code and calls to the consuming code:</p>
+<h4 style="color: blue;">Promise Syntax</h4>
+<div class="affichage">
+let myPromise = new Promise(function(myResolve, myReject) {<br>
+// "Producing Code" (May take some time)<br>
+<br>
+&nbsp; myResolve(); // when successful<br>
+&nbsp; myReject(); &nbsp;// when error<br>
+});<br><br>
+// "Consuming Code" (Must wait for a fulfilled Promise)<br>
+myPromise.then(<br>
+&nbsp; function(value) { /* code if successful */ },<br>
+&nbsp; function(error) { /* code if some error */ }<br>
+);
+</div>
+<p>When the producing code obtains the result, it should call one of the two callbacks:
+<table class="table table-striped">
+<tr><th>Result</th><th>Call</th></tr>
+<tr><td>Success</td><td>myResolve(result value)</td></tr>
+<tr><td>Error</td><td>myReject(error object)</td></tr>
+</table>
+<h4 style="color: blue;">Promise Object Properties</h4>
+<p>A JavaScript Promise object can be:</p>
+<ul>
+<li>Pending</li>
+<li>Fulfilled</li>
+<li>Rejected</li>
+</ul>
+<p>The Promise object supports two properties: <b>state</b> and <b>result</b>.</p>
+<p>While a Promise object is "pending" (working), the result is undefined.</p>
+<p>When a Promise object is "fulfilled", the result is a value.</p>
+<p>When a Promise object is "rejected", the result is an error object.</p>
+<table class="table-striped table">
+<tr><th>myPromise.state</th><th>myPromise.result</th></tr>
+<tr><td>"pending"</td><td>undefined</td></tr>
+<tr><td>"fulfilled"</td><td>a result value</td></tr>
+<tr><td>"rejected"</td><td>an error object</td></tr>
+</table>
+<p>You cannot access the Promise properties <b>state</b> and <b>result</b>.</p>
+<p>You must use a Promise method to handle promises.</p>
+<hr>
+<h2>Promise How To</h2>
+<p>Here is how to use a Promise:</p>
+<div class="affichage">
+myPromise.then(<br>
+&nbsp; function(value) { /* code if successful */ },<br>
+&nbsp; function(error) { /* code if some error */ }<br>
+);
+</div>
+<p>Promise.then() takes two arguments, a callback for success and another for failure.</p>
+<p>Both are optional, so you can add a callback for success or failure only.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+function myDisplayer(some) {<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = some;<br>}<br><br>
+let myPromise = new Promise(function(myResolve, myReject) {<br>
+&nbsp; let x = 0;<br><br>
+// The producing code (this may take some time)<br><br>
+&nbsp; if (x == 0) {<br>
+&nbsp;&nbsp;&nbsp; myResolve(&quot;OK&quot;);<br>
+&nbsp; } else {<br>
+&nbsp;&nbsp;&nbsp; myReject(&quot;Error&quot;);<br>
+&nbsp; }<br>
+});<br><br>
+myPromise.then(<br>
+&nbsp; function(value) {myDisplayer(value);},<br>
+&nbsp; function(error) {myDisplayer(error);}<br>);<br>
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Promise Examples</h4>
+<p>To demonstrate the use of promises, we will use the callback examples from the previous chapter:</p>
+<ul>
+<li>Waiting for a Timeout</li>
+<li>Waiting for a File</li>
+</ul> 
+<hr>
+<h4 style="color: blue;">Waiting for a Timeout</h4>
+<h4 style="color: blue;">Example Using Callback</h4>
+<div class="affichage">
+setTimeout(function() { myFunction("I love You !!!"); }, 3000);<br>
+<br>
+function myFunction(value) {<br>
+&nbsp; document.getElementById("demo").innerHTML = value;<br>
+}
+</div>
+<h4 style="color: blue;">Example Using Promise</h4>
+<div class="affichage">
+let myPromise = new Promise(function(myResolve, myReject) {<br>
+&nbsp; setTimeout(function() { myResolve(&quot;I love You !!&quot;); }, 3000);<br>});<br><br>
+myPromise.then(function(value) {<br>
+&nbsp; document.getElementById(&quot;demo&quot;).innerHTML = value;<br>
+});
+</div>
+<hr>
+<h4 style="color: blue;">Waiting for a file</h4>
+<h4 style="color: blue;">Example using Callback</h4>
+<div class="affichage">
+function getFile(myCallback) {<br>
+&nbsp; let req = new XMLHttpRequest();<br>
+&nbsp; req.open('GET', &quot;mycar.html&quot;);<br>
+&nbsp; req.onload = function() {<br>
+&nbsp;&nbsp;&nbsp; if (req.status == 200) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(req.responseText);<br>
+&nbsp;&nbsp;&nbsp; } else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; myCallback(&quot;Error: &quot; + req.status);<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; }<br>
+&nbsp; req.send();<br>
+}<br><br>
+getFile(myDisplayer);
+</div>
+<h4 style="color: blue;">Example using Promise</h>
+<div class="affichage">
+let myPromise = new Promise(function(myResolve, myReject) {<br>
+  &nbsp;
+  let req = new XMLHttpRequest();<br>
+  &nbsp;
+  req.open('GET', "mycar.htm");<br>
+  &nbsp;
+  req.onload = function() {<br>
+    &nbsp;&nbsp;&nbsp;
+    if (req.status == 200) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myResolve(req.response);<br>
+    &nbsp;&nbsp;&nbsp;
+    } else {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      myReject("File not Found");<br>
+    &nbsp;&nbsp;&nbsp;
+    }<br>
+&nbsp; };<br>
+&nbsp; req.send();<br>
+});<br>
+<br>
+myPromise.then(<br>
+  &nbsp;
+  function(value) {myDisplayer(value);},<br>
+  &nbsp;
+  function(error) {myDisplayer(error);}<br>
+);<br>
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>ECMAScript 2015, also known as ES6, introduced the JavaScript Promise object.</p>
+<p>The following table defines the first browser version with full support for Promise objects:</p>
+<table class="affichage">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 33</td>
+    <td>Edge 12</td>    
+    <td>Firefox 29</td>
+    <td>Safari 7.1</td>
+    <td>Opera 20</td>
+  </tr>
+  <tr>
+    <td>Feb, 2014</td>
+    <td>Jul, 2015</td>    
+    <td>Apr, 2014</td>
+    <td>Sep, 2014</td>
+    <td>Mar, 2014</td>
+  </tr></tbody>
+</table>
+ </div>
+
+</body>
+</html>

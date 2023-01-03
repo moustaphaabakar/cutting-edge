@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css unites<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4>CSS Units</h4>
+        <hr>
+        <h4 style="color: blue;">CSS Units</h4>
+        <p>CSS has several different units for expressing a length.</p>
+        <p>Many CSS properties take &quot;length&quot; values, such as <code>width</code>, <code>margin</code>, <code class="w3-codespan">padding</code>, 
+        <code>font-size</code>, etc.</p>
+        <p><strong>Length</strong> is a number followed by a length unit, such as <code>10px</code>, 
+        <code>2em</code>, etc.</p>
+            <h4 style="color: blue;">Example</h4>
+            <p>Set different length values, using px (pixels):</p>
+            <div class="affichage">
+              h1 {<br>&nbsp; font-size: 60px;<br>}<br><br>p {<br>&nbsp; font-size: 25px;<br>&nbsp; 
+              line-height: 50px;<br>}</div>
+
+              <p><strong>Note:</strong> A whitespace cannot appear between the number and the unit. However, if the value is 
+                <code>0</code>, the unit can be omitted.</p>
+                <p>For some CSS properties, negative lengths are allowed.</p>
+                <p>There are two types of length units: <strong>absolute </strong>and <strong>relative</strong>.</p>
+                <hr>
+                <h2>Absolute Lengths</h2>
+                <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.</p>
+                <p>Absolute length units are not recommended for use on screen, because screen sizes vary so much. 
+                However, they can be used if the output medium is known, such 
+                as for print layout.</p>
+<hr>
+<table class="table table-striped">
+  <tr>
+    <th style="width:12%">Unit</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>cm</td>
+    <td>centimeters
+    </td>
+  </tr>
+    <tr>
+    <td>mm</td>
+    <td>millimeters 
+    </td>
+    </tr>
+  <tr>
+    <td>in</td>
+    <td>inches (1in = 96px = 2.54cm)
+    </td>
+  </tr>
+    <tr>
+    <td>px *</td>
+    <td>pixels (1px = 1/96th of 1in)
+    </td>
+    </tr>
+  <tr>
+    <td>pt</td>
+    <td>points (1pt = 1/72 of 1in) 
+    </td>
+  </tr>
+  <tr>
+    <td>pc</td>
+    <td>picas (1pc = 12 pt) 
+    </td>
+  </tr>
+</table>
+<p>* Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution 
+    screens 1px implies multiple device pixels.</p>
+    <hr>
+    <h2>Relative Lengths</h2>
+    <p>Relative length units specify a length relative to another length property. 
+    Relative length units scale better between different rendering mediums.</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:12%">Unit</th>
+    <th>Description</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>em</td>
+    <td>Relative to the font-size of the element (2em means 2 times the size of the current font)</td>
+  </tr>
+  <tr>
+    <td>ex</td>
+    <td>Relative to the x-height of the current font (rarely used)</td>
+  </tr>
+  <tr>
+    <td>ch</td>
+    <td>Relative to width of the &quot;0&quot; (zero)</td>
+  </tr>
+  <tr>
+    <td>rem</td>
+    <td>Relative to font-size of the root element</td>
+  </tr>
+  <tr>
+    <td>vw</td>
+    <td>Relative to 1% of the width of the viewport*</td>
+  </tr>
+  <tr>
+    <td>vh</td>
+    <td>Relative to 1% of the height of the viewport*</td>
+  </tr>
+  <tr>
+    <td>vmin</td>
+    <td>Relative to 1% of viewport's* smaller dimension</td>
+  </tr>
+  <tr>
+    <td>vmax</td>
+    <td>Relative to 1% of viewport's* larger dimension</td>
+  </tr>
+  <tr>
+    <td>%</td>
+    <td>Relative to the parent element</td>
+  </tr>
+    </table>
+
+    <p><strong>Tip:</strong> The em and rem units are practical in creating perfectly 
+        scalable layout!<br>* Viewport = the browser window size. If the viewport is 50cm 
+        wide, 1vw = 0.5cm.</p>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>The numbers in the table specify the first browser version that fully supports the 
+length unit.</p>
+<table class="table table-striped">
+  <tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Length Unit</th>
+    <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16%;" class="bsEdge" title="Internet Explorer"></th>
+    <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td style="text-align:left;">em, ex, %, px, cm, mm, in, pt, pc</td>
+    <td>1.0</td>
+    <td>3.0</td>
+    <td>1.0</td>
+    <td>1.0</td>
+    <td>3.5</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">ch</td>
+    <td>27.0</td>
+    <td>9.0</td>
+    <td>1.0</td>
+    <td>7.0</td>
+    <td>20.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">rem</td>
+    <td>4.0</td>
+    <td>9.0</td>
+    <td>3.6</td>
+    <td>4.1</td>
+    <td>11.6</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">vh, vw</td>
+    <td>20.0</td>
+    <td>9.0</td>
+    <td>19.0</td>
+    <td>6.0</td>
+    <td>20.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">vmin</td>
+    <td>20.0</td>
+    <td>12.0</td>
+    <td>19.0</td>
+    <td>6.0</td>
+    <td>20.0</td>
+  </tr>
+  <tr>
+    <td style="text-align:left;">vmax</td>
+    <td>26.0</td>
+    <td>16.0</td>
+    <td>19.0</td>
+    <td>7.0</td>
+    <td>20.0</td>
+  </tr>
+  </table>
+      </div>
+</body>
+</html>

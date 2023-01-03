@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">Html quotations</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="mediaquery" style="margin: 10px;">
+        <h4 style=" color:blue">HTMLQuotation and Citation Elements</h4>
+        <p class="intro">In this chapter we will go through the <code>&lt;blockquote&gt;</code>,<code>&lt;q&gt;</code>, <code class="w3-codespan">&lt;abbr&gt;</code>, <code class="w3-codespan">&lt;address&gt;</code>, <code>&lt;cite&gt;</code>, and <code>&lt;bdo&gt;</code> HTML elements.</p>
+        <h4 style="color:blue ;">Example</h4>
+        <div>
+        <p>Here is a quote from WWF's website:</p>
+       <blockquote  cite="http://www.worldwildlife.org/who/index.html">
+        For nearly 60 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by more than one million members in the United States and
+        close to five million globally.</blockquote>
+        </div>
+        <h4 style="color:blue ;">Example</h4>
+         <div class="affichage">
+         &lt;p&gt;Here is a quote from WWF's website:&lt;/p&gt;<br>&lt;blockquote cite=&quot;http://www.worldwildlife.org/who/index.html&quot;&gt;<br>
+         For 50 years, WWF has been protecting the future of nature.<br>The world's 
+         leading conservation organization,<br>WWF works in 100 countries and is 
+         supported by<br>1.2 million members in the United States and<br>close to 5 
+         million globally.<br>&lt;/blockquote&gt;</div>
+         <hr>
+         <h4 style="color:blue ;">HTML &lt;q&gt; for Short Quotations</h4>
+         <p>The HTML <code>&lt;q&gt;</code> tag defines a short quotation.</p>
+        <p>Browsers normally insert quotation marks around the quotation.</p>
+        <h4 style="color:blue ;">Example</h4>
+        <div class="affichage">
+        &lt;p&gt;WWF's goal is to: &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;&lt;/p&gt;</div>
+        <hr>
+        <h4>HTML &lt;abbr&gt; for Abbreviations</h4>
+        <p>The HTML <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like &quot;HTML&quot;, &quot;CSS&quot;, "Mr.&quot;, &quot;Dr.&quot;, &quot;ASAP&quot;, &quot;ATM&quot;.</p>
+         <p>Marking abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+        <p><b>Tip:</b> Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.&nbsp;</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        &lt;p&gt;The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in  1948.&lt;/p&gt;
+        </div>
+        <hr>
+        <h4>HTML &lt;address&gt; for Contact Information</h4>
+        <p>The HTML <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article.</p>
+        <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+        <p>The text in the <code>&lt;address&gt;</code> element usually renders in <i>italic,</i> and browsers will always add a line break before and after the <code>&lt;address&gt;</code> element.</p>          
+         <hr>
+         <h4 style="color:blue ;">Example</h4> 
+         <div class="affichage">
+          &lt;address&gt;<br>Written by John Doe.&lt;br&gt; <br>Visit us at:&lt;br&gt;<br>Example.com&lt;br&gt;<br>
+          Box 564, Disneyland&lt;br&gt;<br>USA<br>&lt;/address&gt;
+        </div>
+         <hr>
+        <h4>HTML &lt;cite&gt; for Work Title</h4>
+         <p>The HTML <code>&lt;cite&gt;</code> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+         <p><b>Note:</b> A person's name is not the title of a work.</p>
+         <p>The text in the <code>&lt;cite&gt;</code> element usually renders in <i>italic</i>.</p>
+         <h4 style="color:blue ;">Example</h4>
+         <div class="affichage">
+          &lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Painted in 1893.&lt;/p&gt;
+         </div>
+         <hr>
+         <h4>HTML &lt;bdo&gt; for Bi-Directional Override</h4>
+         <p>BDO stands for Bi-Directional Override.</p>
+         <p>The HTML <code>&lt;bdo&gt;</code> tag is used to override the current text direction:</p>
+         <h4 style="color:blue ;">Example</h4>
+         <div class="affichage">
+          &lt;bdo dir=&quot;rtl&quot;&gt;This text will be written from right to left&lt;/bdo&gt;
+         </div>
+         <h2>HTML Quotation and Citation Elements</h2>
+         <table class="table table-striped">
+         <tr>
+         <th style="width:20%">Tag</th>
+         <th>Description</th>
+         </tr>
+         <tr>
+         <td><a>&lt;abbr&gt;</a></td>
+         <td>Defines an abbreviation or acronym</td>
+         </tr>
+         <tr>
+         <td><a>&lt;address&gt;</a></td>
+         <td>Defines contact information for the author/owner of a document</td>
+         </tr>
+         <tr>
+         <td><a>&lt;bdo&gt;</a></td>
+         <td>Defines the text direction</td>
+         </tr>
+         <tr>
+         <td><a >&lt;blockquote&gt;</a></td>
+         <td> Defines a section that is quoted from another source</td>
+         </tr>
+           <tr>
+         <td><a>&lt;cite&gt;</a></td>
+         <td>Defines the title of a work</td>
+           </tr>
+         <tr>
+         <td><a>&lt;q&gt;</a></td>
+         <td>Defines a short inline quotation</td>
+         </tr>
+         </table>
+</div>
+</body>
+</html>

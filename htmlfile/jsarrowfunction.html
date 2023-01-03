@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS  arrow function</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Arrow Function</h4>
+        <p>Arrow functions were introduced in ES6.</p>
+        <p>Arrow functions allow us to write shorter function syntax:</p>
+        <p></p>
+        <div class="affichage">
+        let myFunction = (a, b) =&gt; a * b;
+        </div>
+        <p>
+        <h4 style="color: blue;">Before Arrow:</h4>
+        <div class="affichage">
+        hello = function() {<br>&nbsp; return &quot;Hello World!&quot;;<br>}</div>
+        <p>
+        <h4 style="color: blue;">With Arrow Function:</h4>
+        <div class="affichage">
+        hello = () =&gt; {<br>&nbsp; return &quot;Hello World!&quot;;<br>}</div>
+        <p>    
+        <p>It gets shorter! If the function has only one statement, and the statement 
+        returns a value, you can remove the brackets <em>and</em> the
+        <code>return</code> keyword:</p>
+        <h4 style="color: blue;">Arrow Functions Return Value by Default:</h4>
+        <div class="affichage">
+        hello = () =&gt; &quot;Hello World!&quot;;</div>
+        <p>
+        <p><strong>Note:</strong> This works only if the function has only one 
+        statement.</p>
+        <p>If you have parameters, you pass them inside the parentheses:</p>
+        <h4 style="color: blue;">Arrow Function With Parameters:</h4>
+        <div class="affichage">
+        hello = (val) =&gt; &quot;Hello &quot; + val;</div>
+        <p>    
+        <p>In fact, if you have only one parameter, you can skip the parentheses as well:</p>
+        <h4 style="color: blue;">Arrow Function Without Parentheses:</h4>
+        <div class="affichage">
+        hello = val =&gt; &quot;Hello &quot; + val;</div>
+        <a name="arrowthis"><span style="display:none">this</span></a>
+        <hr>
+<h4 style="color: blue;">What About <code>this</code>?</h4>
+<p>The handling of <code class="w3-codespan">this</code> is also different in arrow functions compared to regular 
+functions.</p>
+<p>In short, with arrow functions there are no binding of
+<code>this</code>.</p>
+<p>In regular functions the <code>this</code> keyword represented the object that called the 
+function, which could be the window, the document, a button or whatever.</p>
+<p>With arrow functions the <code>this</code> keyword <em>always</em> represents the 
+object that 
+defined the arrow function.</p>
+<p>Let us take a look at two examples to understand the difference.</p>
+<p>Both examples call a method twice, first when the page loads, and once again 
+when the user clicks a button.</p>
+<p>The first example uses a regular function, and the second example uses an 
+arrow function.</p>
+<p>The result shows that the first example returns two different objects (window and button), 
+and the 
+second example returns the window object twice, because the window object is the 
+&quot;owner&quot; of the function.</p>
+<h4 style="color: blue;">Example</h4>
+<p>With a regular function <code>this</code> represents the 
+object that <em>calls</em> the function:</p>
+<div class="affichage">
+  // Regular Function:<br>hello = function() {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML 
+  += this;<br>}<br><br>// The window object calls the function:<br>
+  window.addEventListener(&quot;load&quot;, hello);<br><br>// A button object calls the 
+  function:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
+<p>
+    <h4 style="color: blue;">Example</h4>
+<p>With an arrow function <code>this</code> represents the 
+<em>owner</em> of the function:</p>
+<div class="affichage">
+  // Arrow Function:<br>hello = () =&gt; {<br>&nbsp; document.getElementById(&quot;demo&quot;).innerHTML 
+  += this;<br>}<br><br>// The window object calls the function:<br>
+  window.addEventListener(&quot;load&quot;, hello);<br><br>// A button object calls the 
+  function:<br>document.getElementById(&quot;btn&quot;).addEventListener(&quot;click&quot;, hello);</div>
+<p>
+<p>Remember these differences when you are working with functions. Sometimes the 
+behavior of regular functions is what you want, if not, use arrow functions.</p>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p>The following table defines the first browser versions with full support for 
+Arrow Functions in JavaScript: </p>
+<table class="table table-striped">
+  <tbody><tr style="height:50px;">
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome 45</td>
+    <td>Edge 12</td>    
+    <td>Firefox 22</td>
+    <td>Safari 10</td>
+    <td>Opera 32</td>
+  </tr>
+  <tr>
+    <td>Sep, 2015</td>
+    <td>Jul, 2015</td>    
+    <td>May, 2013</td>
+    <td>Sep, 2016</td>
+    <td>Sep, 2015</td>
+  </tr></tbody>
+</table>
+ </div>
+</body>
+</html>

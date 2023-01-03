@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html">json arrays</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JSON Array Literals</h4>
+        <p>This is a JSON string:</p>
+        <div class="affichage">
+        '[&quot;Ford&quot;, &quot;BMW&quot;, &quot;Fiat&quot;]'
+        </div>
+        <p>Inside the JSON string there is a JSON array literal:</p>
+        <div class="affichage">
+        [&quot;Ford&quot;, &quot;BMW&quot;, &quot;Fiat&quot;]
+        </div>
+        <p>Arrays in JSON are almost the same as arrays in JavaScript.</p>
+        <p>In JSON, array values must be of type string, number, object, array, boolean 
+        or <em>null</em>.</p>
+        <p>In JavaScript, array values can be all of the above, plus any other valid 
+        JavaScript expression, including functions, dates, and <em>undefined.</em></p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Arrays</h4>
+        <p>You can create a JavaScript array from a literal:
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        myArray = ["Ford", "BMW", "Fiat"];
+        </div>        
+        <p>You can create a JavaScript array by parsing a JSON string:
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        myJSON = '["Ford", "BMW", "Fiat"]';<br>
+        myArray = JSON.Parse(myJSON);
+        </div>
+        <hr>
+        <h4 style="color: blue;">Accessing Array Values</h4>
+        <p>You access array values by index:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        myArray[0];<br>
+        </div>
+        <hr>
+        <h4 style="color: blue;">Arrays in Objects</h4>
+        <p>Objects can contain arrays:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        {<br>
+        &quot;name&quot;:&quot;John&quot;,<br>
+        &quot;age&quot;:30,<br>
+        &quot;cars&quot;:[&quot;Ford&quot;, &quot;BMW&quot;, &quot;Fiat&quot;]<br>
+        }
+        </div>
+        <p>You access array values by index:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        myObj.cars[0];<br>
+        </div>
+        <hr>
+        <h4 style="color: blue;">Looping Through an Array</h4>
+        <p>You can access array values by using a <code>for in</code> loop:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        for (let i in myObj.cars) {<br>&nbsp; 
+          x 
+          += myObj.cars[i];<br>}</div>
+        <p>Or you can use a <code>for</code> loop:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+          for (let i 
+          = 0; i &lt; myObj.cars.length; i++) {<br>&nbsp; x 
+          += myObj.cars[i];<br>}</div> 
+    </div>
+  
+</body>
+</html>

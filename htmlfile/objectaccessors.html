@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object accessors</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        
+        <h4 style="color: blue;">JavaScript Object Accessors</h4>
+<hr>
+<h4 style="color: blue;">JavaScript Accessors (Getters and Setters)</h4>
+<p>ECMAScript 5 (ES5 2009) introduced Getter and Setters.</p>
+<p>Getters and setters allow you to define Object Accessors (Computed 
+Properties).</p>
+<hr>
+<h4 style="color: blue;">JavaScript Getter (The get Keyword)</h4>
+<p>This example uses a <code>lang</code> property to <code >get</code> 
+the value of the <code >language</code> property.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create an object:<br>
+const person = {<br>
+&nbsp; firstName: &quot;John&quot;,<br>
+&nbsp; lastName: &quot;Doe&quot;,<br>
+&nbsp; language: &quot;en&quot;,<br>
+&nbsp; get lang() {<br>
+&nbsp;&nbsp;&nbsp; return this.language;<br>
+  &nbsp; }<br>};<br><br>
+// Display data from the object using a getter:<br>
+document.getElementById(&quot;demo&quot;).innerHTML = person.lang;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Setter (The set Keyword)</h4>
+<p>This example uses a <code>lang</code> property to <code>set</code> 
+the value of the <code>language</code> property.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; firstName: &quot;John&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>
+&nbsp;&nbsp;language: &quot;&quot;,<br>
+  &nbsp; set lang(lang) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;this.language = lang;<br>
+  &nbsp;&nbsp;}<br>};<br><br>
+// Set an object 
+property using a setter:<br>
+person.lang = &quot;en&quot;;<br><br>
+// Display data from the object:<br>
+document.getElementById(&quot;demo&quot;).innerHTML = person.language;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Function or Getter?</h4>
+<p>What is the differences between these two examples?</p>
+<h4 style="color: blue;">Example 1</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; firstName: "John",<br>
+&nbsp; lastName: "Doe",<br>
+&nbsp; fullName: function() {<br>
+&nbsp;&nbsp;&nbsp; return this.firstName + " " + 
+this.lastName;<br>&nbsp;&nbsp;}<br>
+};<br><br>// Display data from the object using a method:<br>
+  document.getElementById(&quot;demo&quot;).innerHTML = person.fullName();</div>
+<h4 style="color: blue;">Example 2</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; firstName: "John",<br>
+&nbsp; lastName: "Doe",<br>
+&nbsp; get fullName() {<br>
+&nbsp;&nbsp;&nbsp; return this.firstName + " " + 
+this.lastName;<br>&nbsp; }<br>
+};<br><br>// Display data from the object using a getter:<br>
+  document.getElementById(&quot;demo&quot;).innerHTML = person.fullName;</div>
+<p>Example 1 access fullName as a function: person.fullName().</p>
+<p>Example 2 access fullName as a property: person.fullName.</p>
+<p>The second example provides a simpler syntax.</p>
+<hr>
+<h4 style="color: blue;">Data Quality</h4>
+<p>JavaScript can secure better data quality when using getters and setters.</p>
+<p>Using the <code>lang</code> property, in this example, returns the value 
+of the <code>language</code> property in upper case:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+// Create an object:<br>
+const person = {<br>
+&nbsp;&nbsp;firstName: &quot;John&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>
+&nbsp; language: &quot;en&quot;,<br>
+&nbsp; get lang() {<br>
+&nbsp;&nbsp;&nbsp; return this.language.toUpperCase();<br>
+  &nbsp;&nbsp;}<br>};<br><br>
+// Display data from the object using a getter:<br>
+document.getElementById(&quot;demo&quot;).innerHTML = person.lang;
+</div>
+<p>Using the <code>lang</code> property, in this example, stores an upper case 
+value in the <code>language</code> property:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; firstName: &quot;John&quot;,<br>
+&nbsp;&nbsp;lastName: &quot;Doe&quot;,<br>
+&nbsp; language: &quot;&quot;,<br>
+&nbsp;&nbsp;set lang(lang) {<br>
+  &nbsp;&nbsp;&nbsp; this.language = lang.toUpperCase();<br>
+  &nbsp; }<br>};<br><br>
+// Set an object 
+property using a setter:<br>
+person.lang = &quot;en&quot;;<br><br>
+// Display data from the object:<br>
+document.getElementById(&quot;demo&quot;).innerHTML = person.language;
+</div>
+<hr>
+<h4 style="color: blue;">Why Using Getters and Setters?</h4>
+<ul>
+  <li>It gives simpler syntax</li>
+  <li>It allows equal syntax for properties and methods</li>
+  <li>It can secure better data quality</li>
+  <li>It is useful for doing things behind-the-scenes</li>
+</ul>
+<hr>
+<h4 style="color: blue;">Object.defineProperty()</h4>
+<p>The <code>Object.defineProperty()</code> method can also be used to add Getters and 
+Setters:</p>
+<h4 style="color: blue;">A Counter Example</h4>
+<div class="affichage">
+// Define object<br>
+const obj = {counter : 0};<br><br>
+// Define setters and getters<br>
+Object.defineProperty(obj, &quot;reset&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter = 0;}<br>});<br>
+Object.defineProperty(obj, &quot;increment&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter++;}<br>});<br>
+Object.defineProperty(obj, &quot;decrement&quot;, {<br>
+&nbsp;&nbsp;get : function () {this.counter--;}<br>});<br>
+Object.defineProperty(obj, &quot;add&quot;, {<br>
+&nbsp;&nbsp;set : function (value) {this.counter += value;}<br>});<br>
+Object.defineProperty(obj, &quot;subtract&quot;, {<br>
+&nbsp;&nbsp;set : function (value) {this.counter -= value;}<br>});<br><br>
+// Play with the counter:<br>
+obj.reset;<br>
+obj.add = 5;<br>
+obj.subtract = 1;<br>
+obj.increment;<br>
+obj.decrement;<br>
+</div>
+      </div>
+</body>
+</html>

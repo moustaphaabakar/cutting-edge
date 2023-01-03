@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS events</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color:blue ;">JavaScript Events</h4>
+        <hr>
+        <p>HTML events are <strong>&quot;things&quot;</strong> that happen to HTML elements.</p>
+        <p>When JavaScript is used in HTML pages, JavaScript can <strong>
+        &quot;react&quot;</strong> on 
+        these events.</p>
+        <hr>
+        <h4 style="color: blue;">HTML Events</h4>
+        <p>An HTML event can be something the browser does, or something a user does.</p>
+        <p>Here are some examples of HTML events:</p>
+        <ul>
+          <li>An HTML web page has finished loading</li>
+          <li>An HTML input field was changed</li>
+          <li>An HTML button was clicked</li>
+        </ul>
+        <p>Often, when events happen, you may want to do something.</p>
+        <p>JavaScript lets you execute code when events are detected.</p>
+        <p>HTML allows event handler attributes, <strong>with JavaScript code</strong>, to be added to HTML elements.</p>
+        <p>With single quotes:</p>
+        <div class="affichage">
+        &lt;<em>element</em>
+         <em>event</em>=<strong>'</strong><em><strong>some JavaScript</strong></em><strong>'</strong>&gt;</div>
+         <p>With double quotes:</p>
+<div class="affichage">
+ &lt;<em>element</em>
+ <em>event</em>=<strong>&quot;</strong><em><strong>some JavaScript</strong></em><strong>&quot;</strong>&gt;</div>
+<p>In the following example, an <code>onclick</code> attribute (with code), is added to a 
+<code>&lt;button&gt;</code> element:</p>
+<h4  style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;button onclick=&quot;document.getElementById('demo').innerHTML = Date()&quot;&gt;The time is?&lt;/button&gt;<br>
+</div>
+<p>In the example above, the JavaScript code changes the content of 
+the element with id=&quot;demo&quot;.</p>
+<p>In the next example, the code changes the content of 
+its own element (using <code><strong>this</strong>.innerHTML</code>): </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+&lt;button onclick=&quot;this.innerHTML = Date()&quot;&gt;The time is?&lt;/button&gt;<br>
+</div>
+<p>JavaScript code is often several lines long. It is more common to see event attributes calling functions:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    &lt;button onclick=&quot;displayDate()&quot;&gt;The time is?&lt;/button&gt;</div>
+    <hr>
+    <h4 style="color: blue;">Common HTML Events</h4>
+    <p>Here is a list of some common HTML events:</p>
+    <table class="table table-striped" style="width: 100%">
+    <tr>
+      <th>Event</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>onchange</td>
+      <td>An HTML element has been changed</td>
+    </tr>
+    <tr>
+      <td>onclick</td>
+      <td>The user clicks an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseover</td>
+      <td>The user moves the mouse over an HTML element</td>
+    </tr>
+    <tr>
+      <td>onmouseout</td>
+      <td>The user moves the mouse away from an HTML element</td>
+    </tr>
+    <tr>
+      <td>onkeydown</td>
+      <td>The user pushes a keyboard key</td>
+    </tr>
+    <tr>
+      <td>onload</td>
+      <td>The browser has finished loading the page</td>
+    </tr>
+    </table>
+    <h4 style="color: blue;">JavaScript Event Handlers</h4>
+    <p>Event handlers can be used to handle and verify user input, user actions, 
+    and browser actions:</p>
+    <ul>
+      <li>Things that should be done every time a page loads</li>
+      <li>Things that should be done when the page is closed</li>
+      <li>Action that should be performed when a user clicks a button</li>
+      <li>Content that should be verified when a user inputs data</li>
+      <li>And more ...</li>
+    </ul>
+    <p>Many different methods can be used to let JavaScript work with events:</p>
+    <ul>
+      <li>HTML event attributes can execute JavaScript code directly</li>
+      <li>HTML event attributes can call JavaScript functions</li>
+      <li>You can assign your own event handler functions to HTML elements</li>
+      <li>You can prevent events from being sent or being handled</li>
+      <li>And more ...</li>
+    </ul>
+</div>
+
+</body>
+</html>

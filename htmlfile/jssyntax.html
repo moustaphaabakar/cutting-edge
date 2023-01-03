@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS syntax</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Syntax</h4>
+        <p>JavaScript syntax is the set of&nbsp;rules, how 
+        JavaScript programs are constructed:</p>
+        <div class="affichage">
+        // How to create variables:<br>
+        var x;<br>
+        let y;<br>
+        <br>
+        // How to use variables:<br>
+        x = 5;<br>
+        y = 6;<br>
+        let z = x + y;<br>
+        </div>
+        <h4 style="color:blue">JavaScript Values</h4>
+        <p>The JavaScript syntax defines two types of values:</p>
+        <ul>
+        <li>Fixed values</li>
+        <li>Variable values</li>
+        </ul>
+        <p>Fixed values are called <b>Literals</b>.</p>
+        <p>Variable values are called <b>Variables</b>.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript Literals</h4>
+        <p>The two most important syntax rules for fixed values are:</p>
+        <p>1. <strong>Numbers</strong> are written with or 
+        without decimals:</p>
+        <div class="affichage">
+         10.50<br><br>
+        1001 </div>
+        <p>2. <strong>Strings</strong> are text, written within double or single quotes:</p>
+        <div class="affichage">
+        &quot;John Doe&quot;<br><br>
+        'John Doe'
+        </div>
+        <hr>
+        <h4 style="color: blue;">JavaScript Variables</h4>
+        <p>In a programming language, <strong>variables</strong> 
+        are used to <strong>store</strong> data values.</p>
+        <p>JavaScript uses the keywords <code>var</code>,
+        <code>let</code> and <code>const</code> to <strong>declare</strong> variables.</p>
+        <p>An <strong>equal sign</strong> is used to <strong>assign values</strong> to variables.</p>
+        <p>In this example, x is defined as a variable. Then, x is 
+        assigned (given) the value 
+        6:</p>
+        <div class="affichage">
+            let x;<br>
+            x = 6; </div>
+            <hr>
+            <h4 style="color: blue;">JavaScript Operators</h4>
+            <p>JavaScript uses <strong>arithmetic operators</strong> ( <code>+</code> <code>-</code> <code class="w3-codespan">*</code> <code class="w3-codespan">/</code></code> ) to 
+            <strong>compute</strong> values: </p>
+            <div class="affichage">
+            (5 + 6) * 10<br>
+            </div>
+            <p>JavaScript uses an <strong>assignment operator</strong> ( <code>=</code> ) to <strong>assign</strong> 
+            values to variables: </p>
+            <div class="affichage">
+            let x, y;<br>x = 5;<br>
+            y = 6;</div>
+            <hr>
+            <h4 style="color: blue;">JavaScript Expressions</h4>
+<p>An expression is a combination of values, variables, and operators, 
+which computes to a value.</p>
+<p>The computation is called an evaluation.</p>
+<p>For example, 5 * 10 evaluates to 50:</p>
+ <div class="affichage">
+5 * 10 
+</div>
+<p>Expressions can also contain variable values:</p>
+ <div class="affichage">
+  x * 10 
+</div>
+<p>The values can be of various types, such as numbers and strings.</p>
+<p>For example, &quot;John&quot; + &quot; &quot; + &quot;Doe&quot;, evaluates to &quot;John Doe&quot;:</p>
+ <div class="affichage">
+  &quot;John&quot; + &quot; &quot; + &quot;Doe&quot;
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Keywords</h4>
+<p>JavaScript <strong>keywords</strong> are used to 
+identify actions to be performed.</p>
+<p>The
+<code>let</code> keyword tells the browser to create variables:</p>
+<div class="affichage">
+let x, y;<br>x = 5 + 6;<br>y = x * 10;
+</div>
+<p>The
+<code>var</code> keyword also tells the browser to create variables:</p>
+<div class="affichage">
+  var x, y;<br>x = 5 + 6;<br>y = x * 10;
+</div>
+<p>In these examples, using <code >var</code>
+or <code>let</code> will produce the same result.</p> 
+<p>You will learn more about <code>var</code>
+and <code>let</code> later in this tutorial.</p> 
+<hr>
+<h4 style="color: blue;">JavaScript Comments</h4>
+<p>Not all JavaScript statements are &quot;executed&quot;.</p>
+<p>Code after double slashes
+<code>//</code> or between <code>/*</code> and <code>*/</code> is treated as a <strong>comment</strong>.</p>
+<p>Comments are ignored, and will not be 
+executed:</p>
+<div class="affichage">
+let x = 5;&nbsp;&nbsp; // I will be executed<br><br>// x = 6;&nbsp;&nbsp; I will 
+NOT be executed</div>
+<p>You will learn more about comments in a later chapter.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Identifiers / Names</h4>
+<p>Identifiers are JavaScript names.</p>
+<p>Identifiers are used to name variables and keywords, and functions.</p>
+<p>The rules for legal names are the same in most programming languages.</p>
+<p>A JavaScript name must begin with:</p>
+<ul>
+<li>A letter (A-Z or a-z)</li>
+<li>A dollar sign ($)</li>
+<li>Or an underscore (_)</li>
+</ul>
+<p>Subsequent characters may be letters, digits, underscores, or dollar signs.</p>
+<h4 style="color: blue;">Note</h4>
+<p>Numbers are not allowed as the first character in names.</p>
+<p>This way JavaScript can easily distinguish identifiers from numbers.</p>
+<hr>
+<h4 style="color:blue ;">JavaScript is Case Sensitive</h4>
+<p>All JavaScript identifiers are 
+<strong>case sensitive</strong>.&nbsp; </p>
+<p>The variables <code >lastName</code> and <code >lastname</code>, 
+are two different variables:</p>
+<div class="affichage">
+let lastname, lastName;<br>lastName = &quot;Doe&quot;;<br>lastname = &quot;Peterson&quot;;
+</div>
+<p>JavaScript does not interpret <b>LET</b> or <b>Let</b> as the keyword <b>let</b>.</p>
+<hr>
+<h4 style="color: blue;">JavaScript and Camel Case</h4>
+<p>Historically, programmers have used different ways of joining multiple words into one variable name:</p>
+<p><strong>Hyphens:</strong></p>
+<p>first-name, last-name, master-card, inter-city.</p>
+<p>Hyphens are not allowed in JavaScript. They are reserved for subtractions.</p>
+<p><strong>Underscore:</strong></p>
+<p>first_name, last_name, master_card, inter_city.</p>
+<p><strong>Upper Camel Case (Pascal Case):</strong></p>
+<p>FirstName, LastName, MasterCard, InterCity.</p>
+<p>
+<p><strong>Lower Camel Case:</strong></p>
+<p>JavaScript programmers tend to use camel case that starts with a lowercase letter:</p>
+<p>firstName, lastName, masterCard, interCity.</p>
+<hr>
+<h4 style="color: blue;">JavaScript Character Set</h4>
+<p>JavaScript uses the <strong>Unicode</strong> character set.</p>
+<p>Unicode covers (almost) all the characters, punctuations, and symbols in the world.</p>
+<p>For a closer look, please study our Complete Unicode Reference.</p>
+</div>
+
+</body>
+</html>

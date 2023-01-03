@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title> 
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>   
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS handling errors </a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Errors</h4>
+        <hr>
+        <h4 style="color: blue;">Throw, and Try...Catch...Finally</h4>
+        <p>The <code>try</code> statement defines a code block to run (to try).</p>
+        <p>The <code>catch</code> statement defines a code block to handle any error.</p>
+        <p>The <code>finally</code> statement defines a code block to run regardless of the result.</p>
+        <p>The <code>throw</code> statement defines a custom error.</p>
+        <hr>
+        <h4 style="color: blue;">Errors Will Happen!</h4>
+        <p>When executing JavaScript code, different errors can 
+        occur. </p>
+        <p>Errors can be coding errors made by the programmer, errors due to wrong 
+        input, and other unforeseeable things.</p>
+        <h4 style="color: blue;">Example</h4>
+        <p>In this example we misspelled "alert" as "adddlert" to deliberately produce an error:</p>
+        <div class="affichage">
+         &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>
+        try {<br>&nbsp; adddlert(&quot;Welcome guest!&quot;);<br>}<br>catch(err) {<br>&nbsp; 
+        document.getElementById(&quot;demo&quot;).innerHTML = err.message;<br>}<br>&lt;/script&gt;</div>
+        <p>JavaScript catches <strong>adddlert</strong> as an error, and executes the 
+        catch code to 
+        handle it.</p>
+        <hr>
+        <h4 style="color: blue;">JavaScript try and catch</h4>
+        <p>The <code>try</code> statement allows you to define a block of code to be 
+        tested for errors while it is being executed.</p>
+        <p>The <code>catch</code> statement allows you to define a block of code to 
+        be executed, if an error occurs in the try block.</p>
+        <p>The JavaScript statements <code>try</code> and <code>catch</code> 
+        come in pairs:</p>
+        <div class="affichage">
+        try {<br>
+          &nbsp; <em>Block of code to try<br>
+        </em>}<br>
+        catch(<em>err</em>) {<br>
+          &nbsp; <em>Block of code to handle errors<br>
+        </em>}
+        </div>
+        <hr>
+        <h4 style="color: blue;">JavaScript Throws Errors</h4>
+        <p>When an error occurs, JavaScript will 
+        normally stop and generate an error message.</p>
+        <p>The technical term for this is: JavaScript will <strong>throw an 
+        exception (throw an error)</strong>.</p>
+        <p>JavaScript will actually create an <strong>Error object</strong> with two properties: 
+        <strong>name</strong> and <strong>message</strong>.</p>
+        <hr>
+        <h4 style="color: blue;">The throw Statement</h4>
+        <p>The <code>throw</code> statement allows you to create a custom error.</p>
+        <p>Technically you can <strong>throw an exception (throw an error)</strong>.</p>
+        <p>The exception can be a JavaScript <code>String</code>, a <code>Number</code>, a <code>Boolean</code> or an <code class="w3-codespan">Object</code>:</p>
+        <div class="affichage">
+        throw &quot;Too big&quot;;&nbsp;&nbsp;&nbsp; // throw a text<br>
+        throw 500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // throw a number</div>
+        <p>If you use <code>throw</code> together with <code>try</code> and 
+        <code>catch</code>, you can control program 
+        flow and generate custom error messages.</p>
+        <hr>
+        <h4 style="color: blue;">Input Validation Example</h4>
+        <p>This example examines input. If the value is wrong, 
+        an exception (err) is thrown.</p>
+        <p>The exception (err) is caught by the catch statement and a custom error message is displayed:</p>
+        <div class="affichage">
+        &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;Please input a number between 
+        5 and 10:&lt;/p&gt;<br><br>&lt;input id=&quot;demo&quot; type=&quot;text&quot;&gt;<br>&lt;button type=&quot;button&quot; 
+        onclick=&quot;myFunction()&quot;&gt;Test Input&lt;/button&gt;<br>&lt;p id=&quot;p01&quot;&gt;&lt;/p&gt;<br><br>
+        &lt;script&gt;<br>function myFunction() {<br>&nbsp;&nbsp;const message = 
+        document.getElementById(&quot;p01&quot;);<br>&nbsp;&nbsp;message.innerHTML = &quot;&quot;;<br>
+        &nbsp;&nbsp;let x = 
+        document.getElementById(&quot;demo&quot;).value;<br>&nbsp; 
+        try { <br>&nbsp;&nbsp;&nbsp;&nbsp;if(x == &quot;&quot;) throw &quot;empty&quot;;<br>
+          &nbsp;&nbsp;&nbsp; 
+         if(isNaN(x)) throw &quot;not a number&quot;;<br>&nbsp;&nbsp;&nbsp; 
+         x = Number(x);<br>&nbsp;&nbsp;&nbsp; if(x &lt; 5) throw 
+         &quot;too low&quot;;<br>&nbsp;&nbsp;&nbsp; if(x &gt; 10) throw &quot;too 
+         high&quot;;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;catch(err) {<br>&nbsp;&nbsp;&nbsp; message.innerHTML = 
+        &quot;Input is &quot; + err;<br>&nbsp;&nbsp;}<br>}<br>&lt;/script&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+        </div>
+        <hr>
+<h4 style="color: blue;">HTML Validation</h4>
+<p>The code above is just an example.</p>
+<p>Modern browsers will often use a combination of JavaScript and built-in HTML 
+validation, using predefined validation rules defined in HTML attributes: </p>
+<div class="affichage">
+ &lt;input id=&quot;demo&quot; type=&quot;number&quot; min=&quot;5&quot; max=&quot;10&quot; step=&quot;1&quot;&gt;
+</div>
+<p>You can read more about forms validation in a later chapter of this tutorial.</p>
+<hr>
+<h4 style="color: blue;">The finally Statement</h4>
+<p>The <code>finally</code> statement lets you execute code, after try and 
+catch, regardless of the result:</p>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage">
+try {<br>
+  &nbsp; <em>Block of code to try<br>
+</em>}<br>
+catch(<em>err</em>) {<br>
+  &nbsp; <em>Block of code to handle errors<br>
+</em>}
+<br>finally {<br>&nbsp; <em>Block of code to be executed regardless of the try / catch result<br>
+</em>}</div>
+ <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ function myFunction() {<br>&nbsp; const message = 
+document.getElementById(&quot;p01&quot;);<br>&nbsp; message.innerHTML = &quot;&quot;;<br>
+&nbsp;&nbsp;let x = 
+document.getElementById(&quot;demo&quot;).value;<br>&nbsp; 
+try { <br>&nbsp;&nbsp;&nbsp; 
+if(x == &quot;&quot;) throw &quot;is empty&quot;;<br>&nbsp;&nbsp;&nbsp; if(isNaN(x)) 
+throw &quot;is not a number&quot;;<br>&nbsp;&nbsp;&nbsp; 
+    x = Number(x);<br>&nbsp;&nbsp;&nbsp; if(x &gt; 
+10) throw &quot;is too high&quot;;<br>&nbsp;&nbsp;&nbsp; if(x &lt; 
+5) throw &quot;is too low&quot;;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;catch(err) 
+{<br>&nbsp;&nbsp;&nbsp; message.innerHTML = &quot;Error: &quot; + 
+err + &quot;.&quot;;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;finally {<br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).value = &quot;&quot;;<br>
+  &nbsp;&nbsp;}<br>}</div>
+<hr>
+<h4 style="color: blue;">The Error Object</h4>
+<p>JavaScript has a built in error object that provides error information when 
+an error occurs. </p>
+<p>The error object provides two useful properties: name and message.</p>
+<hr>
+<h4 style="color:blue">Error Object Properties</h4>
+<table class="table table-striped">
+<tr><th>Property</th><th>Description</th></tr>
+<tr><td>name</td><td>Sets or returns an error name</td></tr>
+<tr><td>message</td><td>Sets or returns an error message (a string)</td></tr>
+</table>
+<h4 style="color: blue;">Error Name Values</h4>
+<p>Six different values can be returned by the error name property:</p>
+<table class="table table-striped">
+<tr><th>Error Name</th><th>Description</th></tr>
+<tr><td>EvalError</td><td>An error has occurred in the eval() function</td></tr>
+<tr><td>RangeError</td><td>A number &quot;out of range&quot; has occurred</td></tr>
+<tr><td>ReferenceError</td><td>An illegal reference has occurred</td></tr>
+<tr><td>SyntaxError</td><td>A syntax error has occurred</td></tr>
+<tr><td>TypeError</td><td>A type error has occurred</td></tr>
+<tr><td>URIError</td><td>An error in encodeURI() has occurred</td></tr>
+</table>
+<p>The six different values are described below.</p>
+<hr>
+<h4 style="color: blue;">Eval Error</h4>
+<p>An <code>EvalError</code> indicates an error in the eval() function.</p>
+<p>Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead.</p>
+<hr>
+<h4 style="color: blue;">Range Error</h4>
+<p>A <code>RangeError</code> is thrown if you use a number that is outside 
+the range of legal values.</p>
+<p>For example: You cannot set the number of significant digits of a number to 
+500. </p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let num = 1;<br>
+try {<br>
+  &nbsp; num.toPrecision(500);&nbsp;&nbsp; // A number cannot have 500 
+ significant digits<br>
+}<br>
+catch(err) {<br>
+  &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Reference Error</h4>
+<p>A <code>ReferenceError</code> is thrown if you use (reference) a variable 
+that has not been declared:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 5;<br>try {<br>
+&nbsp;&nbsp;x = y + 1;&nbsp;&nbsp; // y cannot be used (referenced)<br>
+}<br>
+catch(err) {<br>
+  &nbsp; document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Syntax Error</h4>
+<p>A <code>SyntaxError</code> is thrown if you try to evaluate code with a 
+syntax error.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ try {<br>&nbsp; eval(&quot;alert('Hello)&quot;);&nbsp;&nbsp; // 
+ Missing ' will produce an error<br>}<br>catch(err) {<br>&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>} </div>
+<hr>
+<h4 style="color: blue;">Type Error</h4>
+<p>A <code>TypeError</code> is thrown if you use a value that is outside the 
+range of expected types:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let num = 1;<br>
+try {<br>
+&nbsp;&nbsp;num.toUpperCase();&nbsp;&nbsp; // You cannot convert a number 
+ to upper case<br>
+}<br>
+catch(err) {<br>
+&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">URI (Uniform Resource Identifier) Error</h4>
+<p>A <code>URIError</code> is thrown if you use illegal characters in a URI function:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+try {<br>
+  &nbsp; decodeURI(&quot;%%%&quot;);&nbsp;&nbsp; // You cannot URI decode 
+  percent signs<br>
+}<br>
+catch(err) {<br>
+&nbsp;&nbsp;document.getElementById(&quot;demo&quot;).innerHTML = err.name;<br>
+}
+</div>
+<hr>
+<h4 style="color: blue;">Non-Standard Error Object Properties</h4>
+<p>Mozilla and Microsoft define some non-standard error object properties:</p>
+<p>fileName (Mozilla)<br>
+lineNumber (Mozilla)<br>
+columnNumber (Mozilla)<br>
+stack (Mozilla)<br>
+description (Microsoft)<br>
+number (Microsoft)</p>
+<p>Do not use these properties in public web sites. They will not work in all browsers.</p>
+</div>
+</div>
+
+</body>
+</html>

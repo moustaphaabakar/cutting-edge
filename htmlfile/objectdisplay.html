@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> object display</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Display Objects</h4>
+        <hr>
+        <h4 style="color: blue;">How to Display JavaScript Objects?</h4>
+        <p>Displaying a JavaScript object will output <b>[object Object]</b>.</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const person = {<br>
+        &nbsp; name: &quot;John&quot;,<br>
+        &nbsp; age: 30,<br>
+        &nbsp; city: &quot;New York&quot;<br>
+        };<br>
+        <br>
+        document.getElementById("demo").innerHTML = person;
+        </div>
+        <p>Some common solutions to display JavaScript objects are:
+        <ul>
+        <li>Displaying the Object Properties by name</li>
+        <li>Displaying the Object Properties in a Loop</li>
+        <li>Displaying the Object using Object.values()</li>
+        <li>Displaying the Object using JSON.stringify()</li>
+        </ul>
+        </p>
+        <hr>
+        <h4 style="color:blue">Displaying Object Properties</h4>
+        <p>The properties of an object can be displayed as a string:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const person = {<br>
+        &nbsp; name: &quot;John&quot;,<br>
+        &nbsp; age: 30,<br>
+        &nbsp; city: &quot;New York&quot;<br>
+        };<br>
+        <br>
+        document.getElementById("demo").innerHTML =<br>
+        person.name + "," + person.age + "," + person.city;
+        </div>
+        <hr>
+        <h4 style="color: blue;">Displaying the Object in a Loop</h4>
+        <p>The properties of an object can be collected in a loop:</p>
+        <h4 style="color: blue;">Example</h4>
+        <div class="affichage">
+        const person = {<br>
+        &nbsp; name: &quot;John&quot;,<br>
+        &nbsp; age: 30,<br>
+        &nbsp; city: &quot;New York&quot;<br>
+        };<br>
+        <br>
+        let txt = &quot;&quot;;<br>
+        for (let x in person) {<br>
+        txt += person[x] + &quot; &quot;;<br>
+        };<br><br>
+        document.getElementById("demo").innerHTML = txt;
+        </div>
+        <p>You must use <b>person[x]</b> in the loop.</p>
+        <p><b>person.x</b> will not work (Because <b>x</b> is a variable).</p>
+        <hr>
+<h4 style="color: blue;">Using Object.values()</h4>
+<p>Any JavaScript object can be converted to an array using <code>Object.values()</code>:</p>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: 30,<br>
+&nbsp; city: &quot;New York&quot;<br>
+};<br>
+<br>
+const myArray = Object.values(person);</div>
+<p><code>myArray</code> is now a JavaScript array, ready to be displayed:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: 30,<br>
+&nbsp; city: &quot;New York&quot;<br>
+};<br>
+<br>
+const myArray = Object.values(person);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myArray;
+</div>
+<p><code>Object.values()</code> is supported in all major browsers since 2016.</p>
+<table class="table table-striped">
+  <tbody><tr>
+    <th style="width:20%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:20%;" class="bsEdge" title="Edge"></th>
+    <th style="width:20%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:20%;" class="bsSafari" title="Safari"></th>
+    <th style="width:20%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>54 (2016)</td>
+    <td>14 (2016)</td>    
+    <td>47 (2016)</td>
+    <td>10 (2016)</td>
+    <td>41 (2016)</td>
+  </tr>
+</tbody></table>
+<h4 style="color: blue;">Using JSON.stringify()</h4>
+<p>Any JavaScript object can be stringified (converted to a string) with the JavaScript function
+<code>JSON.stringify()</code>:</p>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: 30,<br>
+&nbsp; city: &quot;New York&quot;<br>
+};<br>
+<br>
+let myString = JSON.stringify(person);</div>
+<p><code >myString</code> is now a JavaScript string, ready to be displayed:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: 30,<br>
+&nbsp; city: &quot;New York&quot;<br>
+};<br>
+<br>
+let myString = JSON.stringify(person);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myString;
+</div>
+<p>The result will be a string following the JSON notation:</p>
+<p>{"name":"John","age":50,"city":"New York"}</p>
+<p><code>JSON.stringify()</code> is included in JavaScript and supported in all major browsers.</p>
+<hr>
+<h4 style="color: blue;">Stringify Dates</h4>
+<p><code class="w3-codespan">JSON.stringify</code> converts dates into strings:</p>
+<h3>Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; today: new Date()<br>
+};<br>
+<br>
+let myString = JSON.stringify(person);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myString;
+</div>
+<hr>
+<h4 style="color: blue;">Stringify Functions</h4>
+<p><code>JSON.stringify</code> will not stringify functions:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: function () {return 30;}<br>
+};<br>
+<br>
+let myString = JSON.stringify(person);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myString;
+</div>
+<p>This can be "fixed" if you convert the functions into strings before stringifying.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const person = {<br>
+&nbsp; name: &quot;John&quot;,<br>
+&nbsp; age: function () {return 30;}<br>
+};<br>
+person.age = person.age.toString();<br><br>
+let myString = JSON.stringify(person);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myString;
+</div>
+<hr>
+<h4 style="color: blue;">Stringify Arrays</h4>
+<p>It is also possible to stringify JavaScript arrays:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+const arr = [&quot;John&quot;, &quot;Peter&quot;, &quot;Sally&quot;, &quot;Jane&quot;];<br><br>
+let myString = JSON.stringify(arr);<br>
+document.getElementById(&quot;demo&quot;).innerHTML = myString;
+</div>
+<p>The result will be a string following the JSON notation:</p>
+<p>["John","Peter","Sally","Jane"]</p>
+ </div>
+
+</body>
+</html>

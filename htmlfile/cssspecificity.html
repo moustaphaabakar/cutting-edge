@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css specificity<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Specificity</h4>
+        <hr>
+        <h4 style="color: blue;">What is Specificity?</h4>
+        <p>If there are two or more CSS rules that point to the same 
+        element, the selector with the highest specificity value will &quot;win&quot;, and its 
+        style declaration will be applied to that HTML element.</p>
+        <p>Think of specificity as a score/rank that determines which style declaration 
+        is ultimately applied to an element.</p>
+        <p>Look at the following examples:</p>
+        <h4 style="color: blue;">Example 1</h4>
+        <p>In this example, we have used the &quot;p&quot; element as selector, and specified a red color 
+        for this element. The text will be red:</p>
+        <div class="affichage">
+          &lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;style&gt;<br>&nbsp;&nbsp;&nbsp; p {color: red;} <br>&nbsp; 
+          &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p&gt;Hello World!&lt;/p&gt;<br>
+          <br>&lt;/body&gt;<br>
+          &lt;/html&gt;</div>
+          <p>Now, look at example 2:</p>
+          <h4 style="color: blue;">Example 2</h4>
+          <p>In this example, we have added a class selector (named &quot;test&quot;), and 
+          specified a green 
+          color for this class. The text will now be green (even though we have specified 
+          a red 
+          color for the element selector &quot;p&quot;). This is because the class selector is given 
+          higher priority:</p>
+          <div class="affichage">
+            &lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;style&gt;<br>&nbsp;&nbsp;&nbsp; .test {color: green;}
+            <br>&nbsp;&nbsp;&nbsp; p {color: red;} <br>&nbsp; &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>
+            <br>&lt;p class=&quot;test&quot;&gt;Hello World!&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+            <p>Now, look at example 3:</p>
+            <h4 style="color:blue ;">Example 3</h4>
+            <p>In this example, we have added the id selector (named &quot;demo&quot;). The text will now be 
+            blue, because the id selector is given higher priority:</p>
+            <div class="affichage">
+              &lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;style&gt;<br>&nbsp;&nbsp;&nbsp; #demo {color: blue;}<br>&nbsp;&nbsp;&nbsp; 
+              .test {color: green;} <br>&nbsp;&nbsp;&nbsp; p {color: red;} <br>&nbsp; 
+              &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p id=&quot;demo&quot; class=&quot;test&quot;&gt;Hello 
+              World!&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+              <p>Now, look at example 4:</p>
+<h4 style="color:blue">Example 4</h4>
+<p>In this example, we have added an inline style for the &quot;p&quot; element. The 
+text will now be pink, because the inline style is given the highest priority:</p>
+<div class="affichage">
+  &lt;html&gt;<br>&lt;head&gt;<br>&nbsp; &lt;style&gt;<br>&nbsp;&nbsp;&nbsp; #demo {color: blue;}<br>&nbsp;&nbsp;&nbsp; 
+  .test {color: green;} <br>&nbsp;&nbsp;&nbsp; p {color: red;} <br>&nbsp; 
+  &lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;p id=&quot;demo&quot; class=&quot;test&quot; 
+  style=&quot;color: pink;&quot;&gt;Hello World!&lt;/p&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;</div>
+
+  <hr>
+
+  <h4 style="color: blue;">Specificity Hierarchy </h4>
+  <p>Every CSS selector has its place in the specificity hierarchy.</p>
+  <p>There are four categories which define the specificity level of a selector:</p>
+  <ul>
+    <li><strong>Inline styles</strong> - Example: 
+  &lt;h1 style=&quot;color: pink;&quot;&gt;</li>
+    <li><strong>IDs</strong> - Example: 
+  #navbar</li>
+    <li><strong>Classes, pseudo-classes, attribute selectors</strong> - Example: .test, 
+    :hover, [href]</li>
+    <li><strong>Elements and pseudo-elements</strong> - Example: h1, :before</li>
+  </ul>
+  <hr>
+  <h4 style="color: blue;">How to Calculate Specificity?</h4>
+  <p>Memorize how to calculate specificity!</p>
+  <p>Start at 0, add 100 for each ID value, add 10 for each 
+  class value (or 
+  pseudo-class or attribute selector), add 1 for each element selector or pseudo-element.</p>
+  
+  <p><strong>Note:</strong> Inline style gets a specificity value of 1000, and is 
+  always given the highest priority!</p>
+    <p><strong>Note 2:</strong> There is one 
+  exception to this rule: if you use the !important</code></a> 
+  rule, it will even override inline styles!</p>
+  
+  <p>The table below shows some examples on how to calculate specificity values:</p>
+  <table class="table table-striped">
+    <tr>
+      <th>Selector</th>
+      <th>Specificity Value</th>
+      <th>Calculation</th>
+    </tr>
+    <tr>
+      <td>p</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>p.test</td>
+      <td>11</td>
+      <td>1 + 10</td>
+    </tr>
+    <tr>
+      <td>p#demo</td>
+      <td>101</td>
+      <td>1 + 100</td>
+    </tr>
+    <tr>
+      <td>&lt;p style=&quot;color: pink;&quot;&gt;</td>
+      <td>1000</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <td>#demo</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>.test</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>p.test1.test2</td>
+      <td>21</td>
+      <td>1 + 10 + 10</td>
+    </tr>
+    <tr>
+      <td>#navbar p#demo</td>
+      <td>201</td>
+      <td>100 + 1 + 100</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>0</td>
+      <td>0 (the universal selector is ignored)</td>
+    </tr>
+    </table>
+    <p><strong>The selector with the highest specificity value will win and take effect!</strong></p>
+    <p>Consider these three code fragments:</p>
+    <h4 style="color: blue; margin: 10px;">Example</h4>
+    <div class="affichage">
+    A: h1<br>B: h1#content<br>C: &lt;h1 id=&quot;content&quot; style=&quot;color: 
+      pink;&quot;&gt;Heading&lt;/h1&gt;</div>
+    <p style="margin: 10px;">The specificity of A is 1 (one element selector)<br>The specificity of B is 
+    101 (one ID reference + one element selector)<br>The specificity of C is 1000 (inline styling)</p>
+    <p style="margin: 10px;">Since the third rule (C) has the highest specificity value (1000), this style 
+    declaration will be applied.</p>
+    <hr>
+    <h4 style="color:blue;margin: 10px;">More Specificity Rules Examples</h4>
+    <p style="margin: 10px;"><strong>Equal specificity: the latest rule wins </strong>- 
+    If the same rule is written twice into the external style sheet, then 
+    the latest rule wins:</p>
+    <h4 style="color: blue;margin:10px ;">Example</h4>
+    <div class="affichage" style="margin: 10px;">
+    h1 {background-color: yellow;}<br>
+    h1 {background-color: red;}
+    </div>
+    <hr>
+<p style="margin: 10px;"><strong>ID selectors have a higher specificity than attribute selectors</strong> 
+- Look at the following three code lines:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+div#a {background-color: green;}<br>#a {background-color: yellow;}<br>div[id=a] {background-color: blue;}
+</div>
+<p>the first rule is more specific than the other two, and will therefore be applied.</p>
+<hr>
+<p style="margin: 10px;"><strong>Contextual selectors are more specific than a single element 
+selector - </strong>The embedded style sheet is closer to the element to be styled. So in the 
+following situation</p>
+    <h4 style="color: blue;margin: 10px;">Example</h4>
+    <div class="affichage">
+    <strong>From external CSS file:</strong><br>#content h1 {background-color: red;}<br><br><strong>
+    In HTML file:</strong><br>&lt;style&gt;<br>#content h1 {background-color: 
+    yellow;}<br>&lt;/style&gt;
+    </div>
+    <p style="margin: 10px;">the latter rule will be applied.</p>
+    <hr>
+    <p style="margin: 10px;"><strong>A class selector beats any number of element selectors </strong>- a class selector such as .intro beats h1, p, div, etc:</p>
+    <h4 style="color:blue;margin: 10px;">Example</h4>
+    <div class="affichage">
+      .intro {background-color: yellow;}<br>h1 {background-color: 
+      red;}
+    </div>
+    <hr>
+    <p style="margin: 10px;"><strong>The universal selector (*) and inherited values have a specificity of 0</strong> - 
+    The universal selector (*) and inherited values are ignored!</p>
+</div>
+</body>
+</html>

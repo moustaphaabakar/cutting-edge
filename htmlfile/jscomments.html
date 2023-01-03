@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS comments</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Comments</h4>
+        <hr>
+        <p>JavaScript comments can be used to explain JavaScript code, and 
+        to make it more readable.</p>
+        <p>JavaScript comments can also be used to prevent execution, when 
+        testing alternative code.</p>
+        <hr>
+        <h4 style="color: blue;">Single Line Comments</h4>
+        <p>Single line comments start with <code>//</code>.</p>
+        <p>Any text between <code>//</code> and the end of the line will be ignored by JavaScript 
+        (will not be executed).</p>
+        <p>This example uses a single-line comment before each code line:</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                // Change heading:<br>
+                document.getElementById(&quot;myH&quot;).innerHTML = &quot;My First Page&quot;;<br><br>
+                // Change paragraph:<br>
+                document.getElementById(&quot;myP&quot;).innerHTML = &quot;My first paragraph.&quot;;
+                </div>
+                <p>This example uses a single line comment at the end of each line 
+                to explain the code:</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                let x = 5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Declare x, give it the value of 5<br>
+                let y = x + 2;&nbsp; // Declare y, give it the value of x + 2
+                </div>
+                <hr>
+                <h4 style="color: blue;">Multi-line Comments</h4>
+                <p>Multi-line comments start with <code>/*</code> and end with  <code>*/</code>.</p>
+                <p>Any text between <code >/*</code> and <code>*/</code> will be ignored by JavaScript.</p>
+                <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+                <h4 style="color: blue;">Example</h4>
+                <div class="affichage">
+                /*<br>
+                The code below will change<br>
+                the heading with id = &quot;myH&quot;<br>
+                and the paragraph with id = &quot;myP&quot;<br>
+                in my web page:<br>
+                */<br>
+                document.getElementById(&quot;myH&quot;).innerHTML = &quot;My First Page&quot;;<br>
+                document.getElementById(&quot;myP&quot;).innerHTML = &quot;My first paragraph.&quot;;
+                </div>
+                    <p>It is most common to use single line comments.<br>Block comments are often 
+                    used for formal documentation.</p>
+                    <hr>
+<h4 style="color: blue;">Using Comments to Prevent Execution</h4>
+<p>Using comments to prevent execution of code is suitable for 
+code testing.</p>
+<p>Adding <code>//</code> in front of a code line changes the code lines from an executable line to 
+a comment.</p>
+<p>This example uses // to prevent execution of one of the code lines:</p>
+<h4 style="color: bllue;">Example</h4>
+<div class="affichage">
+//document.getElementById(&quot;myH&quot;).innerHTML = &quot;My First Page&quot;;<br>
+document.getElementById(&quot;myP&quot;).innerHTML = &quot;My first paragraph.&quot;;
+</div>
+<p>This example uses a comment block to prevent execution of 
+    multiple lines:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    /*<br>
+    document.getElementById(&quot;myH&quot;).innerHTML = &quot;My First Page&quot;;<br>
+    document.getElementById(&quot;myP&quot;).innerHTML = &quot;My first paragraph.&quot;;<br>
+    */
+    </div>
+      </div>
+</body>
+</html>

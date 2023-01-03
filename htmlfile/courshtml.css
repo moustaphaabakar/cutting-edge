@@ -1,0 +1,21 @@
+
+.card-header{
+    text-align: center;
+    margin: 5px;
+}
+.firstpart ol li a{
+    text-decoration: none;
+}
+.firstpart{
+    margin: 20px;
+}
+a:hover{
+    background-color:green;
+    font-size:20px;
+    border: solid green 1px;
+    border-radius: 50px;
+}
+footer nav{
+    position: absolute;
+    top:50px;
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS numbers</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Numbers</h4>
+        <hr>
+        <p>JavaScript has only one type of number.
+        Numbers can be written with or without decimals.</p>
+        <hr>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            let x = 3.14;&nbsp;&nbsp;&nbsp; // A number with decimals<br>
+            let y = 3;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // A number without decimals
+            </div>
+            <p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+            <div class="affichage">
+            let x = 123e5;&nbsp;&nbsp;&nbsp; // 12300000<br>
+            let y = 123e-5;&nbsp;&nbsp; // 0.00123
+            </div>
+            <p>
+                <h4 style="color: blue;">JavaScript Numbers are Always 64-bit Floating Point</h4>
+                <p>Unlike many other programming languages, 
+                JavaScript does not define different types of numbers, like integers, short, long, 
+                floating-point etc.</p>
+                <p>JavaScript numbers are always stored as double precision floating point 
+                numbers, following the international IEEE 754 standard. <br><br>This format 
+                stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 
+                to 51, the exponent in bits 52 to 62, and the sign in bit 63:</p>
+                <table class="table table-striped">
+                  <tr>
+                    <th>Value (aka Fraction/Mantissa)</th>
+                    <th>Exponent</th>
+                    <th>Sign</th>
+                  </tr>
+                  <tr>
+                    <td>52 bits (0 - 51)&nbsp;</td>
+                    <td>11 bits (52 - 62)</td>
+                    <td>1 bit (63)</td>
+                  </tr>
+                </table>
+                <h4 style="color: blue;">Integer Precision</h4>
+<p>Integers (numbers without a period or exponent notation) are accurate up to 15 digits.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 999999999999999;&nbsp;&nbsp; // x will be 999999999999999<br>
+let y = 9999999999999999;&nbsp; // y will be 10000000000000000
+</div>
+<p>The maximum number of decimals is 17.</p>
+<h4 style="color:blue">Floating Precision</h4>
+<p>Floating point arithmetic is not always 100% accurate:</p>
+<div class="affichage">
+let x = 0.2 + 0.1;
+</div>
+<p>To solve the problem above, it helps to multiply and divide:</p>
+<div class="affichage">
+let x = (0.2 * 10 + 0.1 * 10) / 10;
+</div>
+<hr>
+<h4 style="color: blue;">Adding Numbers and Strings</h4>
+<p>WARNING !!</p>
+ <p>JavaScript uses the + operator for both addition and concatenation.</p>
+ <p>Numbers are added. Strings are concatenated.</p>
+<p>If you add two numbers, the result will be a number:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 10;<br>
+let y = 20;<br>
+let z = x + y;
+</div>
+<p>If you add two strings, the result will be a string concatenation:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = &quot;10&quot;;<br>
+let y = &quot;20&quot;;<br>
+let z = x + y;
+</div>
+<p>If you add a number and a string, the result will be a string concatenation:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 10;<br>
+let y = &quot;20&quot;;<br>
+let z = x + y;
+</div>
+<p>If you add a string and a number, the result will be a string concatenation:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = &quot;10&quot;;<br>
+let y = 20;<br>
+let z = x + y;
+</div>
+<p>A common mistake is to expect this result to be 30:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 10;<br>
+let y = 20;<br>
+let z = &quot;The result is: &quot; + x + y;
+</div>
+<p>A common mistake is to expect this result to be 102030:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 10;<br>
+let y = 20;<br>
+let z = "30";<br>
+let result = x + y + z;
+</div>
+<p>The JavaScript interpreter works from left to right.</p>
+<p>First 10 + 20 is added because x and y are both numbers.</p>
+<p>Then 30 + &quot;30&quot; is concatenated because z is a string.</p>
+<hr>
+<h4 style="color: blue;">Numeric Strings</h4>
+<p>JavaScript strings can have numeric content:</p>
+<div class="affichage">
+let x = 100;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // x is a number<br>
+<br>let y = &quot;100&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // y is a 
+string</div>
+<p>JavaScript will try to convert strings to numbers in all numeric operations:</p>
+<p>This will work:</p>
+<div class="affichage">
+let x = &quot;100&quot;;<br>
+let y = &quot;10&quot;;<br>
+let z = x / y;
+</div>
+<p>This will also work:</p>
+<div class="affichage">
+let x = &quot;100&quot;;<br>
+let y = &quot;10&quot;;<br>
+let z = x * y;
+</div>
+<p>And this will work:</p>
+<div class="affichage">
+let x = &quot;100&quot;;<br>
+let y = &quot;10&quot;;<br>
+let z = x - y;
+</div>
+<p>But this will not work:</p>
+<div class="affichage">
+let x = &quot;100&quot;;<br>
+let y = &quot;10&quot;;<br>
+let z = x + y;
+</div>
+<p>In the last example JavaScript uses the + operator to concatenate the strings.</p>
+<hr>
+<h4 style="color: blue;">NaN - Not a Number</h4>
+<p><code>NaN</code> is a JavaScript reserved word indicating that a number is not a legal number.</p>
+<p>Trying to do arithmetic with a non-numeric string will result in <code>NaN</code> (Not a 
+Number):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 / &quot;Apple&quot;;
+</div>
+<p>However, if the string contains a numeric value , the result will be a 
+number:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 / &quot;10&quot;;
+</div>
+<p>You can use the global JavaScript function <code>isNaN()</code>
+to find out if a value is a not a number:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 100 / &quot;Apple&quot;;<br>isNaN(x);
+</div>
+<p>Watch out for <code>NaN</code>. If you use <code>NaN</code> in a mathematical operation, the result will also be <code>NaN</code>:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let x = NaN;<br>
+    let y = 5;<br>
+    let z = x + y;
+    </div>
+    <p>Or the result might be a concatenation like NaN5:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    let x = NaN;<br>
+    let y = &quot;5&quot;;<br>
+    let z = x + y;
+    </div>
+    <p><code>NaN</code> is a number: <code>typeof NaN</code> returns <code>number</code>:</p>
+    <h4 style="color: blue;">Example</h4>
+    <div class="affichage">
+    typeof NaN;
+    </div>
+    <hr>
+    <h4 style="color: blue;">Infinity</h4>
+<p><code>Infinity</code> (or <code>-Infinity</code>) is the value JavaScript will return if you calculate a number outside the largest 
+possible number.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let myNumber = 2;<br>
+// Execute until Infinity<br>
+while (myNumber != Infinity) {<br>
+  &nbsp; myNumber = myNumber * myNumber;<br>}
+</div>
+<p>Division by 0 (zero) also generates <code>Infinity</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x =&nbsp; 2 / 0;<br>
+let y = -2 / 0;
+</div>
+<p><code>Infinity</code> is a number: <code >typeof Infinity</code> returns <code>number</code>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+ typeof Infinity;
+</div>
+<hr>
+<h4 style="color: blue;">Hexadecimal</h4>
+<p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 
+0x.</p>
+<h4 style="color: blue;">Example</h4>
+ <div class="affichage">
+let x = 0xFF;
+</div>
+<p>Never write a number with a leading zero (like 07).<br>Some JavaScript versions interpret 
+numbers as octal if they are written with a leading zero.</p>
+<p>
+By default, JavaScript displays numbers as <strong>base 10</strong> decimals.</p>
+<p>But you can use the <code>toString()</code> method to output numbers from <strong>base 2</strong> 
+to <strong>base 36</strong>.</p>
+<p>Hexadecimal is <strong>base 16</strong>. Decimal is <strong>base 10</strong>. 
+Octal is <strong>base 8</strong>. Binary is <strong>base 2</strong>.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let myNumber = 32;<br>
+myNumber.toString(32);<br>
+myNumber.toString(16);<br>
+myNumber.toString(12);<br>
+myNumber.toString(10);<br>
+myNumber.toString(8);<br>
+myNumber.toString(2);<br>
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript Numbers as Objects</h4>
+<p>Normally JavaScript numbers are primitive values created from literals:</p>
+<div class="affichage">
+let x = 123;<br>
+</div>
+<p>But numbers can also be defined as objects with the keyword <code>new</code>:</p>
+<div class="affichage">
+let y = new Number(123);<br>
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let x = 123;<br>
+let y = new Number(123);<br>
+</div>
+<p>Do not create Number objects.</p>
+<p>The <code>new</code> keyword complicates the code and slows down execution speed.</p>
+<p>Number Objects can produce unexpected results:</p>
+<p>When using the <code>==</code> operator, x and y are <b>equal</b>:</p>
+<div class="affichage">
+let x = 500;<br>
+let y = new Number(500);
+</div>
+<p>When using the <code>===</code> operator, x and y are <b>not equal</b>.</p>
+<div class="affichage">
+let x = 500;<br>
+let y = new Number(500);
+</div>
+<p>Note the difference between <code>(x==y)</code> and <code>(x===y)</code>.</p>
+<p><code>(x == y)</code> true or false?</p>
+<div class="affichage">
+let x = new Number(500);<br>
+let y = new Number(500);
+</div>
+<div class="affichage">
+    let x = new Number(500);<br>
+    let y = new Number(500);
+    </div>
+    <p>Comparing two JavaScript objects <b>always</b> returns <b>false</b>.</p>
+ </div>
+
+</body>
+</html>

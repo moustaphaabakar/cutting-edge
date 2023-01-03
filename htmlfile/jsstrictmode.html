@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS  strict mode</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">JavaScript Use Strict</h4>
+        <hr>
+        <p><code>&quot;use strict&quot;;</code> Defines that 
+        JavaScript code should be executed in 
+        &quot;strict mode&quot;.</p>
+        <hr>
+        <h4 style="color: blue;">The &quot;use strict&quot; Directive</h4>
+        <p>The <code>&quot;use strict&quot;</code> directive was new in ECMAScript version 5.</p>
+        <p>It is not a statement, but a literal expression, ignored by earlier versions 
+        of JavaScript.</p>
+        <p>The purpose of <code>&quot;use strict&quot;</code> is to indicate that the code should be executed in &quot;strict mode&quot;.</p>
+        <p>With strict mode, you can not, for example, use undeclared variables.</p>
+        <p>All modern browsers support "use strict" except Internet Explorer 9 and lower:</p>
+        <table class="table table-striped">
+          <tr>
+            <th style="width:20%;font-size:16px;text-align:left;">Directive</th>
+            <th style="width:16%;" class="bsChrome" title="Chrome"></th>
+            <th style="width:16%;" class="bsEdge"  title="Internet Explorer / Edge"></th>
+            <th style="width:16%;" class="bsFirefox" title="Firefox"></th>
+            <th style="width:16%;" class="bsSafari" title="Safari"></th>
+            <th style="width:16%;" class="bsOpera" title="Opera"></th>                
+          </tr>
+          <tr>
+            <td style="text-align:left;">"use strict"</td>
+            <td>13.0</td>
+            <td>10.0</td>
+            <td>4.0</td>
+            <td>6.0</td>
+            <td>12.1</td>
+          </tr>
+        </table>
+        <p>The numbers in the table specify the first browser version that fully supports the directive.</p>
+        <p>You can use strict mode in all your programs. It helps you to write cleaner code,
+        like preventing you from using undeclared variables.</p>
+        <p><code>"use strict"</code> is just a string, so IE 9 will not throw an error even if it does not understand it.</p>
+        <hr>
+<h4 style="color: blue;">Declaring Strict Mode</h4>
+<p>Strict mode is declared by adding <span>&quot;use strict&quot;;</span> to the beginning of a 
+script or a function.</p>
+<p>Declared at the beginning of a script, it has global scope (all code 
+in the script will execute in strict mode):</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+"use strict";<br>x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error 
+ because x is not declared<br>
+</div>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+"use strict";<br>myFunction();<br><br>
+function myFunction() {<br>
+ &nbsp;&nbsp;y = 3.14;&nbsp;&nbsp; // This will also cause an error 
+ because y is not declared<br>}</div>
+<p>Declared inside a function, it has local scope (only the code inside the function is 
+in strict mode):</p>
+<div class="affichage">
+x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will not cause an error.
+ <br>myFunction();<br><br>function 
+ myFunction() {<br>
+&nbsp;&nbsp;"use strict";<br>
+  &nbsp; y = 3.14;&nbsp;&nbsp; // This will cause an error<br>}<br>
+</div>
+<hr>  
+<h4 style="color: blue;">The &quot;use strict&quot;; Syntax</h4>
+<p>The syntax, for declaring strict mode, was designed to be compatible with 
+older versions of JavaScript.</p>
+<p>Compiling a numeric literal (4 + 5;) or a string literal (&quot;John Doe&quot;;) in a 
+JavaScript program has no side effects. It simply compiles to a non existing 
+variable and dies.</p>
+<p>So <code >&quot;use strict&quot;;</code> only matters to new compilers that &quot;understand&quot; the meaning 
+of it.</p>
+<hr>
+<h4 style="color: blue;">Why Strict Mode?</h4>
+<p>Strict mode makes it easier to write &quot;secure&quot; JavaScript.</p>
+<p>Strict mode changes previously accepted &quot;bad syntax&quot; into real errors.</p>
+<p>As an example, in normal JavaScript, mistyping a variable name creates a new 
+global variable. In strict mode, this will throw an error, making it impossible 
+to accidentally create a global variable.</p>
+<p>In normal JavaScript, a developer will not receive any error feedback 
+assigning values to non-writable properties. </p>
+<p>In strict mode, any assignment to a non-writable property, a getter-only 
+property, a non-existing property, a non-existing variable, or a non-existing 
+object, will throw an error.</p>
+<hr>
+<h4 style="color: blue;">Not Allowed in Strict Mode</h4>
+<p>Using a variable, without declaring it, is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>
+ x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error</div>
+<p>
+<p>Objects are variables too.</p>
+<p>Using an object, without declaring it, is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>
+ x = {p1:10, p2:20};&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error</div>
+<p>
+<p>Deleting a variable (or object) is not allowed.</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>let x = 3.14;<br>
+delete x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This 
+will cause an error
+</div>
+<p>Deleting a function is not allowed.</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>function x(p1, p2) {}; <br>delete x;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ // This will cause an error&nbsp;
+</div>
+<p>
+<p>Duplicating a parameter name is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>function x(p1, p1) {};&nbsp;&nbsp; // This will cause an error
+</div>
+<p>Octal numeric literals are not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>let x = 010;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This 
+will cause an error
+</div>
+<p>Octal escape characters are not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>
+let x = &quot;\010&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+</div>
+<p>Writing to a read-only property is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>
+const obj = {};<br>
+Object.defineProperty(obj, &quot;x&quot;, {value:0, writable:false});<br><br>
+obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; // This 
+will cause an error
+</div>
+<p>Writing to a get-only property is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>
+const obj = {get x() 
+{return 0} };<br><br>obj.x = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This 
+will cause an error
+</div>
+<p>Deleting an undeletable property is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>delete Object.prototype; // This will cause an error
+</div>
+<p>The word <code>eval</code> cannot be used as a variable:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>let eval = 3.14;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+</div>
+<p>The word <code >arguments</code> cannot be used as a variable:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>let arguments = 3.14;&nbsp;&nbsp;&nbsp; // This will cause an error
+</div>
+<p>The <code>with</code> statement is not allowed:</p>
+<div class="affichage">
+&quot;use strict&quot;;<br>with (Math){x = cos(2)}; // This will cause an error
+</div>
+<p>For security reasons, <code>eval()</code> is not allowed to create  
+    variables in the scope from which it was called.</p>
+    <p>In strict mode, a variable can not be used before it is declared:</p>
+    <div class="affichage">
+    &quot;use strict&quot;;<br>
+    eval (&quot;x = 2&quot;);<br>
+    alert (x);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;// This 
+    will cause an error
+    </div>
+    <p>
+    <p>In strict mode, eval() can not declare a variable using the var keyword:</p>
+    <div class="affichage">
+    &quot;use strict&quot;;<br>
+    eval (&quot;var x = 2&quot;);<br>
+    alert (x);&nbsp;&nbsp;&nbsp;&nbsp;// This 
+    will cause an error
+    </div>
+    <p>eval() can not declare a variable using the let keyword:</p>
+    <div class="affichage">
+    eval (&quot;let x = 2&quot;);<br>
+    alert (x);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;// This 
+    will cause an error
+    </div>    
+    <p>The <code>this</code> keyword in functions behaves 
+    differently in strict mode.</p>
+    <p>The <code>this</code> keyword refers to the object that 
+    called the function.</p>
+    <p>If the object is not specified, functions in strict mode 
+    will return <code>undefined</code> and functions in normal 
+    mode will return the global object (window):</p>
+    <div class="affichage">
+    &quot;use strict&quot;;<br>function myFunction() {<br>&nbsp; 
+      alert(this); // will alert &quot;undefined&quot;<br>}<br>myFunction(); </div>
+    <p> 
+    <hr>
+    <h4 style="color: blue;">Future Proof!</h4>
+    <p>
+    Keywords reserved for future JavaScript versions can NOT be used as variable 
+    names in strict mode.</p>
+    <p>
+        These are:</p>
+        <ul>
+          <li>implements</li>
+          <li>interface</li>
+          <li>let</li>
+            <li>package</li>
+          <li>private</li>
+          <li>protected</li>
+          <li>public</li>
+          <li>static</li>
+          <li>yield</li>
+        </ul>
+        <div class="affichage">
+        &quot;use strict&quot;;<br>let public = 1500;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This will cause an error
+        </div>
+        <h4 style="color: blue;">Watch Out!</h4>
+        <p>The &quot;use strict&quot; directive is only recognized at the <strong>beginning</strong> of a script 
+        or a function.</p>
+     </div>
+</body>
+</html>

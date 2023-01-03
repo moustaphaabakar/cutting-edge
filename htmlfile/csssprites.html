@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> css sprites<head></head></a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin: 10px;" class="mediaquery">
+        <h4 style="color: blue;">CSS Image Sprites</h4>
+        <hr>
+        <h4 style="color: blue;">Image Sprites</h4>
+        <p>An image sprite is a collection of images put into a single image.</p>
+        <p>A web page with many images can take a long time to load and generates 
+        multiple server requests.</p>
+        <p>Using image sprites will reduce the number of server requests and save 
+        bandwidth.</p>
+        <hr>
+        <h4 style="color: blue;">Image Sprites - Simple Example</h4>
+        <p>Instead of using three separate images, we use this single image (&quot;img_navsprites.gif&quot;):</p>
+        <p><img src="../img_navsprites.gif" alt="navigation images" /></p>
+        <p>With CSS, we can show just the part of the image we need.</p>
+        <p>In the following example the CSS specifies which part of the &quot;img_navsprites.gif&quot; 
+        image to show:</p>
+        <h4 style="color: blue;">Example</h4>
+<div class="affichage">
+#home
+{<br>
+  &nbsp;
+width: 46px;<br>
+&nbsp;&nbsp;height: 44px;<br>
+  &nbsp;
+background: url(img_navsprites.gif) 0 0;<br>
+}</div>
+
+<p><b>Example explained:</b></p>
+<ul>
+<li><code >&lt;img id=&quot;home&quot; src=&quot;img_trans.gif&quot;&gt;</code> - Only defines a small transparent image 
+because the src attribute cannot be empty. The displayed image will be the background image we specify in CSS</li>
+<li><code>width: 46px; height: 44px;</code> - Defines the portion of the image we want to use</li>
+<li><code>background: url(img_navsprites.gif) 0 0;</code> - Defines the background image and its position (left 0px, top 0px)</li>
+</ul>
+<p>This is the easiest way to use image sprites, now we want to expand it by 
+using links and hover effects.</p>
+<hr>
+<h4 style="color: blue;">Image Sprites - Create a Navigation List</h4>
+<p>We want to use the sprite image (&quot;img_navsprites.gif&quot;) to create a navigation list.</p>
+<p>We will use an HTML list, because it can be a link and also supports a background image:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+#navlist {<br>&nbsp;&nbsp;position: relative;<br>}<br>
+<br>#navlist li {<br>&nbsp; margin: 0;<br>&nbsp; padding: 0;<br>&nbsp; list-style: none;<br>&nbsp; position: absolute;<br>
+  &nbsp; top: 0;<br>}<br><br>
+#navlist li, #navlist a {<br>&nbsp; height: 44px;<br>&nbsp; display: block;<br>}<br>
+<br>
+#home {<br>&nbsp; left: 0px;<br>&nbsp; width: 46px;<br>&nbsp;&nbsp;background: url('img_navsprites.gif') 
+0 0;<br>}<br>
+<br>#prev {<br>&nbsp; left: 63px;<br>&nbsp; width: 43px;<br>&nbsp;&nbsp;background: url('img_navsprites.gif') -47px 0;<br>}<br>
+<br>#next {<br>&nbsp; left: 129px;<br>&nbsp;&nbsp;width: 43px;<br>&nbsp;&nbsp;background: url('img_navsprites.gif') 
+-91px 0;<br>}
+</div>
+<p><b>Example explained:</b></p>
+<ul>
+<li>#navlist {position:relative;} - position is set to relative to allow 
+absolute positioning inside it</li>
+<li>#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} 
+- margin and padding are set to 0, list-style is removed, and all list items 
+are absolute positioned</li>
+<li>#navlist li, #navlist a {height:44px;display:block;} - the height of all 
+the images is 44px</li>
+</ul>
+<p>Now start to position and style for each specific part:</p>
+<ul>
+<li>#home {left:0px;width:46px;} - Positioned all the way to the left, and 
+the width of the image is 46px</li>
+<li>#home {background:url(img_navsprites.gif) 0 0;} - 
+Defines the background 
+image and its position (left 0px, top 0px)</li>
+<li>#prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 
+46px + some extra space between items), and the width is 43px</li>
+<li>#prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background 
+image 47px to the right (#home width 46px + 1px line 
+divider)</li>
+<li>#next {left:129px;width:43px;} - Positioned 129px to 
+the right (start of #prev is 63px + #prev width 43px + extra space), and the 
+width is 43px</li>
+<li>#next {background:url('img_navsprites.gif') -91px 0;} - 
+Defines the background 
+image 91px to the right (#home width 46px + 1px 
+line divider + #prev width 43px + 1px line divider)</li>
+</ul>
+
+<hr>
+
+<h4 style="color: blue;">Image Sprites - Hover Effect</h4>
+<p>Now we want to add a hover effect to our navigation list.</p>
+  <p><strong>Tip:</strong> The <code>:hover</code> selector can be used on all elements, not only on links.</p>
+<p>Our new image (&quot;img_navsprites_hover.gif&quot;) contains three navigation images 
+and three images to use for hover effects:</p>
+<p><img src="../img_navsprites_hover.gif" alt="navigation images" /></p>
+<p>Because this is one single image, and not six separate files, there will be <b>no 
+loading delay</b> when a user hovers over the image.</p>
+<p>We only add three lines of code to add the hover effect:</p>
+<h4 style="clear: blue;">Example</h4>
+<div class="affichage">
+#home a:hover {<br>&nbsp; background: url('img_navsprites_hover.gif') 0 -45px;<br>}<br>
+<br>#prev a:hover {<br>&nbsp;&nbsp;background: url('img_navsprites_hover.gif') -47px 
+-45px;<br>}<br>
+<br>#next a:hover {<br>&nbsp;&nbsp;background: url('img_navsprites_hover.gif') -91px 
+-45px;<br>}</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> JS strings search</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div style="margin:10px" class="mediaquery">
+        <h4 style="color: blue;">JavaScript String search </h4>
+       <hr>
+        <h4 style="color: blue;">JavaScript Search Methods</h4>
+        <ul>
+        <li>String indexOf()</li>
+        <li>String lastIndexOf()</li>
+        <li>String startsWith()</li>
+        <li>String endsWith()</li>
+        </ul>
+        <h4 style="color: blue;">JavaScript String indexOf()</h4>
+        <p>The <code>indexOf()</code> method returns the index of (the position of) 
+        the <code>first</code> occurrence of a specified text in a string:</p>
+          <h4 style="color: blue;">Example</h4>
+          <div class="affichage">
+          let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+          str.indexOf(&quot;locate&quot;);
+          </div>
+          <h4 style="color: blue;">Note</h4>
+          <p>JavaScript counts positions from zero.</p>
+          <p>0 is the first position in a 
+          string, 1 is the second, 2 is the third, ...</p>
+          <hr>
+          <h4 style="color: blue;">JavaScript String lastIndexOf()</h4>
+          <p>The <code>lastIndexOf()</code> method returns the index of the <strong>last</strong> 
+          occurrence of a specified text in a string:</p>
+          <h4 style="color: blue;">Example</h4>
+          <div class="affichage">
+          let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+          str.lastIndexOf(&quot;locate&quot;);
+          </div>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+            str.indexOf(&quot;locate&quot;);
+            </div>
+            <h4 style="color: blue;">Note</h4>
+            <p>JavaScript counts positions from zero.</p>
+            <p>0 is the first position in a 
+            string, 1 is the second, 2 is the third, ...</p>
+            <hr>
+            <h4 style="color: blue;">JavaScript String lastIndexOf()</h4>
+            <p>The <code>lastIndexOf()</code> method returns the index of the <strong>last</strong> 
+            occurrence of a specified text in a string:</p>
+            <h4 style="color: blue;">Example</h4>
+            <div class="affichage">
+            let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+            str.lastIndexOf(&quot;locate&quot;);
+            </div>
+            <p>Both <code>indexOf()</code>, and <code>lastIndexOf()</code> return -1
+              if the text is not found:</p>
+              <h4 style="color: blue;">Example</h4>
+              <div class="affichage">
+              let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+              str.lastIndexOf(&quot;John&quot;);
+              </div>
+              <p>Both methods accept a second parameter as the starting position for the 
+              search:</p>
+              <h4 style="color: blue;">Example</h4>
+              <div class="affichage">
+              let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+              str.indexOf(&quot;locate&quot;, 15);
+              </div>
+              <p>The <code>lastIndexOf()</code> methods searches backwards 
+              (from the end to the beginning), meaning:
+              if the second parameter is <code>15</code>, the search starts at position 
+              15, and searches to the beginning of the string.</p>
+              <h4 style="color: blue;">Example</h4>
+              <div class="affichage">
+              let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+              str.lastIndexOf(&quot;locate&quot;, 15);
+              </div>
+              <hr>
+              <h4 style="color: blue;">JavaScript String search()</h2>
+              <p>The <code>search()</code> method searches a string for a specified value 
+              and returns the position of the match:</p>
+              <h4 style="color: blue;">Example</h4>
+              <div class="affichage">
+              let str = &quot;Please locate where 'locate' occurs!&quot;;<br>
+              str.search(&quot;locate&quot;);
+              </div>
+              <hr>
+              <h4 style="color: blue;">Did You Notice?</h4>
+<p>The two methods, <code>indexOf()</code> and <code>search()</code>, are <strong>equal?</strong></p>
+<p>They accept the same arguments (parameters), and return the same value?</p>
+<p>The two methods are <strong>NOT</strong> equal. These are the differences:</p>
+<ul>
+<li>The <code>search()</code> method cannot take a second start position argument.</li>
+<li>The <code>indexOf()</code> method cannot take 
+powerful search values (regular expressions).</li>
+</ul>
+<p>You will learn more about 
+regular expressions in a later chapter.</p>
+<hr>
+<h4 style="color: blue;">JavaScript String match()</h4>
+<p>The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.</p>
+<h4 style="color: blue;">Example 1</h4>
+<p>Search a string for &quot;ain&quot;:</p>
+<div class="affichage">
+let text = &quot;The rain in SPAIN stays mainly in the plain&quot;; <br>
+text.match(/ain/g); 
+</div>
+<h4 style="color: blue;">Syntax</h4>
+<i>string</i>.match(<em>regexp</em>)
+<table class="table table-striped"> 
+<tr>
+  <td><em>regexp</em></td>
+  <td>Required. The value to search for, as a regular expression.</td>
+</tr>
+<tr>
+ <td>Returns:</td>
+  <td>An Array, containing the matches, one item for each match, or <em>null</em> if no match is found</td>
+</tr>
+</table>
+<h4 style="color: blue;">Example 2</h4>
+<p>Perform a global, case-insensitive search for &quot;ain&quot;:</p>
+<div class="affichage">
+let text = &quot;The rain in SPAIN stays mainly in the plain&quot;; <br>
+text.match(/ain/gi);
+</div>
+<hr>
+<h4 style="color: blue;">JavaScript String includes()</h4>
+<p>The <code>includes()</code> method returns true if a string contains a specified value.</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+text.includes(&quot;world&quot;);
+</div>
+<hr>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage"><div>
+<i>string</i>.includes(<em>searchvalue</em>,<em> start</em>)</div></div>
+<table class="table table-striped"> 
+  <tr>
+    <td><em>searchvalue</em></td>
+    <td>Required. The string to search for</td>
+  </tr>
+    <tr>
+    <td><em>start</em></td>
+    <td>Optional. Default 0. Position to start the search</td>
+  </tr>
+  <tr>
+ <td>Returns:</td>
+  <td>Returns <code>true</code> if the string contains the value, otherwise <code>false</code></td>
+  </tr>
+  <tr>
+ <td>JS Version:</td>
+  <td>ES6 (2015)</td>
+  </tr>
+</table>
+<p>Check if a string includes "world", starting the search at position 12:</p>
+<div class="affichage">
+let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+text.includes(&quot;world&quot;, 12);
+</div>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code>includes()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="table table-striped">
+  <tr style="height:60px">
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>
+    <th style="width:16.6%;"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<h4 style="color: blue;">JavaScript String startsWith()</h4>
+<p>The <code>startsWith()</code> method returns <code>true</code>
+if a string begins with a specified value, otherwise <code >false</code>:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+<br>
+text.startsWith(&quot;Hello&quot;);
+</div>
+<h4 style="color: blue;">Syntax</h4>
+<div class="affichage"><div>
+<i>string</i>.startsWith(<em>searchvalue</em>,<em> start</em>)</div></div>
+<h2>Parameter Values</h2>
+<table class="table table-striped"> 
+  <tr>
+    <th style="width:23%">Parameter</th>
+    <th>Description</th>  </tr>  
+  <tr>
+    <td><em>searchvalue</em></td>
+    <td>Required. The value to search for.</td>
+  </tr>
+    <tr>
+    <td><em>start</em></td>
+    <td>Optional. Default 0. The position to start the search.</td>
+  </tr>
+</table>
+  <h4 style="color: blue;">Examples</h4>
+  <div class="affichage">
+  let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+  <br>
+  text.startsWith(&quot;world&quot;)&nbsp;&nbsp;&nbsp;&nbsp;// Returns false
+  </div>
+  <div class="affichage">
+  let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+  <br>
+  text.startsWith(&quot;world&quot;, 5)&nbsp;&nbsp;&nbsp;&nbsp;// Returns false
+  </div>
+  
+  <div class="affichage">
+  let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+  <br>
+  text.startsWith(&quot;world&quot;, 6)&nbsp;&nbsp;&nbsp;&nbsp;// Returns true
+  </div>
+  <h4 style="color: blue;">Note</h4>
+  <p>The <code>startsWith()</code> method is case sensitive.</p> 
+  <hr>
+  <h4 style="color: blue;">Browser Support</h4>
+  <p><code>startsWith()</code> is an ES6  feature (JavaScript 2015).</p>
+  <p>It is supported in all modern browsers:</p>
+  <table class="table table-striped">
+    <tr style="height:60px">
+      <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+      <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+      <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+      <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+      <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+    </tr>
+    <tr>
+      <td>Chrome</td>
+      <td>Edge</td>
+      <td>Firefox</td>
+      <td>Safari</td>
+      <td>Opera</td>
+    </tr>
+    <tr>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+  <p><code>startsWith()</code> is not supported in Internet Explorer.</p>
+  <hr>
+  <h4 style="color: blue;">JavaScript String endsWith()</h4>
+  <p>The <code>endsWith()</code> method returns <code>true</code>
+  if a string ends with a specified value, otherwise <code>false</code>:</p>
+  <h4 style="color: blue;">Example</h4>
+<p>Check if a string ends with "Doe":</p>
+<div class="affichage">
+let text = &quot;John Doe&quot;;<br>
+text.endsWith(&quot;Doe&quot;);
+</div>
+<h4 style="color: blue;">Syntax</h4>
+<i>string</i>.endsWith(<em>searchvalue</em>,<em> length</em>)
+<h4 style="color: blue;">Parameter Values</h4>
+<table class="table table-striped"> 
+  <tr>
+    <th style="width:23%">Parameter</th>
+    <th>Description</th>  </tr>  
+  <tr>
+    <td><em>searchvalue</em></td>
+    <td>Required. The value to search for.</td>
+  </tr>
+    <tr>
+    <td><em>length</em></td>
+    <td>Optional. The length to search.</td>
+  </tr>
+</table>
+<p>Check if the 11 first characters of a string ends with "world":</p>
+<div class="affichage">
+let text = &quot;Hello world, welcome to the universe.&quot;;<br>
+text.endsWith(&quot;world&quot;, 11);
+</div>
+<h4 style="color: blue;">Note</h4>
+<p>The <code class="w3-codespan">endsWith()</code> method is case sensitive.</p>
+<hr>
+<h4 style="color: blue;">Browser Support</h4>
+<p><code class="w3-codespan">endsWith()</code> is an ES6  feature (JavaScript 2015).</p>
+<p>It is supported in all modern browsers:</p>
+<table class="browserref notranslate">
+  <tr style="height:60px">
+    <th style="width:16.6%;" class="bsChrome" title="Chrome"></th>
+    <th style="width:16.6%;" class="bsEdge" title="Edge"></th>
+    <th style="width:16.6%;" class="bsFirefox" title="Firefox"></th>
+    <th style="width:16.6%;" class="bsSafari" title="Safari"></th>
+    <th style="width:16.6%;" class="bsOpera" title="Opera"></th>                
+  </tr>
+  <tr>
+    <td>Chrome</td>
+    <td>Edge</td>
+    <td>Firefox</td>
+    <td>Safari</td>
+    <td>Opera</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+<p><code>endsWith()</code> is not supported in Internet Explorer.</p>
+</div>
+</body>
+</html>

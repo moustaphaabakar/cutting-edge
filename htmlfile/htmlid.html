@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"></script>
+    <script src="../routing.js"></script>
+    <link rel="stylesheet" href="../principal.css">
+    <link rel="stylesheet" href="elementscc.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>digibit</title>
+    <style>
+
+      @media only  screen and (min-width:768px) {
+      
+      .mediaquery{
+        max-width:9000px;
+        margin: auto;
+        padding: 10px;
+        justify-content: center;
+        box-sizing: border-box;
+        border: solid 2px black;
+        border-radius: 20px;
+
+      }
+
+      .mediaquery{
+        max-width: 750px;
+        margin: auto;
+        padding: 10px;
+        position: absolute;
+        left: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <img src="../digibit.png" style="width: 200px; height: 130px;" class="center" alt="">
+    <nav class="navbar  navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#!html"> Html ID</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="mediaquery" style="margin: 10px;">
+        <h4 style="color: blue;">ID</h4>
+        <p >The HTML <code>id</code> attribute is used to specify a unique id for an HTML element.</p>
+        <p >You cannot have more than one element with the same id in an  HTML document.</p>
+        <hr>
+        <h4 style="color: blue;">Using The id Attribute</h4>
+<p>The <code>id</code> attribute specifies a unique id 
+for an HTML element. The value of the <code>id</code> 
+attribute must be unique within the HTML document.</p>
+<p>The <code>id</code> attribute is used to point 
+to a specific style declaration in a style sheet. It is also used by JavaScript to access and 
+manipulate the element with the specific id.</p>
+<p>The syntax for id is: write a hash character (#), followed by an id name. 
+Then, define the CSS properties within curly braces {}.</p>
+<p>In the following example we have an <code>&lt;h1&gt;</code> element that points to the 
+id name 
+&quot;myHeader&quot;. This <code>&lt;h1&gt;</code> element will be styled according to the <code>#myHeader</code> style definition in the head section:</p>
+<div style="margin: 10px;">
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;style&gt;<br>#myHeader {<br>&nbsp; 
+  background-color: lightblue;<br>&nbsp; color: black;<br>&nbsp; padding: 40px;<br>&nbsp; 
+  text-align: center;<br>} <br>&lt;/style&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br><br>&lt;h1 id=&quot;myHeader&quot;&gt;My 
+  Header&lt;/h1&gt;<br><br>&lt;/body&gt;<br>&lt;/html&gt;
+</div>
+<p><strong>Note:</strong> The id name is case sensitive!</p>
+  <p><strong>Note:</strong> The id name must contain at least one 
+  character, cannot start with a number, and must not contain whitespaces (spaces, tabs, 
+  etc.).</p>
+<h4 style="color: blue;">Difference Between Class and ID</h4>
+<p>A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page:</p>
+<h4 style="color: blue;">Example</h4>
+<div class="affichage">
+  &lt;style&gt;<br>/* Style the element with the id "myHeader" 
+  */<br>
+  <strong>#myHeader</strong> {<br>&nbsp; background-color: lightblue;<br>&nbsp; 
+  color: black;<br>&nbsp;&nbsp;padding: 
+  40px;<br>&nbsp;&nbsp;text-align: center;<br>}<br><br>/* Style all 
+  elements with the class name "city" */<br><strong>.city
+  </strong>{<br>&nbsp; background-color: tomato;<br>&nbsp;&nbsp;color: white;<br>&nbsp;&nbsp;padding: 10px;<br>} <br>&lt;/style&gt;<br>
+  <br>&lt;!-- An element with a unique id --&gt;<br>&lt;h1 id=&quot;myHeader&quot;&gt;My 
+  Cities&lt;/h1&gt;<br><br>&lt;!-- Multiple elements with same class --&gt;<br>&lt;h2 class=&quot;city&quot;&gt;London&lt;/h2&gt;<br>&lt;p&gt;London is the capital of England.&lt;/p&gt;<br><br>
+  &lt;h2 class=&quot;city&quot;&gt;Paris&lt;/h2&gt;<br>&lt;p&gt;Paris is the capital of France.&lt;/p&gt;<br><br>
+  &lt;h2 class=&quot;city&quot;&gt;Tokyo&lt;/h2&gt;<br>&lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;<br></div>
+  <h4 style="color: blue;">HTML Bookmarks with ID and Links</h4>
+  <p>HTML bookmarks are used to allow readers to jump to specific parts of a webpage.</p>
+  <p>Bookmarks can be useful if your page is very long.</p>
+  <p>To use a bookmark, you must first create it, and then add a link 
+  to it.</p>
+  <p>Then, when the link is clicked, the page will scroll to the location with the 
+  bookmark.</p>
+  <h4 style="color: blue;">Example</h4>
+  <p>First, create a bookmark with the <code>id</code> attribute:</p>
+  <div class="affichage">
+  &lt;h2 id=&quot;C4&quot;&gt;Chapter 4&lt;/h2&gt;</div>
+  <p>Then, add a link to the bookmark (&quot;Jump to Chapter 4&quot;), from within the same page:</p>
+ <h4 style="color:blue ;">Example</h4>
+  <div class="affichage">
+   &lt;a href=&quot;#C4&quot;&gt;Jump to Chapter 4&lt;/a&gt;
+  </div>
+  <p>Or, add a link to the bookmark (&quot;Jump to Chapter 4&quot;), from another page:</p>
+<div class="affichage">
+&lt;a href=&quot;html_demo.html#C4&quot;&gt;Jump to Chapter 4&lt;/a&gt;
+</div>
+<h4 style="color: blue;">Using The id Attribute in JavaScript</h4>
+<p>The <code>id</code> attribute can also be used by JavaScript to perform 
+some tasks for that specific element.</p>
+<p>JavaScript can access an element with a specific id with the <code>getElementById()</code> method:</p>
+<h4 style="color: blue;">Example</h4>
+  <p>Use the <code>id</code> attribute to manipulate text with JavaScript:</p>
+<div class="affichage">
+  &lt;script&gt;<br>function displayResult() {<br>&nbsp;&nbsp;document.getElementById(&quot;myHeader&quot;).innerHTML = &quot;Have a nice day!&quot;;<br>}<br>
+  &lt;/script&gt;
+</div>
+<h4 style="color: blue;margin: 10px;">Chapter Summary</h4>
+<ul style="margin: 10px;">
+<li>The <code>id</code> attribute is used to specify a unique id 
+for an HTML element</li>
+  <li>The value of the <code >id</code> 
+attribute must be unique within the HTML document</li>
+  <li>The <code >id</code> 
+  attribute is used by CSS and JavaScript to style/select a specific element</li>
+  <li>The value of the <code >id</code> 
+  attribute is case sensitive</li>
+  <li>The <code >id</code> 
+  attribute is also used to create HTML bookmarks</li>
+  <li>JavaScript can access an element with a specific id with the <code >getElementById()</code> 
+  method</li>
+</ul>
+</div>
+</body>
+</html>
